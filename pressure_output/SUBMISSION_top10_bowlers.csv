@@ -1,0 +1,11 @@
+Rank,Player_Name,Player_ID,CPPI_Score,HP_Matches,HP_Win_Rate,Pressure_Lift,Baseline_Win_Rate,MOM_HP,KO_Win_Rate,Teams
+1,Jacob Duffy,jacob_duffy,68.83,8,75.0,20.5,54.5,1,100.0,"New Zealand, Royal Challengers Bengaluru"
+2,Josh Hazlewood,josh_hazlewood,68.59,14,78.6,14.9,63.7,1,83.3,"Australia, Royal Challengers Bengaluru"
+3,Yash Dayal,yash_dayal,63.09,10,80.0,10.2,69.8,0,80.0,"Gujarat Titans, India, Royal Challengers Bengaluru"
+4,Mitchell Starc,mitchell_starc,62.8,10,60.0,-8.3,68.3,3,100.0,"Australia, Delhi Capitals, Kolkata Knight Riders"
+5,Varun Chakravarthy,varun_chakravarthy,62.38,21,61.9,3.3,58.6,1,100.0,"India, Kolkata Knight Riders"
+6,Romario Shepherd,romario_shepherd,62.0,25,56.0,7.0,49.0,2,100.0,"LSG, MI, RCB, SRH, West Indies"
+7,Suyash Sharma,suyash_sharma,60.07,11,72.7,7.6,65.1,1,66.7,"India A, Kolkata Knight Riders, Royal Challengers Bengaluru"
+8,Bhuvneshwar Kumar,bhuvneshwar_kumar,56.86,25,60.0,2.7,57.3,2,71.4,"India, RCB, Sunrisers Hyderabad"
+9,Arshdeep Singh,arshdeep_singh,55.26,25,68.0,11.1,56.9,2,33.3,"India, Punjab Kings"
+10,Lockie Ferguson,lockie_ferguson,52.0,9,55.6,6.5,49.1,2,50.0,"Gujarat Titans, KKR, New Zealand, PBKS, RCB"

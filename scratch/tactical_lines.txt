@@ -1,0 +1,381 @@
+2570:     <!-- IPL 2027 Rajasthan Royals Tactical Squad & Auction Strategy Section -->
+2571:     <!-- IPL 2027 Rajasthan Royals Tactical Squad & Auction Strategy Section -->
+2572:     <div id="section-tactical-xi" class="data-section" style="display:none;margin-top:16px;">
+2573:         
+2574:         <div class="tactical-grid">
+2575:             <!-- Left Column: Playing XI Formation & Lineup -->
+2576:             <div class="tactical-card">
+2577:                 <div class="tactical-card-title">
+2578:                     Rajasthan Royals — Recommended 2027 Playing XI
+2579:                 </div>
+2580:                 <div class="tactical-card-sub">
+2581:                     A balanced team combination built to strengthen middle-overs scoring against spin and close out death overs.
+2582:                 </div>
+2583:                 
+2584:                 <div class="tactical-img-frame">
+2585: [BASE64_IMAGE_LINE]
+2586:                 </div>
+2587: 
+2588:                 <table class="purse-table" style="margin-top:14px;">
+2589:                     <thead>
+2590:                         <tr>
+2591:                             <th>#</th>
+2592:                             <th>Player</th>
+2593:                             <th>Role in Team</th>
+2594:                             <th style="text-align:right;">Normal Win%</th>
+2595:                             <th style="text-align:right;">Pressure Win%</th>
+2596:                             <th style="text-align:center;">Win Difference</th>
+2597:                         </tr>
+2598:                     </thead>
+2599:                     <tbody>
+2600:                         <tr onclick="window.location.href='players/devon_conway.html'" style="cursor:pointer;">
+2601:                             <td style="font-weight:700;color:var(--rr-navy);">1</td>
+2602:                             <td><strong>Devon Conway</strong> <span style="font-size:11px;color:var(--text-muted);">(wk)</span></td>
+2603:                             <td>Top-Order Anchor & Wicketkeeper</td>
+2604:                             <td style="text-align:right;color:var(--text-muted);">46.2%</td>
+2605:                             <td style="text-align:right;font-weight:700;color:var(--success);">64.3%</td>
+2606:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+18.1%</span></td>
+2607:                         </tr>
+2608:                         <tr onclick="window.location.href='players/ruturaj_gaikwad.html'" style="cursor:pointer;">
+2609:                             <td style="font-weight:700;color:var(--rr-navy);">2</td>
+2610:                             <td><strong>Ruturaj Gaikwad</strong></td>
+2611:                             <td>Opening Batter & Inning Pacer</td>
+2612:                             <td style="text-align:right;color:var(--text-muted);">50.6%</td>
+2613:                             <td style="text-align:right;font-weight:700;color:var(--success);">57.1%</td>
+2614:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+6.5%</span></td>
+2615:                         </tr>
+2616:                         <tr onclick="window.location.href='players/rajat_patidar.html'" style="cursor:pointer;">
+2617:                             <td style="font-weight:700;color:var(--rr-navy);">3</td>
+2618:                             <td><strong>Rajat Patidar</strong></td>
+2619:                             <td>No. 3 Anchor & Spin Attacker</td>
+2620:                             <td style="text-align:right;color:var(--text-muted);">60.3%</td>
+2621:                             <td style="text-align:right;font-weight:700;color:var(--success);">71.4%</td>
+2622:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+11.1%</span></td>
+2623:                         </tr>
+2624:                         <tr onclick="window.location.href='players/shivam_dube.html'" style="cursor:pointer;">
+2625:                             <td style="font-weight:700;color:var(--rr-navy);">4</td>
+2626:                             <td><strong>Shivam Dube</strong></td>
+2627:                             <td>Middle-Overs Boundary Hitter vs Spin (Overs 7–15)</td>
+2628:                             <td style="text-align:right;color:var(--text-muted);">54.3%</td>
+2629:                             <td style="text-align:right;font-weight:700;color:var(--success);">66.7%</td>
+2630:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+12.4%</span></td>
+2631:                         </tr>
+2632:                         <tr onclick="window.location.href='players/shreyas_iyer.html'" style="cursor:pointer;">
+2633:                             <td style="font-weight:700;color:var(--rr-navy);">5</td>
+2634:                             <td><strong>Shreyas Iyer</strong> <span style="font-size:11px;color:var(--rr-pink);font-weight:700;">(c)</span></td>
+2635:                             <td>Middle-Order Game Manager & Captain</td>
+2636:                             <td style="text-align:right;color:var(--text-muted);">54.5%</td>
+2637:                             <td style="text-align:right;font-weight:700;color:var(--success);">55.6%</td>
+2638:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+1.1%</span></td>
+2639:                         </tr>
+2640:                         <tr onclick="window.location.href='players/rinku_singh.html'" style="cursor:pointer;">
+2641:                             <td style="font-weight:700;color:var(--rr-navy);">6</td>
+2642:                             <td><strong>Rinku Singh</strong></td>
+2643:                             <td>Designated Death Finisher (Overs 16–20)</td>
+2644:                             <td style="text-align:right;color:var(--text-muted);">63.8%</td>
+2645:                             <td style="text-align:right;font-weight:700;color:var(--success);">69.2%</td>
+2646:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+5.4%</span></td>
+2647:                         </tr>
+2648:                         <tr onclick="window.location.href='players/axar_patel.html'" style="cursor:pointer;">
+2649:                             <td style="font-weight:700;color:var(--rr-navy);">7</td>
+2650:                             <td><strong>Axar Patel</strong></td>
+2651:                             <td>Spin All-Rounder & Late-Overs Hitter</td>
+2652:                             <td style="text-align:right;color:var(--text-muted);">56.5%</td>
+2653:                             <td style="text-align:right;font-weight:700;color:var(--success);">64.3%</td>
+2654:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+7.8%</span></td>
+2655:                         </tr>
+2656:                         <tr onclick="window.location.href='players/romario_shepherd.html'" style="cursor:pointer;">
+2657:                             <td style="font-weight:700;color:var(--rr-navy);">8</td>
+2658:                             <td><strong>Romario Shepherd</strong></td>
+2659:                             <td>Pace All-Rounder & Heavy-Ball Bowler</td>
+2660:                             <td style="text-align:right;color:var(--text-muted);">49.0%</td>
+2661:                             <td style="text-align:right;font-weight:700;color:var(--success);">56.0%</td>
+2662:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+7.0%</span></td>
+2663:                         </tr>
+2664:                         <tr onclick="window.location.href='players/mitchell_starc.html'" style="cursor:pointer;">
+2665:                             <td style="font-weight:700;color:var(--rr-navy);">9</td>
+2666:                             <td><strong>Mitchell Starc</strong></td>
+2667:                             <td>Left-Arm Fast Bowler (Powerplay & Death)</td>
+2668:                             <td style="text-align:right;color:var(--text-muted);">68.3%</td>
+2669:                             <td style="text-align:right;font-weight:700;color:var(--success);">60.0%</td>
+2670:                             <td style="text-align:center;"><span class="diff-tag" style="background:#FEF3C7;color:#92400E;">3 Awards</span></td>
+2671:                         </tr>
+2672:                         <tr onclick="window.location.href='players/varun_chakravarthy.html'" style="cursor:pointer;">
+2673:                             <td style="font-weight:700;color:var(--rr-navy);">10</td>
+2674:                             <td><strong>Varun Chakravarthy</strong></td>
+2675:                             <td>Mystery Spinner (Middle Overs)</td>
+2676:                             <td style="text-align:right;color:var(--text-muted);">58.6%</td>
+2677:                             <td style="text-align:right;font-weight:700;color:var(--success);">61.9%</td>
+2678:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+3.3%</span></td>
+2679:                         </tr>
+2680:                         <tr onclick="window.location.href='players/jacob_duffy.html'" style="cursor:pointer;">
+2681:                             <td style="font-weight:700;color:var(--rr-navy);">11</td>
+2682:                             <td><strong>Jacob Duffy</strong></td>
+2683:                             <td>Accurate Swing & Seam Bowler</td>
+2684:                             <td style="text-align:right;color:var(--text-muted);">54.5%</td>
+2685:                             <td style="text-align:right;font-weight:700;color:var(--success);">75.0%</td>
+2686:                             <td style="text-align:center;"><span class="diff-tag diff-pos">+20.5%</span></td>
+2687:                         </tr>
+2688:                     </tbody>
+2689:                 </table>
+2690:             </div>
+2691: 
+2692:             <!-- Right Column: Auction Valuation Model & Purse Allocation -->
+2693:             <div class="tactical-card">
+2694:                 <div class="tactical-card-title">
+2695:                     Auction Budget Plan (&#8377;45 Crore Total Purse)
+2696:                 </div>
+2697:                 <div class="tactical-card-sub">
+2698:                     Budget plan with clear maximum bid limits to prevent overspending on marquee names.
+2699:                 </div>
+2700: 
+2701:                 <div class="budget-kpi-bar">
+2702:                     <div>
+2703:                         <div class="budget-kpi-val">&#8377;45.0 Cr</div>
+2704:                         <div class="budget-kpi-lbl">Total Budget</div>
+2705:                     </div>
+2706:                     <div>
+2707:                         <div class="budget-kpi-val" style="color:var(--success);">&#8377;45.0 Cr</div>
+2708:                         <div class="budget-kpi-lbl">Target Allocations</div>
+2709:                     </div>
+2710:                     <div>
+2711:                         <div class="budget-kpi-val" style="color:var(--rr-pink);">100%</div>
+2712:                         <div class="budget-kpi-lbl">Budget Utilized</div>
+2713:                     </div>
+2714:                 </div>
+2715: 
+2716:                 <table class="purse-table">
+2717:                     <thead>
+2718:                         <tr>
+2719:                             <th>Target Player</th>
+2720:                             <th>Priority</th>
+2721:                             <th style="text-align:right;">Max Bid</th>
+2722:                             <th style="text-align:right;">% of Purse</th>
+2723:                             <th>Why Rajasthan Royals Needs Him</th>
+2724:                         </tr>
+2725:                     </thead>
+2726:                     <tbody>
+2727:                         <tr onclick="window.location.href='players/rinku_singh.html'" style="cursor:pointer;">
+2728:                             <td><strong>Rinku Singh</strong></td>
+2729:                             <td><span class="tier-badge tier-1">Priority 1</span></td>
+2730:                             <td style="text-align:right;font-weight:700;color:var(--rr-navy);">&#8377;11.00 Cr</td>
+2731:                             <td style="text-align:right;color:var(--text-muted);">24.4%</td>
+2732:                             <td style="font-size:12px;">Proven death finisher; finishes tight chases with calm execution (69.2% win rate).</td>
+2733:                         </tr>
+2734:                         <tr onclick="window.location.href='players/shivam_dube.html'" style="cursor:pointer;">
+2735:                             <td><strong>Shivam Dube</strong></td>
+2736:                             <td><span class="tier-badge tier-1">Priority 1</span></td>
+2737:                             <td style="text-align:right;font-weight:700;color:var(--rr-navy);">&#8377;9.50 Cr</td>
+2738:                             <td style="text-align:right;color:var(--text-muted);">21.1%</td>
+2739:                             <td style="font-size:12px;">Destroys spin bowling in overs 7–15; prevents scoring slowdowns in middle overs.</td>
+2740:                         </tr>
+2741:                         <tr onclick="window.location.href='players/axar_patel.html'" style="cursor:pointer;">
+2742:                             <td><strong>Axar Patel</strong></td>
+2743:                             <td><span class="tier-badge tier-1">Priority 1</span></td>
+2744:                             <td style="text-align:right;font-weight:700;color:var(--rr-navy);">&#8377;8.00 Cr</td>
+2745:                             <td style="text-align:right;color:var(--text-muted);">17.8%</td>
+2746:                             <td style="font-size:12px;">Gives batting depth at No. 7 and bowls tight 4 overs of left-arm spin.</td>
+2747:                         </tr>
+2748:                         <tr onclick="window.location.href='players/jacob_duffy.html'" style="cursor:pointer;">
+2749:                             <td><strong>Jacob Duffy</strong></td>
+2750:                             <td><span class="tier-badge tier-1">Priority 1</span></td>
+2751:                             <td style="text-align:right;font-weight:700;color:var(--rr-navy);">&#8377;6.50 Cr</td>
+2752:                             <td style="text-align:right;color:var(--text-muted);">14.4%</td>
+2753:                             <td style="font-size:12px;">Top bowler in high-pressure matches (+20.5% lift, 75.0% win rate); disciplined swing.</td>
+2754:                         </tr>
+2755:                         <tr onclick="window.location.href='players/varun_chakravarthy.html'" style="cursor:pointer;">
+2756:                             <td><strong>Varun Chakravarthy</strong></td>
+2757:                             <td><span class="tier-badge tier-2">Priority 2</span></td>
+2758:                             <td style="text-align:right;font-weight:700;color:var(--rr-navy);">&#8377;5.50 Cr</td>
+2759:                             <td style="text-align:right;color:var(--text-muted);">12.2%</td>
+2760:                             <td style="font-size:12px;">Takes wickets in middle overs; 100% win rate in playoff knockout games.</td>
+2761:                         </tr>
+2762:                         <tr onclick="window.location.href='players/romario_shepherd.html'" style="cursor:pointer;">
+2763:                             <td><strong>Romario Shepherd</strong></td>
+2764:                             <td><span class="tier-badge tier-2">Priority 2</span></td>
+2765:                             <td style="text-align:right;font-weight:700;color:var(--rr-navy);">&#8377;4.50 Cr</td>
+2766:                             <td style="text-align:right;color:var(--text-muted);">10.0%</td>
+2767:                             <td style="font-size:12px;">Fast bowling option with heavy ball and power-hitting down the order.</td>
+2768:                         </tr>
+2769:                     </tbody>
+2770:                 </table>
+2771: 
+2772:                 <div style="margin-top:20px;padding:14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
+2773:                     <div style="font-weight:700;font-size:12.5px;color:var(--rr-navy);margin-bottom:4px;">Auction Bidding Rule:</div>
+2774:                     <p style="font-size:12px;color:var(--text-main);line-height:1.5;margin:0;">
+2775:                         If bidding for any player goes more than 10% above their maximum limit, stop bidding immediately and switch to backup targets (such as Yash Dayal at &#8377;5.5 Cr or Bhanuka Rajapaksa at &#8377;3.5 Cr) to protect the overall team budget.
+2776:                     </p>
+2777:                 </div>
+2778:             </div>
+2779:         </div>
+2780: 
+2781:         <!-- Bottom Card: Pressure Lift Quadrant Matrix -->
+2782:         <div class="tactical-card" style="margin-top:24px;">
+2783:             <div class="tactical-card-title">
+2784:                 Pressure Win Rate vs Normal Win Rate (Player Quadrants)
+2785:             </div>
+2786:             <div class="tactical-card-sub">
+2787:                 Compares how players perform when matches are close (under 15 runs or 2 wickets) versus normal games.
+2788:             </div>
+2789: 
+2790:             <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:24px;align-items:center;">
+2791:                 <div class="tactical-img-frame" style="margin-bottom:0;">
+2792: [BASE64_IMAGE_LINE]
+2793:                 </div>
+2794:                 <div>
+2795:                     <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:18px;">
+2796:                         <div style="font-weight:700;color:var(--rr-navy);font-size:13px;margin-bottom:12px;">Key Insights from the Data:</div>
+2797:                         
+2798:                         <div style="margin-bottom:12px;">
+2799:                             <strong style="color:var(--rr-navy);font-size:12px;">1. High Clutch Match-Winners:</strong>
+2800:                             <p style="font-size:12px;color:var(--text-main);margin:2px 0 0 0;line-height:1.4;">
+2801:                                 Players like <strong>Shivam Dube</strong> (+12.4%), <strong>Jacob Duffy</strong> (+20.5%), and <strong>Rinku Singh</strong> (+5.4%) win significantly more often when the game is tight.
+2802:                             </p>
+2803:                         </div>
+2804: 
+2805:                         <div style="margin-bottom:12px;">
+2806:                             <strong style="color:var(--rr-navy);font-size:12px;">2. Consistent High Performers:</strong>
+2807:                             <p style="font-size:12px;color:var(--text-main);margin:2px 0 0 0;line-height:1.4;">
+2808:                                 <strong>Devon Conway</strong>, <strong>Rajat Patidar</strong>, and <strong>Axar Patel</strong> maintain high win rates across both normal and high-pressure matches.
+2809:                             </p>
+2810:                         </div>
+2811: 
+2812:                         <div style="margin-bottom:12px;">
+2813:                             <strong style="color:var(--rr-navy);font-size:12px;">3. Aggressive Power Hitters:</strong>
+2814:                             <p style="font-size:12px;color:var(--text-main);margin:2px 0 0 0;line-height:1.4;">
+2815:                                 <strong>Bhanuka Rajapaksa</strong> and <strong>Sediqullah Atal</strong> play with high aggression, providing quick scoring bursts in close games.
+2816:                             </p>
+2817:                         </div>
+2818: 
+2819:                         <div>
+2820:                             <strong style="color:var(--rr-navy);font-size:12px;">4. Superstar Bowlers (Bumrah &amp; Rashid Khan):</strong>
+2821:                             <p style="font-size:12px;color:var(--text-main);margin:2px 0 0 0;line-height:1.4;">
+2822:                                 Opponents play safe and take zero risks against their overs, attacking the other bowlers instead. Their individual pressure win lift drops because opponents refuse to take them on.
+2823:                             </p>
+2824:                         </div>
+2825:                     </div>
+2826:                 </div>
+2827:             </div>
+2828:         </div>
+2829: 
+2830:     </div>
+2831: 
+2832:     <!-- Quantitative Framework Documentation -->
+2833:     <div class="doc-grid">
+2834:         <div class="doc-box">
+2835:             <div class="doc-heading">Quantitative Model Formulation</div>
+2836:             <p style="font-size:12.5px;color:#CBD5E1;margin-bottom:8px;">
+2837:                 The Clutch Player Performance Index (CPPI) addresses small-sample statistical variance via Bayesian shrinkage estimation:
+2838:             </p>
+2839:             <div class="code-snippet">
+2840:                 CPPI = [ 0.35 &times; WR_hp + 0.15 &times; WR_base + 0.20 &times; &Delta; + 0.15 &times; MOM_hp + 0.15 &times; WR_ko ] &times; Saturation
+2841:             </div>
+2842:             <p style="font-size:12px;color:#94A3B8;line-height:1.5;">
+2843:                 Where Saturation = min(1.0, Matches_hp / 10.0), guaranteeing that candidates with insufficient high-leverage samples are penalised in final ranking calculations.
+2844:             </p>
+2845:         </div>
+2846: 
+2847:         <div class="doc-box">
+2848:             <div class="doc-heading">Operational Definitions & Data Governance</div>
+2849:             <p style="font-size:12.5px;color:#CBD5E1;line-height:1.6;">
+2850:                 <strong style="color:#FFFFFF;">1. High-Leverage Fixture:</strong> Matches meeting stern empirical pressure criteria: elimination knockout games (Finals, Semi-Finals, Eliminators), super-over resolutions, or finishes with winning margins &le; 15 runs or &le; 2 wickets.<br>
+2851:                 <strong style="color:#FFFFFF;">2. Regulatory Pre-Filter:</strong> Strict exclusion of non-auction eligible entities pursuant to BCCI IPL Player Regulations.<br>
+2852:                 <strong style="color:#FFFFFF;">3. Tactical Venue Model:</strong> Sawai Mansingh Stadium pitch metrics (72-78m boundaries, middle-overs spin grip, nocturnal dew factor).
+2853:             </p>
+2854:         </div>
+2855:     </div>
+2856: 
+2857: </div>
+2858: 
+2859: <!-- Interactive Power BI Slicer & Sort Logic -->
+2860: <script>
+2861: function showSection(sectionId, btn) {
+2862:     var sections = document.querySelectorAll('.data-section');
+2863:     for (var i = 0; i < sections.length; i++) {
+2864:         sections[i].style.display = 'none';
+2865:     }
+2866:     var buttons = document.querySelectorAll('.nav-tab-btn');
+2867:     for (var j = 0; j < buttons.length; j++) {
+2868:         buttons[j].classList.remove('active');
+2869:     }
+2870:     var target = document.getElementById('section-' + sectionId);
+2871:     if (target) {
+2872:         target.style.display = 'block';
+2873:     }
+2874:     if (btn) {
+2875:         btn.classList.add('active');
+2876:     }
+2877:     applySlicers();
+2878: }
+2879: 
+2880: function applySlicers() {
+2881:     var query = document.getElementById('filterInput').value.toLowerCase();
+2882:     var roleFilter = document.getElementById('roleSlicer').value;
+2883:     var sortOrder = document.getElementById('sortSlicer').value;
+2884:     
+2885:     var sections = document.querySelectorAll('.data-section');
+2886:     var currentSection = null;
+2887:     for (var i = 0; i < sections.length; i++) {
+2888:         if (sections[i].style.display !== 'none') {
+2889:             currentSection = sections[i];
+2890:             break;
+2891:         }
+2892:     }
+2893:     if (!currentSection) return;
+2894:     
+2895:     var table = currentSection.querySelector('table');
+2896:     if (!table) return;
+2897:     var tbody = table.querySelector('tbody');
+2898:     var rows = Array.from(tbody.querySelectorAll('tr'));
+2899:     
+2900:     // Filter rows
+2901:     rows.forEach(function(row) {
+2902:         var text = row.innerText.toLowerCase();
+2903:         var role = (row.getAttribute('data-role') || '').toUpperCase();
+2904:         var matchesQuery = (text.indexOf(query) !== -1);
+2905:         var matchesRole = true;
+2906:         
+2907:         if (roleFilter === 'TOP') {
+2908:             matchesRole = (role.indexOf('OPEN') !== -1 || role.indexOf('TOP') !== -1 || role.indexOf('#3') !== -1 || text.indexOf('kohli') !== -1 || text.indexOf('patidar') !== -1);
+2909:         } else if (roleFilter === 'MIDDLE') {
+2910:             matchesRole = (role.indexOf('MIDDLE') !== -1 || role.indexOf('#4') !== -1 || role.indexOf('STRIKER') !== -1 || text.indexOf('iyer') !== -1 || text.indexOf('dube') !== -1);
+2911:         } else if (roleFilter === 'FINISHER') {
+2912:             matchesRole = (role.indexOf('FINISH') !== -1 || role.indexOf('DEATH') !== -1 || role.indexOf('#7') !== -1);
+2913:         } else if (roleFilter === 'SEAM') {
+2914:             matchesRole = (role.indexOf('SEAM') !== -1 || role.indexOf('PACE') !== -1 || role.indexOf('FAST') !== -1 || role.indexOf('SWING') !== -1);
+2915:         } else if (roleFilter === 'SPIN') {
+2916:             matchesRole = (role.indexOf('SPIN') !== -1 || role.indexOf('ROUNDER') !== -1 || role.indexOf('WRIST') !== -1 || role.indexOf('MYSTERY') !== -1);
+2917:         }
+2918:         
+2919:         row.style.display = (matchesQuery && matchesRole) ? '' : 'none';
+2920:     });
+2921:     
+2922:     // Sort rows dynamically
+2923:     rows.sort(function(a, b) {
+2924:         if (sortOrder === 'DIFF') {
+2925:             return parseFloat(b.getAttribute('data-diff') || 0) - parseFloat(a.getAttribute('data-diff') || 0);
+2926:         } else if (sortOrder === 'WIN') {
+2927:             return parseFloat(b.getAttribute('data-win') || 0) - parseFloat(a.getAttribute('data-win') || 0);
+2928:         } else if (sortOrder === 'INDEX') {
+2929:             return parseFloat(b.getAttribute('data-index') || 0) - parseFloat(a.getAttribute('data-index') || 0);
+2930:         } else {
+2931:             return parseFloat(a.getAttribute('data-rank') || 0) - parseFloat(b.getAttribute('data-rank') || 0);
+2932:         }
+2933:     });
+2934:     
+2935:     rows.forEach(function(row) { tbody.appendChild(row); });
+2936: }
+2937: </script>
+2938: 
+2939: 
+2940: </body>
+2941: </html>
+2942: """
+2943: 
+2944: 
+2945: # ==============================================================================
+2946: # CINEMATIC WAR ROOM ENTRY ANIMATION INJECTOR
+2947: # ==============================================================================
+2948: 
+2949: # Entry animation removed as requested
+2950: 

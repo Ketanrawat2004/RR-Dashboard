@@ -1,0 +1,16 @@
+merged,into,reason
+a khan,AMBIGUOUS,"matches ['aarav khan', 'arjun khan', 'ayaan khan']"
+a reddy,AMBIGUOUS,"matches ['aarav reddy', 'ayaan reddy']"
+p reddy,pranav reddy,initial matches a single full name
+h iyer,harsh iyer,initial matches a single full name
+d kulkarni,dev kulkarni,initial matches a single full name
+y kulkarni,yash kulkarni,initial matches a single full name
+t mehta,tanmay mehta,initial matches a single full name
+h mishra,harsh mishra,initial matches a single full name
+n mishra,nikhil mishra,initial matches a single full name
+p mishra,pranav mishra,initial matches a single full name
+j verma,jai verma,initial matches a single full name
+r das,AMBIGUOUS,"matches ['reyansh das', 'rohan das', 'rudra das']"
+n patel,neel patel,initial matches a single full name
+v saini,veer saini,initial matches a single full name
+i tiwari,ishaan tiwari,initial matches a single full name

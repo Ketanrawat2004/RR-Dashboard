@@ -1,0 +1,11 @@
+Rank,Player_Name,Player_ID,CPPI_Score,HP_Matches,HP_Win_Rate,Pressure_Lift,Baseline_Win_Rate,MOM_HP,KO_Win_Rate,Teams
+1,Shivam Dube,shivam_dube,66.81,18,66.7,12.4,54.3,1,100.0,"Chennai Super Kings, India, Mumbai"
+2,Rinku Singh,rinku_singh,66.26,26,69.2,5.4,63.8,1,100.0,"India, Kolkata Knight Riders, Uttar Pradesh"
+3,Axar Patel,axar_patel,65.82,28,64.3,7.8,56.5,2,100.0,"Delhi Capitals, India, Gujarat"
+4,Rajat Patidar,rajat_patidar,64.26,14,71.4,11.1,60.3,2,71.4,"Royal Challengers Bengaluru, Madhya Pradesh"
+5,Ruturaj Gaikwad,ruturaj_gaikwad,62.41,14,57.1,6.5,50.6,2,100.0,"Chennai Super Kings, India, Maharashtra"
+6,Devon Conway,devon_conway,61.97,14,64.3,18.1,46.2,2,66.7,"Chennai Super Kings, New Zealand"
+7,Virat Kohli,virat_kohli,61.47,20,70.0,7.6,62.4,1,71.4,"India, Royal Challengers Bengaluru"
+8,Bhanuka Rajapaksa,bhanuka_rajapaksa,59.88,9,66.7,10.4,56.2,1,100.0,"Punjab Kings, Sri Lanka"
+9,Shreyas Iyer,shreyas_iyer,54.18,18,55.6,1.1,54.5,3,60.0,"India, Kolkata Knight Riders, Mumbai"
+10,Sediqullah Atal,sediqullah_atal,50.07,8,50.0,-7.9,57.9,2,66.7,"Afghanistan, Afghanistan A"

@@ -1,0 +1,51 @@
+player_id,player_name,teams,role,total_matches,total_wins,hp_matches,hp_wins,ko_matches,ko_wins,mom_all,mom_hp,baseline_win_rate,hp_win_rate,ko_win_rate,mom_rate_all,mom_rate_hp,avg_pressure_score,reliability_score,pressure_lift,bbb_bonus,cppi,role_category
+3097,Shan Masood,Pakistan,batter,12,7,3,3,1,1,0,0,58.3,100.0,100.0,0.0,0.0,20.8,100.0,41.7,0.0,75.63,Batter
+8652,Mohammad Ishaq,"Afghanistan, Afghanistan A",batter,13,10,5,5,2,2,0,0,76.9,100.0,100.0,0.0,0.0,30.0,100.0,23.1,0.0,74.23,Batter
+3550,Sharafuddin Ashraf,"Afghanistan, Afghanistan A",batter,13,10,7,6,2,2,1,0,76.9,85.7,100.0,7.7,0.0,33.4,55.9,8.8,0.0,63.75,Batter
+22920,Jacob Duffy,"New Zealand, Royal Challengers Bengaluru",batter,44,24,8,6,2,2,3,1,54.5,75.0,100.0,6.8,12.5,17.5,38.3,20.5,0.0,61.62,Batter
+3543,Shahidullah Kamal,"Afghanistan, Afghanistan A",batter,11,9,5,4,2,2,0,0,81.8,80.0,100.0,0.0,0.0,29.8,44.1,-1.8,0.0,59.77,Batter
+7689,Dilshan Madushanka,"Mumbai Indians, Sri Lanka, Sunrisers Hyderabad",batter,19,9,4,3,1,1,0,0,47.4,75.0,100.0,0.0,0.0,19.9,33.3,27.6,0.0,59.15,Batter
+830,Josh Hazlewood,"Australia, Royal Challengers Bengaluru",batter,66,42,14,11,6,5,6,1,63.6,78.6,83.3,9.1,7.1,20.7,45.8,15.0,0.0,58.8,Batter
+4867,Wesley Madhevere,Zimbabwe,batter,30,9,4,4,0,0,0,0,30.0,100.0,0.0,0.0,0.0,17.9,100.0,70.0,0.0,57.75,Batter
+7322,Yash Dayal,"Gujarat Titans, India, Royal Challengers Bengaluru",batter,43,30,10,8,5,4,0,0,69.8,80.0,80.0,0.0,0.0,22.2,47.3,10.2,0.0,56.99,Batter
+8182,Donovan Ferreira,"Delhi Capitals, Rajasthan Royals, South Africa",batter,33,13,5,4,2,1,2,1,39.4,80.0,50.0,6.1,20.0,17.4,44.1,40.6,0.0,56.95,Batter
+20894,Aman Khan,"Chennai Super Kings, Delhi Capitals, Kolkata Knight Riders",batter,12,5,3,3,0,0,0,0,41.7,100.0,0.0,0.0,0.0,19.5,100.0,58.3,0.0,56.87,Batter
+1617,Rishi Dhawan,Punjab Kings,batter,13,6,3,3,0,0,0,0,46.2,100.0,0.0,0.0,0.0,19.9,100.0,53.8,0.0,56.53,Batter
+2003,Bhanuka Rajapaksa,"Punjab Kings, Sri Lanka",batter,32,18,9,6,1,1,1,1,56.2,66.7,100.0,3.1,11.1,21.5,25.0,10.5,0.0,56.35,Batter
+2407,Dhananjaya de Silva,Sri Lanka,batter,16,10,7,5,1,1,0,0,62.5,71.4,100.0,0.0,0.0,27.2,31.7,8.9,0.0,56.33,Batter
+7545,Kuldeep Sen,"Punjab Kings, Rajasthan Royals",batter,12,6,3,3,0,0,0,0,50.0,100.0,0.0,0.0,0.0,22.0,100.0,50.0,0.0,56.25,Batter
+4708,Rinku Singh,"India, Kolkata Knight Riders",batter,105,67,26,18,3,3,5,1,63.8,69.2,100.0,4.8,3.8,19.9,32.0,5.4,0.0,56.09,Batter
+38855,Mohammad Saifuddin,Bangladesh,batter,22,12,3,3,0,0,1,0,54.5,100.0,0.0,4.5,0.0,15.4,100.0,45.5,0.0,55.91,Batter
+4755,Shivam Dube,"Chennai Super Kings, India",batter,116,63,18,12,3,3,5,1,54.3,66.7,100.0,4.3,5.6,17.8,27.2,12.4,0.0,55.62,Batter
+829,Mitchell Starc,"Australia, Delhi Capitals, Kolkata Knight Riders",batter,41,28,10,6,2,2,5,3,68.3,60.0,100.0,12.2,30.0,20.0,13.9,-8.3,0.0,55.27,Batter
+167,Ajinkya Rahane,"Chennai Super Kings, Kolkata Knight Riders",batter,61,31,9,6,2,2,1,0,50.8,66.7,100.0,1.6,0.0,17.1,25.0,15.9,0.0,54.54,Batter
+2876,Axar Patel,"Delhi Capitals, India",batter,147,83,28,18,1,1,6,2,56.5,64.3,100.0,4.1,7.1,17.7,24.1,7.8,0.0,54.42,Batter
+3916,Jitesh Sharma,"India, India A, Punjab Kings, Royal Challengers Bengaluru",batter,88,51,19,14,5,4,1,0,58.0,73.7,80.0,1.1,0.0,20.6,38.6,15.7,0.0,54.33,Batter
+8746,Vaibhav Arora,"India A, Kolkata Knight Riders, Punjab Kings",batter,45,25,12,8,2,2,1,0,55.6,66.7,100.0,2.2,0.0,20.4,26.1,11.1,0.0,54.29,Batter
+5039,Rajat Patidar,Royal Challengers Bengaluru,batter,53,32,14,10,7,5,4,2,60.4,71.4,71.4,7.5,14.3,22.7,34.4,11.0,0.0,53.89,Batter
+29888,Harshit Rana,"India, Kolkata Knight Riders",batter,48,24,14,9,2,2,0,0,50.0,64.3,100.0,0.0,0.0,20.8,22.7,14.3,0.0,53.34,Batter
+27959,Hrithik Shokeen,"India A, Mumbai Indians",batter,13,7,3,2,1,1,0,0,53.8,66.7,100.0,0.0,0.0,21.2,13.4,12.9,0.0,53.15,Batter
+1941,Devon Conway,"Chennai Super Kings, New Zealand",batter,65,30,13,9,3,2,5,2,46.2,69.2,66.7,7.7,15.4,18.0,30.6,23.0,0.0,52.93,Batter
+6256,Varun Chakravarthy,"India, Kolkata Knight Riders",batter,99,58,21,13,3,3,8,1,58.6,61.9,100.0,8.1,4.8,19.0,19.6,3.3,0.0,52.33,Batter
+3275,Alzarri Joseph,"Gujarat Titans, Royal Challengers Bengaluru, West Indies",batter,54,25,8,5,1,1,0,0,46.3,62.5,100.0,0.0,0.0,18.7,17.2,16.2,0.0,52.31,Batter
+36982,Suyash Sharma,"India A, Kolkata Knight Riders, Royal Challengers Bengaluru",batter,43,28,11,8,3,2,1,1,65.1,72.7,66.7,2.3,9.1,22.9,35.8,7.6,0.0,52.25,Batter
+535,Ambati Rayudu,Chennai Super Kings,batter,29,14,8,5,2,2,0,0,48.3,62.5,100.0,0.0,0.0,22.0,17.2,14.2,0.0,52.16,Batter
+6059,Ruturaj Gaikwad,"Chennai Super Kings, India",batter,81,41,14,8,2,2,5,2,50.6,57.1,100.0,6.2,14.3,18.3,10.1,6.5,0.0,51.85,Batter
+1813,Deepak Chahar,"Chennai Super Kings, India, Mumbai Indians",batter,48,27,8,5,2,2,0,0,56.2,62.5,100.0,0.0,0.0,17.9,17.2,6.3,0.0,51.57,Batter
+7327,Rasikh Salam,"Delhi Capitals, India A, Kolkata Knight Riders, Royal Challengers Bengaluru",batter,28,19,8,6,3,2,1,0,67.9,75.0,66.7,3.6,0.0,24.3,38.3,7.1,0.0,51.45,Batter
+2892,Asif Ali,Pakistan,batter,15,9,5,4,2,1,0,0,60.0,80.0,50.0,0.0,0.0,27.3,44.1,20.0,0.0,51.41,Batter
+47,Virat Kohli,"India, Royal Challengers Bengaluru",batter,93,58,20,14,7,5,10,1,62.4,70.0,71.4,10.8,5.0,20.5,32.8,7.6,0.0,51.13,Batter
+1596,Moeen Ali,"Chennai Super Kings, England, Kolkata Knight Riders",batter,73,34,14,8,2,2,2,1,46.6,57.1,100.0,2.7,7.1,18.1,10.1,10.5,0.0,50.71,Batter
+992,Mayank Agarwal,"Punjab Kings, Royal Challengers Bengaluru, Sunrisers Hyderabad",batter,31,14,9,5,2,2,1,1,45.2,55.6,100.0,3.2,11.1,21.1,5.1,10.4,0.0,50.47,Batter
+6160,Chamika Karunaratne,"Kolkata Knight Riders, Sri Lanka",batter,21,10,5,3,1,1,0,0,47.6,60.0,100.0,0.0,0.0,21.2,8.7,12.4,0.0,50.3,Batter
+6726,Romario Shepherd,"Lucknow Super Giants, Mumbai Indians, Royal Challengers Bengaluru, Sunrisers Hyderabad, West Indies",batter,100,49,25,14,4,4,6,2,49.0,56.0,100.0,6.0,8.0,20.7,9.5,7.0,0.0,50.18,Batter
+7544,Venkatesh Iyer,"India, Kolkata Knight Riders, Royal Challengers Bengaluru",batter,62,34,17,10,4,4,3,0,54.8,58.8,100.0,4.8,0.0,21.6,13.8,4.0,0.0,49.76,Batter
+7696,Mohammad Wasim,Pakistan,batter,17,10,5,3,1,1,0,0,58.8,60.0,100.0,0.0,0.0,20.6,8.7,1.2,0.0,49.46,Batter
+6436,Qais Ahmad,"Afghanistan, Afghanistan A",batter,10,6,5,3,2,2,1,0,60.0,60.0,100.0,10.0,0.0,36.7,8.7,0.0,0.0,49.37,Batter
+49003,Hasan Nawaz,Pakistan,batter,28,17,5,3,1,1,1,0,60.7,60.0,100.0,3.6,0.0,16.4,8.7,-0.7,0.0,49.32,Batter
+7312,Nandre Burger,"Rajasthan Royals, South Africa",batter,23,13,4,3,2,1,1,0,56.5,75.0,50.0,4.3,0.0,17.9,33.3,18.5,0.0,48.47,Batter
+4219,Krunal Pandya,"Lucknow Super Giants, Royal Challengers Bengaluru",batter,74,45,21,14,6,4,5,1,60.8,66.7,66.7,6.8,4.8,22.5,27.5,5.9,0.0,48.34,Batter
+3644,Kuldeep Yadav,"Delhi Capitals, India",batter,92,48,18,10,1,1,9,0,52.2,55.6,100.0,9.8,0.0,18.1,8.0,3.4,0.0,48.01,Batter
+8,Mahendra Singh Dhoni,Chennai Super Kings,batter,58,25,11,6,2,2,1,0,43.1,54.5,100.0,1.7,0.0,19.3,4.3,11.4,0.0,47.86,Batter
+360,Bhuvneshwar Kumar,"India, Royal Challengers Bengaluru, Sunrisers Hyderabad",batter,103,59,24,15,7,5,3,2,57.3,62.5,71.4,2.9,8.3,19.9,20.9,5.2,0.0,47.79,Batter
+4391,Liam Livingstone,"England, Punjab Kings, Royal Challengers Bengaluru, Sunrisers Hyderabad",batter,74,33,11,6,2,2,2,0,44.6,54.5,100.0,2.7,0.0,18.1,4.3,9.9,0.0,47.74,Batter

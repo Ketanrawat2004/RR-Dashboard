@@ -1,0 +1,884 @@
+match_id,match_date,comp_id,stage,result,pressure_score,is_high_pressure,stage_score,close_score,knockout_score,stage_label,close_label
+48029,2025-11-23,3289,Final,Pakistan A Won the super over,100,True,40,40,20,Final,Super Over / Last-Ball Tie
+48027,2025-11-21,3289,Semi Final,Bangladesh A Won The Super Over,95,True,35,40,20,Semi-Final,Super Over / Last-Ball Tie
+48028,2025-11-21,3289,Semi Final,Pakistan A Won by 5 runs,93,True,35,38,20,Semi-Final,5-run cliff
+40767,2025-06-03,2725,Final,Royal Challengers Bengaluru Won by 6 runs,92,True,40,32,20,Final,6-run edge
+16665,2022-09-11,1533,Final,Sri Lanka Won by 23 Runs,78,True,40,18,20,Final,23-run moderate
+15188,2022-05-25,1358,Eliminator,Royal Challengers Bengaluru Won by 14 Runs,76,True,30,26,20,Qualifier/Eliminator,14-run close
+21583,2023-05-23,1715,Qualifier,Chennai Super Kings Won by 15 runs,76,True,30,26,20,Qualifier/Eliminator,15-run close
+17743,2022-10-14,1608,Final,Pakistan Won by 5 Wickets,74,True,40,14,20,Final,5-wicket win
+21586,2023-05-29,1715,Final,Chennai Super Kings Won by 5 wickets  (DLS method),74,True,40,14,20,Final,5-wicket win
+45513,2025-09-28,3133,Final,India Won by 5 wickets,74,True,40,14,20,Final,5-wicket win
+50945,2026-05-31,3298,Final,Royal Challengers Bengaluru Won by 5 wickets,74,True,40,14,20,Final,5-wicket win
+37098,2024-10-25,2670,Semi Final,Afghanistan A Won by 20 runs,73,True,35,18,20,Semi-Final,20-run moderate
+40765,2025-05-30,2725,Eliminator,Mumbai Indians Won by 20 runs,68,True,30,18,20,Qualifier/Eliminator,20-run moderate
+15190,2022-05-29,1358,Final,Gujarat Titans Won by 7 Wickets,66,True,40,6,20,Final,7-wicket comfortable
+37099,2024-10-27,2670,Final,Afghanistan A Won by 7 wickets,66,True,40,6,20,Final,7-wicket comfortable
+47982,2025-11-29,3288,Final,Pakistan Won by 6 wickets,66,True,40,6,20,Final,6-wicket comfortable
+31290,2024-05-22,2193,Eliminator,Rajasthan Royals Won by 4 wickets,64,True,30,14,20,Qualifier/Eliminator,4-wicket win
+40766,2025-06-01,2725,Qualifier,Punjab Kings Won by 5 wickets,64,True,30,14,20,Qualifier/Eliminator,5-wicket win
+45857,2025-09-07,3159,Final,Pakistan Won by 75 runs,64,True,40,4,20,Final,75-run dominant
+31292,2024-05-26,2193,Final,Kolkata Knight Riders Won by 8 wickets,62,True,40,2,20,Final,8-wicket dominant
+37097,2024-10-25,2670,Semi Final,Sri Lanka A Won by 7 wickets,61,True,35,6,20,Semi-Final,7-wicket comfortable
+45512,2025-09-26,3133,Super 4,India won the Super Over(Match Tied),60,True,20,40,0,Super 4,Super Over / Last-Ball Tie
+15187,2022-05-24,1358,Qualifier,Gujarat Titans Won by 7 Wickets,56,True,30,6,20,Qualifier/Eliminator,7-wicket comfortable
+15189,2022-05-27,1358,Qualifier,Rajasthan Royals won by 7 wickets,56,True,30,6,20,Qualifier/Eliminator,7-wicket comfortable
+50944,2026-05-29,3298,Qualifier,Gujarat Titans Won by 7 wickets,56,True,30,6,20,Qualifier/Eliminator,7-wicket comfortable
+21584,2023-05-24,1715,Eliminator,Mumbai Indians won by 81 runs,54,True,30,4,20,Qualifier/Eliminator,81-run dominant
+21585,2023-05-26,1715,Qualifier,Gujarat Titans won by 62 runs,54,True,30,4,20,Qualifier/Eliminator,62-run dominant
+31291,2024-05-24,2193,Qualifier,Sunrisers Hyderabad Won by 36 runs,54,True,30,4,20,Qualifier/Eliminator,36-run dominant
+50942,2026-05-26,3298,Qualifier,Royal Challengers Bengaluru Won by 92 runs,54,True,30,4,20,Qualifier/Eliminator,92-run dominant
+50943,2026-05-27,3298,Eliminator,Rajasthan Royals Won by 47 runs,54,True,30,4,20,Qualifier/Eliminator,47-run dominant
+31289,2024-05-21,2193,Qualifier,Kolkata Knight Riders Won by 8 wickets,52,True,30,2,20,Qualifier/Eliminator,8-wicket dominant
+40764,2025-05-29,2725,Qualifier,Royal Challengers Bengaluru Won by 8 wickets,52,True,30,2,20,Qualifier/Eliminator,8-wicket dominant
+45511,2025-09-25,3133,Super 4,Pakistan Won by 11 runs,46,True,20,26,0,Super 4,11-run close
+21176,2023-04-02,1719,League,Sri Lanka won the super over,45,True,5,40,0,League,Super Over / Last-Ball Tie
+28962,2024-01-17,2059,Others,India Won Super Over By 10 Runs,45,True,5,40,0,League,Super Over / Last-Ball Tie
+34429,2024-07-30,2542,Others,India Tied with Srilanka (India Won the Super Over by 2 wickets),45,True,5,40,0,League,Super Over / Last-Ball Tie
+40725,2025-04-16,2725,League,Delhi Capitals Tied with Rajasthan Royals (DC won the Super Over),45,True,5,40,0,League,Super Over / Last-Ball Tie
+50359,2026-04-26,3298,League,Kolkata Knight Riders Won by Super over (Match Tied),45,True,5,40,0,League,Super Over / Last-Ball Tie
+13512,2022-01-23,1331,League,England Won by 1 Run,43,True,5,38,0,League,1-run cliff
+14113,2022-04-10,1358,League,Rajasthan Royals Won By 3 Runs,43,True,5,38,0,League,3-run cliff
+14145,2022-05-06,1358,League,Mumbai Indians won by 5 runs,43,True,5,38,0,League,5-run cliff
+14159,2022-05-17,1358,League,Sunrisers Hyderabad Won by 3 Runs,43,True,5,38,0,League,3-run cliff
+14160,2022-05-18,1358,League,Lucknow Super Giants Won by 2 Runs,43,True,5,38,0,League,2-run cliff
+15796,2022-06-28,1474,League,India Won by 4 Runs,43,True,5,38,0,League,4-run cliff
+16662,2022-09-07,1533,League,Pakistan Won by 1 Wicket,43,True,5,38,0,League,1-wicket nail-biter
+16863,2022-08-21,1551,League,Kuwait Won by 1 wicket,43,True,5,38,0,League,1-wicket nail-biter
+17556,2022-09-25,1595,League,Pakistan Won by 3 Runs,43,True,5,38,0,League,3-run cliff
+19556,2023-01-03,1698,Others,India Won by 2 Runs,43,True,5,38,0,League,2-run cliff
+20188,2023-04-05,1715,League,Punjab Kings Won by 5 runs,43,True,5,38,0,League,5-run cliff
+20195,2023-04-10,1715,League,Lucknow Super Giants Won by 1 wicket,43,True,5,38,0,League,1-wicket nail-biter
+20197,2023-04-12,1715,League,Rajasthan Royals Won by 3 Runs,43,True,5,38,0,League,3-run cliff
+20224,2023-05-02,1715,League,Delhi Capitals Won by 5 runs,43,True,5,38,0,League,5-run cliff
+20227,2023-05-04,1715,League,Kolkata Knight Riders Won by 5 Runs,43,True,5,38,0,League,5-run cliff
+20243,2023-05-16,1715,League,Lucknow Super Giants won by 5 runs,43,True,5,38,0,League,5-run cliff
+20248,2023-05-20,1715,League,Lucknow Super Giants won by 1 run,43,True,5,38,0,League,1-run cliff
+21405,2023-04-17,1799,League,New Zealand Won by 4 Runs,43,True,5,38,0,League,4-run cliff
+24822,2023-08-18,1998,League,India Won by 2 Runs (DLS method),43,True,5,38,0,League,2-run cliff
+28057,2023-12-07,2188,Others,Zimbabwe Won By 1 Wicket,43,True,5,38,0,League,1-wicket nail-biter
+30058,2024-03-23,2193,League,Kolkata Knight Riders won by 4 runs,43,True,5,38,0,League,4-run cliff
+31241,2024-04-09,2193,League,Sunrisers Hyderabad Won by 2 runs,43,True,5,38,0,League,2-run cliff
+31254,2024-04-21,2193,League,Kolkata Knight Riders Won by 1 runs,43,True,5,38,0,League,1-run cliff
+31258,2024-04-24,2193,League,Delhi Capitals Won by 4 runs,43,True,5,38,0,League,4-run cliff
+31268,2024-05-02,2193,League,Sunrisers Hyderabad Won by 1 runs,43,True,5,38,0,League,1-run cliff
+29924,2024-02-17,2267,Others,Sri Lanka Won by 4 runs,43,True,5,38,0,League,4-run cliff
+29926,2024-02-21,2267,Others,Afghanistan won by 3 runs,43,True,5,38,0,League,3-run cliff
+30341,2024-03-04,2305,League,Sri Lanka won by 3 runs,43,True,5,38,0,League,3-run cliff
+31710,2024-04-25,2350,League,New Zealand Won by 4 runs,43,True,5,38,0,League,4-run cliff
+32135,2024-05-10,2371,Others,Bangladesh Won by 5 runs,43,True,5,38,0,League,5-run cliff
+32621,2024-05-19,2398,Others,Ireland Won by 1 runs,43,True,5,38,0,League,1-run cliff
+32625,2024-05-24,2398,Others,Ireland Won by 3 runs,43,True,5,38,0,League,3-run cliff
+35429,2024-08-28,2605,League,Netherlands Won by 4 runs,43,True,5,38,0,League,4-run cliff
+37895,2024-11-10,2716,League,New Zealand Won by 5 runs,43,True,5,38,0,League,5-run cliff
+40697,2025-03-24,2725,League,Delhi Capitals Won by 1 wickets,43,True,5,38,0,League,1-wicket nail-biter
+40712,2025-04-08,2725,League,Lucknow Super Giants Won by 4 runs,43,True,5,38,0,League,4-run cliff
+40729,2025-04-19,2725,League,Lucknow Super Giants Won by 2 runs,43,True,5,38,0,League,2-run cliff
+40745,2025-05-03,2725,League,Royal Challengers Bengaluru Won by 2 runs,43,True,5,38,0,League,2-run cliff
+40746,2025-05-04,2725,League,Kolkata Knight Riders Won by 1 run,43,True,5,38,0,League,1-run cliff
+45856,2025-09-05,3159,League,Afghanistan Won by 4 runs,43,True,5,38,0,League,4-run cliff
+47966,2025-11-06,3282,Others,New Zealand Won by 3 runs,43,True,5,38,0,League,3-run cliff
+50138,2026-04-08,3298,League,Gujarat Titans Won by 1 run,43,True,5,38,0,League,1-run cliff
+50341,2026-06-28,3446,Others,Ireland Won by 1 run,43,True,5,38,0,League,1-run cliff
+54711,2026-09-22,3739,Others,India Won by 2 runs,43,True,5,38,0,League,2-run cliff
+13523,2022-02-18,1335,League,India Won by 8 Runs,37,True,5,32,0,League,8-run edge
+14123,2022-04-18,1358,League,Rajasthan Royals Won by 7 Runs,37,True,5,32,0,League,7-run edge
+14128,2022-04-23,1358,League,Gujarat Titans Won by 8 Runs,37,True,5,32,0,League,8-run edge
+14139,2022-05-01,1358,League,Lucknow Super Giants won by 6 runs,37,True,5,32,0,League,6-run edge
+16426,2022-08-02,1523,League,Zimbabwe Won by 10 runs,37,True,5,32,0,League,10-run edge
+16657,2022-09-01,1533,League,Sri Lanka Won by 2 Wickets,37,True,5,32,0,League,2-wicket thriller
+16862,2022-08-20,1551,League,Hong Kong Won by 8 runs,37,True,5,32,0,League,8-run edge
+17557,2022-09-28,1595,League,Pakistan Won by 6 Runs,37,True,5,32,0,League,6-run edge
+17631,2022-09-25,1601,League,Bangladesh won by 7 runs,37,True,5,32,0,League,7-run edge
+17763,2022-10-09,1611,League,England Won by 8 Runs,37,True,5,32,0,League,8-run edge
+17764,2022-10-12,1611,League,England Won by 8 Runs,37,True,5,32,0,League,8-run edge
+20182,2023-04-01,1715,League,Punjab Kings Won by 7 Runs(D/L Method),37,True,5,32,0,League,7-run edge
+20201,2023-04-15,1715,League,Punjab Kings won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+20204,2023-04-17,1715,League,Chennai Super Kings Won by 8 Runs,37,True,5,32,0,League,8-run edge
+20206,2023-04-19,1715,League,Lucknow Super Giants Won by 10 Runs,37,True,5,32,0,League,10-run edge
+20210,2023-04-22,1715,League,Gujarat Titans Won by 7 runs,37,True,5,32,0,League,7-run edge
+20212,2023-04-23,1715,League,Royal Challengers Bengaluru Won By 7 Runs,37,True,5,32,0,League,7-run edge
+20214,2023-04-24,1715,League,Delhi Capitals Won by 7 Runs,37,True,5,32,0,League,7-run edge
+20220,2023-04-29,1715,League,Sunrisers Hyderabad Won by 9 Runs,37,True,5,32,0,League,9-run edge
+19961,2023-03-28,1718,League,West Indies Won by 7 runs,37,True,5,32,0,League,7-run edge
+23673,2023-07-14,1885,League,Bangladesh Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+24351,2023-08-06,1913,League,West Indies Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+27060,2023-11-23,2046,Others,India won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+27064,2023-12-03,2046,Others,India won by 6 runs,37,True,5,32,0,League,6-run edge
+28064,2023-12-14,2048,Others,West Indies won by 10 runs,37,True,5,32,0,League,10-run edge
+30060,2024-03-24,2193,League,Gujarat Titans won by 6 runs,37,True,5,32,0,League,6-run edge
+31250,2024-04-16,2193,League,Rajasthan Royals Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+31251,2024-04-18,2193,League,Mumbai Indians Won by 9 runs,37,True,5,32,0,League,9-run edge
+31261,2024-04-27,2193,League,Delhi Capitals Won by 10 runs,37,True,5,32,0,League,10-run edge
+31711,2024-04-27,2350,League,Pakistan Won by 9 runs,37,True,5,32,0,League,9-run edge
+32134,2024-05-07,2371,Others,Bangladesh Won by 9 runs,37,True,5,32,0,League,9-run edge
+38842,2024-12-16,2457,Others,Bangladesh Won by 7 runs,37,True,5,32,0,League,7-run edge
+40037,2025-01-25,2513,League,India Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+37015,2024-09-29,2562,League,Ireland Won by 10 runs,37,True,5,32,0,League,10-run edge
+35427,2024-08-26,2605,League,Canada Won by 8 runs,37,True,5,32,0,League,8-run edge
+37088,2024-10-19,2670,League,India A Won by 7 runs,37,True,5,32,0,League,7-run edge
+37928,2024-12-05,2722,League,Zimbabwe Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+40704,2025-03-30,2725,League,Rajasthan Royals Won by 6 runs,37,True,5,32,0,League,6-run edge
+40750,2025-05-07,2725,League,Chennai Super Kings Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+40760,2025-05-18,2725,League,Punjab Kings Won by 10 runs,37,True,5,32,0,League,10-run edge
+38632,2024-12-28,2755,League,New Zealand Won by 8 runs,37,True,5,32,0,League,8-run edge
+38634,2025-01-02,2755,League,Sri Lanka Won by 7 runs,37,True,5,32,0,League,7-run edge
+41511,2025-08-02,2875,Others,West Indies Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+41851,2026-02-01,2906,Others,West Indies Won by 6 runs(DLS Method),37,True,5,32,0,League,6-run edge
+41971,2025-08-16,2912,Others,Australia Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+42784,2025-05-19,2975,League,United Arab Emirates Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+44266,2025-07-22,3074,Others,Bangladesh Won by 8 runs,37,True,5,32,0,League,8-run edge
+45503,2025-09-16,3133,League,Bangladesh Won by 8 runs,37,True,5,32,0,League,8-run edge
+46754,2025-10-03,3228,Others,Bangladesh Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+47262,2025-11-02,3254,Others,Afghanistan Won by 9 runs,37,True,5,32,0,League,9-run edge
+47965,2025-11-05,3282,Others,West Indies Won by 7 runs,37,True,5,32,0,League,7-run edge
+47967,2025-11-09,3282,Others,New Zealand Won by 9 runs,37,True,5,32,0,League,9-run edge
+47981,2025-11-27,3288,League,Sri Lanka Won by 6 runs,37,True,5,32,0,League,6-run edge
+48019,2025-11-16,3289,League,Oman Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+48026,2025-11-19,3289,League,Sri Lanka A Won by 6 runs,37,True,5,32,0,League,6-run edge
+50133,2026-04-04,3298,League,Rajasthan Royals Won by 6 runs,37,True,5,32,0,League,6-run edge
+50348,2026-04-18,3298,League,Sunrisers Hyderabad Won by 10 runs,37,True,5,32,0,League,10-run edge
+50371,2026-05-07,3298,League,Lucknow Super Giants Won by 9 runs (DLS method),37,True,5,32,0,League,9-run edge
+50375,2026-05-10,3298,League,Royal Challengers Bengaluru Won by 2 wickets,37,True,5,32,0,League,2-wicket thriller
+50598,2026-06-19,3482,Others,Australia Won by 7 runs,37,True,5,32,0,League,7-run edge
+45507,2025-09-20,3133,Super 4,Bangladesh Won by 4 wickets,34,True,20,14,0,Super 4,4-wicket win
+45509,2025-09-23,3133,Super 4,Pakistan Won by 5 wickets,34,True,20,14,0,Super 4,5-wicket win
+14103,2022-04-02,1358,League,Gujarat Titans won by 14 runs,31,True,5,26,0,League,14-run close
+14105,2022-04-04,1358,League,Lucknow Super Giants won by 12 Runs,31,True,5,26,0,League,12-run close
+14116,2022-04-13,1358,League,Punjab Kings won by 12 runs,31,True,5,26,0,League,12-run close
+14127,2022-04-22,1358,League,Rajasthan Royals Won by 15 Runs,31,True,5,26,0,League,15-run close
+14131,2022-04-25,1358,League,Punjab Kings Won by 11 Runs,31,True,5,26,0,League,11-run close
+14140,2022-05-01,1358,League,Chennai Super Kings won by 13 runs,31,True,5,26,0,League,13-run close
+14143,2022-05-04,1358,League,Royal Challengers Bengaluru won by 13 Runs,31,True,5,26,0,League,13-run close
+16683,2022-08-11,1537,League,New Zealand Won by 13 Runs,31,True,5,26,0,League,13-run close
+20186,2023-04-03,1715,League,Chennai Super Kings Won by 12 runs,31,True,5,26,0,League,12-run close
+20205,2023-04-18,1715,League,Mumbai Indians Won by 14 Runs,31,True,5,26,0,League,14-run close
+20244,2023-05-17,1715,League,Delhi Capitals Won by 15 runs,31,True,5,26,0,League,15-run close
+29815,2024-02-09,2061,Others,Australia Won by 11 runs,31,True,5,26,0,League,11-run close
+30064,2024-03-28,2193,League,Rajasthan Royals won by 12 runs,31,True,5,26,0,League,12-run close
+33803,2024-07-06,2372,Others,Zimbabwe Won by 13 runs,31,True,5,26,0,League,13-run close
+37355,2024-11-16,2387,Others,Australia Won by 13 runs,31,True,5,26,0,League,13-run close
+38795,2024-12-10,2442,League,South Africa Won by 11 runs,31,True,5,26,0,League,11-run close
+40039,2025-01-31,2513,League,India Won by 15 runs,31,True,5,26,0,League,15-run close
+36208,2025-09-10,2628,League,South Africa Won by 14 runs(DLS method),31,True,5,26,0,League,14-run close
+37086,2024-10-18,2670,League,Afghanistan A Won by 11 runs,31,True,5,26,0,League,11-run close
+37942,2024-11-13,2718,League,India Won by 11 runs,31,True,5,26,0,League,11-run close
+40698,2025-03-25,2725,League,Punjab Kings Won by 11 runs,31,True,5,26,0,League,11-run close
+40709,2025-04-04,2725,League,Lucknow Super Giants Won by 12 runs,31,True,5,26,0,League,12-run close
+40714,2025-04-07,2725,League,Royal Challengers Bengaluru Won by 12 runs,31,True,5,26,0,League,12-run close
+40722,2025-04-13,2725,League,Mumbai Indians Won by 12 runs,31,True,5,26,0,League,12-run close
+40735,2025-04-24,2725,League,Royal Challengers Bengaluru Won by 11 runs,31,True,5,26,0,League,11-run close
+40741,2025-04-29,2725,League,Kolkata Knight Riders Won by 14 runs,31,True,5,26,0,League,14-run close
+41510,2025-07-31,2875,Others,Pakistan Won by 14 runs,31,True,5,26,0,League,14-run close
+41512,2025-08-03,2875,Others,Pakistan Won by 13 runs,31,True,5,26,0,League,13-run close
+46941,2025-10-30,3241,Others,West Indies Won by 14 runs,31,True,5,26,0,League,14-run close
+48514,2026-01-12,3317,Others,Sri Lanka Won by 14 runs,31,True,5,26,0,League,14-run close
+48598,2026-01-22,3331,Others,West Indies Won by 13 runs,31,True,5,26,0,League,13-run close
+48610,2026-01-30,3334,Others,England Won by 11 runs (DLS method),31,True,5,26,0,League,11-run close
+48612,2026-02-03,3334,Others,England Won by 12 runs,31,True,5,26,0,League,12-run close
+50406,2026-10-11,3450,Others,India Won by 14 runs,31,True,5,26,0,League,14-run close
+14122,2022-04-17,1358,League,Gujarat Titans won by 3 wickets,29,False,5,24,0,League,3-wicket close
+14126,2022-04-21,1358,League,Chennai Super Kings Won by 3 Wickets,29,False,5,24,0,League,3-wicket close
+17640,2022-10-05,1603,League,Australia Won by 3 Wickets,29,False,5,24,0,League,3-wicket close
+20193,2023-04-09,1715,League,Kolkata Knight Riders Won By 3 Wickets,29,False,5,24,0,League,3-wicket close
+20203,2023-04-16,1715,League,Rajasthan Royals Won by 3 Wickets,29,False,5,24,0,League,3-wicket close
+19959,2023-03-25,1718,League,West Indies won by 3 wickets,29,False,5,24,0,League,3-wicket close
+30072,2024-04-04,2193,League,Punjab Kings Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+31242,2024-04-10,2193,League,Gujarat Titans Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+31245,2024-04-13,2193,League,Rajasthan Royals Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+31255,2024-04-21,2193,League,Gujarat Titans Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+28957,2024-01-14,2229,Others,Sri Lanka Won By 3 Wickets,29,False,5,24,0,League,3-wicket close
+37351,2024-11-15,2455,Others,England Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+36563,2024-09-13,2548,League,England Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+37941,2024-11-10,2718,League,South Africa Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+40749,2025-05-06,2725,League,Gujarat Titans Won by 3 wickets (DLS Method),29,False,5,24,0,League,3-wicket close
+38628,2024-12-12,2753,League,Afghanistan Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+39984,2025-02-23,2801,League,Zimbabwe Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+41505,2025-07-20,2874,Others,Australia Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+41508,2025-07-26,2874,Others,Australia Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+41509,2025-07-28,2874,Others,Australia Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+46312,2025-10-04,3197,Others,Australia Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+48018,2025-11-15,3289,League,Afghanistan A Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+50128,2026-03-31,3298,League,Punjab Kings Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+50139,2026-04-09,3298,League,Lucknow Super Giants Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+50376,2026-05-11,3298,League,Delhi Capitals Won by 3 wickets,29,False,5,24,0,League,3-wicket close
+45508,2025-09-21,3133,Super 4,India Won by 6 wickets,26,False,20,6,0,Super 4,6-wicket comfortable
+45510,2025-09-24,3133,Super 4,India Won by 41 runs,24,False,20,4,0,Super 4,41-run dominant
+13513,2022-01-26,1331,League,West Indies Won by 20 runs,23,False,5,18,0,League,20-run moderate
+13515,2022-01-30,1331,League,West Indies Won by 17 runs,23,False,5,18,0,League,17-run moderate
+13524,2022-02-20,1335,League,India Won by 17 runs,23,False,5,18,0,League,17-run moderate
+13612,2022-02-11,1345,League,Australia Won by 20 runs (D/L method),23,False,5,18,0,League,20-run moderate
+14102,2022-04-02,1358,League,Rajasthan Royals Won by 23 Runs,23,False,5,18,0,League,23-run moderate
+14115,2022-04-12,1358,League,Chennai Super Kings Won by 23 Runs,23,False,5,18,0,League,23-run moderate
+14119,2022-04-16,1358,League,Lucknow Super Giants won by 18 runs,23,False,5,18,0,League,18-run moderate
+14120,2022-04-16,1358,League,Royal Challengers Bengaluru won by 16 runs,23,False,5,18,0,League,16-run moderate
+14124,2022-04-19,1358,League,Royal Challengers Bengaluru won by 18 runs,23,False,5,18,0,League,18-run moderate
+14135,2022-04-29,1358,League,Lucknow Super Giants Won by 20 Runs,23,False,5,18,0,League,20-run moderate
+14144,2022-05-05,1358,League,Delhi Capitals Won by 21 Runs,23,False,5,18,0,League,21-run moderate
+14157,2022-05-15,1358,League,Rajasthan Royals Won by 24 Runs,23,False,5,18,0,League,24-run moderate
+14158,2022-05-16,1358,League,Delhi Capitals Won by 17 Runs,23,False,5,18,0,League,17-run moderate
+15610,2022-06-12,1458,League,Afghanistan Won by 21 Runs,23,False,5,18,0,League,21-run moderate
+16042,2022-07-10,1494,League,England Won by 17 runs,23,False,5,18,0,League,17-run moderate
+16424,2022-07-30,1523,League,Zimbabwe Won by 17 Runs,23,False,5,18,0,League,17-run moderate
+16646,2022-08-03,1531,League,South Africa won by 21 runs,23,False,5,18,0,League,21-run moderate
+16666,2022-08-04,1534,League,New Zealand Won by 16 Runs,23,False,5,18,0,League,16-run moderate
+16752,2022-08-12,1543,League,Afghanistan Won by 22 Runs,23,False,5,18,0,League,22-run moderate
+17626,2022-10-02,1599,League,India Won by 16 Runs,23,False,5,18,0,League,16-run moderate
+17737,2022-10-07,1608,League,Pakistan Won by 21 Runs,23,False,5,18,0,League,21-run moderate
+19557,2023-01-05,1698,League,Sri Lanka Won by 16 Runs,23,False,5,18,0,League,16-run moderate
+19715,2023-01-27,1700,League,New Zealand won by 21 runs,23,False,5,18,0,League,21-run moderate
+20199,2023-04-14,1715,League,Sunrisers Hyderabad Won By 23 Runs,23,False,5,18,0,League,23-run moderate
+20200,2023-04-15,1715,League,Royal Challengers Bengaluru won by 23 runs,23,False,5,18,0,League,23-run moderate
+20207,2023-04-20,1715,League,Royal Challengers Bengaluru Won by 24 Runs,23,False,5,18,0,League,24-run moderate
+20216,2023-04-26,1715,League,Kolkata Knight Riders Won by 21 Runs,23,False,5,18,0,League,21-run moderate
+20135,2023-03-14,1742,League,Bangladesh won by 16 runs,23,False,5,18,0,League,16-run moderate
+21070,2023-03-27,1769,League,Bangladesh Won by 22 Runs (DLS method),23,False,5,18,0,League,22-run moderate
+24792,2023-08-17,1997,League,New Zealand Won by 19 Runs,23,False,5,18,0,League,19-run moderate
+27063,2023-12-01,2046,Others,India Won by 20 runs,23,False,5,18,0,League,20-run moderate
+28964,2024-01-14,2060,Others,New Zealand Won by 21 Runs,23,False,5,18,0,League,21-run moderate
+30059,2024-03-24,2193,League,Rajasthan Royals won by 20 runs,23,False,5,18,0,League,20-run moderate
+30066,2024-03-30,2193,League,Lucknow Super Giants won by 21 runs,23,False,5,18,0,League,21-run moderate
+30068,2024-03-31,2193,League,Delhi Capitals Won by 20 runs,23,False,5,18,0,League,20-run moderate
+31247,2024-04-14,2193,League,Chennai Super Kings Won by 20 runs,23,False,5,18,0,League,20-run moderate
+31248,2024-04-15,2193,League,Sunrisers Hyderabad Won by 25 runs,23,False,5,18,0,League,25-run moderate
+31269,2024-05-03,2193,League,Kolkata Knight Riders Won by 24 runs,23,False,5,18,0,League,24-run moderate
+31274,2024-05-07,2193,League,Delhi Capitals Won by 20 runs,23,False,5,18,0,League,20-run moderate
+31278,2024-05-11,2193,League,Kolkata Knight Riders Won by 18 runs,23,False,5,18,0,League,18-run moderate
+31282,2024-05-14,2193,League,Delhi Capitals Won by 19 runs,23,False,5,18,0,League,19-run moderate
+31285,2024-05-17,2193,League,Lucknow Super Giants Won by 18 runs,23,False,5,18,0,League,18-run moderate
+32611,2024-05-25,2354,Others,England Won by 23 runs,23,False,5,18,0,League,23-run moderate
+33805,2024-07-10,2372,Others,India Won by 23 runs,23,False,5,18,0,League,23-run moderate
+32618,2024-05-26,2452,Others,West Indies Won by 16 runs,23,False,5,18,0,League,16-run moderate
+35428,2024-08-27,2605,League,United States Of America Won by 20 runs,23,False,5,18,0,League,20-run moderate
+36199,2025-06-06,2626,League,England Won by 21 runs,23,False,5,18,0,League,21-run moderate
+37094,2024-10-22,2670,League,Sri Lanka A Won by 19 runs,23,False,5,18,0,League,19-run moderate
+40710,2025-04-05,2725,League,Delhi Capitals Won by 25 runs,23,False,5,18,0,League,25-run moderate
+40715,2025-04-08,2725,League,Punjab Kings Won by 18 runs,23,False,5,18,0,League,18-run moderate
+40724,2025-04-15,2725,League,Punjab Kings Won by 16 runs,23,False,5,18,0,League,16-run moderate
+41969,2025-08-10,2912,Others,Australia Won by 17 runs,23,False,5,18,0,League,17-run moderate
+45506,2025-09-19,3133,League,India Won by 21 runs,23,False,5,18,0,League,21-run moderate
+45854,2025-09-02,3159,League,Afghanistan Won by 18 runs,23,False,5,18,0,League,18-run moderate
+46249,2025-09-27,3190,Others,Nepal Won by 19 runs,23,False,5,18,0,League,19-run moderate
+46940,2025-10-27,3241,Others,West Indies Won by 16 runs,23,False,5,18,0,League,16-run moderate
+48025,2025-11-19,3289,League,Afghanistan A Won by 24 runs,23,False,5,18,0,League,24-run moderate
+50142,2026-04-11,3298,League,Chennai Super Kings Won by 23 runs,23,False,5,18,0,League,23-run moderate
+50144,2026-04-12,3298,League,Royal Challengers Bengaluru Won by 18 runs,23,False,5,18,0,League,18-run moderate
+50382,2026-05-17,3298,League,Royal Challengers Bengaluru Won by 23 runs,23,False,5,18,0,League,23-run moderate
+48915,2026-01-29,3358,Others,Pakistan Won by 22 runs,23,False,5,18,0,League,22-run moderate
+49739,2026-03-22,3395,Others,South Africa Won by 19 runs,23,False,5,18,0,League,19-run moderate
+50407,2026-10-14,3450,Others,West Indies Won by 24 runs,23,False,5,18,0,League,24-run moderate
+55560,2026-10-29,3787,Others,Afghanistan Won by 19 runs,23,False,5,18,0,League,19-run moderate
+13616,2022-02-20,1345,League,Sri Lanka Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+14095,2022-03-27,1358,League,Delhi Capitals Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+14097,2022-03-28,1358,League,Gujarat Titans Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+14107,2022-04-06,1358,League,Kolkata Knight Riders Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+14133,2022-04-27,1358,League,Gujarat Titans Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+14134,2022-04-28,1358,League,Delhi Capitals Won By 4 Wickets,19,False,5,14,0,League,4-wicket win
+14137,2022-04-30,1358,League,Mumbai Indians Won By 5 Wickets,19,False,5,14,0,League,5-wicket win
+14153,2022-05-12,1358,League,Mumbai Indians Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+14162,2022-05-20,1358,League,Rajasthan Royals Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+14163,2022-05-21,1358,League,Mumbai Indians Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+14164,2022-05-22,1358,League,Punjab Kings Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+15460,2022-06-11,1435,League,Sri Lanka Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+15407,2022-06-12,1439,League,South Africa Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+15548,2022-07-07,1452,League,West Indies Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+16063,2022-08-01,1499,League,West Indies Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+16654,2022-08-28,1533,League,India Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+16659,2022-09-03,1533,League,Sri Lanka Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+16660,2022-09-04,1533,League,Pakistan Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+16664,2022-09-09,1533,League,Sri Lanka Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+16751,2022-08-11,1543,League,Ireland Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+17394,2022-09-20,1584,League,Australia Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+19690,2023-01-12,1709,League,Zimbabwe Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+19692,2023-01-15,1709,League,Zimbabwe Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+20181,2023-03-31,1715,League,Gujarat Titans Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+20202,2023-04-16,1715,League,Mumbai Indians won by 5 wickets,19,False,5,14,0,League,5-wicket win
+20208,2023-04-20,1715,League,Delhi Capitals Won By 4 Wickets,19,False,5,14,0,League,4-wicket win
+20232,2023-05-07,1715,League,Sunrisers Hyderabad Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+20233,2023-05-08,1715,League,Kolkata Knight Riders Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+20246,2023-05-19,1715,League,Rajasthan Royals Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+21178,2023-04-08,1719,League,New Zealand Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+25157,2023-09-03,2000,League,Australia Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+27062,2023-11-28,2046,Others,Australia Won by 5 Wickets,19,False,5,14,0,League,5-wicket win
+28046,2023-12-12,2047,Others,South Africa won by 5 wickets (DLS),19,False,5,14,0,League,5-wicket win
+28063,2023-12-13,2048,Others,West Indies Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+28067,2023-12-22,2048,Others,West Indies Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+28332,2023-12-27,2058,Others,Bangladesh won by 5 wickets,19,False,5,14,0,League,5-wicket win
+28058,2023-12-09,2188,Others,Ireland Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+30057,2024-03-23,2193,League,Punjab Kings Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+30061,2024-03-25,2193,League,Royal Challengers Bengaluru won by 4 wickets,19,False,5,14,0,League,4-wicket win
+31266,2024-04-30,2193,League,Lucknow Super Giants Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+31270,2024-05-04,2193,League,Royal Challengers Bengaluru Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+31279,2024-05-12,2193,League,Chennai Super Kings Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+31283,2024-05-15,2193,League,Punjab Kings Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+31287,2024-05-19,2193,League,Sunrisers Hyderabad Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+28958,2024-01-16,2229,Others,Zimbabwe Won by 4 Wickets,19,False,5,14,0,League,4-wicket win
+32290,2024-05-10,2395,League,Ireland Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+32624,2024-05-23,2398,Others,Ireland Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+37352,2024-11-17,2455,Others,West Indies Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+35423,2024-08-23,2605,League,Netherlands Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+36200,2025-06-08,2626,League,England Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+37085,2024-10-18,2670,League,Bangladesh A Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+37087,2024-10-19,2670,League,United Arab Emirates Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+37090,2024-10-20,2670,League,Afghanistan A Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+37093,2024-10-22,2670,League,Hong Kong Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+37553,2024-10-13,2692,League,West Indies Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+37894,2024-11-09,2716,League,Sri Lanka Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+40696,2025-03-23,2725,League,Chennai Super Kings Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+40700,2025-03-27,2725,League,Lucknow Super Giants Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+40723,2025-04-14,2725,League,Chennai Super Kings Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+40726,2025-04-17,2725,League,Mumbai Indians Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+40727,2025-04-18,2725,League,Punjab Kings Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+40736,2025-04-25,2725,League,Sunrisers Hyderabad Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+40742,2025-04-30,2725,League,Punjab Kings Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+38626,2024-12-09,2753,League,Zimbabwe Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+39809,2025-03-18,2793,League,New Zealand Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+41976,2025-10-31,2915,Others,Australia Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+41977,2025-11-02,2915,Others,India Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+45391,2026-07-04,3126,Others,England Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+45502,2025-09-15,3133,League,Sri Lanka Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+45903,2025-09-03,3162,Others,Sri Lanka Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+45904,2025-09-06,3162,Others,Zimbabwe Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+46007,2025-09-17,3174,Others,England Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+46742,2025-11-01,3223,Others,Pakistan Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+46753,2025-10-02,3228,Others,Bangladesh Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+46942,2025-11-01,3241,Others,West Indies Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+47242,2025-11-29,3251,Others,Bangladesh Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+47976,2025-11-17,3288,League,Pakistan Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50131,2026-04-03,3298,League,Punjab Kings Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50134,2026-04-05,3298,League,Lucknow Super Giants Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50344,2026-04-15,3298,League,Royal Challengers Bengaluru Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50346,2026-04-17,3298,League,Gujarat Titans Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50349,2026-04-19,3298,League,Kolkata Knight Riders Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+50355,2026-04-24,3298,League,Royal Challengers Bengaluru Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50357,2026-04-25,3298,League,Sunrisers Hyderabad Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50363,2026-04-30,3298,League,Gujarat Titans Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+50367,2026-05-03,3298,League,Gujarat Titans Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+50374,2026-05-10,3298,League,Chennai Super Kings Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50383,2026-05-17,3298,League,Delhi Capitals Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50384,2026-05-18,3298,League,Sunrisers Hyderabad Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50386,2026-05-20,3298,League,Kolkata Knight Riders Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+50505,2026-06-15,3464,Others,West Indies Won by 5 wickets,19,False,5,14,0,League,5-wicket win
+50597,2026-06-17,3482,Others,Australia Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+51385,2026-07-19,3568,Others,Bangladesh Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+54210,2026-10-22,3690,Others,India Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+54211,2026-10-24,3690,Others,India Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+55078,2026-10-09,3765,Others,Pakistan Won by 4 wickets,19,False,5,14,0,League,4-wicket win
+13514,2022-01-29,1331,League,England Won by 34 runs,15,False,5,10,0,League,34-run comfortable
+14132,2022-04-26,1358,League,Rajasthan Royals Won by 29 Runs,15,False,5,10,0,League,29-run comfortable
+15547,2022-07-03,1452,League,West Indies Won by 35 Runs,15,False,5,10,0,League,35-run comfortable
+15611,2022-06-14,1458,League,Afghanistan Won by 35 Runs,15,False,5,10,0,League,35-run comfortable
+16258,2022-07-18,1512,League,New Zealand Won by 31 Runs,15,False,5,10,0,League,31-run comfortable
+16753,2022-08-15,1543,League,Afghanistan Won by 27 Runs,15,False,5,10,0,League,27-run comfortable
+17632,2022-09-27,1601,League,Bangladesh Won by 32 Runs,15,False,5,10,0,League,32-run comfortable
+17641,2022-10-07,1603,League,Australia Won by 31 runs,15,False,5,10,0,League,31-run comfortable
+20217,2023-04-27,1715,League,Rajasthan Royals Won by 32 Runs,15,False,5,10,0,League,32-run comfortable
+20235,2023-05-10,1715,League,Chennai Super Kings Won by 27 Runs,15,False,5,10,0,League,27-run comfortable
+20237,2023-05-12,1715,League,Mumbai Indians Won by 27 Runs,15,False,5,10,0,League,27-run comfortable
+20239,2023-05-13,1715,League,Punjab Kings Won by 31 Runs,15,False,5,10,0,League,31-run comfortable
+20242,2023-05-15,1715,League,Gujarat Titans Won by 34 runs,15,False,5,10,0,League,34-run comfortable
+24794,2023-08-20,1997,League,New Zealand Won by 32 Runs,15,False,5,10,0,League,32-run comfortable
+24823,2023-08-20,1998,League,India Won by 33 Runs,15,False,5,10,0,League,33-run comfortable
+29816,2024-02-11,2061,Others,Australia Won by 34 Runs,15,False,5,10,0,League,34-run comfortable
+29984,2024-02-25,2062,Others,Australia Won by 27 Runs (DLS method),15,False,5,10,0,League,27-run comfortable
+30063,2024-03-27,2193,League,Sunrisers Hyderabad won by 31 runs,15,False,5,10,0,League,31-run comfortable
+30070,2024-04-02,2193,League,Lucknow Super Giants Won by 28 runs,15,False,5,10,0,League,28-run comfortable
+30075,2024-04-07,2193,League,Mumbai Indians Won by 29 runs,15,False,5,10,0,League,29-run comfortable
+30076,2024-04-07,2193,League,Lucknow Super Giants Won by 33 runs,15,False,5,10,0,League,33-run comfortable
+31259,2024-04-25,2193,League,Royal Challengers Bengaluru Won by 35 runs,15,False,5,10,0,League,35-run comfortable
+31271,2024-05-05,2193,League,Chennai Super Kings Won by 28 runs,15,False,5,10,0,League,28-run comfortable
+31277,2024-05-10,2193,League,Gujarat Titans Won by 35 runs,15,False,5,10,0,League,35-run comfortable
+31286,2024-05-18,2193,League,Royal Challengers Bengaluru Won by 27 runs,15,False,5,10,0,League,27-run comfortable
+30343,2024-03-09,2305,League,Sri Lanka won by 28 runs,15,False,5,10,0,League,28-run comfortable
+37354,2024-11-14,2387,Others,Australia Won by 29 runs,15,False,5,10,0,League,29-run comfortable
+32617,2024-05-24,2452,Others,West Indies Won by 28 runs,15,False,5,10,0,League,28-run comfortable
+36097,2024-08-26,2453,Others,West Indies Won by 30 runs,15,False,5,10,0,League,30-run comfortable
+38843,2024-12-18,2457,Others,Bangladesh Won by 27 runs,15,False,5,10,0,League,27-run comfortable
+40038,2025-01-28,2513,League,England Won by 26 runs,15,False,5,10,0,League,26-run comfortable
+36562,2024-09-11,2548,League,Australia Won by 28 runs,15,False,5,10,0,League,28-run comfortable
+40758,2025-05-22,2725,League,Lucknow Super Giants Won by 33 runs,15,False,5,10,0,League,33-run comfortable
+42031,2025-12-19,2921,Others,India Won by 30 runs,15,False,5,10,0,League,30-run comfortable
+42783,2025-05-17,2975,Others,Bangladesh Won by 27 runs,15,False,5,10,0,League,27-run comfortable
+45852,2025-08-30,3159,League,Pakistan Won by 31 runs,15,False,5,10,0,League,31-run comfortable
+45855,2025-09-04,3159,League,Pakistan Won by 31 runs,15,False,5,10,0,League,31-run comfortable
+50137,2026-04-07,3298,League,Rajasthan Royals Won by 27 runs,15,False,5,10,0,League,27-run comfortable
+50343,2026-04-14,3298,League,Chennai Super Kings Won by 32 runs,15,False,5,10,0,League,32-run comfortable
+50370,2026-05-06,3298,League,Sunrisers Hyderabad Won by 33 runs,15,False,5,10,0,League,33-run comfortable
+50381,2026-05-16,3298,League,Kolkata Knight Riders Won by 29 runs,15,False,5,10,0,League,29-run comfortable
+50390,2026-05-24,3298,League,Rajasthan Royals Won by 30 runs,15,False,5,10,0,League,30-run comfortable
+48467,2026-01-31,3313,Others,Ireland Won by 30 runs,15,False,5,10,0,League,30-run comfortable
+49740,2026-03-25,3395,Others,South Africa Won by 33 runs,15,False,5,10,0,League,33-run comfortable
+50340,2026-06-26,3446,Others,Ireland Won by 34 runs,15,False,5,10,0,League,34-run comfortable
+50509,2026-07-26,3465,Others,India Won by 35 runs,15,False,5,10,0,League,35-run comfortable
+51383,2026-07-15,3568,Others,Zimbabwe Won by 32 runs,15,False,5,10,0,League,32-run comfortable
+51384,2026-07-17,3568,Others,Bangladesh Won by 34 runs,15,False,5,10,0,League,34-run comfortable
+13522,2022-02-16,1335,League,India Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+13615,2022-02-18,1345,League,Australia Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+14108,2022-04-07,1358,League,Lucknow Super Giants won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+14109,2022-04-08,1358,League,Gujarat Titans won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+14111,2022-04-09,1358,League,Royal Challengers Bengaluru won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+14118,2022-04-15,1358,League,Sunrisers Hyderabad won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+14121,2022-04-17,1358,League,Sunrisers Hyderabad won by 7 wicket,11,False,5,6,0,League,7-wicket comfortable
+14136,2022-04-30,1358,League,Gujarat Titans won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+14141,2022-05-02,1358,League,Kolkata Knight Riders Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+14146,2022-05-07,1358,League,Rajasthan Royals won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+14156,2022-05-15,1358,League,Gujarat Titans won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+15609,2022-06-11,1458,League,Afghanistan Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+15795,2022-06-26,1474,League,India Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+16064,2022-08-02,1499,League,India Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+16260,2022-07-22,1512,League,New Zealand Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+16425,2022-07-31,1523,League,Bangladesh Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+16655,2022-08-30,1533,League,Afghanistan Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+16661,2022-09-06,1533,League,Sri Lanka Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+16750,2022-08-09,1543,League,Ireland Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+16754,2022-08-17,1543,League,Ireland Won by 7 Wickets(D/L Method),11,False,5,6,0,League,7-wicket comfortable
+16867,2022-08-24,1551,League,Kuwait Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+17395,2022-09-23,1584,League,India Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+17396,2022-09-25,1584,League,India Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+17553,2022-09-20,1595,League,England Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+17738,2022-10-08,1608,League,Pakistan Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+17742,2022-10-13,1608,League,Pakistan Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+19716,2023-01-29,1700,League,India won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+19691,2023-01-14,1709,League,Ireland Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20187,2023-04-04,1715,League,Gujarat Titans won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20190,2023-04-07,1715,League,Lucknow Super Giants Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20192,2023-04-08,1715,League,Chennai Super Kings Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+20196,2023-04-11,1715,League,Mumbai Indians Won By 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+20198,2023-04-13,1715,League,Gujarat Titans Won By 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+20209,2023-04-21,1715,League,Chennai Super Kings Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+20219,2023-04-29,1715,League,Gujarat Titans Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+20222,2023-04-30,1715,League,Mumbai Indians won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20225,2023-05-03,1715,League,Mumbai Indians Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20229,2023-05-06,1715,League,Chennai Super Kings Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20230,2023-05-06,1715,League,Delhi Capitals Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+20234,2023-05-09,1715,League,Mumbai Indians won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20238,2023-05-13,1715,League,Lucknow Super Giants Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+20241,2023-05-14,1715,League,Kolkata Knight Riders won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+20250,2023-05-21,1715,League,Gujarat Titans Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+19960,2023-03-26,1718,League,South Africa Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+20133,2023-03-09,1742,League,Bangladesh Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+21072,2023-03-31,1769,League,Ireland Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+20878,2023-03-24,1792,League,Afghanistan Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+20879,2023-03-26,1792,League,Afghanistan Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+21407,2023-04-24,1799,League,New Zealand Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+23674,2023-07-16,1885,League,Bangladesh Won by 6 Wickets(D/L Method),11,False,5,6,0,League,6-wicket comfortable
+24352,2023-08-08,1913,League,India Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+24793,2023-08-19,1997,League,United Arab Emirates Won by 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+25158,2023-08-30,1999,League,England won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+25161,2023-09-05,1999,League,New Zealand Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+28065,2023-12-16,2048,Others,England Won By 7 Wickets,11,False,5,6,0,League,7-wicket comfortable
+28960,2024-01-11,2059,Others,India Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+28961,2024-01-14,2059,Others,India Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+28966,2024-01-19,2060,Others,New Zealand Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+29982,2024-02-21,2062,Others,Australia Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+28059,2023-12-10,2188,Others,Ireland Won By 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+30056,2024-03-22,2193,League,Chennai Super Kings Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+30065,2024-03-29,2193,League,Kolkata Knight Riders won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+30067,2024-03-31,2193,League,Gujarat Titans Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+30069,2024-04-01,2193,League,Rajasthan Royals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+30073,2024-04-05,2193,League,Sunrisers Hyderabad Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+30074,2024-04-06,2193,League,Rajasthan Royals Won by 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+31240,2024-04-08,2193,League,Chennai Super Kings Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+31243,2024-04-11,2193,League,Mumbai Indians Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+31244,2024-04-12,2193,League,Delhi Capitals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+31249,2024-04-17,2193,League,Delhi Capitals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+31257,2024-04-23,2193,League,Lucknow Super Giants Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+31262,2024-04-27,2193,League,Rajasthan Royals Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+31265,2024-04-29,2193,League,Kolkata Knight Riders Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+31267,2024-05-01,2193,League,Punjab Kings Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+31273,2024-05-06,2193,League,Mumbai Indians Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+31708,2024-04-20,2350,League,Pakistan Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+31709,2024-04-21,2350,League,New Zealand Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+32613,2024-05-30,2354,Others,England Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+32133,2024-05-05,2371,Others,Bangladesh Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+37356,2024-11-18,2387,Others,Australia Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+32291,2024-05-12,2395,League,Pakistan Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+32292,2024-05-14,2395,League,Pakistan Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+38796,2024-12-13,2442,League,South Africa Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+36096,2024-08-24,2453,Others,West Indies Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+37350,2024-11-11,2455,Others,England Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+37276,2024-10-06,2512,League,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40036,2025-01-22,2513,League,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+34428,2024-07-28,2542,Others,India Won by 7 wickets(D/L Method),11,False,5,6,0,League,7-wicket comfortable
+36559,2024-09-04,2561,League,Australia Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+36561,2024-09-07,2561,League,Australia Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+37092,2024-10-21,2670,League,India A Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+37096,2024-10-23,2670,League,India A Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+40694,2025-03-22,2725,League,Royal Challengers Bengaluru Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40703,2025-03-30,2725,League,Delhi Capitals Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40713,2025-04-06,2725,League,Gujarat Titans Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40717,2025-04-10,2725,League,Delhi Capitals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+40719,2025-04-12,2725,League,Lucknow Super Giants Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+40728,2025-04-19,2725,League,Gujarat Titans Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40730,2025-04-20,2725,League,Royal Challengers Bengaluru Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40734,2025-04-23,2725,League,Mumbai Indians Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40739,2025-04-27,2725,League,Royal Challengers Bengaluru Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+40752,2025-05-27,2725,League,Royal Challengers Bengaluru Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+40754,2025-05-26,2725,League,Punjab Kings Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+40756,2025-05-20,2725,League,Rajasthan Royals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+40763,2025-05-19,2725,League,Sunrisers Hyderabad Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+43057,2025-05-24,2725,League,Delhi Capitals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+41507,2025-07-25,2874,Others,Australia Won By 6 Wickets,11,False,5,6,0,League,6-wicket comfortable
+41850,2026-01-29,2906,Others,South Africa Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+42029,2025-12-14,2921,Others,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+42744,2025-06-01,2973,Others,Pakistan Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+43171,2025-05-21,2975,Others,United Arab Emirates Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+43592,2025-07-10,3020,Others,Sri Lanka Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+44265,2025-07-20,3074,Others,Bangladesh Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+45490,2026-09-17,3128,Others,England Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+45497,2025-09-11,3133,League,Bangladesh Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+45499,2025-09-13,3133,League,Sri Lanka Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+45500,2025-09-14,3133,League,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+45505,2025-09-18,3133,League,Sri Lanka Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+46009,2025-09-21,3174,Others,England Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+46310,2025-10-01,3197,Others,Australia Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+46755,2025-10-05,3228,Others,Bangladesh Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+47261,2025-10-31,3254,Others,Afghanistan Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+47978,2025-11-22,3288,League,Pakistan Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+48021,2025-11-17,3289,League,Sri Lanka A Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+48024,2025-11-18,3289,League,India A Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50125,2026-03-28,3298,League,Royal Challengers Bengaluru Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50126,2026-03-29,3298,League,Mumbai Indians Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50129,2026-04-01,3298,League,Delhi Capitals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50132,2026-04-04,3298,League,Delhi Capitals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50140,2026-04-10,3298,League,Rajasthan Royals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50141,2026-04-11,3298,League,Punjab Kings Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50143,2026-04-12,3298,League,Gujarat Titans Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50345,2026-04-16,3298,League,Punjab Kings Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50347,2026-04-18,3298,League,Delhi Capitals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50356,2026-04-25,3298,League,Punjab Kings Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50361,2026-04-28,3298,League,Rajasthan Royals Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50362,2026-04-29,3298,League,Sunrisers Hyderabad Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50364,2026-05-01,3298,League,Delhi Capitals Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50366,2026-05-03,3298,League,Kolkata Knight Riders Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50368,2026-05-04,3298,League,Mumbai Indians Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50378,2026-05-13,3298,League,Royal Challengers Bengaluru Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50379,2026-05-14,3298,League,Mumbai Indians Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50380,2026-05-15,3298,League,Lucknow Super Giants Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50385,2026-05-19,3298,League,Rajasthan Royals Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50389,2026-05-23,3298,League,Punjab Kings Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+48512,2026-01-07,3317,Others,Pakistan Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+48592,2026-01-23,3329,Others,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+48611,2026-02-01,3334,Others,England Won by 6 wickets(DLS Method),11,False,5,6,0,League,6-wicket comfortable
+49736,2026-03-15,3395,Others,South Africa Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50188,2026-04-27,3433,Others,Bangladesh Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50190,2026-05-02,3433,Others,New Zealand Won by 6 wickets (DLS Method),11,False,5,6,0,League,6-wicket comfortable
+50405,2026-10-09,3450,Others,West Indies Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+50503,2026-06-12,3464,Others,West Indies Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50507,2026-07-23,3465,Others,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+50599,2026-06-21,3482,Others,Australia Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+54212,2026-10-27,3690,Others,India Won by 6 wickets,11,False,5,6,0,League,6-wicket comfortable
+54214,2026-11-01,3690,Others,New Zealand Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+54408,2026-09-13,3713,Others,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+54409,2026-09-15,3713,Others,India Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+55561,2026-11-01,3787,Others,Afghanistan Won by 7 wickets,11,False,5,6,0,League,7-wicket comfortable
+14098,2022-03-29,1358,League,Rajasthan Royals Won by 61 Runs,9,False,5,4,0,League,61-run dominant
+14104,2022-04-03,1358,League,Punjab Kings won by 54 runs,9,False,5,4,0,League,54-run dominant
+14112,2022-04-10,1358,League,Delhi Capitals won by 44 run,9,False,5,4,0,League,44-run dominant
+14117,2022-04-14,1358,League,Gujarat Titans Won by 37 runs,9,False,5,4,0,League,37-run dominant
+14147,2022-05-07,1358,League,Lucknow Super Giants won by 75 runs,9,False,5,4,0,League,75-run dominant
+14148,2022-05-08,1358,League,Royal Challengers Bengaluru won by 67 runs,9,False,5,4,0,League,67-run dominant
+14149,2022-05-08,1358,League,Chennai Super Kings won by 91 runs,9,False,5,4,0,League,91-run dominant
+14150,2022-05-09,1358,League,Kolkata Knight Riders Won by 52 Runs,9,False,5,4,0,League,52-run dominant
+14151,2022-05-10,1358,League,Gujarat Titans won by 62 runs,9,False,5,4,0,League,62-run dominant
+14154,2022-05-13,1358,League,Punjab Kings won by 54 runs,9,False,5,4,0,League,54-run dominant
+14155,2022-05-14,1358,League,Kolkata Knight Riders won by 54 runs,9,False,5,4,0,League,54-run dominant
+15408,2022-06-14,1439,League,India Won by 48 runs,9,False,5,4,0,League,48-run dominant
+15409,2022-06-17,1439,League,India Won by 82 runs,9,False,5,4,0,League,82-run dominant
+16040,2022-07-07,1494,League,India Won by 50 Runs,9,False,5,4,0,League,50-run dominant
+16041,2022-07-09,1494,League,India Won by 49 Runs,9,False,5,4,0,League,49-run dominant
+16062,2022-07-29,1499,League,India Won by 68 Runs,9,False,5,4,0,League,68-run dominant
+16065,2022-08-06,1499,League,India Won by 59 Runs,9,False,5,4,0,League,59-run dominant
+16066,2022-08-07,1499,League,India Won by 88 Runs,9,False,5,4,0,League,88-run dominant
+16259,2022-07-20,1512,League,New Zealand Won by 88 runs,9,False,5,4,0,League,88-run dominant
+16315,2022-07-27,1517,League,England Won by 41 Runs,9,False,5,4,0,League,41-run dominant
+16316,2022-07-28,1517,League,South Africa Won by 58 Runs,9,False,5,4,0,League,58-run dominant
+16317,2022-07-31,1517,League,South Africa Won by 90 Runs,9,False,5,4,0,League,90-run dominant
+16647,2022-08-05,1531,League,South Africa Won by 44 Runs,9,False,5,4,0,League,44-run dominant
+16656,2022-08-31,1533,League,India Won by 40 Runs,9,False,5,4,0,League,40-run dominant
+16658,2022-09-02,1533,League,Pakistan Won by 155 Runs,9,False,5,4,0,League,155-run dominant
+16663,2022-09-08,1533,League,India Won by 101 Runs,9,False,5,4,0,League,101-run dominant
+16684,2022-08-13,1537,League,New Zealand Won by 90 Runs,9,False,5,4,0,League,90-run dominant
+16864,2022-08-22,1551,League,United Arab Emirates Won by 47 Runs,9,False,5,4,0,League,47-run dominant
+17555,2022-09-23,1595,League,England Won by 63 Runs,9,False,5,4,0,League,63-run dominant
+17559,2022-10-02,1595,League,England Won by 67 Runs,9,False,5,4,0,League,67-run dominant
+17627,2022-10-04,1599,League,South Africa Won by 49 Runs,9,False,5,4,0,League,49-run dominant
+17741,2022-10-12,1608,League,New Zealand Won by 48 Runs,9,False,5,4,0,League,48-run dominant
+18531,2022-11-20,1646,League,India won by 65 runs,9,False,5,4,0,League,65-run dominant
+19558,2023-01-07,1698,League,India Won by 91 Runs,9,False,5,4,0,League,91-run dominant
+19717,2023-02-01,1700,League,India Won by 168 runs,9,False,5,4,0,League,168-run dominant
+20183,2023-04-01,1715,League,Lucknow Super Giants Won by 50 runs,9,False,5,4,0,League,50-run dominant
+20184,2023-04-02,1715,League,Rajasthan Royals Won By 72 Runs,9,False,5,4,0,League,72-run dominant
+20189,2023-04-06,1715,League,Kolkata Knight Riders Won By 81 Runs,9,False,5,4,0,League,81-run dominant
+20191,2023-04-08,1715,League,Rajasthan Royals Won by 57 Runs,9,False,5,4,0,League,57-run dominant
+20213,2023-04-23,1715,League,Chennai Super Kings won by 49 runs,9,False,5,4,0,League,49-run dominant
+20215,2023-04-25,1715,League,Gujarat Titans Won by 55 runs,9,False,5,4,0,League,55-run dominant
+20218,2023-04-28,1715,League,Lucknow Super Giants Won by 56 runs,9,False,5,4,0,League,56-run dominant
+20231,2023-05-07,1715,League,Gujarat Titans Won By 56 Runs,9,False,5,4,0,League,56-run dominant
+20240,2023-05-14,1715,League,Royal Challengers Bengaluru Won by 112 runs,9,False,5,4,0,League,112-run dominant
+20247,2023-05-20,1715,League,Chennai Super Kings Won by 77 runs,9,False,5,4,0,League,77-run dominant
+21071,2023-03-29,1769,League,Bangladesh Won by 77 Runs,9,False,5,4,0,League,77-run dominant
+20880,2023-03-27,1792,League,Pakistan Won by 66 Runs,9,False,5,4,0,League,66-run dominant
+21403,2023-04-14,1799,League,Pakistan Won by 88 Runs,9,False,5,4,0,League,88-run dominant
+21404,2023-04-15,1799,League,Pakistan Won by 38 runs,9,False,5,4,0,League,38-run dominant
+25159,2023-09-01,1999,League,England Won by 95 runs,9,False,5,4,0,League,95-run dominant
+25160,2023-09-03,1999,League,New Zealand Won by 74 runs,9,False,5,4,0,League,74-run dominant
+25155,2023-08-30,2000,League,Australia Won by 111 Runs,9,False,5,4,0,League,111-run dominant
+27061,2023-11-26,2046,Others,India won by 44 runs,9,False,5,4,0,League,44-run dominant
+28047,2023-12-14,2047,Others,India won by 106 runs,9,False,5,4,0,League,106-run dominant
+28066,2023-12-20,2048,Others,England Won by 75 Runs,9,False,5,4,0,League,75-run dominant
+28963,2024-01-12,2060,Others,New Zealand won by 46 runs,9,False,5,4,0,League,46-run dominant
+28965,2024-01-17,2060,Others,New Zealand Won by 45 Runs,9,False,5,4,0,League,45-run dominant
+28967,2024-01-21,2060,Others,Pakistan Won by 42 Runs,9,False,5,4,0,League,42-run dominant
+29817,2024-02-13,2061,Others,West Indies Won by 37 runs,9,False,5,4,0,League,37-run dominant
+29983,2024-02-23,2062,Others,Australia Won by 72 Runs,9,False,5,4,0,League,72-run dominant
+30062,2024-03-26,2193,League,Chennai Super Kings won by 63 runs,9,False,5,4,0,League,63-run dominant
+30071,2024-04-03,2193,League,Kolkata Knight Riders Won by 106 runs,9,False,5,4,0,League,106-run dominant
+31253,2024-04-20,2193,League,Sunrisers Hyderabad Won by 67 runs,9,False,5,4,0,League,67-run dominant
+31264,2024-04-28,2193,League,Chennai Super Kings Won by 78 runs,9,False,5,4,0,League,78-run dominant
+31272,2024-05-05,2193,League,Kolkata Knight Riders Won by 98 runs,9,False,5,4,0,League,98-run dominant
+31276,2024-05-09,2193,League,Royal Challengers Bengaluru Won by 60 runs,9,False,5,4,0,League,60-run dominant
+31280,2024-05-12,2193,League,Royal Challengers Bengaluru Won by 47 runs,9,False,5,4,0,League,47-run dominant
+29925,2024-02-19,2267,Others,Sri Lanka Won by 72 Runs,9,False,5,4,0,League,72-run dominant
+30728,2024-03-15,2269,Others,Ireland won by 38 runs,9,False,5,4,0,League,38-run dominant
+30730,2024-03-18,2269,Others,Afghanistan won by 57 runs,9,False,5,4,0,League,57-run dominant
+33804,2024-07-07,2372,Others,India Won by 100 runs,9,False,5,4,0,League,100-run dominant
+33807,2024-07-14,2372,Others,India Won by 42 runs,9,False,5,4,0,League,42-run dominant
+32620,2024-05-18,2398,Others,Netherlands Won by 41 runs,9,False,5,4,0,League,41-run dominant
+32623,2024-05-22,2398,Others,Scotland Won by 71 runs,9,False,5,4,0,League,71-run dominant
+38844,2024-12-20,2457,Others,Bangladesh Won by 80 runs,9,False,5,4,0,League,80-run dominant
+37277,2024-10-09,2512,League,India Won by 86 runs,9,False,5,4,0,League,86-run dominant
+37278,2024-10-12,2512,League,India Won by 133 runs,9,False,5,4,0,League,133-run dominant
+40040,2025-02-02,2513,League,India Won by 150 runs,9,False,5,4,0,League,150-run dominant
+34427,2024-07-27,2542,League,India Won by 43 runs,9,False,5,4,0,League,43-run dominant
+36560,2024-09-06,2561,League,Australia Won by 70 runs,9,False,5,4,0,League,70-run dominant
+35425,2024-08-25,2605,League,Netherlands Won by 102 runs,9,False,5,4,0,League,102-run dominant
+36201,2025-06-10,2626,League,England Won by 37 runs,9,False,5,4,0,League,37-run dominant
+36209,2025-09-12,2628,League,England Won by 146 runs,9,False,5,4,0,League,146-run dominant
+37089,2024-10-20,2670,League,Sri Lanka A Won by 42 runs,9,False,5,4,0,League,42-run dominant
+37091,2024-10-21,2670,League,Pakistan A Won by 74 runs,9,False,5,4,0,League,74-run dominant
+37095,2024-10-23,2670,League,Pakistan A Won by 114 runs,9,False,5,4,0,League,114-run dominant
+37554,2024-10-15,2692,League,Sri Lanka Won by 73 runs,9,False,5,4,0,League,73-run dominant
+37940,2024-11-08,2718,League,India Won by 61 runs,9,False,5,4,0,League,61-run dominant
+37943,2024-11-15,2718,League,India Won by 135 runs,9,False,5,4,0,League,135-run dominant
+37926,2024-12-01,2722,League,Pakistan Won by 57 runs,9,False,5,4,0,League,57-run dominant
+40695,2025-03-23,2725,League,Sunrisers Hyderabad Won by 44 runs,9,False,5,4,0,League,44-run dominant
+40701,2025-03-28,2725,League,Royal Challengers Bengaluru Won by 50 runs,9,False,5,4,0,League,50-run dominant
+40702,2025-03-29,2725,League,Gujarat Titans Won by 36 runs,9,False,5,4,0,League,36-run dominant
+40708,2025-04-03,2725,League,Kolkata Knight Riders Won by 80 runs,9,False,5,4,0,League,80-run dominant
+40711,2025-04-05,2725,League,Rajasthan Royals Won by 50 runs,9,False,5,4,0,League,50-run dominant
+40716,2025-04-09,2725,League,Gujarat Titans Won by 58 runs,9,False,5,4,0,League,58-run dominant
+40732,2025-04-21,2725,League,Gujarat Titans Won by 39 runs,9,False,5,4,0,League,39-run dominant
+40738,2025-04-27,2725,League,Mumbai Indians Won by 54 runs,9,False,5,4,0,League,54-run dominant
+40743,2025-05-01,2725,League,Mumbai Indians Won by 100 runs,9,False,5,4,0,League,100-run dominant
+40744,2025-05-02,2725,League,Gujarat Titans Won by 38 runs,9,False,5,4,0,League,38-run dominant
+40747,2025-05-04,2725,League,Punjab Kings Won by 37 runs,9,False,5,4,0,League,37-run dominant
+40753,2025-05-25,2725,League,Sunrisers Hyderabad Won by 110 runs,9,False,5,4,0,League,110-run dominant
+40757,2025-05-23,2725,League,Sunrisers Hyderabad Won by 42 runs,9,False,5,4,0,League,42-run dominant
+40759,2025-05-21,2725,League,Mumbai Indians Won by 59 runs,9,False,5,4,0,League,59-run dominant
+40762,2025-05-25,2725,League,Chennai Super Kings Won by 83 runs,9,False,5,4,0,League,83-run dominant
+38627,2024-12-11,2753,League,Afghanistan Won by 50 runs,9,False,5,4,0,League,50-run dominant
+38633,2024-12-30,2755,League,New Zealand Won by 45 runs,9,False,5,4,0,League,45-run dominant
+39811,2025-03-23,2793,League,New Zealand Won by 115 runs,9,False,5,4,0,League,115-run dominant
+41504,2025-06-15,2873,Others,West Indies Won by 62 runs,9,False,5,4,0,League,62-run dominant
+41970,2025-08-12,2912,Others,South Africa Won by 53 runs,9,False,5,4,0,League,53-run dominant
+41978,2025-11-06,2915,Others,India Won by 48 runs,9,False,5,4,0,League,48-run dominant
+42027,2025-12-09,2921,Others,India Won by 101 runs,9,False,5,4,0,League,101-run dominant
+42028,2025-12-11,2921,Others,South Africa Won by 51 runs,9,False,5,4,0,League,51-run dominant
+42742,2025-05-28,2973,Others,Pakistan Won by 37 runs,9,False,5,4,0,League,37-run dominant
+42743,2025-05-30,2973,Others,Pakistan Won by 57 runs,9,False,5,4,0,League,57-run dominant
+43594,2025-07-13,3020,Others,Bangladesh Won by 83 runs,9,False,5,4,0,League,83-run dominant
+44267,2025-07-24,3074,Others,Pakistan Won by 74 runs,9,False,5,4,0,League,74-run dominant
+45392,2026-07-07,3126,Others,England Won by 125 runs,9,False,5,4,0,League,125-run dominant
+45394,2026-07-11,3126,Others,England Won by 56 runs,9,False,5,4,0,League,56-run dominant
+45489,2026-09-15,3128,Others,England Won by 119 runs,9,False,5,4,0,League,119-run dominant
+45495,2025-09-09,3133,League,Afghanistan Won by 94 runs,9,False,5,4,0,League,94-run dominant
+45498,2025-09-12,3133,League,Pakistan Won by 93 runs,9,False,5,4,0,League,93-run dominant
+45501,2025-09-15,3133,League,United Arab Emirates Won by 42 runs,9,False,5,4,0,League,42-run dominant
+45504,2025-09-17,3133,League,Pakistan Won by 41 runs,9,False,5,4,0,League,41-run dominant
+45851,2025-08-29,3159,League,Pakistan Won by 39 runs,9,False,5,4,0,League,39-run dominant
+45853,2025-09-01,3159,League,Afghanistan Won by 38 runs,9,False,5,4,0,League,38-run dominant
+46250,2025-09-28,3190,Others,Nepal Won by 90 runs,9,False,5,4,0,League,90-run dominant
+46740,2025-10-28,3223,Others,South Africa Won by 55 runs,9,False,5,4,0,League,55-run dominant
+46748,2025-10-20,3226,Others,England Won by 65 runs,9,False,5,4,0,League,65-run dominant
+47241,2025-11-27,3251,Others,Ireland Won by 39 runs,9,False,5,4,0,League,39-run dominant
+47260,2025-10-29,3254,Others,Afghanistan Won by 53 runs,9,False,5,4,0,League,53-run dominant
+47977,2025-11-19,3288,League,Zimbabwe Won by 67 runs,9,False,5,4,0,League,67-run dominant
+47979,2025-11-23,3288,League,Pakistan Won by 69 runs,9,False,5,4,0,League,69-run dominant
+48015,2025-11-14,3289,League,Pakistan A Won by 40 runs,9,False,5,4,0,League,40-run dominant
+48016,2025-11-14,3289,League,India A Won by 148 runs,9,False,5,4,0,League,148-run dominant
+50130,2026-04-02,3298,League,Sunrisers Hyderabad Won by 65 runs,9,False,5,4,0,League,65-run dominant
+50135,2026-04-05,3298,League,Royal Challengers Bengaluru Won by 43 runs,9,False,5,4,0,League,43-run dominant
+50342,2026-04-13,3298,League,Sunrisers Hyderabad Won by 57 runs,9,False,5,4,0,League,57-run dominant
+50350,2026-04-19,3298,League,Punjab Kings Won by 54 runs,9,False,5,4,0,League,54-run dominant
+50351,2026-04-20,3298,League,Mumbai Indians Won by 99 runs,9,False,5,4,0,League,99-run dominant
+50352,2026-04-21,3298,League,Sunrisers Hyderabad Won by 47 runs,9,False,5,4,0,League,47-run dominant
+50353,2026-04-22,3298,League,Rajasthan Royals Won by 40 runs,9,False,5,4,0,League,40-run dominant
+50354,2026-04-23,3298,League,Chennai Super Kings Won by 103 runs,9,False,5,4,0,League,103-run dominant
+50373,2026-05-09,3298,League,Gujarat Titans Won by 77 runs,9,False,5,4,0,League,77-run dominant
+50377,2026-05-12,3298,League,Gujarat Titans Won by 82 runs,9,False,5,4,0,League,82-run dominant
+50387,2026-05-21,3298,League,Gujarat Titans Won by 89 runs,9,False,5,4,0,League,89-run dominant
+50388,2026-05-22,3298,League,Sunrisers Hyderabad Won by 55 runs,9,False,5,4,0,League,55-run dominant
+50391,2026-05-24,3298,League,Delhi Capitals Won by 40 runs,9,False,5,4,0,League,40-run dominant
+48466,2026-01-29,3313,Others,Ireland Won by 57 runs,9,False,5,4,0,League,57-run dominant
+48591,2026-01-21,3329,Others,India Won by 48 runs,9,False,5,4,0,League,48-run dominant
+48594,2026-01-28,3329,Others,New Zealand Won by 50 runs,9,False,5,4,0,League,50-run dominant
+48595,2026-01-31,3329,Others,India Won by 46 runs,9,False,5,4,0,League,46-run dominant
+48596,2026-01-19,3331,Others,Afghanistan Won by 38 runs,9,False,5,4,0,League,38-run dominant
+48597,2026-01-21,3331,Others,Afghanistan Won by 39 runs,9,False,5,4,0,League,39-run dominant
+48916,2026-01-31,3358,Others,Pakistan Won by 90 runs,9,False,5,4,0,League,90-run dominant
+48917,2026-02-01,3358,Others,Pakistan Won by 111 runs,9,False,5,4,0,League,111-run dominant
+49737,2026-03-17,3395,Others,New Zealand Won by 68 runs,9,False,5,4,0,League,68-run dominant
+50504,2026-06-14,3464,Others,Sri Lanka Won by 37 runs,9,False,5,4,0,League,37-run dominant
+50508,2026-07-25,3465,Others,India Won by 90 runs,9,False,5,4,0,League,90-run dominant
+54213,2026-10-30,3690,Others,New Zealand Won by 87 runs,9,False,5,4,0,League,87-run dominant
+54410,2026-09-17,3713,Others,India Won by 127 runs,9,False,5,4,0,League,127-run dominant
+55079,2026-10-11,3765,Others,Pakistan Won by 82 runs,9,False,5,4,0,League,82-run dominant
+55559,2026-10-27,3787,Others,Afghanistan Won by 37 runs,9,False,5,4,0,League,37-run dominant
+13511,2022-01-22,1331,League,West Indies Won by 9 Wickets,7,False,5,2,0,League,9-wicket dominant
+13613,2022-02-13,1345,League,Australia Won the one over Eliminator,7,False,5,2,0,League,Normal
+13614,2022-02-15,1345,League,Australia Won by 6 Wkts,7,False,5,2,0,League,Normal
+14094,2022-03-26,1358,League,Kolkata Knight Riders Won by 6 Wkts,7,False,5,2,0,League,Normal
+14096,2022-03-27,1358,League,Punjab Kings Won by 5 Wkts,7,False,5,2,0,League,Normal
+14099,2022-03-30,1358,League,Royal Challengers Bengaluru Won 3 Wkts,7,False,5,2,0,League,Normal
+14100,2022-03-31,1358,League,Lucknow Super Giants Won by 6 Wkts,7,False,5,2,0,League,Normal
+14101,2022-04-01,1358,League,Kolkata Knight Riders Won by 6 wkts,7,False,5,2,0,League,Normal
+14106,2022-04-05,1358,League,Royal Challengers Bengaluru Won by 4 Wkts,7,False,5,2,0,League,Normal
+14110,2022-04-09,1358,League,Sunrisers Hyderabad won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+14114,2022-04-11,1358,League,Sunrisers Hyderabad Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+14125,2022-04-20,1358,League,Delhi Capitals won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+14129,2022-04-23,1358,League,Sunrisers Hyderabad won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+14130,2022-04-24,1358,League,Lucknow Super Giants Won 36  Runs,7,False,5,2,0,League,Normal
+14142,2022-05-03,1358,League,Punjab Kings Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+14152,2022-05-11,1358,League,Delhi Capitals Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+14161,2022-05-19,1358,League,Royal Challengers Bengaluru won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+15458,2022-06-07,1435,League,Australia Won by 10 Wickets,7,False,5,2,0,League,10-wicket dominant
+15459,2022-06-08,1435,League,Australia Won by 3 Wkts,7,False,5,2,0,League,Normal
+15406,2022-06-09,1439,League,South Africa Won by 7 Wkts,7,False,5,2,0,League,Normal
+15410,2022-06-19,1439,League,Match Abandoned,7,False,5,2,0,League,Normal
+15546,2022-07-02,1452,League,No Result,7,False,5,2,0,League,Normal
+16653,2022-08-27,1533,League,Afghanistan Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+16667,2022-08-05,1534,League,New Zealand Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+16685,2022-08-15,1537,League,West Indies Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+16865,2022-08-23,1551,League,Hong Kong Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+16866,2022-08-24,1551,League,Hong Kong Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+17554,2022-09-22,1595,League,Pakistan Won by 10 Wickets,7,False,5,2,0,League,10-wicket dominant
+17558,2022-09-30,1595,League,England Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+17625,2022-09-28,1599,League,India Won by 8 Wickets,7,False,5,2,0,League,8-wicket dominant
+17739,2022-10-09,1608,League,New Zealand Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+17740,2022-10-11,1608,League,New Zealand Won by 9 Wickets,7,False,5,2,0,League,9-wicket dominant
+17765,2022-10-14,1611,League,No Result,7,False,5,2,0,League,Normal
+18532,2022-11-22,1646,League,Match Tied,7,False,5,2,0,League,Normal
+20185,2023-04-02,1715,League,Royal Challengers Bengaluru won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+20194,2023-04-09,1715,League,Sunrisers Hyderabad won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+20211,2023-04-22,1715,League,Punjab Kings Won By 13Runs,7,False,5,2,0,League,Normal
+20221,2023-04-30,1715,League,Punjab Kings Won By  4 wickets,7,False,5,2,0,League,Normal
+20223,2023-05-01,1715,League,Royal Challengers Bengaluru Won  by 18 Runs,7,False,5,2,0,League,Normal
+20226,2023-05-03,1715,League,Match Abandoned,7,False,5,2,0,League,Normal
+20228,2023-05-05,1715,League,Gujarat Titans Won by 9 Wickets,7,False,5,2,0,League,9-wicket dominant
+20236,2023-05-11,1715,League,Rajasthan Royals Won by 9 Wickets,7,False,5,2,0,League,9-wicket dominant
+20245,2023-05-18,1715,League,Royal Challengers Bengaluru Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+20249,2023-05-21,1715,League,Mumbai Indians Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+21177,2023-04-05,1719,League,New Zealand Won by 9 Wickets,7,False,5,2,0,League,9-wicket dominant
+20134,2023-03-12,1742,League,Bangladesh Won  by 4 Wickets,7,False,5,2,0,League,Normal
+21406,2023-04-20,1799,League,Match Abandoned,7,False,5,2,0,League,Normal
+24350,2023-08-03,1913,League,West Indies Won   by 4 runs,7,False,5,2,0,League,Normal
+24353,2023-08-12,1913,League,India won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+24354,2023-08-13,1913,League,West Indies Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+25156,2023-09-01,2000,League,Australia won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+28333,2023-12-29,2058,Others,No Result,7,False,5,2,0,League,Normal
+28334,2023-12-31,2058,Others,New Zealand won by 17runs (DLS Method),7,False,5,2,0,League,Normal
+31246,2024-04-14,2193,League,Kolkata Knight Riders Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+31252,2024-04-19,2193,League,Lucknow Super Giants Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+31256,2024-04-22,2193,League,Rajasthan Royals Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+31260,2024-04-26,2193,League,Punjab Kings Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+31263,2024-04-28,2193,League,Royal Challengers Bengaluru Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+31275,2024-05-08,2193,League,Sunrisers Hyderabad Won by 10 wickets,7,False,5,2,0,League,10-wicket dominant
+31281,2024-05-13,2193,League,Match Abandoned,7,False,5,2,0,League,Normal
+31284,2024-05-16,2193,League,Match Abandoned,7,False,5,2,0,League,Normal
+31288,2024-05-19,2193,League,Match Abandoned,7,False,5,2,0,League,Normal
+28959,2024-01-18,2229,Others,Sri Lanka Won by 9 Wickets,7,False,5,2,0,League,9-wicket dominant
+30729,2024-03-17,2269,Others,Afghanistan Won By 10Runs,7,False,5,2,0,League,Normal
+30342,2024-03-06,2305,League,Bangladesh won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+31707,2024-04-18,2350,League,No Result,7,False,5,2,0,League,Normal
+32610,2024-05-22,2354,Others,Match Abandoned,7,False,5,2,0,League,Normal
+32612,2024-05-28,2354,Others,Match Abandoned,7,False,5,2,0,League,Normal
+32132,2024-05-03,2371,Others,Bangladesh Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+32136,2024-05-12,2371,Others,Zimbabwe Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+33806,2024-07-13,2372,Others,India Won by 10 wickets,7,False,5,2,0,League,10-wicket dominant
+32622,2024-05-20,2398,Others,Match Abandoned,7,False,5,2,0,League,Normal
+38797,2024-12-14,2442,League,Match Abandoned,7,False,5,2,0,League,Normal
+32619,2024-05-27,2452,Others,West Indies Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+36098,2024-08-28,2453,Others,West Indies Won by 8 wickets (DLS),7,False,5,2,0,League,8-wicket dominant
+37349,2024-11-10,2455,Others,England Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+37353,2024-11-18,2455,Others,No Result,7,False,5,2,0,League,Normal
+36564,2024-09-15,2548,League,Match Abandoned,7,False,5,2,0,League,Normal
+37014,2024-09-27,2562,League,South Africa Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+35424,2024-08-24,2605,League,No Result,7,False,5,2,0,League,Normal
+36210,2025-09-14,2628,League,Match Abandoned,7,False,5,2,0,League,Normal
+37555,2024-10-17,2692,League,Sri Lanka Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+37927,2024-12-03,2722,League,Pakistan Won by 10 wickets,7,False,5,2,0,League,10-wicket dominant
+40699,2025-03-26,2725,League,Kolkata Knight Riders Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40705,2025-03-31,2725,League,Mumbai Indians Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40706,2025-04-01,2725,League,Punjab Kings Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40707,2025-04-02,2725,League,Gujarat Titans Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40718,2025-04-11,2725,League,Kolkata Knight Riders Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40720,2025-04-12,2725,League,Sunrisers Hyderabad Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40721,2025-04-13,2725,League,Royal Challengers Bengaluru Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+40731,2025-04-20,2725,League,Mumbai Indians Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+40733,2025-04-22,2725,League,Delhi Capitals Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40737,2025-04-26,2725,League,No Result,7,False,5,2,0,League,Normal
+40740,2025-04-28,2725,League,Rajasthan Royals Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+40748,2025-05-05,2725,League,No Result,7,False,5,2,0,League,Normal
+40751,2025-05-08,2725,League,No Result,7,False,5,2,0,League,Normal
+40755,2025-05-18,2725,League,Gujarat Titans Won by 10 wickets,7,False,5,2,0,League,10-wicket dominant
+40761,2025-05-17,2725,League,Match Abandoned,7,False,5,2,0,League,Normal
+39808,2025-03-16,2793,League,New Zealand Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+39810,2025-03-21,2793,League,Pakistan Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+39812,2025-03-26,2793,League,New Zealand Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+39983,2025-02-22,2801,League,No Result,7,False,5,2,0,League,Normal
+39985,2025-02-25,2801,League,No Result,7,False,5,2,0,League,Normal
+41502,2025-06-12,2873,Others,Match Abandoned,7,False,5,2,0,League,Normal
+41503,2025-06-14,2873,Others,Match Abandoned,7,False,5,2,0,League,Normal
+41506,2025-07-22,2874,Others,Australia Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+41849,2026-01-27,2906,Others,South Africa Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+41975,2025-10-29,2915,Others,No Result,7,False,5,2,0,League,Normal
+41979,2025-11-08,2915,Others,No Result,7,False,5,2,0,League,Normal
+42030,2025-12-17,2921,Others,Match Abandoned,7,False,5,2,0,League,Normal
+43595,2025-07-16,3020,Others,Bangladesh Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+45390,2026-07-01,3126,Others,No Result,7,False,5,2,0,League,Normal
+45393,2026-07-09,3126,Others,England Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+45491,2026-09-19,3128,Others,England Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+45496,2025-09-10,3133,League,India Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+45905,2025-09-07,3162,Others,Sri Lanka Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+45906,2025-08-30,3163,Others,Bangladesh Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+45907,2025-09-01,3163,Others,Bangladesh Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+45908,2025-09-03,3163,Others,No Result,7,False,5,2,0,League,Normal
+46008,2025-09-19,3174,Others,Match Abandoned,7,False,5,2,0,League,Normal
+46251,2025-09-30,3190,Others,West Indies Won by 10 wickets,7,False,5,2,0,League,10-wicket dominant
+46311,2025-10-03,3197,Others,No Result,7,False,5,2,0,League,Normal
+46741,2025-10-31,3223,Others,Pakistan Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+46747,2025-10-18,3226,Others,No Result,7,False,5,2,0,League,Normal
+46749,2025-10-23,3226,Others,No Result,7,False,5,2,0,League,Normal
+47243,2025-12-02,3251,Others,Bangladesh Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+47968,2025-11-10,3282,Others,No Result,7,False,5,2,0,League,Normal
+47969,2025-11-13,3282,Others,New Zealand Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+47980,2025-11-25,3288,League,Sri Lanka Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+48017,2025-11-15,3289,League,Bangladesh A Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+48020,2025-11-16,3289,League,Pakistan A Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+48022,2025-11-17,3289,League,Bangladesh A Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+48023,2025-11-18,3289,League,Pakistan A Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+50127,2026-03-30,3298,League,Rajasthan Royals Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+50136,2026-04-06,3298,League,No Result,7,False,5,2,0,League,Normal
+50358,2026-04-26,3298,League,Gujarat Titans Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+50360,2026-04-27,3298,League,Royal Challengers Bengaluru Won by 9 wickets,7,False,5,2,0,League,9-wicket dominant
+50365,2026-05-02,3298,League,Chennai Super Kings Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+50369,2026-05-05,3298,League,Chennai Super Kings Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+50372,2026-05-08,3298,League,Kolkata Knight Riders Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+48513,2026-01-10,3317,Others,Match Abandoned,7,False,5,2,0,League,Normal
+48593,2026-01-25,3329,Others,India Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+49738,2026-03-20,3395,Others,New Zealand Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+50189,2026-04-29,3433,Others,Match Abandoned,7,False,5,2,0,League,Normal
+50404,2026-10-06,3450,Others,India Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
+50408,2026-10-17,3450,Others,No Result,7,False,5,2,0,League,Normal
+55080,2026-10-13,3765,Others,Sri Lanka Won by 8 wickets,7,False,5,2,0,League,8-wicket dominant
