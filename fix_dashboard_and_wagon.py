@@ -355,7 +355,7 @@ def build_clean_wagon_wheel_svg(wdata):
     ]
     
     svg = []
-    svg.append('<svg viewBox="0 0 380 380" width="100%" height="340" style="max-width:360px;margin:0 auto;display:block;">')
+    svg.append('<svg viewBox="0 0 380 380" style="width:100%;max-width:360px;height:auto;margin:0 auto;display:block;">')
     svg.append('''<defs>
         <radialGradient id="fieldGrad" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stop-color="#FFFFFF"/>
@@ -436,7 +436,7 @@ def build_clean_wagon_wheel_svg(wdata):
     
     # Legend below wagon wheel
     svg.append('''
-    <div style="display:flex;justify-content:center;gap:18px;font-size:11.5px;color:var(--text-muted);margin-top:10px;font-weight:600;">
+    <div class="wagon-legend" style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px 18px;font-size:11.5px;color:var(--text-muted);margin-top:10px;font-weight:600;">
         <div><span style="display:inline-block;width:12px;height:3px;background:#EB1A8D;margin-right:5px;vertical-align:middle;"></span>Fours (Boundaries)</div>
         <div><span style="display:inline-block;width:12px;height:3px;background:#059669;margin-right:5px;vertical-align:middle;"></span>Sixes (Maximums)</div>
         <div><span style="display:inline-block;width:12px;height:2px;background:#64748B;border-top:1px dashed #64748B;margin-right:5px;vertical-align:middle;"></span>1s & 2s (Rotation)</div>
@@ -448,7 +448,7 @@ def build_clean_wagon_wheel_svg(wdata):
 # 6. Clean, Professional SVG Pitch Map Generator for Bowlers
 def build_clean_pitch_map_svg(bdata):
     svg = []
-    svg.append('<svg viewBox="0 0 280 340" width="100%" height="300" style="max-width:260px;margin:0 auto;display:block;">')
+    svg.append('<svg viewBox="0 0 280 340" style="width:100%;max-width:260px;height:auto;margin:0 auto;display:block;">')
     
     # Pitch outline
     svg.append('<rect x="40" y="20" width="200" height="300" fill="#F8FAFC" stroke="#001D48" stroke-width="2" rx="4"/>')
@@ -672,25 +672,25 @@ for idx, p in enumerate(all_players_pool):
                 Strike Rate by Match Phase
             </div>
             <div style="margin-bottom:12px;">
-                <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span>Powerplay (Overs 1-6)</span>
                     <strong>{wdata['pp_sr']} SR ({wdata['pp_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;"><div style="background:#64748B;width:{wdata['pp_sr']/2.5}%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#64748B;width:{wdata['pp_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
-                <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span style="font-weight:700;color:#111827;">Middle Overs (Overs 7-15)</span>
                     <strong style="color:var(--rr-pink);">{wdata['mid_sr']} SR ({wdata['mid_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;"><div style="background:var(--rr-pink);width:{wdata['mid_sr']/2.5}%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--rr-pink);width:{wdata['mid_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
-                <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span>Death Overs (Overs 16-20)</span>
                     <strong style="color:var(--success);">{wdata['death_sr']} SR ({wdata['death_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;"><div style="background:var(--success);width:{wdata['death_sr']/2.5}%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--success);width:{wdata['death_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <p style="font-size:11.5px;color:var(--text-muted);margin-top:14px;line-height:1.5;">
                 Quantitative wagon wheel tracking isolates shot placement under pressure, confirming high boundary conversion away from defensive catchers.
@@ -709,25 +709,25 @@ for idx, p in enumerate(all_players_pool):
                 Economy Rate & Dot Ball% by Phase
             </div>
             <div style="margin-bottom:12px;">
-                <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span>Powerplay (Overs 1-6)</span>
                     <strong>{bdata['pp_econ']} Econ ({bdata['pp_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;"><div style="background:#0284C7;width:{bdata['pp_econ']*8.5}%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#0284C7;width:{bdata['pp_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
-                <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span>Middle Overs (Overs 7-15)</span>
                     <strong>{bdata['mid_econ']} Econ</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;"><div style="background:#64748B;width:{bdata['mid_econ']*8.5}%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#64748B;width:{bdata['mid_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
-                <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span style="font-weight:700;color:#111827;">Death Overs (Overs 16-20)</span>
                     <strong style="color:var(--rr-pink);">{bdata['death_econ']} Econ ({bdata['death_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;"><div style="background:var(--rr-pink);width:{bdata['death_econ']*8.5}%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--rr-pink);width:{bdata['death_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <p style="font-size:11.5px;color:var(--text-muted);margin-top:14px;line-height:1.5;">
                 Pitch-length tracking confirms disciplined adherence to defensive fourth-stump corridors, denying opposition death-overs boundaries.
@@ -966,6 +966,7 @@ for idx, p in enumerate(all_players_pool):
         .cand-nav {{
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }}
         .cand-nav a {{
             color: #111827;
@@ -992,15 +993,24 @@ for idx, p in enumerate(all_players_pool):
                 grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
             }}
+            .graphic-flex {{
+                gap: 18px;
+            }}
+            .graphic-col-visual {{
+                min-width: min(100%, 260px);
+            }}
+            .graphic-col-data {{
+                min-width: min(100%, 240px);
+            }}
         }}
 
         /* Mobile Responsive (<= 768px) */
         @media (max-width: 768px) {{
             body {{
-                padding: 10px 8px;
+                padding: 12px 10px;
             }}
             .container {{
-                padding: 0 4px;
+                padding: 0 2px;
             }}
             .top-nav {{
                 flex-direction: column;
@@ -1023,14 +1033,14 @@ for idx, p in enumerate(all_players_pool):
                 gap: 8px;
             }}
             .cand-nav a {{
-                flex: 1;
+                flex: 1 1 140px;
                 text-align: center;
-                min-height: 38px;
+                min-height: 40px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 6px 8px;
-                font-size: 11.5px;
+                padding: 8px 10px;
+                font-size: 12px;
             }}
             .profile-card {{
                 flex-direction: column;
@@ -1051,9 +1061,14 @@ for idx, p in enumerate(all_players_pool):
             }}
             .player-name {{
                 font-size: 22px;
+                overflow-wrap: anywhere;
             }}
             .player-teams {{
                 font-size: 12px;
+            }}
+            .role-badge {{
+                max-width: 100%;
+                white-space: normal;
             }}
             .rating-box {{
                 width: 100%;
@@ -1070,7 +1085,7 @@ for idx, p in enumerate(all_players_pool):
                 margin-bottom: 14px;
             }}
             .metric-card {{
-                padding: 10px 8px;
+                padding: 12px 10px;
             }}
             .metric-val {{
                 font-size: 18px;
@@ -1079,7 +1094,7 @@ for idx, p in enumerate(all_players_pool):
                 font-size: 10px;
             }}
             .metric-sub {{
-                font-size: 9px;
+                font-size: 9.5px;
             }}
             .section-card {{
                 padding: 16px 14px;
@@ -1145,37 +1160,39 @@ for idx, p in enumerate(all_players_pool):
         /* Extra Small Mobile (<= 420px) */
         @media (max-width: 420px) {{
             body {{
-                padding: 6px 4px;
+                padding: 8px 6px;
             }}
             .profile-card {{
-                padding: 14px 10px;
+                padding: 14px 12px;
             }}
             .player-name {{
                 font-size: 20px;
             }}
             .metric-grid {{
-                grid-template-columns: 1fr;
-                gap: 6px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
             }}
             .metric-card {{
-                padding: 8px 10px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                text-align: left;
+                padding: 10px 8px;
             }}
             .metric-val {{
                 font-size: 17px;
-                order: 2;
             }}
-            .metric-lbl {{
-                margin-top: 0;
+            .cand-nav a {{
+                flex: 1 1 100%;
             }}
         }}
 
 
 
     
+        @media (max-width: 640px) {{
+            .footer-bottom-row {{
+                flex-direction: column;
+                align-items: flex-start !important;
+            }}
+        }}
+
         </style>
 </head>
 <body>
@@ -1310,7 +1327,7 @@ for idx, p in enumerate(all_players_pool):
     player_html = player_html.replace('</div>\n\n</body>', '''
     <!-- Simple Minimal Footer with Copyright -->
     <footer class="simple-footer" style="margin-top:44px;margin-bottom:28px;padding-top:26px;border-top:1px solid #E2E8F0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#475569;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:28px;margin-bottom:22px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr));gap:24px;margin-bottom:22px;">
             <div>
                 <div style="font-size:12.5px;font-weight:700;color:#111827;margin-bottom:6px;">Methodology</div>
                 <p style="margin:0;font-size:12px;line-height:1.65;color:#475569;">
@@ -1325,7 +1342,7 @@ for idx, p in enumerate(all_players_pool):
             </div>
         </div>
 
-        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #E2E8F0;font-size:12px;color:#64748B;">
+        <div class="footer-bottom-row" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #E2E8F0;font-size:12px;color:#64748B;">
             <div>
                 &copy; 2026 Ketan Rawat. All rights reserved. &middot; Rajasthan Royals SupeRR Selector Season 2
             </div>
@@ -1534,10 +1551,10 @@ master_dashboard_html = f"""<!DOCTYPE html>
             margin-top: 3px;
         }}
 
-        /* 3-Column Analytics Grid: Generous column 1 width to prevent any legend overflow */
+        /* 3-Column Analytics Grid */
         .analytics-row-3col {{
             display: grid;
-            grid-template-columns: minmax(340px, 1.15fr) minmax(280px, 0.95fr) minmax(460px, 1.7fr);
+            grid-template-columns: minmax(320px, 1.15fr) minmax(260px, 0.95fr) minmax(440px, 1.7fr);
             gap: 18px;
             margin-bottom: 24px;
             align-items: stretch;
@@ -1552,6 +1569,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
+            min-width: 0;
             box-sizing: border-box;
         }}
 
@@ -1561,7 +1579,8 @@ master_dashboard_html = f"""<!DOCTYPE html>
 
         .table-scroll-wrapper {{
             width: 100%;
-            overflow: hidden;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }}
 
         .panel-header-box {{
@@ -1882,7 +1901,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
 
-        /* Corporate Data Tables - Zero Horizontal Scrollbar on Desktops & Laptops */
+        /* Corporate Data Tables - Scroll Safely Without Clipping on Tablet & Mobile */
         .table-responsive {{
             background: var(--bg-card);
             border: 1px solid var(--border-card);
@@ -1892,7 +1911,8 @@ master_dashboard_html = f"""<!DOCTYPE html>
             display: block;
             box-sizing: border-box;
             margin-bottom: 24px;
-            overflow-x: hidden; /* Zero horizontal scrollbar on standard laptop & desktop */
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }}
 
         table {{
@@ -2055,11 +2075,16 @@ master_dashboard_html = f"""<!DOCTYPE html>
             -webkit-overflow-scrolling: touch;
             width: 100%;
         }}
+        .chart-scroll-wrapper {{
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }}
         .mobile-table-hint {{
             display: none;
             font-size: 11.5px;
             color: var(--text-muted);
-            margin-bottom: 6px;
+            padding: 6px 10px 4px 10px;
             text-align: right;
             font-weight: 600;
         }}
@@ -2068,6 +2093,18 @@ master_dashboard_html = f"""<!DOCTYPE html>
            COMPREHENSIVE RESPONSIVE DESIGN (LAPTOP, TABLET & MOBILE)
            ========================================================== */
 
+        /* Show horizontal scroll hint on tablet & mobile where wide tables scroll */
+        @media (max-width: 1120px) {{
+            .mobile-table-hint {{
+                display: block;
+            }}
+            #table-batters,
+            #table-bowlers,
+            #table-superstars {{
+                min-width: 820px;
+            }}
+        }}
+
         /* 1. Laptops & Medium Screens (1025px - 1280px) */
         @media (max-width: 1280px) {{
             body {{
@@ -2075,7 +2112,15 @@ master_dashboard_html = f"""<!DOCTYPE html>
             }}
             .kpi-strip {{
                 grid-template-columns: repeat(3, 1fr);
-                gap: 12px;
+                gap: 10px;
+                padding: 14px 16px;
+            }}
+            .kpi-item,
+            .kpi-item:last-child {{
+                border: 1px solid #EEF2F6;
+                border-radius: 6px;
+                padding: 12px 10px;
+                background: #FAFCFF;
             }}
             .analytics-row-3col {{
                 grid-template-columns: 1fr 1fr;
@@ -2092,17 +2137,17 @@ master_dashboard_html = f"""<!DOCTYPE html>
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 14px;
-                padding: 16px 20px;
+                padding: 18px 20px;
             }}
             .header-meta {{
                 text-align: left;
                 width: 100%;
-                border-top: 1px solid #F1F5F9;
+                border-top: 1px solid rgba(255, 255, 255, 0.14);
                 padding-top: 10px;
             }}
             .kpi-strip {{
                 grid-template-columns: repeat(3, 1fr);
-                gap: 12px;
+                gap: 10px;
             }}
             .analytics-row-3col {{
                 grid-template-columns: 1fr 1fr;
@@ -2112,52 +2157,91 @@ master_dashboard_html = f"""<!DOCTYPE html>
                 grid-column: 1 / -1;
             }}
             .slicer-card {{
-                padding: 14px 18px;
-                gap: 14px;
+                padding: 14px 16px;
+                gap: 12px;
+            }}
+            .tab-group {{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                gap: 8px;
+            }}
+            .nav-tab-btn {{
+                width: 100%;
+                min-height: 38px;
+                white-space: normal;
+                line-height: 1.25;
+                text-align: center;
+            }}
+            .slicer-controls-row {{
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }}
+            .search-wrapper {{
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                height: 38px;
+            }}
+            .slicer-dropdowns {{
+                width: 100%;
+                justify-content: flex-start;
             }}
             .doc-grid {{
                 grid-template-columns: 1fr;
                 gap: 16px;
             }}
+            .tactical-two-col,
+            .quadrant-insights-grid {{
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }}
+            .purse-table {{
+                min-width: 600px;
+            }}
         }}
 
         /* 3. Mobile & Small Tablets (521px - 768px) */
         @media (max-width: 768px) {{
-            .table-responsive {{
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }}
-            table {{
-                min-width: 740px;
-            }}
             body {{
                 padding: 10px 8px;
+            }}
+            .dashboard-container {{
+                padding: 0 2px;
             }}
             .executive-header {{
                 padding: 14px 16px;
                 gap: 12px;
-                border-radius: 6px;
+                border-radius: 8px;
+            }}
+            .brand-section {{
+                gap: 12px;
+            }}
+            .header-titles {{
+                min-width: 0;
             }}
             .header-titles h1 {{
                 font-size: 18px;
             }}
             .header-titles p {{
-                font-size: 11.5px;
+                font-size: 12px;
             }}
             .rr-logo {{
-                width: 48px;
-                height: 48px;
+                height: 46px;
+                width: auto;
             }}
             .kpi-strip {{
                 grid-template-columns: repeat(2, 1fr);
                 gap: 8px;
+                padding: 12px;
                 margin-bottom: 16px;
             }}
             .kpi-item {{
-                padding: 12px 14px;
+                padding: 10px 8px;
             }}
             .kpi-num {{
-                font-size: 22px;
+                font-size: 21px;
             }}
             .analytics-row-3col {{
                 grid-template-columns: 1fr;
@@ -2168,7 +2252,10 @@ master_dashboard_html = f"""<!DOCTYPE html>
                 grid-column: 1;
             }}
             .panel-box {{
-                padding: 16px;
+                padding: 16px 14px;
+            }}
+            .matrix-table {{
+                min-width: 440px;
             }}
             .donut-container {{
                 flex-direction: column;
@@ -2177,24 +2264,23 @@ master_dashboard_html = f"""<!DOCTYPE html>
             }}
             .donut-legend {{
                 width: 100%;
-                max-width: 240px;
+                max-width: 260px;
                 margin: 0 auto;
             }}
             .slicer-card {{
-                flex-direction: column;
-                align-items: stretch;
-                padding: 14px;
-                gap: 12px;
-            }}
-            .slicer-group {{
-                flex-direction: column;
-                align-items: stretch;
-                width: 100%;
+                padding: 14px 12px;
                 gap: 10px;
+            }}
+            .slicer-dropdowns {{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                width: 100%;
             }}
             .slicer-item {{
                 display: flex;
                 flex-direction: column;
+                align-items: stretch;
                 gap: 4px;
                 width: 100%;
             }}
@@ -2203,67 +2289,72 @@ master_dashboard_html = f"""<!DOCTYPE html>
                 height: 40px;
                 font-size: 13px;
             }}
-            .search-field {{
-                width: 100%;
+            .search-wrapper {{
                 height: 40px;
+            }}
+            .search-field {{
                 font-size: 13px;
             }}
-            .tab-group {{
-                display: flex;
-                flex-direction: column;
+            .slicer-reset-btn {{
+                grid-column: 1 / -1;
                 width: 100%;
-                gap: 6px;
-            }}
-            .nav-tab-btn {{
-                width: 100%;
-                text-align: center;
-            }}
-            .slicer-card {{
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-            }}
-            .nav-tab-btn {{
-                padding: 8px 14px;
-                font-size: 12px;
-                min-height: 38px;
-            }}
-            .mobile-table-hint {{
-                display: block;
+                height: 40px;
             }}
             .table-container {{
                 margin-bottom: 18px;
                 border-radius: 6px;
+            }}
+            .tactical-card {{
+                padding: 16px 14px !important;
+            }}
+            .xi-role {{
+                white-space: normal !important;
+                overflow: visible !important;
+                text-overflow: clip !important;
             }}
             .doc-grid {{
                 grid-template-columns: 1fr;
                 gap: 14px;
                 margin-bottom: 24px;
             }}
+            .doc-box {{
+                padding: 16px 14px !important;
+            }}
             .code-snippet {{
                 font-size: 11px;
                 overflow-x: auto;
+                max-width: 100%;
                 padding: 10px;
             }}
         }}
 
-        /* 4. Extra Small Mobile Phones (<= 520px) */
+        /* 4. Small & Extra Small Mobile Phones (<= 640px & <= 480px) */
+        @media (max-width: 640px) {{
+            .tab-group {{
+                grid-template-columns: 1fr;
+            }}
+            .scatter-svg {{
+                min-width: 560px;
+            }}
+            .footer-bottom-row {{
+                flex-direction: column;
+                align-items: flex-start !important;
+            }}
+        }}
+
         @media (max-width: 520px) {{
             body {{
-                padding: 6px 4px;
-            }}
-            .dashboard-container {{
-                padding: 0 4px;
+                padding: 8px 6px;
             }}
             .executive-header {{
-                padding: 12px;
+                padding: 12px 14px;
             }}
             .brand-section {{
                 gap: 10px;
             }}
             .rr-logo {{
-                width: 40px;
                 height: 40px;
+                width: auto;
             }}
             .header-titles h1 {{
                 font-size: 16px;
@@ -2277,25 +2368,40 @@ master_dashboard_html = f"""<!DOCTYPE html>
             .header-meta span {{
                 font-size: 10.5px;
             }}
-            .kpi-strip {{
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }}
-            .kpi-item {{
-                padding: 10px 12px;
-            }}
             .kpi-num {{
-                font-size: 20px;
+                font-size: 19px;
+            }}
+            .kpi-lbl {{
+                font-size: 10px;
             }}
             .pill-header {{
                 font-size: 10px;
                 padding: 5px 12px;
+                white-space: normal;
+                line-height: 1.3;
             }}
             .panel-box {{
-                padding: 14px 10px;
+                padding: 14px 12px;
             }}
             .diff-row-header {{
                 font-size: 11.5px;
+                gap: 8px;
+            }}
+            .phase-purse-grid {{
+                grid-template-columns: 1fr !important;
+            }}
+            .slicer-dropdowns {{
+                grid-template-columns: 1fr;
+            }}
+            .budget-kpi-bar {{
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }}
+        }}
+
+        @media (max-width: 340px) {{
+            .kpi-strip {{
+                grid-template-columns: 1fr;
             }}
         }}
 
@@ -2304,6 +2410,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
     </style>
 </head>
 <body>
+<div class="dashboard-container">
 
 <!-- Header Section -->
     <div class="executive-header">
@@ -2563,11 +2670,9 @@ master_dashboard_html = f"""<!DOCTYPE html>
         </div>
     </div>
 
-        <input type="text" id="filterInput" class="search-field" placeholder="Search player, role, team..." onkeyup="applySlicers()">
-    </div>
-
     <!-- Table 1: Batters -->
     <div id="section-batters" class="table-responsive data-section">
+        <div class="mobile-table-hint">&larr; Swipe horizontally to view all metrics &rarr;</div>
         <table id="table-batters">
             <thead>
                 <tr>
@@ -2627,6 +2732,7 @@ master_dashboard_html += """
 
     <!-- Table 2: Bowlers -->
     <div id="section-bowlers" class="table-responsive data-section" style="display:none;">
+        <div class="mobile-table-hint">&larr; Swipe horizontally to view all metrics &rarr;</div>
         <table id="table-bowlers">
             <thead>
                 <tr>
@@ -2686,7 +2792,8 @@ master_dashboard_html += """
 
     <!-- Table 3: Superstars Audit -->
     <div id="section-superstars" class="table-responsive data-section" style="display:none;">
-        <table>
+        <div class="mobile-table-hint">&larr; Swipe horizontally to view all metrics &rarr;</div>
+        <table id="table-superstars">
             <thead>
                 <tr>
                     <th style="text-align:left;">Candidate</th>
@@ -2696,7 +2803,7 @@ master_dashboard_html += """
                     <th style="text-align:right;">Pressure<br>Win%</th>
                     <th style="text-align:center;">Win Diff<br>(&Delta;)</th>
                     <th style="text-align:center;">Playoff<br>Win%</th>
-                    <th style="text-align:left;width:34%;">Why Numbers Differ in Close Games</th>
+                    <th style="text-align:left;min-width:240px;">Why Numbers Differ in Close Games</th>
                     <th style="text-align:center;">Action</th>
                 </tr>
             </thead>
@@ -2724,7 +2831,7 @@ for s in superstars_audit:
                     <td style="text-align:center;font-weight:600;">{s['ko_wr']:.1f}%</td>
                     <td style="font-size:12.5px;color:#374151;line-height:1.5;">{s['reason']}</td>
                     <td style="text-align:center;">
-                        <a href="players/{s['key']}.html" class="wagon-btn" style="text-decoration:none;">View Profile &rarr;</a>
+                        <a href="players/{s['key']}.html" class="action-link" onclick="event.stopPropagation();">View Profile &rarr;</a>
                     </td>
                 </tr>
 """
@@ -2903,7 +3010,9 @@ master_dashboard_html += """
                 </div>
 
                 <!-- Playing XI Win Conversion Table: Cleanly Padded & Non-Wrapping -->
-                <table class="purse-table" style="margin-top:16px;">
+                <div class="mobile-table-hint" style="margin-top:12px;">&larr; Swipe table horizontally to inspect metrics &rarr;</div>
+                <div class="table-scroll-wrapper" style="margin-top:6px;">
+                <table class="purse-table">
                     <thead>
                         <tr>
                             <th style="width:36px;text-align:center;">#</th>
@@ -3005,6 +3114,7 @@ master_dashboard_html += """
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
 
             <!-- Right Column: Auction Valuation Model & Purse Allocation -->
@@ -3032,6 +3142,8 @@ master_dashboard_html += """
                 </div>
 
                 <!-- Fixed Auction Budget Table: No wrap on badges, prices, or purse % -->
+                <div class="mobile-table-hint">&larr; Swipe table horizontally to view all bids &rarr;</div>
+                <div class="table-scroll-wrapper">
                 <table class="purse-table">
                     <thead>
                         <tr>
@@ -3087,6 +3199,7 @@ master_dashboard_html += """
                         </tr>
                     </tbody>
                 </table>
+                </div>
 
                 <div style="margin-top:20px;padding:14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
                     <div style="font-weight:700;font-size:12.5px;color:#111827;margin-bottom:4px;">Auction Bidding Rule:</div>
@@ -3120,7 +3233,7 @@ master_dashboard_html += """
         </div>
 
         <!-- Strategic War Room Principles & Phase Distribution (Balanced 2-Column Row) -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;align-items:start;">
+        <div class="tactical-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;align-items:start;">
             <!-- Phase-by-Phase Purse Distribution Grid -->
             <div class="tactical-card">
                 <div class="tactical-card-title">
@@ -3129,7 +3242,7 @@ master_dashboard_html += """
                 <div class="tactical-card-sub">
                     Balanced allocation preventing over-commitment in any single game phase.
                 </div>
-                <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:12px;">
+                <div class="phase-purse-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:12px;">
                     <div style="padding:12px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
                         <div style="font-size:11px;font-weight:700;color:#64748B;text-transform:uppercase;">Middle Spin Attack</div>
                         <div style="font-size:16px;font-weight:800;color:#111827;margin-top:2px;">&#8377;17.50 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(38.9%)</span></div>
@@ -3180,8 +3293,9 @@ master_dashboard_html += """
             </div>
 
             <!-- Crisp Light Mode Vector Scatter Plot (Replaces dark matplotlib chart) -->
-            <div style="margin-bottom:20px;">
-                <svg viewBox="0 0 920 540" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#FFFFFF;border-radius:10px;border:1px solid #E2E8F0;box-shadow:0 2px 10px rgba(0,0,0,0.03);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            <div class="mobile-table-hint">&larr; Swipe chart horizontally on small screens &rarr;</div>
+            <div class="chart-scroll-wrapper" style="margin-bottom:20px;">
+                <svg class="scatter-svg" viewBox="0 0 920 540" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#FFFFFF;border-radius:10px;border:1px solid #E2E8F0;box-shadow:0 2px 10px rgba(0,0,0,0.03);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:block;">
   <rect x="410.7" y="75" width="459.3" height="273.3" fill="#F0FDF4" />
   <rect x="80" y="75" width="330.7" height="273.3" fill="#FFFBEB" />
   <rect x="410.7" y="348.3" width="459.3" height="136.7" fill="#F8FAFC" />
@@ -3352,7 +3466,7 @@ master_dashboard_html += """
             </div>
 
             <!-- Strategic Insights and Quadrant Explanations in Clean Light Mode -->
-            <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;">
+            <div class="quadrant-insights-grid" style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;">
                 <!-- 4 Quadrants Visual Grid in Light Mode -->
                 <div class="quadrant-light-grid">
                     <div class="quadrant-box q-box-1">
@@ -3587,6 +3701,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 24px;
+            min-width: 0;
             box-shadow: 0 4px 20px rgba(0, 29, 72, 0.05);
         }
 
@@ -3636,7 +3751,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         }
         .xi-player-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
             gap: 8px;
         }
         .xi-player-pill {
@@ -3676,7 +3791,8 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 8px;
+            flex-wrap: wrap;
+            gap: 4px 8px;
         }
         .xi-name {
             font-size: 13px;
@@ -3864,6 +3980,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             border: 1px solid #E2E8F0 !important;
             border-radius: 10px;
             padding: 22px 24px;
+            min-width: 0;
             box-shadow: 0 4px 16px rgba(0, 29, 72, 0.04) !important;
         }
 
@@ -3886,7 +4003,7 @@ if target_pos != -1:
     master_dashboard_html = master_dashboard_html[:target_pos] + """
     <!-- Simple Minimal Footer with Copyright -->
     <footer class="simple-footer" style="margin-top:44px;margin-bottom:28px;padding-top:26px;border-top:1px solid #E2E8F0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#475569;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:28px;margin-bottom:22px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr));gap:24px;margin-bottom:22px;">
             <div>
                 <div style="font-size:12.5px;font-weight:700;color:#111827;margin-bottom:6px;">Methodology</div>
                 <p style="margin:0;font-size:12px;line-height:1.65;color:#475569;">
@@ -3901,7 +4018,7 @@ if target_pos != -1:
             </div>
         </div>
 
-        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #E2E8F0;font-size:12px;color:#64748B;">
+        <div class="footer-bottom-row" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #E2E8F0;font-size:12px;color:#64748B;">
             <div>
                 &copy; 2026 Ketan Rawat. All rights reserved. &middot; Rajasthan Royals SupeRR Selector Season 2
             </div>
