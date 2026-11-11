@@ -724,6 +724,7 @@ def build_deck():
     tfl.margin_left = tfl.margin_top = 0
     pl = tfl.paragraphs[0]
     links = [
+        ("Live Dashboard", "https://rr-dashboard.onrender.com/"),
         ("LinkedIn", "https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/"),
         ("GitHub", "https://github.com/Ketanrawat2004/RR-Dashboard"),
         ("Resume", "https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link"),

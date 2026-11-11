@@ -4,6 +4,8 @@ Player pressure analysis and auction planning project for Rajasthan Royals ahead
 
 The model compares how players perform in tight, high-pressure games against their normal match record, then ranks the top 10 batters and top 10 bowlers suited for Sawai Mansingh Stadium, Jaipur within an INR 45.0 Cr auction budget.
 
+Live dashboard: [https://rr-dashboard.onrender.com/](https://rr-dashboard.onrender.com/)
+
 ## Dataset
 
 Data is stored in `season2_data/` and covers IPL and T20 International matches from January 2022 to November 2026:
@@ -89,7 +91,7 @@ Built around Sawai Mansingh Stadium conditions (72-78m boundaries, dry middle ov
 
 ## How to Open or Rebuild
 
-To view the dashboard, open `index.html` in any web browser (all CSS, charts, and player images are bundled inside the HTML files).
+View the live dashboard at [https://rr-dashboard.onrender.com/](https://rr-dashboard.onrender.com/), or open `index.html` locally in any web browser (all CSS, charts, and player images are bundled inside the HTML files).
 
 To regenerate the dashboard or slide deck from Python:
 
@@ -104,6 +106,7 @@ python build_clean_submission_pptx.py
 
 Ketan Rawat (B.Tech ECE, NIT Jamshedpur)
 
+- [Live Dashboard](https://rr-dashboard.onrender.com/)
 - [LinkedIn](https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/)
 - [Resume](https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link)
 - [Season 1 Certificate (Additional Top 20)](https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing)

@@ -1347,6 +1347,8 @@ for idx, p in enumerate(all_players_pool):
                 &copy; 2026 Ketan Rawat. All rights reserved. &middot; Rajasthan Royals SupeRR Selector Season 2
             </div>
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;">
+                <a href="https://rr-dashboard.onrender.com/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Live Dashboard</a>
+                <span style="color:#CBD5E1;">|</span>
                 <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
                 <span style="color:#CBD5E1;">|</span>
                 <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
@@ -4023,6 +4025,8 @@ if target_pos != -1:
                 &copy; 2026 Ketan Rawat. All rights reserved. &middot; Rajasthan Royals SupeRR Selector Season 2
             </div>
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;">
+                <a href="https://rr-dashboard.onrender.com/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Live Dashboard</a>
+                <span style="color:#CBD5E1;">|</span>
                 <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
                 <span style="color:#CBD5E1;">|</span>
                 <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
