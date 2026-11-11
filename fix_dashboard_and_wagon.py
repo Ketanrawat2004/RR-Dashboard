@@ -107,61 +107,61 @@ BATTER_WAGON_SPECS = {
 # 4. Pitch Map Profiles for Bowlers
 BOWLER_PITCH_SPECS = {
     "mitchell_starc": {
-        "lengths": [("Yorker (0-2m)", 30, "#059669"), ("Full (2-6m)", 32, "#0284C7"), ("Good Length (6-8m)", 24, "#001D48"), ("Short / Bouncer (>8m)", 14, "#DC2626")],
+        "lengths": [("Yorker (0-2m)", 30, "#059669"), ("Full (2-6m)", 32, "#0284C7"), ("Good Length (6-8m)", 24, "#111111"), ("Short / Bouncer (>8m)", 14, "#DC2626")],
         "pp_econ": 7.2, "mid_econ": 7.6, "death_econ": 9.1,
         "pp_dots": 54.0, "death_dots": 46.0,
         "strike_zone": "Swinging Blockhole Yorker (30%)"
     },
     "josh_hazlewood": {
-        "lengths": [("Yorker (0-2m)", 14, "#059669"), ("Full (2-6m)", 22, "#0284C7"), ("Good Length (6-8m)", 46, "#001D48"), ("Short / Bouncer (>8m)", 18, "#DC2626")],
+        "lengths": [("Yorker (0-2m)", 14, "#059669"), ("Full (2-6m)", 22, "#0284C7"), ("Good Length (6-8m)", 46, "#111111"), ("Short / Bouncer (>8m)", 18, "#DC2626")],
         "pp_econ": 6.6, "mid_econ": 6.9, "death_econ": 8.4,
         "pp_dots": 58.0, "death_dots": 48.0,
         "strike_zone": "Top of Off-Stump Corridor (46%)"
     },
     "jacob_duffy": {
-        "lengths": [("Yorker (0-2m)", 22, "#059669"), ("Full (2-6m)", 26, "#0284C7"), ("Good Length (6-8m)", 38, "#001D48"), ("Short / Bouncer (>8m)", 14, "#DC2626")],
+        "lengths": [("Yorker (0-2m)", 22, "#059669"), ("Full (2-6m)", 26, "#0284C7"), ("Good Length (6-8m)", 38, "#111111"), ("Short / Bouncer (>8m)", 14, "#DC2626")],
         "pp_econ": 7.4, "mid_econ": 7.8, "death_econ": 9.0,
         "pp_dots": 48.0, "death_dots": 42.0,
         "strike_zone": "Fourth-Stump Seam Movement (38%)"
     },
     "suyash_sharma": {
-        "lengths": [("Full / Stumps", 36, "#059669"), ("Good Length Spin", 42, "#0284C7"), ("Back of Length", 14, "#001D48"), ("Short", 8, "#DC2626")],
+        "lengths": [("Full / Stumps", 36, "#059669"), ("Good Length Spin", 42, "#0284C7"), ("Back of Length", 14, "#111111"), ("Short", 8, "#DC2626")],
         "pp_econ": 8.2, "mid_econ": 7.2, "death_econ": 9.4,
         "pp_dots": 46.0, "death_dots": 38.0,
         "strike_zone": "Rapid Googly Attacking Stumps (42%)"
     },
     "lockie_ferguson": {
-        "lengths": [("Yorker (0-2m)", 26, "#059669"), ("Full (2-6m)", 20, "#0284C7"), ("Good Length (6-8m)", 26, "#001D48"), ("Short / Bouncer (>8m)", 28, "#DC2626")],
+        "lengths": [("Yorker (0-2m)", 26, "#059669"), ("Full (2-6m)", 20, "#0284C7"), ("Good Length (6-8m)", 26, "#111111"), ("Short / Bouncer (>8m)", 28, "#DC2626")],
         "pp_econ": 7.6, "mid_econ": 7.4, "death_econ": 9.2,
         "pp_dots": 50.0, "death_dots": 45.0,
         "strike_zone": "150 kph Throat Bouncer & Yorker (28%)"
     },
     "yash_dayal": {
-        "lengths": [("Wide Yorker", 30, "#059669"), ("Full (2-6m)", 24, "#0284C7"), ("Good Length (6-8m)", 30, "#001D48"), ("Short / Slower", 16, "#DC2626")],
+        "lengths": [("Wide Yorker", 30, "#059669"), ("Full (2-6m)", 24, "#0284C7"), ("Good Length (6-8m)", 30, "#111111"), ("Short / Slower", 16, "#DC2626")],
         "pp_econ": 7.8, "mid_econ": 7.9, "death_econ": 9.2,
         "pp_dots": 47.0, "death_dots": 44.0,
         "strike_zone": "Left-Arm Wide Yorker Outside Off (30%)"
     },
     "romario_shepherd": {
-        "lengths": [("Yorker (0-2m)", 24, "#059669"), ("Full (2-6m)", 22, "#0284C7"), ("Good Length (6-8m)", 32, "#001D48"), ("Short / Cutter", 22, "#DC2626")],
+        "lengths": [("Yorker (0-2m)", 24, "#059669"), ("Full (2-6m)", 22, "#0284C7"), ("Good Length (6-8m)", 32, "#111111"), ("Short / Cutter", 22, "#DC2626")],
         "pp_econ": 8.4, "mid_econ": 8.2, "death_econ": 9.8,
         "pp_dots": 44.0, "death_dots": 40.0,
         "strike_zone": "Heavy Back-of-Length Cutter (32%)"
     },
     "varun_chakravarthy": {
-        "lengths": [("Full / Stumps", 34, "#059669"), ("Good Length (6-8m)", 48, "#0284C7"), ("Back of Length", 12, "#001D48"), ("Short", 6, "#DC2626")],
+        "lengths": [("Full / Stumps", 34, "#059669"), ("Good Length (6-8m)", 48, "#0284C7"), ("Back of Length", 12, "#111111"), ("Short", 6, "#DC2626")],
         "pp_econ": 6.8, "mid_econ": 6.7, "death_econ": 8.6,
         "pp_dots": 54.0, "death_dots": 48.0,
         "strike_zone": "Carrom Ball & Sharp Leg-Break (48%)"
     },
     "bhuvneshwar_kumar": {
-        "lengths": [("Yorker (0-2m)", 24, "#059669"), ("Full / Swing", 34, "#0284C7"), ("Good Length (6-8m)", 34, "#001D48"), ("Short / Knuckle", 8, "#DC2626")],
+        "lengths": [("Yorker (0-2m)", 24, "#059669"), ("Full / Swing", 34, "#0284C7"), ("Good Length (6-8m)", 34, "#111111"), ("Short / Knuckle", 8, "#DC2626")],
         "pp_econ": 6.4, "mid_econ": 7.2, "death_econ": 8.6,
         "pp_dots": 60.0, "death_dots": 45.0,
         "strike_zone": "Conventional Outswing Corridor (34%)"
     },
     "arshdeep_singh": {
-        "lengths": [("Yorker (0-2m)", 32, "#059669"), ("Full (2-6m)", 24, "#0284C7"), ("Good Length (6-8m)", 28, "#001D48"), ("Short / Bouncer", 16, "#DC2626")],
+        "lengths": [("Yorker (0-2m)", 32, "#059669"), ("Full (2-6m)", 24, "#0284C7"), ("Good Length (6-8m)", 28, "#111111"), ("Short / Bouncer", 16, "#DC2626")],
         "pp_econ": 7.1, "mid_econ": 7.5, "death_econ": 8.7,
         "pp_dots": 52.0, "death_dots": 48.0,
         "strike_zone": "Death Overs Blockhole Yorker (32%)"
@@ -359,8 +359,8 @@ def build_clean_wagon_wheel_svg(wdata):
     svg.append('''<defs>
         <radialGradient id="fieldGrad" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stop-color="#FFFFFF"/>
-            <stop offset="88%" stop-color="#F8FAFC"/>
-            <stop offset="100%" stop-color="#EEF2F6"/>
+            <stop offset="88%" stop-color="#F5F5F6"/>
+            <stop offset="100%" stop-color="#E6E6E8"/>
         </radialGradient>
         <filter id="badgeFilt" x="-10%" y="-10%" width="120%" height="120%">
             <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.06"/>
@@ -368,15 +368,15 @@ def build_clean_wagon_wheel_svg(wdata):
     </defs>''')
     
     # Boundary ring & 30 yd circle
-    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r_ground}" fill="url(#fieldGrad)" stroke="#001D48" stroke-width="2.5"/>')
-    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r_circle}" fill="none" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="3,3"/>')
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r_ground}" fill="url(#fieldGrad)" stroke="#111111" stroke-width="2.5"/>')
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r_circle}" fill="none" stroke="#B4B4BC" stroke-width="1.2" stroke-dasharray="3,3"/>')
     
     # 8 Faint sector guide lines (stopping BEFORE labels)
     for ang in range(0, 360, 45):
         rad = math.radians(ang)
         x2 = cx + (r_ground - 4) * math.sin(rad)
         y2 = cy - (r_ground - 4) * math.cos(rad)
-        svg.append(f'<line x1="{cx}" y1="{cy}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="#E2E8F0" stroke-width="1"/>')
+        svg.append(f'<line x1="{cx}" y1="{cy}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="#D0D0D5" stroke-width="1"/>')
         
     # Pitch in center
     svg.append(f'<rect x="{cx - 5}" y="{cy - 12}" width="10" height="24" fill="#D97706" rx="2"/>')
@@ -402,7 +402,7 @@ def build_clean_wagon_wheel_svg(wdata):
                 dash = ""
                 r_dot = 2.5
             else:
-                col = "#64748B"
+                col = "#27272A"
                 sw = "1.2"
                 dash = 'stroke-dasharray="2,2"'
                 r_dot = 2.0
@@ -422,8 +422,8 @@ def build_clean_wagon_wheel_svg(wdata):
         bx = lx - bw / 2
         by = ly - bh / 2
         
-        border_col = "#EB1A8D" if is_dom else "#CBD5E1"
-        text_col = "#EB1A8D" if is_dom else "#001D48"
+        border_col = "#EB1A8D" if is_dom else "#B4B4BC"
+        text_col = "#EB1A8D" if is_dom else "#111111"
         bg_col = "#FDF2F8" if is_dom else "#FFFFFF"
         font_wt = "800" if is_dom else "700"
         
@@ -439,7 +439,7 @@ def build_clean_wagon_wheel_svg(wdata):
     <div class="wagon-legend" style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px 18px;font-size:11.5px;color:var(--text-muted);margin-top:10px;font-weight:600;">
         <div><span style="display:inline-block;width:12px;height:3px;background:#EB1A8D;margin-right:5px;vertical-align:middle;"></span>Fours (Boundaries)</div>
         <div><span style="display:inline-block;width:12px;height:3px;background:#059669;margin-right:5px;vertical-align:middle;"></span>Sixes (Maximums)</div>
-        <div><span style="display:inline-block;width:12px;height:2px;background:#64748B;border-top:1px dashed #64748B;margin-right:5px;vertical-align:middle;"></span>1s & 2s (Rotation)</div>
+        <div><span style="display:inline-block;width:12px;height:2px;background:#27272A;border-top:1px dashed #27272A;margin-right:5px;vertical-align:middle;"></span>1s & 2s (Rotation)</div>
     </div>
     ''')
     return "".join(svg)
@@ -451,9 +451,9 @@ def build_clean_pitch_map_svg(bdata):
     svg.append('<svg viewBox="0 0 280 340" style="width:100%;max-width:260px;height:auto;margin:0 auto;display:block;">')
     
     # Pitch outline
-    svg.append('<rect x="40" y="20" width="200" height="300" fill="#F8FAFC" stroke="#001D48" stroke-width="2" rx="4"/>')
+    svg.append('<rect x="40" y="20" width="200" height="300" fill="#F5F5F6" stroke="#111111" stroke-width="2" rx="4"/>')
     # Bowling crease & Stumps
-    svg.append('<line x1="40" y1="52" x2="240" y2="52" stroke="#64748B" stroke-width="2"/>')
+    svg.append('<line x1="40" y1="52" x2="240" y2="52" stroke="#27272A" stroke-width="2"/>')
     svg.append('<rect x="125" y="34" width="30" height="7" fill="#D97706" rx="1"/>')
     
     # Length Zones with neat fills
@@ -466,8 +466,8 @@ def build_clean_pitch_map_svg(bdata):
     svg.append(f'<text x="140" y="140" font-size="11" font-weight="700" fill="#0284C7" text-anchor="middle">Full Driving ({bdata["lengths"][1][1]}%)</text>')
     
     # 3. Good Length (6-8m)
-    svg.append('<rect x="45" y="168" width="190" height="70" fill="#111827" fill-opacity="0.12" stroke="#001D48" stroke-width="1.8"/>')
-    svg.append(f'<text x="140" y="208" font-size="11" font-weight="800" fill="#111827" text-anchor="middle">Good Length ({bdata["lengths"][2][1]}%)</text>')
+    svg.append('<rect x="45" y="168" width="190" height="70" fill="#09090B" fill-opacity="0.12" stroke="#111111" stroke-width="1.8"/>')
+    svg.append(f'<text x="140" y="208" font-size="11" font-weight="800" fill="#09090B" text-anchor="middle">Good Length ({bdata["lengths"][2][1]}%)</text>')
     
     # 4. Short / Bouncer (>8m)
     svg.append('<rect x="45" y="242" width="190" height="66" fill="#DC2626" fill-opacity="0.12" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="3,3"/>')
@@ -478,9 +478,9 @@ def build_clean_pitch_map_svg(bdata):
     svg.append('<circle cx="145" cy="80" r="4" fill="#059669"/>')
     svg.append('<circle cx="120" cy="130" r="4" fill="#0284C7"/>')
     svg.append('<circle cx="155" cy="142" r="4" fill="#0284C7"/>')
-    svg.append('<circle cx="128" cy="195" r="4" fill="#111827"/>')
-    svg.append('<circle cx="142" cy="210" r="4" fill="#111827"/>')
-    svg.append('<circle cx="150" cy="188" r="4" fill="#111827"/>')
+    svg.append('<circle cx="128" cy="195" r="4" fill="#09090B"/>')
+    svg.append('<circle cx="142" cy="210" r="4" fill="#09090B"/>')
+    svg.append('<circle cx="150" cy="188" r="4" fill="#09090B"/>')
     svg.append('<circle cx="135" cy="265" r="4" fill="#DC2626"/>')
     
     svg.append('</svg>')
@@ -489,7 +489,7 @@ def build_clean_pitch_map_svg(bdata):
     <div style="display:flex;justify-content:center;gap:16px;font-size:11.5px;color:var(--text-muted);margin-top:10px;font-weight:600;">
         <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#059669;margin-right:4px;vertical-align:middle;"></span>Yorker</div>
         <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#0284C7;margin-right:4px;vertical-align:middle;"></span>Full</div>
-        <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#001D48;margin-right:4px;vertical-align:middle;"></span>Good Length</div>
+        <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#111111;margin-right:4px;vertical-align:middle;"></span>Good Length</div>
         <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#DC2626;margin-right:4px;vertical-align:middle;"></span>Short</div>
     </div>
     ''')
@@ -645,7 +645,110 @@ superstars_audit = [
 ]
 
 
-# 7. Generate All 20 Standalone Player Pages
+PLAYER_FOOTER_NOTES = {
+    "shivam_dube": {
+        "methodology": "Evaluated across 70 total fixtures with 18 qualifying high-pressure games. Shivam Dube's win rate rises from 54.3% overall to 66.7% under pressure (+12.4% lift), backed by a 100.0% knockout record and 1 HP POTM award. With M=5.0 Bayesian shrinkage and high-sample credibility, he ranks Batter #1 at 66.81 CPPI.",
+        "thought_process": "Middle-overs scoring drops at Jaipur when slow bowlers grip the surface across 72-78m boundaries. Dube takes down wrist-spin and left-arm orthodox down the ground, freeing Sanju Samson and Riyan Parag to pace the innings. Capping him at INR 9.5 Cr fixes a clear RR bottleneck without overpaying."
+    },
+    "rinku_singh": {
+        "methodology": "Measured across 72 total matches including 26 high-pressure games, one of the largest close-game batting samples in the pool. His win rate climbs from 63.8% baseline to 69.2% in pressure finishes (+5.4% lift) with a 100.0% knockout record and 1 HP POTM, placing him Batter #2 at 66.26 CPPI.",
+        "thought_process": "Finishes decided in overs 16-20 win or lose seasons at Sawai Mansingh Stadium where clearing square boundaries late takes composure. Rinku owns a 176.2 death strike rate paired with Dhruv Jurel and Shimron Hetmyer, justifying RR's highest Priority 1 cap (INR 11.0-12.0 Cr) with a Rajapaksa pivot."
+    },
+    "axar_patel": {
+        "methodology": "Scored across 85 matches with 28 high-pressure appearances, the largest pressure volume among batters. His win rate moves from 56.5% baseline to 64.3% under pressure (+7.8% lift), holding a 100.0% knockout win rate and 2 HP POTM awards for 65.82 CPPI (Batter #3).",
+        "thought_process": "Rajasthan Royals needs a left-handed No. 7 who prevents lower-order collapses and bowls quiet middle overs on dry Jaipur decks. Axar gives both skills in one Indian spot at up to INR 8.0-11.0 Cr, letting RR use its overseas slots on pace and Conway rather than spending heavily on pure specialists."
+    },
+    "rajat_patidar": {
+        "methodology": "Tracked across 42 matches and 14 high-pressure games, posting a 71.4% pressure win rate versus 60.3% baseline (+11.1% lift). Combined with a 71.4% knockout win rate and 2 HP POTM awards, Bayesian adjustment scores him at 64.26 CPPI (Batter #4).",
+        "thought_process": "Patidar attacks spin cleanly in overs 7-15 (178.6 strike rate, 22.4% dot balls) without soaking up deliveries early. If bidding on Shivam Dube crosses RR's 10% walk-away limit, switching cleanly to Patidar preserves middle-overs spin power while protecting squad purse depth."
+    },
+    "ruturaj_gaikwad": {
+        "methodology": "Evaluated over 79 matches and 14 high-pressure fixtures. Gaikwad converts 57.1% under pressure compared with a 50.6% baseline (+6.5% lift), supported by a 100.0% knockout win rate and 2 HP POTM awards for 62.41 CPPI (Batter #5).",
+        "thought_process": "Gaikwad paces big chases smoothly across 75m outfields using clean cover and leg-side gaps. Even so, with Yashasvi Jaiswal and Sanju Samson already anchoring RR's top three, paying INR 14.0 Cr for another frontline top-order accumulator would squeeze RR's death-bowling budget."
+    },
+    "devon_conway": {
+        "methodology": "Assessed across 65 fixtures and 14 high-pressure matches, recording a +18.1% pressure lift - the highest jump among Top 10 batters (64.3% HP win rate vs 46.2% baseline). Adding 2 HP POTM awards and a 66.7% knockout record yields 61.97 CPPI (Batter #6).",
+        "thought_process": "New-ball movement in the first three overs at Jaipur punishes reckless openers. Conway's left-handed control and low 28.0% powerplay dot rate let Jaiswal attack freely while doubling as wicketkeeping backup, all at a sensible INR 6.5 Cr valuation."
+    },
+    "virat_kohli": {
+        "methodology": "Sampled across 85 total matches and 20 high-pressure contests. Kohli converts 70.0% of pressure fixtures against a 62.4% overall win rate (+7.6% lift), alongside 71.4% in knockouts and 1 HP POTM award for 61.47 CPPI (Batter #7).",
+        "thought_process": "Kohli sets the benchmark for gap running and chase control on expansive grounds like Jaipur. Practically, however, an INR 18.0 Cr valuation clashes with RR's INR 45.0 Cr remaining purse rules and overlaps top-order roles already held by Jaiswal and Samson."
+    },
+    "bhanuka_rajapaksa": {
+        "methodology": "Evaluated over 34 total matches and 9 high-pressure games just above the 8-game threshold. A jump from 56.2% baseline to 66.7% HP win rate (+10.4% lift), 100.0% knockout record, and 1 HP POTM produce 59.88 CPPI after credibility scaling (Batter #8).",
+        "thought_process": "Because RR caps Rinku Singh strictly around INR 11.0 Cr, having an affordable backup ready matters if auction inflation hits finishers. Rajapaksa clears boundaries early at INR 3.5 Cr max, letting RR move Hetmyer to No. 6 and shift saved funds to bowlers."
+    },
+    "shreyas_iyer": {
+        "methodology": "Analysed across 66 fixtures including 18 high-pressure games, posting 55.6% HP win rate against 54.5% baseline (+1.1% lift) plus 3 HP POTM awards - the most among ranked batters - and a 60.0% knockout record, yielding 54.18 CPPI (Batter #9).",
+        "thought_process": "Iyer controls chases through middle-overs rotation and three match-winning pressure knocks, keeping him in the Top 10 despite narrow win lift. Still, at ~INR 12.5 Cr and with Sanju Samson already captaining at No. 3, Dube or Patidar offer stronger spin-boundary ROI per crore."
+    },
+    "sediqullah_atal": {
+        "methodology": "Measured across 19 matches with 8 high-pressure contests at the model's minimum sample boundary. His 50.0% HP win rate trails his 57.9% baseline (-7.9% lift), but 2 HP POTM awards and 66.7% knockout record keep him at 50.07 CPPI (Batter #10).",
+        "thought_process": "Atal enters at #10 mainly because two high-leverage POTM knocks in a small 8-match pressure sample carry weight alongside a low INR 1.5 Cr price tag. His negative lift and 19-match sample mark him strictly as a cheap bench powerplay cover rather than a starter."
+    },
+    "jacob_duffy": {
+        "methodology": "Tracked over 22 matches with 8 high-pressure appearances. Duffy posts a 75.0% pressure win rate versus 54.5% baseline for a dataset-best +20.5% pressure lift, plus a 100.0% knockout record and 1 HP POTM, earning 68.83 CPPI after Bayesian shrinkage (Bowler #1).",
+        "thought_process": "Auctions routinely undervalue accurate overseas seamers without household fame. Duffy hits hard seam lengths and bowls quiet overs under dew (7.2 death economy, 38.0% dots) at just INR 2.0-6.5 Cr, making him both a high-value XI starter and Hazlewood insurance."
+    },
+    "josh_hazlewood": {
+        "methodology": "Assessed across 55 matches and 14 high-pressure games. His win rate climbs from 63.7% baseline to 78.6% in close games (+14.9% lift), supported by 83.3% knockout wins and 1 HP POTM award for 68.59 CPPI (Bowler #2).",
+        "thought_process": "Under night dew at Sawai Mansingh Stadium, 6-8m good-length seamers beat risky pace variations because batters cannot clear straight 75m boundaries cleanly off the seam. Pairing Hazlewood (INR 9.0 Cr) with Sandeep Sharma gives RR calm execution in powerplay and death."
+    },
+    "yash_dayal": {
+        "methodology": "Evaluated across 43 total games and 10 high-pressure matches, converting 80.0% under pressure compared with 69.8% baseline (+10.2% lift) and 80.0% in knockouts. Even with 0 HP POTM awards, consistent win conversion yields 63.09 CPPI (Bowler #3).",
+        "thought_process": "Most teams blow their purse fighting for capped overseas quicks, leaving Indian slots short. Dayal gives RR a domestic left-arm angle (7.8 death economy, wide yorkers) at INR 5.5-7.5 Cr, keeping overseas spots free for Conway, Hetmyer, and Hazlewood."
+    },
+    "mitchell_starc": {
+        "methodology": "Measured over 41 total matches and 10 high-pressure outings. Although his 60.0% HP win rate sits below his 68.3% baseline (-8.3% lift), 3 HP POTM awards and a 100.0% knockout win rate lift his composite index to 62.80 CPPI (Bowler #4).",
+        "thought_process": "Starc dominates elimination matches with new-ball swing and reverse yorkers, reflected in three pressure POTM awards. However, his -8.3% league-wide close-finish differential and ~INR 14.0 Cr market price push RR toward Hazlewood and Duffy for steadier budget value."
+    },
+    "varun_chakravarthy": {
+        "methodology": "Analysed across 70 matches and 21 high-pressure games, showing a 61.9% pressure win rate over 58.6% baseline (+3.3% lift), a 100.0% knockout win rate, and 1 HP POTM award, reaching 62.38 CPPI (Bowler #5).",
+        "thought_process": "Once the powerplay ends at Jaipur, scoring stalls when wrist or mystery spin forces hitters into 75m boundaries. Varun provides middle-overs wickets (6.9 middle economy, 100% knockout record) at ~INR 5.5 Cr, pairing well with Axar Patel or Riyan Parag."
+    },
+    "romario_shepherd": {
+        "methodology": "Tracked across 96 matches including 25 high-pressure appearances - tied for largest bowling pressure volume. His win conversion improves from 49.0% baseline to 56.0% under pressure (+7.0% lift), backed by 100.0% knockouts and 2 HP POTM for 62.00 CPPI (Bowler #6).",
+        "thought_process": "Teams often lose tight games at Nos. 7-8 when fast bowlers cannot finish with the bat. At INR 4.5 Cr max, Shepherd offers heavy back-of-length overs alongside lower-order power, acting as an adaptable balance piece if RR pivots away from pricey finishers."
+    },
+    "suyash_sharma": {
+        "methodology": "Evaluated across 43 matches and 11 high-pressure games. Suyash lifts his win conversion from 65.1% baseline to 72.7% in tight contests (+7.6% lift), adding a 66.7% knockout record and 1 HP POTM award for 60.07 CPPI (Bowler #7).",
+        "thought_process": "Leg-spinners with quick arm speed trouble set batters across Jaipur's dry center wicket even when dew comes in later. Suyash gives RR a young Indian option around INR 4.5 Cr if Varun Chakravarthy rises past his auction ceiling."
+    },
+    "bhuvneshwar_kumar": {
+        "methodology": "Measured across 89 matches and 25 high-pressure outings, lifting from 57.3% baseline to 60.0% under pressure (+2.7% lift). Two HP POTM awards and a 71.4% playoff record give a steady, low-variance 56.86 CPPI (Bowler #8).",
+        "thought_process": "Early seam movement under lights in Jaipur suits Bhuvneshwar's swing and knuckle-ball control (7.1 powerplay economy). While he sits behind Dayal and Hazlewood as a younger primary buy, his experience remains a steady Indian depth backup around INR 5.0 Cr."
+    },
+    "arshdeep_singh": {
+        "methodology": "Built on the largest sample in the pool: 153 matches and 25 high-pressure games. His win rate rises sharply from 56.9% baseline to 68.0% under pressure (+11.1% lift) with 2 HP POTM awards, though a 33.3% knockout win rate settles him at 55.26 CPPI (Bowler #9).",
+        "thought_process": "Arshdeep's left-arm death yorkers fit Sawai Mansingh Stadium well and lift regular-season close games by +11.1%. His lower 33.3% knockout sample keeps him behind Dayal in index rank, and auction inflation past INR 8.5 Cr would strain RR's 45 Cr cap."
+    },
+    "lockie_ferguson": {
+        "methodology": "Evaluated across 57 matches and 9 high-pressure appearances. Winning 55.6% under pressure versus 49.1% baseline (+6.5% lift) with 2 HP POTM awards and 50.0% knockout conversion places him at 52.00 CPPI (Bowler #10).",
+        "thought_process": "On flat batting evenings when slower cutters lose grip, 145+ kph speed still rushes hitters into deep Jaipur fielders. Ferguson fills a clear pace-enforcer backup spot at ~INR 5.5 Cr behind Hazlewood and Duffy if RR wants raw middle-overs velocity."
+    },
+    "jasprit_bumrah": {
+        "methodology": "Comparison Audit over 77 matches and 14 high-pressure games: despite 4 HP POTM awards, Bumrah's team win conversion dips from 51.9% baseline to 42.9% under pressure (-9.1% lift, 40.0% knockout WR), producing 50.20 CPPI outside Top 10 and locked by Mumbai retention rules.",
+        "thought_process": "Opponents survive Bumrah by playing low-risk singles against his four overs and attacking Mumbai's weaker bowlers in tight chases. Beyond BCCI retention lock, devoting INR 18.0+ Cr of a 45 Cr purse to one pacer breaks squad balance when Hazlewood plus Dayal cover 8 overs for less."
+    },
+    "mohammed_siraj": {
+        "methodology": "Comparison Audit across 83 matches and 18 high-pressure appearances: Siraj's win conversion drops from 55.4% baseline to 38.9% in close finishes (-16.5% lift, 28.6% knockout WR, 1 HP POTM), bringing his CPPI down to 47.80 despite strong new-ball strike power.",
+        "thought_process": "Siraj takes early powerplay wickets when the new ball moves, yet hard-length bowling at 10.4+ death economy gets punished once batters clear their front leg in final overs under dew. For INR 9-11 Cr, Hazlewood and Duffy offer much steadier death execution."
+    },
+    "rashid_khan": {
+        "methodology": "Comparison Audit over 122 matches and 26 high-pressure games: although Rashid holds a 57.4% overall win rate and 4 HP POTM awards, high-pressure win conversion drops to 38.5% (-18.9% lift, 42.9% KO WR), scoring 48.50 CPPI behind Varun and Suyash.",
+        "thought_process": "In close chases, batters treat Rashid much like Bumrah - shutting down aerial shots against his googly and taking singles while hunting other bowlers. With GT retention pricing around INR 16-18 Cr, pairing Axar Patel (8.0 Cr) and Varun (5.5 Cr) covers spin control plus batting depth."
+    },
+    "heinrich_klaasen": {
+        "methodology": "Comparison Audit across 76 matches and 15 high-pressure games: Klaasen drops from 48.7% baseline win rate to 40.0% under pressure (-8.7% lift, 25.0% KO WR, 1 HP POTM), placing at 49.10 CPPI alongside high-risk boundary dismissal patterns in chases.",
+        "thought_process": "Klaasen hits spin harder than almost anyone in T20s, yet all-out aggression brings higher dismissal risk when 12 runs remain from 8 balls. For RR, Samson and Jurel already keep wickets, Hetmyer fills overseas finish power, and Shivam Dube adds +12.4% lift inside an Indian slot."
+    },
+    "rohit_sharma": {
+        "methodology": "Comparison Audit over 92 matches and 19 high-pressure contests: Rohit records a 47.4% pressure win rate against a 51.1% baseline (-3.7% lift, 40.0% knockout WR, 2 HP POTM awards), scoring 52.40 CPPI under Bayesian adjustment.",
+        "thought_process": "Powerplay aggression gives teams quick starts but leaves vulnerability against early swing in tight low-scoring defenses. With Yashasvi Jaiswal and Sanju Samson already leading RR's top order, spending INR 12.0+ Cr on another front-line opener offers duplicate coverage instead of closing overs."
+    }
+}
+
+# 7. Generate All 25 Standalone Player Pages
 all_players_pool = players_db + superstars_audit
 for idx, p in enumerate(all_players_pool):
     prev_p = all_players_pool[idx - 1] if idx > 0 else all_players_pool[-1]
@@ -668,7 +771,7 @@ for idx, p in enumerate(all_players_pool):
         
         phase_panel = f"""
         <div class="graphic-col-data">
-            <div style="font-size:13px;font-weight:700;color:#111827;text-transform:uppercase;margin-bottom:12px;letter-spacing:0.5px;">
+            <div style="font-size:13px;font-weight:700;color:#09090B;text-transform:uppercase;margin-bottom:12px;letter-spacing:0.5px;">
                 Strike Rate by Match Phase
             </div>
             <div style="margin-bottom:12px;">
@@ -676,21 +779,21 @@ for idx, p in enumerate(all_players_pool):
                     <span>Powerplay (Overs 1-6)</span>
                     <strong>{wdata['pp_sr']} SR ({wdata['pp_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#64748B;width:{wdata['pp_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#27272A;width:{wdata['pp_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
                 <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
-                    <span style="font-weight:700;color:#111827;">Middle Overs (Overs 7-15)</span>
+                    <span style="font-weight:700;color:#09090B;">Middle Overs (Overs 7-15)</span>
                     <strong style="color:var(--rr-pink);">{wdata['mid_sr']} SR ({wdata['mid_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--rr-pink);width:{wdata['mid_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--rr-pink);width:{wdata['mid_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
                 <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span>Death Overs (Overs 16-20)</span>
                     <strong style="color:var(--success);">{wdata['death_sr']} SR ({wdata['death_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--success);width:{wdata['death_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--success);width:{wdata['death_sr']/2.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <p style="font-size:11.5px;color:var(--text-muted);margin-top:14px;line-height:1.5;">
                 Quantitative wagon wheel tracking isolates shot placement under pressure, confirming high boundary conversion away from defensive catchers.
@@ -705,7 +808,7 @@ for idx, p in enumerate(all_players_pool):
         
         phase_panel = f"""
         <div class="graphic-col-data">
-            <div style="font-size:13px;font-weight:700;color:#111827;text-transform:uppercase;margin-bottom:12px;letter-spacing:0.5px;">
+            <div style="font-size:13px;font-weight:700;color:#09090B;text-transform:uppercase;margin-bottom:12px;letter-spacing:0.5px;">
                 Economy Rate & Dot Ball% by Phase
             </div>
             <div style="margin-bottom:12px;">
@@ -713,21 +816,21 @@ for idx, p in enumerate(all_players_pool):
                     <span>Powerplay (Overs 1-6)</span>
                     <strong>{bdata['pp_econ']} Econ ({bdata['pp_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#0284C7;width:{bdata['pp_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#0284C7;width:{bdata['pp_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
                 <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
                     <span>Middle Overs (Overs 7-15)</span>
                     <strong>{bdata['mid_econ']} Econ</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#64748B;width:{bdata['mid_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#27272A;width:{bdata['mid_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <div style="margin-bottom:12px;">
                 <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
-                    <span style="font-weight:700;color:#111827;">Death Overs (Overs 16-20)</span>
+                    <span style="font-weight:700;color:#09090B;">Death Overs (Overs 16-20)</span>
                     <strong style="color:var(--rr-pink);">{bdata['death_econ']} Econ ({bdata['death_dots']}% Dots)</strong>
                 </div>
-                <div style="background:#EEF2F6;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--rr-pink);width:{bdata['death_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--rr-pink);width:{bdata['death_econ']*8.5}%;max-width:100%;height:100%;border-radius:5px;"></div></div>
             </div>
             <p style="font-size:11.5px;color:var(--text-muted);margin-top:14px;line-height:1.5;">
                 Pitch-length tracking confirms disciplined adherence to defensive fourth-stump corridors, denying opposition death-overs boundaries.
@@ -743,14 +846,14 @@ for idx, p in enumerate(all_players_pool):
     <title>{p['name']} — Quantitative Scouting Dossier | Rajasthan Royals Analytics</title>
     <style>
         :root {{
-            --rr-navy: #111827;
-            --rr-navy-light: #1F2937;
+            --rr-navy: #09090B;
+            --rr-navy-light: #111111;
             --rr-pink: #EB1A8D;
-            --bg-page: #F8F9FA;
+            --bg-page: #ECECED;
             --bg-card: #FFFFFF;
-            --border: #DDE2E5;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
+            --border: #D0D0D5;
+            --text-main: #111111;
+            --text-muted: #27272A;
             --success: #059669;
             --success-bg: #ECFDF5;
             --danger: #DC2626;
@@ -771,7 +874,7 @@ for idx, p in enumerate(all_players_pool):
         body {{
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-page);
-            color: #374151;
+            color: #141417;
             padding: 20px;
             line-height: 1.5;
         }}
@@ -789,7 +892,7 @@ for idx, p in enumerate(all_players_pool):
             margin-bottom: 20px;
             transition: background 0.15s ease;
         }}
-        .nav-back:hover {{ background: #0A2540; }}
+        .nav-back:hover {{ background: #000000; }}
 
         .profile-card {{
             background: var(--bg-card);
@@ -807,7 +910,7 @@ for idx, p in enumerate(all_players_pool):
             height: 110px;
             border-radius: 50%;
             border: 3px solid var(--border);
-            background: #F1F5F9;
+            background: #E6E6E8;
             overflow: hidden;
             flex-shrink: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.06);
@@ -825,7 +928,7 @@ for idx, p in enumerate(all_players_pool):
         .player-name {{
             font-size: 26px;
             font-weight: 800;
-            color: #111827;
+            color: #09090B;
             line-height: 1.2;
             margin-bottom: 4px;
         }}
@@ -836,8 +939,8 @@ for idx, p in enumerate(all_players_pool):
         }}
         .role-badge {{
             display: inline-block;
-            background: #F1F5F9;
-            color: #111827;
+            background: #E6E6E8;
+            color: #09090B;
             font-size: 12px;
             font-weight: 600;
             padding: 4px 10px;
@@ -845,14 +948,14 @@ for idx, p in enumerate(all_players_pool):
             border: 1px solid var(--border);
         }}
         .rating-box {{
-            background: #F8FAFC;
+            background: #F5F5F6;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 16px 20px;
             text-align: center;
             min-width: 140px;
         }}
-        .rating-val {{ font-size: 32px; font-weight: 800; color: #111827; line-height: 1; }}
+        .rating-val {{ font-size: 32px; font-weight: 800; color: #09090B; line-height: 1; }}
         .rating-lbl {{ font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-top: 4px; }}
 
         /* Metric Grid */
@@ -869,7 +972,7 @@ for idx, p in enumerate(all_players_pool):
             padding: 14px;
             text-align: center;
         }}
-        .metric-val {{ font-size: 20px; font-weight: 800; color: #111827; }}
+        .metric-val {{ font-size: 20px; font-weight: 800; color: #09090B; }}
         .metric-lbl {{ font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-top: 4px; }}
         .metric-sub {{ font-size: 10px; color: var(--text-muted); margin-top: 2px; }}
 
@@ -884,22 +987,22 @@ for idx, p in enumerate(all_players_pool):
         .section-header {{
             font-size: 14px;
             font-weight: 700;
-            color: #111827;
+            color: #09090B;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 10px;
             padding-bottom: 6px;
-            border-bottom: 1px solid #F1F5F9;
+            border-bottom: 1px solid #E6E6E8;
         }}
         .section-content {{
             font-size: 13.5px;
-            color: #374151;
+            color: #141417;
             line-height: 1.6;
         }}
 
         /* Visual Progress Bars */
         .chart-box {{
-            background: #F8FAFC;
+            background: #F5F5F6;
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 16px;
@@ -911,8 +1014,8 @@ for idx, p in enumerate(all_players_pool):
             margin-bottom: 10px;
             font-size: 13px;
         }}
-        .bar-label {{ width: 220px; font-weight: 600; color: #374151; }}
-        .bar-track {{ flex: 1; height: 12px; background: #E2E8F0; border-radius: 6px; overflow: hidden; margin: 0 12px; }}
+        .bar-label {{ width: 220px; font-weight: 600; color: #141417; }}
+        .bar-track {{ flex: 1; height: 12px; background: #D0D0D5; border-radius: 6px; overflow: hidden; margin: 0 12px; }}
         .bar-fill {{ height: 100%; border-radius: 6px; }}
         .bar-value {{ width: 70px; font-weight: 700; text-align: right; }}
 
@@ -925,7 +1028,7 @@ for idx, p in enumerate(all_players_pool):
             border-top: 1px solid var(--border);
         }}
         .bottom-nav a {{
-            color: #111827;
+            color: #09090B;
             text-decoration: none;
             font-size: 13px;
             font-weight: 600;
@@ -934,7 +1037,7 @@ for idx, p in enumerate(all_players_pool):
             border-radius: 6px;
             background: #FFFFFF;
         }}
-        .bottom-nav a:hover {{ background: #F1F5F9; }}
+        .bottom-nav a:hover {{ background: #E6E6E8; }}
         /* Responsive Layout Classes */
         .graphic-flex {{
             display: flex;
@@ -969,7 +1072,7 @@ for idx, p in enumerate(all_players_pool):
             flex-wrap: wrap;
         }}
         .cand-nav a {{
-            color: #111827;
+            color: #09090B;
             text-decoration: none;
             font-size: 12.5px;
             font-weight: 600;
@@ -980,8 +1083,8 @@ for idx, p in enumerate(all_players_pool):
             transition: all 0.15s ease;
         }}
         .cand-nav a:hover {{
-            background: #F1F5F9;
-            border-color: #111827;
+            background: #E6E6E8;
+            border-color: #09090B;
         }}
 
         /* Tablet Responsive (<= 1024px) */
@@ -1230,7 +1333,7 @@ for idx, p in enumerate(all_players_pool):
             <div class="metric-sub">&le; 15 runs / 2 wickets</div>
         </div>
         <div class="metric-card">
-            <div class="metric-val" style="color:#111827;">{p['hp_wr']:.1f}%</div>
+            <div class="metric-val" style="color:#09090B;">{p['hp_wr']:.1f}%</div>
             <div class="metric-lbl">High-Leverage Win%</div>
             <div class="metric-sub">Pressure win conversion</div>
         </div>
@@ -1275,12 +1378,12 @@ for idx, p in enumerate(all_players_pool):
             <div class="bar-item">
                 <span class="bar-label">High-Leverage Situations:</span>
                 <div class="bar-track"><div class="bar-fill" style="width:{p['hp_wr']}%;background:var(--rr-navy);"></div></div>
-                <span class="bar-value" style="color:#111827;">{p['hp_wr']:.1f}%</span>
+                <span class="bar-value" style="color:#09090B;">{p['hp_wr']:.1f}%</span>
             </div>
             <div class="bar-item">
                 <span class="bar-label">Full Baseline Sample:</span>
-                <div class="bar-track"><div class="bar-fill" style="width:{p['base_wr']}%;background:#64748B;"></div></div>
-                <span class="bar-value" style="color:#64748B;">{p['base_wr']:.1f}%</span>
+                <div class="bar-track"><div class="bar-fill" style="width:{p['base_wr']}%;background:#27272A;"></div></div>
+                <span class="bar-value" style="color:#27272A;">{p['base_wr']:.1f}%</span>
             </div>
             <div class="bar-item">
                 <span class="bar-label">Playoff Knockout Fixtures:</span>
@@ -1324,38 +1427,39 @@ for idx, p in enumerate(all_players_pool):
 </body>
 </html>
 """
-    player_html = player_html.replace('</div>\n\n</body>', '''
+    footer_note = PLAYER_FOOTER_NOTES[p["key"]]
+    player_html = player_html.replace('</div>\n\n</body>', f'''
     <!-- Simple Minimal Footer with Copyright -->
-    <footer class="simple-footer" style="margin-top:44px;margin-bottom:28px;padding-top:26px;border-top:1px solid #E2E8F0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#475569;">
+    <footer class="simple-footer" style="margin-top:44px;margin-bottom:28px;padding-top:26px;border-top:1px solid #D0D0D5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1C1C20;">
         <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr));gap:24px;margin-bottom:22px;">
             <div>
-                <div style="font-size:12.5px;font-weight:700;color:#111827;margin-bottom:6px;">Methodology</div>
-                <p style="margin:0;font-size:12px;line-height:1.65;color:#475569;">
-                    Evaluated 883 IPL &amp; T20I matches (2022&ndash;2026) to isolate 178 high-pressure games (MLI &ge; 30: knockouts, Super Overs, or close finishes). Players are ranked via the calibrated CPPI combining Bayesian HP Win Rate (35%), Normalized Pressure Lift &Delta; (25%), Knockout Win Rate (20%), HP POTM Density (10%), and Baseline Win Rate (10%), scaled by a sigmoid credibility curve and BCCI auction eligibility filters.
+                <div style="font-size:12.5px;font-weight:700;color:#09090B;margin-bottom:6px;">Methodology &mdash; {p['name']}</div>
+                <p style="margin:0;font-size:12px;line-height:1.65;color:#1C1C20;">
+                    {footer_note['methodology']}
                 </p>
             </div>
             <div>
-                <div style="font-size:12.5px;font-weight:700;color:#111827;margin-bottom:6px;">Thought Process</div>
-                <p style="margin:0;font-size:12px;line-height:1.65;color:#475569;">
-                    Traditional averages reward stat-padding in one-sided matches. Measuring True Pressure Lift (&Delta;) isolates who genuinely raises their team&rsquo;s win rate when stakes peak &mdash; highlighting high-value clutch winners like Shivam Dube and Jacob Duffy suited for Sawai Mansingh Stadium (Jaipur) within a &#8377;45 Cr auction budget, rather than overpaying for reputation.
+                <div style="font-size:12.5px;font-weight:700;color:#09090B;margin-bottom:6px;">Thought Process &mdash; {p['name']}</div>
+                <p style="margin:0;font-size:12px;line-height:1.65;color:#1C1C20;">
+                    {footer_note['thought_process']}
                 </p>
             </div>
         </div>
 
-        <div class="footer-bottom-row" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #E2E8F0;font-size:12px;color:#64748B;">
+        <div class="footer-bottom-row" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #D0D0D5;font-size:12px;color:#27272A;">
             <div>
                 &copy; 2026 Ketan Rawat. All rights reserved. &middot; Rajasthan Royals SupeRR Selector Season 2
             </div>
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;">
-                <a href="https://rr-dashboard.onrender.com/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Live Dashboard</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Resume</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Season 1 Certificate (Additional Top 20)</a>
+                <a href="https://rr-dashboard.onrender.com/" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Live Dashboard</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Resume</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Season 1 Certificate (Additional Top 20)</a>
             </div>
         </div>
     </footer>
@@ -1378,14 +1482,14 @@ master_dashboard_html = f"""<!DOCTYPE html>
     <title>Rajasthan Royals — Performance Analytics Dashboard</title>
     <style>
         :root {{
-            --rr-navy: #111827;
-            --rr-navy-light: #1F2937;
+            --rr-navy: #09090B;
+            --rr-navy-light: #111111;
             --rr-pink: #EB1A8D;
-            --bg-page: #F4F6F9;
+            --bg-page: #ECECED;
             --bg-card: #FFFFFF;
-            --border-card: #DDE2E5;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
+            --border-card: #D0D0D5;
+            --text-main: #111111;
+            --text-muted: #27272A;
             --success: #059669;
             --success-bg: #ECFDF5;
             --danger: #DC2626;
@@ -1407,7 +1511,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         body {{
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-page);
-            color: #374151;
+            color: #141417;
             padding: 20px;
             line-height: 1.45;
             -webkit-font-smoothing: antialiased;
@@ -1421,11 +1525,11 @@ master_dashboard_html = f"""<!DOCTYPE html>
             box-sizing: border-box;
         }}
 
-        /* Top Executive Header with RR Wallpaper Background & Dark Gradient */
+        /* Top Executive Header with RR Wallpaper Background & Matte Black Gradient */
         .executive-header {{
             position: relative;
             overflow: hidden;
-            background: #00122e;
+            background: #09090B;
             border: 1px solid rgba(235, 26, 141, 0.35);
             border-radius: 10px;
             padding: 22px 28px;
@@ -1435,7 +1539,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 18px;
-            box-shadow: 0 4px 20px rgba(0, 18, 46, 0.25);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
         }}
 
         /* Low Opacity RR Wallpaper Background Layer */
@@ -1452,12 +1556,12 @@ master_dashboard_html = f"""<!DOCTYPE html>
             z-index: 1;
         }}
 
-        /* Rich Dark Gradient Overlay (Deep Navy to Black) */
+        /* Rich Matte Black Gradient Overlay */
         .executive-header::after {{
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(110deg, rgba(0, 16, 42, 0.95) 0%, rgba(0, 22, 54, 0.88) 50%, rgba(10, 12, 22, 0.94) 100%);
+            background: linear-gradient(110deg, rgba(9, 9, 11, 0.96) 0%, rgba(18, 18, 22, 0.90) 50%, rgba(5, 5, 7, 0.96) 100%);
             pointer-events: none;
             z-index: 2;
         }}
@@ -1492,7 +1596,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
 
         .header-titles p {{
             font-size: 13.5px;
-            color: #E2E8F0;
+            color: #E4E4E7;
             margin-top: 4px;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
         }}
@@ -1500,7 +1604,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         .header-meta {{
             text-align: right;
             font-size: 12px;
-            color: #94A3B8;
+            color: #D4D4D8;
         }}
         .header-meta strong {{
             color: #FFFFFF;
@@ -1510,7 +1614,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
         }}
         .header-meta span {{
-            color: #CBD5E1;
+            color: #E4E4E7;
         }}
 /* Top Metrics Strip */
         .kpi-strip {{
@@ -1526,7 +1630,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         .kpi-item {{
-            border-right: 1px solid #EEF2F6;
+            border-right: 1px solid #E6E6E8;
             padding: 0 8px;
         }}
         .kpi-item:last-child {{ border-right: none; }}
@@ -1543,7 +1647,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         .kpi-num {{
             font-size: 26px;
             font-weight: 800;
-            color: #111827;
+            color: #09090B;
             line-height: 1.1;
         }}
 
@@ -1637,7 +1741,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
             display: flex;
             align-items: center;
             gap: 6px;
-            color: #111827;
+            color: #09090B;
             font-weight: 600;
             font-size: 11px;
             overflow: hidden;
@@ -1647,7 +1751,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         .donut-legend-pct {{
             font-weight: 700;
             color: var(--text-dark);
-            background: #F1F5F9;
+            background: #E6E6E8;
             padding: 1.5px 7px;
             border-radius: 4px;
             font-size: 10.5px;
@@ -1685,7 +1789,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
             margin-top: 4px;
         }}
         .matrix-table th {{
-            background: #F8FAFC;
+            background: #F5F5F6;
             color: var(--text-muted);
             font-weight: 700;
             padding: 8px 4px;
@@ -1732,9 +1836,9 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         .nav-tab-btn {{
-            background: #F8FAFC;
+            background: #F5F5F6;
             border: 1px solid var(--border-card);
-            color: #475569;
+            color: #1C1C20;
             font-size: 12px;
             font-weight: 600;
             padding: 6px 14px;
@@ -1745,15 +1849,15 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         .nav-tab-btn:hover {{
-            background: #F1F5F9;
-            color: #111827;
-            border-color: #CBD5E1;
+            background: #E6E6E8;
+            color: #09090B;
+            border-color: #B4B4BC;
         }}
 
         .nav-tab-btn.active {{
-            background: #111827 !important;
+            background: #09090B !important;
             color: #FFFFFF !important;
-            border-color: #111827 !important;
+            border-color: #09090B !important;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }}
 
@@ -1763,8 +1867,8 @@ master_dashboard_html = f"""<!DOCTYPE html>
             gap: 6px;
             font-size: 11px;
             font-weight: 600;
-            color: #64748B;
-            background: #F8FAFC;
+            color: #27272A;
+            background: #F5F5F6;
             border: 1px solid var(--border-card);
             padding: 4px 10px;
             border-radius: 16px;
@@ -1787,15 +1891,15 @@ master_dashboard_html = f"""<!DOCTYPE html>
             flex-wrap: wrap;
             gap: 12px;
             padding-top: 10px;
-            border-top: 1px solid #F1F5F9;
+            border-top: 1px solid #E6E6E8;
         }}
 
         .search-wrapper {{
             display: flex;
             align-items: center;
             gap: 8px;
-            background: #F8FAFC;
-            border: 1px solid #CBD5E1;
+            background: #F5F5F6;
+            border: 1px solid #B4B4BC;
             border-radius: 6px;
             padding: 0 12px;
             height: 34px;
@@ -1806,9 +1910,9 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         .search-wrapper:focus-within {{
-            border-color: #111827;
+            border-color: #09090B;
             background: #FFFFFF;
-            box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.08);
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
         }}
 
         .search-icon {{
@@ -1821,12 +1925,12 @@ master_dashboard_html = f"""<!DOCTYPE html>
             outline: none;
             width: 100%;
             font-size: 12px;
-            color: #111827;
+            color: #09090B;
             padding: 0;
         }}
 
         .search-field::placeholder {{
-            color: #94A3B8;
+            color: #52525B;
         }}
 
         .slicer-dropdowns {{
@@ -1845,20 +1949,20 @@ master_dashboard_html = f"""<!DOCTYPE html>
         .slicer-label {{
             font-size: 11px;
             font-weight: 700;
-            color: #64748B;
+            color: #27272A;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             white-space: nowrap;
         }}
 
         .slicer-select {{
-            background: #F8FAFC;
-            border: 1px solid #CBD5E1;
+            background: #F5F5F6;
+            border: 1px solid #B4B4BC;
             border-radius: 6px;
             padding: 4px 10px;
             font-size: 12px;
             font-weight: 600;
-            color: #111827;
+            color: #09090B;
             outline: none;
             cursor: pointer;
             height: 34px;
@@ -1866,17 +1970,17 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         .slicer-select:focus {{
-            border-color: #111827;
+            border-color: #09090B;
         }}
 
         .slicer-reset-btn {{
-            background: #F1F5F9;
+            background: #E6E6E8;
             border: 1px solid var(--border-card);
             border-radius: 6px;
             padding: 0 12px;
             font-size: 12px;
             font-weight: 600;
-            color: #475569;
+            color: #1C1C20;
             cursor: pointer;
             height: 34px;
             transition: all 0.15s ease;
@@ -1884,8 +1988,8 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         .slicer-reset-btn:hover {{
-            background: #E2E8F0;
-            color: #111827;
+            background: #D0D0D5;
+            color: #09090B;
         }}
         /* Continuous Rolling Donut Animation */
         @keyframes rollingDonut {{
@@ -1928,7 +2032,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         thead tr {{
-            background: #F8FAFC;
+            background: #F5F5F6;
             border-bottom: 2px solid var(--border-card);
         }}
 
@@ -1944,13 +2048,13 @@ master_dashboard_html = f"""<!DOCTYPE html>
         }}
 
         tbody tr {{
-            border-bottom: 1px solid #EEF2F6;
+            border-bottom: 1px solid #E6E6E8;
             cursor: pointer;
             transition: background 0.15s ease;
         }}
 
         tbody tr:hover {{
-            background-color: #F8FAFC;
+            background-color: #F5F5F6;
         }}
 
         td {{
@@ -1970,7 +2074,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
             height: 44px;
             border-radius: 50%;
             border: 2px solid var(--border-card);
-            background: #F1F5F9;
+            background: #E6E6E8;
             overflow: hidden;
             flex-shrink: 0;
             box-shadow: 0 1px 2px rgba(0,0,0,0.06);
@@ -1978,7 +2082,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         .thumb-img img {{ width: 100%; height: 100%; object-fit: cover; }}
 
         .name-box a {{
-            color: #111827;
+            color: #09090B;
             text-decoration: none;
             font-weight: 700;
             font-size: 13.5px;
@@ -2013,7 +2117,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
             transition: background 0.15s ease;
             white-space: nowrap;
         }}
-        .action-link:hover {{ background: #0A2540; }}
+        .action-link:hover {{ background: #000000; }}
 
         /* Lower Documentation Section */
         .data-section {{
@@ -2030,7 +2134,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
 
         .doc-box {{
             background: #FFFFFF;
-            border: 1px solid #E2E8F0;
+            border: 1px solid #D0D0D5;
             border-radius: 10px;
             padding: 22px 24px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -2039,34 +2143,34 @@ master_dashboard_html = f"""<!DOCTYPE html>
         .doc-heading {{
             font-size: 14px;
             font-weight: 800;
-            color: #111827;
+            color: #09090B;
             text-transform: uppercase;
             letter-spacing: 0.6px;
             margin-bottom: 12px;
-            border-bottom: 1px solid #E2E8F0;
+            border-bottom: 1px solid #D0D0D5;
             padding-bottom: 8px;
         }}
 
         .doc-box p {{
             font-size: 12.5px;
-            color: #374151;
+            color: #141417;
             line-height: 1.6;
         }}
 
         .doc-box p strong {{
-            color: #111827;
+            color: #09090B;
             font-weight: 700;
         }}
 
         .code-snippet {{
-            background: #F8FAFC;
-            border: 1px solid #CBD5E1;
+            background: #F5F5F6;
+            border: 1px solid #B4B4BC;
             border-left: 3px solid #EB1A8D;
             border-radius: 6px;
             padding: 10px 14px;
             font-family: ui-monospace, Menlo, Consolas, monospace;
             font-size: 12px;
-            color: #111827;
+            color: #09090B;
             font-weight: 600;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -2119,10 +2223,10 @@ master_dashboard_html = f"""<!DOCTYPE html>
             }}
             .kpi-item,
             .kpi-item:last-child {{
-                border: 1px solid #EEF2F6;
+                border: 1px solid #E6E6E8;
                 border-radius: 6px;
                 padding: 12px 10px;
-                background: #FAFCFF;
+                background: #F5F5F6;
             }}
             .analytics-row-3col {{
                 grid-template-columns: 1fr 1fr;
@@ -2453,7 +2557,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         </div>
         <div class="kpi-item">
             <div class="kpi-lbl">Top Ranked Bowler</div>
-            <div class="kpi-num" style="color:#111827;">68.8</div>
+            <div class="kpi-num" style="color:#09090B;">68.8</div>
             <div class="kpi-sub">Jacob Duffy (+20.5% &Delta;)</div>
         </div>
         <div class="kpi-item">
@@ -2472,12 +2576,12 @@ master_dashboard_html = f"""<!DOCTYPE html>
             </div>
             <div class="donut-container">
                 <svg viewBox="0 0 160 160" width="112" height="112" style="flex-shrink:0;overflow:visible;">
-                    <circle cx="80" cy="80" r="58" fill="none" stroke="#EEF2F6" stroke-width="22"/>
+                    <circle cx="80" cy="80" r="58" fill="none" stroke="#E6E6E8" stroke-width="22"/>
                     <!-- Rolling Ring Group: Continuous automatic smooth 360deg rotation -->
                     <g class="rolling-donut-ring">
                         <animateTransform attributeName="transform" type="rotate" from="0 80 80" to="360 80 80" dur="12s" repeatCount="indefinite"/>
                         <!-- Playoff / KO Stage (20%) -->
-                        <circle cx="80" cy="80" r="58" fill="none" stroke="#001D48" stroke-width="22"
+                        <circle cx="80" cy="80" r="58" fill="none" stroke="#111111" stroke-width="22"
                                 stroke-dasharray="72 364" stroke-dashoffset="0" transform="rotate(-90 80 80)"/>
                         <!-- Defences <= 15 runs (66%) -->
                         <circle cx="80" cy="80" r="58" fill="none" stroke="#EB1A8D" stroke-width="22"
@@ -2487,8 +2591,8 @@ master_dashboard_html = f"""<!DOCTYPE html>
                                 stroke-dasharray="51 364" stroke-dashoffset="-313" transform="rotate(-90 80 80)"/>
                     </g>
                     <!-- Center Metric (Stationary and upright in the center) -->
-                    <text x="80" y="75" font-size="20" font-weight="800" fill="#111827" text-anchor="middle">178</text>
-                    <text x="80" y="91" font-size="9" font-weight="700" fill="#64748B" text-anchor="middle">MATCHES</text>
+                    <text x="80" y="75" font-size="20" font-weight="800" fill="#09090B" text-anchor="middle">178</text>
+                    <text x="80" y="91" font-size="9" font-weight="700" fill="#27272A" text-anchor="middle">MATCHES</text>
                 </svg>
                 <div class="donut-legend">
                     <div class="donut-legend-item">
@@ -2500,7 +2604,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
                     </div>
                     <div class="donut-legend-item">
                         <div class="donut-legend-left">
-                            <span class="legend-dot" style="background:#001D48;"></span>
+                            <span class="legend-dot" style="background:#111111;"></span>
                             <span>Playoff / KO Stage</span>
                         </div>
                         <span class="donut-legend-pct">20%</span>
@@ -2525,42 +2629,42 @@ master_dashboard_html = f"""<!DOCTYPE html>
             <div style="font-size:12px;">
                 <div class="diff-row-item">
                     <div class="diff-row-header">
-                        <span style="font-weight:700;color:#111827;">1. Jacob Duffy</span>
+                        <span style="font-weight:700;color:#09090B;">1. Jacob Duffy</span>
                         <strong style="color:var(--success);">+20.5%</strong>
                     </div>
-                    <div style="background:#EEF2F6;height:6px;border-radius:3px;"><div style="background:var(--success);width:100%;height:100%;border-radius:3px;"></div></div>
+                    <div style="background:#E6E6E8;height:6px;border-radius:3px;"><div style="background:var(--success);width:100%;height:100%;border-radius:3px;"></div></div>
                 </div>
 
                 <div class="diff-row-item">
                     <div class="diff-row-header">
-                        <span style="font-weight:700;color:#111827;">2. Devon Conway</span>
+                        <span style="font-weight:700;color:#09090B;">2. Devon Conway</span>
                         <strong style="color:var(--success);">+18.1%</strong>
                     </div>
-                    <div style="background:#EEF2F6;height:6px;border-radius:3px;"><div style="background:var(--success);width:88%;height:100%;border-radius:3px;"></div></div>
+                    <div style="background:#E6E6E8;height:6px;border-radius:3px;"><div style="background:var(--success);width:88%;height:100%;border-radius:3px;"></div></div>
                 </div>
 
                 <div class="diff-row-item">
                     <div class="diff-row-header">
-                        <span style="font-weight:700;color:#111827;">3. Josh Hazlewood</span>
+                        <span style="font-weight:700;color:#09090B;">3. Josh Hazlewood</span>
                         <strong style="color:var(--success);">+14.9%</strong>
                     </div>
-                    <div style="background:#EEF2F6;height:6px;border-radius:3px;"><div style="background:var(--success);width:73%;height:100%;border-radius:3px;"></div></div>
+                    <div style="background:#E6E6E8;height:6px;border-radius:3px;"><div style="background:var(--success);width:73%;height:100%;border-radius:3px;"></div></div>
                 </div>
 
                 <div class="diff-row-item">
                     <div class="diff-row-header">
-                        <span style="font-weight:700;color:#111827;">4. Shivam Dube</span>
+                        <span style="font-weight:700;color:#09090B;">4. Shivam Dube</span>
                         <strong style="color:var(--success);">+12.4%</strong>
                     </div>
-                    <div style="background:#EEF2F6;height:6px;border-radius:3px;"><div style="background:var(--success);width:60%;height:100%;border-radius:3px;"></div></div>
+                    <div style="background:#E6E6E8;height:6px;border-radius:3px;"><div style="background:var(--success);width:60%;height:100%;border-radius:3px;"></div></div>
                 </div>
 
                 <div class="diff-row-item" style="margin-bottom:0;">
                     <div class="diff-row-header">
-                        <span style="font-weight:700;color:#111827;">5. R. Patidar / Arshdeep</span>
+                        <span style="font-weight:700;color:#09090B;">5. R. Patidar / Arshdeep</span>
                         <strong style="color:var(--success);">+11.1%</strong>
                     </div>
-                    <div style="background:#EEF2F6;height:6px;border-radius:3px;"><div style="background:var(--success);width:54%;height:100%;border-radius:3px;"></div></div>
+                    <div style="background:#E6E6E8;height:6px;border-radius:3px;"><div style="background:var(--success);width:54%;height:100%;border-radius:3px;"></div></div>
                 </div>
             </div>
             <div style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:6px;">True empirical win rate boost under pressure</div>
@@ -2591,14 +2695,14 @@ master_dashboard_html = f"""<!DOCTYPE html>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="text-align:left;font-weight:700;color:#111827;padding-left:8px;">Top 10 Batters</td>
+                        <td style="text-align:left;font-weight:700;color:#09090B;padding-left:8px;">Top 10 Batters</td>
                         <td class="matrix-highlight">68.4%</td>
                         <td class="matrix-highlight">71.2%</td>
                         <td>64.5%</td>
                         <td class="matrix-highlight">72.0%</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left;font-weight:700;color:#111827;padding-left:8px;">Top 10 Bowlers</td>
+                        <td style="text-align:left;font-weight:700;color:#09090B;padding-left:8px;">Top 10 Bowlers</td>
                         <td class="matrix-highlight">66.7%</td>
                         <td>63.8%</td>
                         <td class="matrix-highlight">69.1%</td>
@@ -2637,7 +2741,7 @@ master_dashboard_html = f"""<!DOCTYPE html>
         <!-- Bottom Row: Filter & Search Controls (Balanced, Full-Width, No Empty Void) -->
         <div class="slicer-controls-row">
             <div class="search-wrapper">
-                <svg class="search-icon" viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="#64748B" stroke-width="2">
+                <svg class="search-icon" viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="#27272A" stroke-width="2">
                     <circle cx="8.5" cy="8.5" r="5.5"></circle>
                     <line x1="12.5" y1="12.5" x2="17" y2="17"></line>
                 </svg>
@@ -2701,7 +2805,7 @@ for b in top10_batters:
     
     master_dashboard_html += f"""
                 <tr onclick="window.location.href='players/{b['key']}.html'" data-role="{b['tactical_role']}" data-diff="{b['lift']}" data-win="{b['hp_wr']}" data-index="{b['cppi']}" data-rank="{b['rank']}">
-                    <td style="font-weight:700;color:#111827;">{b['rank']}</td>
+                    <td style="font-weight:700;color:#09090B;">{b['rank']}</td>
                     <td>
                         <div class="player-flex">
                             <a href="players/{b['key']}.html" onclick="event.stopPropagation();">
@@ -2715,12 +2819,12 @@ for b in top10_batters:
                     </td>
                     <td>{b['teams']}</td>
                     <td style="text-align:center;font-weight:600;">{b['hp_m']}</td>
-                    <td style="text-align:right;font-weight:700;color:#111827;">{b['hp_wr']:.1f}%</td>
+                    <td style="text-align:right;font-weight:700;color:#09090B;">{b['hp_wr']:.1f}%</td>
                     <td style="text-align:right;color:var(--text-muted);">{b['base_wr']:.1f}%</td>
                     <td style="text-align:center;"><span class="diff-tag {diff_class}">{diff_sign}</span></td>
                     <td style="text-align:center;font-weight:600;">{b['mom_hp']}</td>
                     <td style="text-align:right;font-weight:700;">{b['ko_wr']:.1f}%</td>
-                    <td style="text-align:right;font-weight:800;color:#111827;">{b['cppi']:.2f}</td>
+                    <td style="text-align:right;font-weight:800;color:#09090B;">{b['cppi']:.2f}</td>
                     <td style="text-align:center;">
                         <a href="players/{b['key']}.html" class="action-link" onclick="event.stopPropagation();">View Wagon Wheel &rarr;</a>
                     </td>
@@ -2761,7 +2865,7 @@ for b in top10_bowlers:
     
     master_dashboard_html += f"""
                 <tr onclick="window.location.href='players/{b['key']}.html'" data-role="{b['tactical_role']}" data-diff="{b['lift']}" data-win="{b['hp_wr']}" data-index="{b['cppi']}" data-rank="{b['rank']}">
-                    <td style="font-weight:700;color:#111827;">{b['rank']}</td>
+                    <td style="font-weight:700;color:#09090B;">{b['rank']}</td>
                     <td>
                         <div class="player-flex">
                             <a href="players/{b['key']}.html" onclick="event.stopPropagation();">
@@ -2775,12 +2879,12 @@ for b in top10_bowlers:
                     </td>
                     <td>{b['teams']}</td>
                     <td style="text-align:center;font-weight:600;">{b['hp_m']}</td>
-                    <td style="text-align:right;font-weight:700;color:#111827;">{b['hp_wr']:.1f}%</td>
+                    <td style="text-align:right;font-weight:700;color:#09090B;">{b['hp_wr']:.1f}%</td>
                     <td style="text-align:right;color:var(--text-muted);">{b['base_wr']:.1f}%</td>
                     <td style="text-align:center;"><span class="diff-tag {diff_class}">{diff_sign}</span></td>
                     <td style="text-align:center;font-weight:600;">{b['mom_hp']}</td>
                     <td style="text-align:right;font-weight:700;">{b['ko_wr']:.1f}%</td>
-                    <td style="text-align:right;font-weight:800;color:#111827;">{b['cppi']:.2f}</td>
+                    <td style="text-align:right;font-weight:800;color:#09090B;">{b['cppi']:.2f}</td>
                     <td style="text-align:center;">
                         <a href="players/{b['key']}.html" class="action-link" onclick="event.stopPropagation();">View Pitch Map &rarr;</a>
                     </td>
@@ -2821,7 +2925,7 @@ for s in superstars_audit:
                         <div class="player-flex">
                             <div class="thumb-img"><img src="{s_img}" alt="{s['name']}"></div>
                             <div>
-                                <strong style="color:#111827;font-size:13px;">{s['name']}</strong>
+                                <strong style="color:#09090B;font-size:13px;">{s['name']}</strong>
                             </div>
                         </div>
                     </td>
@@ -2831,7 +2935,7 @@ for s in superstars_audit:
                     <td style="text-align:right;font-weight:700;color:var(--danger);">{s['hp_wr']:.1f}%</td>
                     <td style="text-align:center;"><span class="diff-tag diff-neg">{diff_sign}</span></td>
                     <td style="text-align:center;font-weight:600;">{s['ko_wr']:.1f}%</td>
-                    <td style="font-size:12.5px;color:#374151;line-height:1.5;">{s['reason']}</td>
+                    <td style="font-size:12.5px;color:#141417;line-height:1.5;">{s['reason']}</td>
                     <td style="text-align:center;">
                         <a href="players/{s['key']}.html" class="action-link" onclick="event.stopPropagation();">View Profile &rarr;</a>
                     </td>
@@ -3027,7 +3131,7 @@ master_dashboard_html += """
                     </thead>
                     <tbody>
                         <tr onclick="window.location.href='players/devon_conway.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">1</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">1</td>
                             <td style="white-space:nowrap;"><strong>Devon Conway</strong> <span style="font-size:11px;color:var(--text-muted);">(wk)</span></td>
                             <td>Top-Order Anchor & Wicketkeeper</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">46.2%</td>
@@ -3035,7 +3139,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+18.1%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/ruturaj_gaikwad.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">2</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">2</td>
                             <td style="white-space:nowrap;"><strong>Ruturaj Gaikwad</strong></td>
                             <td>Opening Batter & Inning Pacer</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">50.6%</td>
@@ -3043,7 +3147,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+6.5%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/rajat_patidar.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">3</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">3</td>
                             <td style="white-space:nowrap;"><strong>Rajat Patidar</strong></td>
                             <td>No. 3 Anchor & Spin Attacker</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">60.3%</td>
@@ -3051,7 +3155,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+11.1%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/shivam_dube.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">4</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">4</td>
                             <td style="white-space:nowrap;"><strong>Shivam Dube</strong></td>
                             <td>Middle-Overs Boundary Hitter vs Spin (Overs 7&ndash;15)</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">54.3%</td>
@@ -3059,7 +3163,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+12.4%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/shreyas_iyer.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">5</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">5</td>
                             <td style="white-space:nowrap;"><strong>Shreyas Iyer</strong> <span style="font-size:11px;color:var(--rr-pink);font-weight:700;">(c)</span></td>
                             <td>Middle-Order Game Manager & Captain</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">54.5%</td>
@@ -3067,7 +3171,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+1.1%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/rinku_singh.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">6</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">6</td>
                             <td style="white-space:nowrap;"><strong>Rinku Singh</strong></td>
                             <td>Designated Death Finisher (Overs 16&ndash;20)</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">63.8%</td>
@@ -3075,7 +3179,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+5.4%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/axar_patel.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">7</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">7</td>
                             <td style="white-space:nowrap;"><strong>Axar Patel</strong></td>
                             <td>Spin All-Rounder & Late-Overs Hitter</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">56.5%</td>
@@ -3083,7 +3187,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+7.8%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/romario_shepherd.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">8</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">8</td>
                             <td style="white-space:nowrap;"><strong>Romario Shepherd</strong></td>
                             <td>Pace All-Rounder & Heavy-Ball Bowler</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">49.0%</td>
@@ -3091,7 +3195,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+7.0%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/mitchell_starc.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">9</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">9</td>
                             <td style="white-space:nowrap;"><strong>Mitchell Starc</strong></td>
                             <td>Left-Arm Fast Bowler (Powerplay & Death)</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">68.3%</td>
@@ -3099,7 +3203,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag" style="background:#FEF3C7;color:#92400E;">3 Awards</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/varun_chakravarthy.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">10</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">10</td>
                             <td style="white-space:nowrap;"><strong>Varun Chakravarthy</strong></td>
                             <td>Mystery Spinner (Middle Overs)</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">58.6%</td>
@@ -3107,7 +3211,7 @@ master_dashboard_html += """
                             <td style="text-align:center;white-space:nowrap;"><span class="diff-tag diff-pos">+3.3%</span></td>
                         </tr>
                         <tr onclick="window.location.href='players/jacob_duffy.html'" style="cursor:pointer;">
-                            <td style="font-weight:700;color:#111827;text-align:center;">11</td>
+                            <td style="font-weight:700;color:#09090B;text-align:center;">11</td>
                             <td style="white-space:nowrap;"><strong>Jacob Duffy</strong></td>
                             <td>Accurate Swing & Seam Bowler</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">54.5%</td>
@@ -3160,42 +3264,42 @@ master_dashboard_html += """
                         <tr onclick="window.location.href='players/rinku_singh.html'" style="cursor:pointer;">
                             <td style="white-space:nowrap;"><strong>Rinku Singh</strong></td>
                             <td style="text-align:center;white-space:nowrap;"><span class="tier-badge tier-1">Priority 1</span></td>
-                            <td style="text-align:right;font-weight:700;color:#111827;white-space:nowrap;">&#8377;11.00 Cr</td>
+                            <td style="text-align:right;font-weight:700;color:#09090B;white-space:nowrap;">&#8377;11.00 Cr</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">24.4%</td>
                             <td style="font-size:12px;line-height:1.45;">Proven death finisher; finishes tight chases with calm execution (69.2% win rate).</td>
                         </tr>
                         <tr onclick="window.location.href='players/shivam_dube.html'" style="cursor:pointer;">
                             <td style="white-space:nowrap;"><strong>Shivam Dube</strong></td>
                             <td style="text-align:center;white-space:nowrap;"><span class="tier-badge tier-1">Priority 1</span></td>
-                            <td style="text-align:right;font-weight:700;color:#111827;white-space:nowrap;">&#8377;9.50 Cr</td>
+                            <td style="text-align:right;font-weight:700;color:#09090B;white-space:nowrap;">&#8377;9.50 Cr</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">21.1%</td>
                             <td style="font-size:12px;line-height:1.45;">Destroys spin bowling in overs 7&ndash;15; prevents scoring slowdowns in middle overs.</td>
                         </tr>
                         <tr onclick="window.location.href='players/axar_patel.html'" style="cursor:pointer;">
                             <td style="white-space:nowrap;"><strong>Axar Patel</strong></td>
                             <td style="text-align:center;white-space:nowrap;"><span class="tier-badge tier-1">Priority 1</span></td>
-                            <td style="text-align:right;font-weight:700;color:#111827;white-space:nowrap;">&#8377;8.00 Cr</td>
+                            <td style="text-align:right;font-weight:700;color:#09090B;white-space:nowrap;">&#8377;8.00 Cr</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">17.8%</td>
                             <td style="font-size:12px;line-height:1.45;">Gives batting depth at No. 7 and bowls tight 4 overs of left-arm spin.</td>
                         </tr>
                         <tr onclick="window.location.href='players/jacob_duffy.html'" style="cursor:pointer;">
                             <td style="white-space:nowrap;"><strong>Jacob Duffy</strong></td>
                             <td style="text-align:center;white-space:nowrap;"><span class="tier-badge tier-1">Priority 1</span></td>
-                            <td style="text-align:right;font-weight:700;color:#111827;white-space:nowrap;">&#8377;6.50 Cr</td>
+                            <td style="text-align:right;font-weight:700;color:#09090B;white-space:nowrap;">&#8377;6.50 Cr</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">14.4%</td>
                             <td style="font-size:12px;line-height:1.45;">Top bowler in high-pressure matches (+20.5% lift, 75.0% win rate); disciplined swing.</td>
                         </tr>
                         <tr onclick="window.location.href='players/varun_chakravarthy.html'" style="cursor:pointer;">
                             <td style="white-space:nowrap;"><strong>Varun Chakravarthy</strong></td>
                             <td style="text-align:center;white-space:nowrap;"><span class="tier-badge tier-2">Priority 2</span></td>
-                            <td style="text-align:right;font-weight:700;color:#111827;white-space:nowrap;">&#8377;5.50 Cr</td>
+                            <td style="text-align:right;font-weight:700;color:#09090B;white-space:nowrap;">&#8377;5.50 Cr</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">12.2%</td>
                             <td style="font-size:12px;line-height:1.45;">Takes wickets in middle overs; 100% win rate in playoff knockout games.</td>
                         </tr>
                         <tr onclick="window.location.href='players/romario_shepherd.html'" style="cursor:pointer;">
                             <td style="white-space:nowrap;"><strong>Romario Shepherd</strong></td>
                             <td style="text-align:center;white-space:nowrap;"><span class="tier-badge tier-2">Priority 2</span></td>
-                            <td style="text-align:right;font-weight:700;color:#111827;white-space:nowrap;">&#8377;4.50 Cr</td>
+                            <td style="text-align:right;font-weight:700;color:#09090B;white-space:nowrap;">&#8377;4.50 Cr</td>
                             <td style="text-align:right;color:var(--text-muted);white-space:nowrap;">10.0%</td>
                             <td style="font-size:12px;line-height:1.45;">Fast bowling option with heavy ball and power-hitting down the order.</td>
                         </tr>
@@ -3203,29 +3307,29 @@ master_dashboard_html += """
                 </table>
                 </div>
 
-                <div style="margin-top:20px;padding:14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
-                    <div style="font-weight:700;font-size:12.5px;color:#111827;margin-bottom:4px;">Auction Bidding Rule:</div>
-                    <p style="font-size:12px;color:#374151;line-height:1.5;margin:0;">
+                <div style="margin-top:20px;padding:14px;background:#F5F5F6;border:1px solid #D0D0D5;border-radius:8px;">
+                    <div style="font-weight:700;font-size:12.5px;color:#09090B;margin-bottom:4px;">Auction Bidding Rule:</div>
+                    <p style="font-size:12px;color:#141417;line-height:1.5;margin:0;">
                         If bidding for any player goes more than 10% above their maximum limit, stop bidding immediately and switch to backup targets (such as Yash Dayal at &#8377;5.5 Cr or Bhanuka Rajapaksa at &#8377;3.5 Cr) to protect the overall team budget.
                     </p>
                 </div>
 
                 <!-- 1. Contingency Bidding Matrix & Step-Down Rules -->
-                <div style="margin-top:16px;padding:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;">
-                    <div style="font-weight:700;font-size:12.5px;color:#111827;margin-bottom:10px;">
+                <div style="margin-top:16px;padding:16px;background:#FFFFFF;border:1px solid #D0D0D5;border-radius:8px;">
+                    <div style="font-weight:700;font-size:12.5px;color:#09090B;margin-bottom:10px;">
                         Contingency Bidding Matrix (Live Step-Down Triggers)
                     </div>
-                    <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;color:#374151;">
-                        <div style="padding:8px 10px;background:#F8FAFC;border-radius:6px;border-left:3px solid var(--rr-pink);line-height:1.45;">
+                    <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;color:#141417;">
+                        <div style="padding:8px 10px;background:#F5F5F6;border-radius:6px;border-left:3px solid var(--rr-pink);line-height:1.45;">
                             <strong>If Rinku Singh &gt; &#8377;11.0 Cr:</strong> Pivot immediately to Bhanuka Rajapaksa (&#8377;3.5 Cr) + promote Hetmyer to No. 6, freeing &#8377;7.5 Cr for bowling reserve.
                         </div>
-                        <div style="padding:8px 10px;background:#F8FAFC;border-radius:6px;border-left:3px solid #0284C7;line-height:1.45;">
+                        <div style="padding:8px 10px;background:#F5F5F6;border-radius:6px;border-left:3px solid #0284C7;line-height:1.45;">
                             <strong>If Shivam Dube &gt; &#8377;9.5 Cr:</strong> Switch to Rajat Patidar (&#8377;7.0 Cr) for spin boundary execution, reallocating &#8377;2.5 Cr to overseas pace.
                         </div>
-                        <div style="padding:8px 10px;background:#F8FAFC;border-radius:6px;border-left:3px solid #059669;line-height:1.45;">
+                        <div style="padding:8px 10px;background:#F5F5F6;border-radius:6px;border-left:3px solid #059669;line-height:1.45;">
                             <strong>If Josh Hazlewood &gt; &#8377;9.5 Cr:</strong> Lock Jacob Duffy (&#8377;6.5 Cr) as primary overseas seamer and secure Yash Dayal (&#8377;4.5 Cr).
                         </div>
-                        <div style="padding:8px 10px;background:#F8FAFC;border-radius:6px;border-left:3px solid #D97706;line-height:1.45;">
+                        <div style="padding:8px 10px;background:#F5F5F6;border-radius:6px;border-left:3px solid #D97706;line-height:1.45;">
                             <strong>If Axar Patel &gt; &#8377;8.0 Cr:</strong> Pivot to Varun Chakravarthy (&#8377;5.5 Cr) + domestic all-rounder backup to secure middle-overs spin choke.
                         </div>
                     </div>
@@ -3245,25 +3349,25 @@ master_dashboard_html += """
                     Balanced allocation preventing over-commitment in any single game phase.
                 </div>
                 <div class="phase-purse-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:12px;">
-                    <div style="padding:12px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
-                        <div style="font-size:11px;font-weight:700;color:#64748B;text-transform:uppercase;">Middle Spin Attack</div>
-                        <div style="font-size:16px;font-weight:800;color:#111827;margin-top:2px;">&#8377;17.50 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(38.9%)</span></div>
-                        <div style="font-size:11.5px;color:#64748B;margin-top:4px;">Dube (&#8377;9.5) + Axar (&#8377;8.0)</div>
+                    <div style="padding:12px 14px;background:#F5F5F6;border:1px solid #D0D0D5;border-radius:8px;">
+                        <div style="font-size:11px;font-weight:700;color:#27272A;text-transform:uppercase;">Middle Spin Attack</div>
+                        <div style="font-size:16px;font-weight:800;color:#09090B;margin-top:2px;">&#8377;17.50 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(38.9%)</span></div>
+                        <div style="font-size:11.5px;color:#27272A;margin-top:4px;">Dube (&#8377;9.5) + Axar (&#8377;8.0)</div>
                     </div>
-                    <div style="padding:12px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
-                        <div style="font-size:11px;font-weight:700;color:#64748B;text-transform:uppercase;">Death Finishing</div>
-                        <div style="font-size:16px;font-weight:800;color:#111827;margin-top:2px;">&#8377;11.00 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(24.4%)</span></div>
-                        <div style="font-size:11.5px;color:#64748B;margin-top:4px;">Rinku Singh (Priority 1)</div>
+                    <div style="padding:12px 14px;background:#F5F5F6;border:1px solid #D0D0D5;border-radius:8px;">
+                        <div style="font-size:11px;font-weight:700;color:#27272A;text-transform:uppercase;">Death Finishing</div>
+                        <div style="font-size:16px;font-weight:800;color:#09090B;margin-top:2px;">&#8377;11.00 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(24.4%)</span></div>
+                        <div style="font-size:11.5px;color:#27272A;margin-top:4px;">Rinku Singh (Priority 1)</div>
                     </div>
-                    <div style="padding:12px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
-                        <div style="font-size:11px;font-weight:700;color:#64748B;text-transform:uppercase;">Pace Spearheads</div>
-                        <div style="font-size:16px;font-weight:800;color:#111827;margin-top:2px;">&#8377;11.00 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(24.4%)</span></div>
-                        <div style="font-size:11.5px;color:#64748B;margin-top:4px;">Duffy (&#8377;6.5) + Shepherd (&#8377;4.5)</div>
+                    <div style="padding:12px 14px;background:#F5F5F6;border:1px solid #D0D0D5;border-radius:8px;">
+                        <div style="font-size:11px;font-weight:700;color:#27272A;text-transform:uppercase;">Pace Spearheads</div>
+                        <div style="font-size:16px;font-weight:800;color:#09090B;margin-top:2px;">&#8377;11.00 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(24.4%)</span></div>
+                        <div style="font-size:11.5px;color:#27272A;margin-top:4px;">Duffy (&#8377;6.5) + Shepherd (&#8377;4.5)</div>
                     </div>
-                    <div style="padding:12px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;">
-                        <div style="font-size:11px;font-weight:700;color:#64748B;text-transform:uppercase;">Mystery Spin Choke</div>
-                        <div style="font-size:16px;font-weight:800;color:#111827;margin-top:2px;">&#8377;5.50 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(12.2%)</span></div>
-                        <div style="font-size:11.5px;color:#64748B;margin-top:4px;">Varun Chakravarthy</div>
+                    <div style="padding:12px 14px;background:#F5F5F6;border:1px solid #D0D0D5;border-radius:8px;">
+                        <div style="font-size:11px;font-weight:700;color:#27272A;text-transform:uppercase;">Mystery Spin Choke</div>
+                        <div style="font-size:16px;font-weight:800;color:#09090B;margin-top:2px;">&#8377;5.50 Cr <span style="font-size:11.5px;font-weight:700;color:#059669;">(12.2%)</span></div>
+                        <div style="font-size:11.5px;color:#27272A;margin-top:4px;">Varun Chakravarthy</div>
                     </div>
                 </div>
             </div>
@@ -3276,7 +3380,7 @@ master_dashboard_html += """
                 <div class="tactical-card-sub">
                     Core operational disciplines governing every auction call.
                 </div>
-                <ul style="margin:0;padding-left:18px;font-size:12.5px;color:#374151;line-height:1.65;">
+                <ul style="margin:0;padding-left:18px;font-size:12.5px;color:#141417;line-height:1.65;">
                     <li style="margin-bottom:6px;"><strong>No Emotional Marquee Bidding:</strong> Resist brand-driven inflation on marquee names whose clutch win differential is negative.</li>
                     <li style="margin-bottom:6px;"><strong>Jaipur SMS Fortress Fit:</strong> Prioritize players suited to 75m+ boundaries and middle-overs spin grip over generic power hitters.</li>
                     <li style="margin-bottom:6px;"><strong>Strict 2+2 Overseas Structure:</strong> Exactly 2 overseas in Starting XI (Conway, Hazlewood) and 2 impact covers (Duffy, Hetmyer).</li>
@@ -3297,172 +3401,172 @@ master_dashboard_html += """
             <!-- Crisp Light Mode Vector Scatter Plot (Replaces dark matplotlib chart) -->
             <div class="mobile-table-hint">&larr; Swipe chart horizontally on small screens &rarr;</div>
             <div class="chart-scroll-wrapper" style="margin-bottom:20px;">
-                <svg class="scatter-svg" viewBox="0 0 920 540" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#FFFFFF;border-radius:10px;border:1px solid #E2E8F0;box-shadow:0 2px 10px rgba(0,0,0,0.03);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:block;">
+                <svg class="scatter-svg" viewBox="0 0 920 540" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#FFFFFF;border-radius:10px;border:1px solid #D0D0D5;box-shadow:0 2px 10px rgba(0,0,0,0.03);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:block;">
   <rect x="410.7" y="75" width="459.3" height="273.3" fill="#F0FDF4" />
   <rect x="80" y="75" width="330.7" height="273.3" fill="#FFFBEB" />
-  <rect x="410.7" y="348.3" width="459.3" height="136.7" fill="#F8FAFC" />
+  <rect x="410.7" y="348.3" width="459.3" height="136.7" fill="#F5F5F6" />
   <text x="92" y="65" fill="#B45309" font-size="11" font-weight="800" letter-spacing="0.5">QUADRANT II &bull; SITUATIONAL SPECIALISTS</text>
   <text x="858" y="65" text-anchor="end" fill="#047857" font-size="11" font-weight="800" letter-spacing="0.5">QUADRANT I &bull; CLUTCH MATCH-WINNERS</text>
-  <text x="856" y="471" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="800" letter-spacing="0.5">QUADRANT IV &bull; HIGH BASELINE DRIFT</text>
-  <line x1="80" y1="462.2" x2="870" y2="462.2" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="70" y="466.2" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600">-10%</text>
-  <line x1="80" y1="405.3" x2="870" y2="405.3" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="70" y="409.3" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600">-5%</text>
-  <line x1="80" y1="348.3" x2="870" y2="348.3" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4,4" />
-  <text x="70" y="352.3" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600">+0%</text>
-  <line x1="80" y1="291.4" x2="870" y2="291.4" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="70" y="295.4" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600">+5%</text>
-  <line x1="80" y1="234.4" x2="870" y2="234.4" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="70" y="238.4" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600">+10%</text>
-  <line x1="80" y1="177.5" x2="870" y2="177.5" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="70" y="181.5" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600">+15%</text>
-  <line x1="80" y1="120.6" x2="870" y2="120.6" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="70" y="124.6" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600">+20%</text>
-  <line x1="135.1" y1="75" x2="135.1" y2="485" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="135.1" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">45%</text>
-  <line x1="227.0" y1="75" x2="227.0" y2="485" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="227.0" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">50%</text>
-  <line x1="318.8" y1="75" x2="318.8" y2="485" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="318.8" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">55%</text>
-  <line x1="410.7" y1="75" x2="410.7" y2="485" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4,4" />
-  <text x="410.7" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">60%</text>
-  <line x1="502.6" y1="75" x2="502.6" y2="485" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="502.6" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">65%</text>
-  <line x1="594.4" y1="75" x2="594.4" y2="485" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="594.4" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">70%</text>
-  <line x1="686.3" y1="75" x2="686.3" y2="485" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="686.3" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">75%</text>
-  <line x1="778.1" y1="75" x2="778.1" y2="485" stroke="#E2E8F0" stroke-width="1"  />
-  <text x="778.1" y="503" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">80%</text>
-  <rect x="80" y="75" width="790" height="410" fill="none" stroke="#CBD5E1" stroke-width="1.5" />
-  <text x="475.0" y="525" text-anchor="middle" fill="#111827" font-size="12" font-weight="700">High-Pressure Win Rate (%) &bull; Close Finishes &le; 15 Runs / 2 Wickets &amp; Playoff Knockouts</text>
-  <text x="18" y="280.0" text-anchor="middle" fill="#111827" font-size="12" font-weight="700" transform="rotate(-90, 18, 280.0)">True Pressure Lift &Delta; (%) vs Career Baseline</text>
+  <text x="856" y="471" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="800" letter-spacing="0.5">QUADRANT IV &bull; HIGH BASELINE DRIFT</text>
+  <line x1="80" y1="462.2" x2="870" y2="462.2" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="70" y="466.2" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="600">-10%</text>
+  <line x1="80" y1="405.3" x2="870" y2="405.3" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="70" y="409.3" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="600">-5%</text>
+  <line x1="80" y1="348.3" x2="870" y2="348.3" stroke="#52525B" stroke-width="1.5" stroke-dasharray="4,4" />
+  <text x="70" y="352.3" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="600">+0%</text>
+  <line x1="80" y1="291.4" x2="870" y2="291.4" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="70" y="295.4" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="600">+5%</text>
+  <line x1="80" y1="234.4" x2="870" y2="234.4" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="70" y="238.4" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="600">+10%</text>
+  <line x1="80" y1="177.5" x2="870" y2="177.5" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="70" y="181.5" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="600">+15%</text>
+  <line x1="80" y1="120.6" x2="870" y2="120.6" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="70" y="124.6" text-anchor="end" fill="#27272A" font-size="10.5" font-weight="600">+20%</text>
+  <line x1="135.1" y1="75" x2="135.1" y2="485" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="135.1" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">45%</text>
+  <line x1="227.0" y1="75" x2="227.0" y2="485" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="227.0" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">50%</text>
+  <line x1="318.8" y1="75" x2="318.8" y2="485" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="318.8" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">55%</text>
+  <line x1="410.7" y1="75" x2="410.7" y2="485" stroke="#52525B" stroke-width="1.5" stroke-dasharray="4,4" />
+  <text x="410.7" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">60%</text>
+  <line x1="502.6" y1="75" x2="502.6" y2="485" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="502.6" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">65%</text>
+  <line x1="594.4" y1="75" x2="594.4" y2="485" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="594.4" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">70%</text>
+  <line x1="686.3" y1="75" x2="686.3" y2="485" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="686.3" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">75%</text>
+  <line x1="778.1" y1="75" x2="778.1" y2="485" stroke="#D0D0D5" stroke-width="1"  />
+  <text x="778.1" y="503" text-anchor="middle" fill="#27272A" font-size="10.5" font-weight="600">80%</text>
+  <rect x="80" y="75" width="790" height="410" fill="none" stroke="#B4B4BC" stroke-width="1.5" />
+  <text x="475.0" y="525" text-anchor="middle" fill="#09090B" font-size="12" font-weight="700">High-Pressure Win Rate (%) &bull; Close Finishes &le; 15 Runs / 2 Wickets &amp; Playoff Knockouts</text>
+  <text x="18" y="280.0" text-anchor="middle" fill="#09090B" font-size="12" font-weight="700" transform="rotate(-90, 18, 280.0)">True Pressure Lift &Delta; (%) vs Career Baseline</text>
   <g transform="translate(90, 30)">
     <circle cx="0" cy="0" r="5.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="1.5" />
-    <text x="10" y="3.5" fill="#111827" font-size="11" font-weight="700">Batters</text>
-    <circle cx="85" cy="0" r="5.5" fill="#111827" stroke="#FFFFFF" stroke-width="1.5" />
-    <text x="95" y="3.5" fill="#111827" font-size="11" font-weight="700">Bowlers</text>
-    <text x="180" y="3.5" fill="#64748B" font-size="10.5">&bull; Size indicates high-pressure match sample volume &bull; Hover for player data</text>
+    <text x="10" y="3.5" fill="#09090B" font-size="11" font-weight="700">Batters</text>
+    <circle cx="85" cy="0" r="5.5" fill="#09090B" stroke="#FFFFFF" stroke-width="1.5" />
+    <text x="95" y="3.5" fill="#09090B" font-size="11" font-weight="700">Bowlers</text>
+    <text x="180" y="3.5" fill="#27272A" font-size="10.5">&bull; Size indicates high-pressure match sample volume &bull; Hover for player data</text>
   </g>
   <g class="scatter-point">
-    <circle cx="557.7" cy="223.1" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="557.7" cy="223.1" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Arshdeep Singh (#9): 68.0% Win Rate, +11.0% Pressure Lift</title>
     </circle>
-    <text x="567.7" y="211.1" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Arshdeep Singh (#9)</text>
+    <text x="567.7" y="211.1" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Arshdeep Singh (#9)</text>
   </g>
   <g class="scatter-point">
     <circle cx="489.7" cy="259.5" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Axar Patel (#3): 64.3% Win Rate, +7.8% Pressure Lift</title>
     </circle>
-    <text x="479.7" y="255.5" text-anchor="end" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Axar Patel (#3)</text>
+    <text x="479.7" y="255.5" text-anchor="end" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Axar Patel (#3)</text>
   </g>
   <g class="scatter-point">
     <circle cx="533.8" cy="229.9" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>B. Rajapaksa (#8): 66.7% Win Rate, +10.4% Pressure Lift</title>
     </circle>
-    <text x="523.8" y="225.9" text-anchor="end" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">B. Rajapaksa (#8)</text>
+    <text x="523.8" y="225.9" text-anchor="end" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">B. Rajapaksa (#8)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="410.7" cy="317.6" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="410.7" cy="317.6" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Bhuvneshwar K. (#8): 60.0% Win Rate, +2.7% Pressure Lift</title>
     </circle>
-    <text x="400.7" y="313.6" text-anchor="end" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Bhuvneshwar K. (#8)</text>
+    <text x="400.7" y="313.6" text-anchor="end" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Bhuvneshwar K. (#8)</text>
   </g>
   <g class="scatter-point">
     <circle cx="489.7" cy="142.2" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Devon Conway (#6): 64.3% Win Rate, +18.1% Pressure Lift</title>
     </circle>
-    <text x="499.7" y="138.2" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Devon Conway (#6)</text>
+    <text x="499.7" y="138.2" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Devon Conway (#6)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="686.3" cy="114.9" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="686.3" cy="114.9" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Jacob Duffy (#1): 75.0% Win Rate, +20.5% Pressure Lift</title>
     </circle>
-    <text x="696.3" y="110.9" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Jacob Duffy (#1)</text>
+    <text x="696.3" y="110.9" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Jacob Duffy (#1)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="752.4" cy="178.6" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="752.4" cy="178.6" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Josh Hazlewood (#2): 78.6% Win Rate, +14.9% Pressure Lift</title>
     </circle>
-    <text x="742.4" y="174.6" text-anchor="end" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Josh Hazlewood (#2)</text>
+    <text x="742.4" y="174.6" text-anchor="end" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Josh Hazlewood (#2)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="329.9" cy="274.3" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="329.9" cy="274.3" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>L. Ferguson (#10): 55.6% Win Rate, +6.5% Pressure Lift</title>
     </circle>
-    <text x="319.9" y="278.3" text-anchor="end" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">L. Ferguson (#10)</text>
+    <text x="319.9" y="278.3" text-anchor="end" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">L. Ferguson (#10)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="410.7" cy="442.9" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="410.7" cy="442.9" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Mitchell Starc (#4): 60.0% Win Rate, -8.3% Pressure Lift</title>
     </circle>
-    <text x="420.7" y="438.9" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Mitchell Starc (#4)</text>
+    <text x="420.7" y="438.9" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Mitchell Starc (#4)</text>
   </g>
   <g class="scatter-point">
     <circle cx="357.4" cy="274.3" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>R. Gaikwad (#5): 57.1% Win Rate, +6.5% Pressure Lift</title>
     </circle>
-    <text x="367.4" y="278.3" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">R. Gaikwad (#5)</text>
+    <text x="367.4" y="278.3" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">R. Gaikwad (#5)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="337.2" cy="268.6" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="337.2" cy="268.6" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>R. Shepherd (#6): 56.0% Win Rate, +7.0% Pressure Lift</title>
     </circle>
-    <text x="333.2" y="256.6" text-anchor="middle" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">R. Shepherd (#6)</text>
+    <text x="333.2" y="256.6" text-anchor="middle" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">R. Shepherd (#6)</text>
   </g>
   <g class="scatter-point">
     <circle cx="620.1" cy="221.9" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Rajat Patidar (#4): 71.4% Win Rate, +11.1% Pressure Lift</title>
     </circle>
-    <text x="630.1" y="237.9" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Rajat Patidar (#4)</text>
+    <text x="630.1" y="237.9" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Rajat Patidar (#4)</text>
   </g>
   <g class="scatter-point">
     <circle cx="579.7" cy="286.8" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Rinku Singh (#2): 69.2% Win Rate, +5.4% Pressure Lift</title>
     </circle>
-    <text x="589.7" y="282.8" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Rinku Singh (#2)</text>
+    <text x="589.7" y="282.8" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Rinku Singh (#2)</text>
   </g>
   <g class="scatter-point">
     <circle cx="227.0" cy="438.3" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Sediqullah Atal (#10): 50.0% Win Rate, -7.9% Pressure Lift</title>
     </circle>
-    <text x="237.0" y="434.3" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Sediqullah Atal (#10)</text>
+    <text x="237.0" y="434.3" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Sediqullah Atal (#10)</text>
   </g>
   <g class="scatter-point">
     <circle cx="533.8" cy="207.1" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Shivam Dube (#1): 66.7% Win Rate, +12.4% Pressure Lift</title>
     </circle>
-    <text x="523.8" y="203.1" text-anchor="end" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Shivam Dube (#1)</text>
+    <text x="523.8" y="203.1" text-anchor="end" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Shivam Dube (#1)</text>
   </g>
   <g class="scatter-point">
     <circle cx="329.9" cy="335.8" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Shreyas Iyer (#9): 55.6% Win Rate, +1.1% Pressure Lift</title>
     </circle>
-    <text x="339.9" y="339.8" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Shreyas Iyer (#9)</text>
+    <text x="339.9" y="339.8" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Shreyas Iyer (#9)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="644.0" cy="261.8" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="644.0" cy="261.8" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Suyash Sharma (#7): 72.7% Win Rate, +7.6% Pressure Lift</title>
     </circle>
-    <text x="654.0" y="257.8" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Suyash Sharma (#7)</text>
+    <text x="654.0" y="257.8" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Suyash Sharma (#7)</text>
   </g>
   <g class="scatter-point">
-    <circle cx="445.6" cy="310.8" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="445.6" cy="310.8" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Varun C. (#5): 61.9% Win Rate, +3.3% Pressure Lift</title>
     </circle>
-    <text x="455.6" y="306.8" text-anchor="start" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Varun C. (#5)</text>
+    <text x="455.6" y="306.8" text-anchor="start" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Varun C. (#5)</text>
   </g>
   <g class="scatter-point">
     <circle cx="594.4" cy="261.8" r="6.5" fill="#EB1A8D" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Virat Kohli: 70.0% Win Rate, +7.6% Pressure Lift</title>
     </circle>
-    <text x="584.4" y="257.8" text-anchor="end" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Virat Kohli</text>
+    <text x="584.4" y="257.8" text-anchor="end" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Virat Kohli</text>
   </g>
   <g class="scatter-point">
-    <circle cx="778.1" cy="232.2" r="6.5" fill="#111827" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
+    <circle cx="778.1" cy="232.2" r="6.5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" style="cursor:pointer;transition:transform 0.15s ease;">
       <title>Yash Dayal (#3): 80.0% Win Rate, +10.2% Pressure Lift</title>
     </circle>
-    <text x="778.1" y="220.2" text-anchor="middle" fill="#111827" font-size="10.5" font-weight="600" style="pointer-events:none;">Yash Dayal (#3)</text>
+    <text x="778.1" y="220.2" text-anchor="middle" fill="#09090B" font-size="10.5" font-weight="600" style="pointer-events:none;">Yash Dayal (#3)</text>
   </g>
 </svg>
             </div>
@@ -3513,33 +3617,33 @@ master_dashboard_html += """
 
                 <!-- Insights Column -->
                 <div>
-                    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:18px;">
-                        <div style="font-weight:700;color:#111827;font-size:13px;margin-bottom:12px;">Strategic Takeaways for Rajasthan Royals:</div>
+                    <div style="background:#F5F5F6;border:1px solid #D0D0D5;border-radius:8px;padding:18px;">
+                        <div style="font-weight:700;color:#09090B;font-size:13px;margin-bottom:12px;">Strategic Takeaways for Rajasthan Royals:</div>
                         
                         <div style="margin-bottom:12px;">
-                            <strong style="color:#111827;font-size:12px;">1. Solves the Middle-Overs Slowdown:</strong>
-                            <p style="font-size:12px;color:#374151;margin:2px 0 0 0;line-height:1.4;">
+                            <strong style="color:#09090B;font-size:12px;">1. Solves the Middle-Overs Slowdown:</strong>
+                            <p style="font-size:12px;color:#141417;margin:2px 0 0 0;line-height:1.4;">
                                 Target signing <strong>Shivam Dube</strong> (+12.4% lift) gives Rajasthan Royals the required spin boundary enforcer to partner Samson and Parag.
                             </p>
                         </div>
 
                         <div style="margin-bottom:12px;">
-                            <strong style="color:#111827;font-size:12px;">2. Fortress Sawai Mansingh Fit:</strong>
-                            <p style="font-size:12px;color:#374151;margin:2px 0 0 0;line-height:1.4;">
+                            <strong style="color:#09090B;font-size:12px;">2. Fortress Sawai Mansingh Fit:</strong>
+                            <p style="font-size:12px;color:#141417;margin:2px 0 0 0;line-height:1.4;">
                                 Jaipur's large 75m+ boundary requires elite runners and tactical anchors like <strong>Devon Conway</strong> and <strong>Axar Patel</strong> who maintain low dot-ball percentages.
                             </p>
                         </div>
 
                         <div style="margin-bottom:12px;">
-                            <strong style="color:#111827;font-size:12px;">3. Guaranteed Death Overs Defense:</strong>
-                            <p style="font-size:12px;color:#374151;margin:2px 0 0 0;line-height:1.4;">
+                            <strong style="color:#09090B;font-size:12px;">3. Guaranteed Death Overs Defense:</strong>
+                            <p style="font-size:12px;color:#141417;margin:2px 0 0 0;line-height:1.4;">
                                 Pairing <strong>Josh Hazlewood</strong> with retained yorker specialist <strong>Sandeep Sharma</strong> guarantees 4 disciplined death overs under 9.0 RPO.
                             </p>
                         </div>
 
                         <div>
-                            <strong style="color:#111827;font-size:12px;">4. Bidding Discipline:</strong>
-                            <p style="font-size:12px;color:#374151;margin:2px 0 0 0;line-height:1.4;">
+                            <strong style="color:#09090B;font-size:12px;">4. Bidding Discipline:</strong>
+                            <p style="font-size:12px;color:#141417;margin:2px 0 0 0;line-height:1.4;">
                                 A hard cap of &#8377;11.0 Cr for any single target prevents auction inflation from ruining squad depth.
                             </p>
                         </div>
@@ -3554,23 +3658,23 @@ master_dashboard_html += """
     <div class="doc-grid">
         <div class="doc-box">
             <div class="doc-heading">Quantitative Model Formulation</div>
-            <p style="font-size:12.5px;color:#475569;margin-bottom:8px;">
+            <p style="font-size:12.5px;color:#1C1C20;margin-bottom:8px;">
                 The Clutch Player Performance Index (CPPI) addresses small-sample statistical variance via Bayesian shrinkage estimation:
             </p>
             <div class="code-snippet">
                 CPPI = [ 0.35 &times; Bayes_HP_WR + 0.25 &times; Lift_norm + 0.20 &times; Bayes_KO_WR + 0.10 &times; MOM_HP + 0.10 &times; Base_WR ] &times; Credibility(n_HP)
             </div>
-            <p style="font-size:12px;color:#64748B;line-height:1.5;">
+            <p style="font-size:12px;color:#27272A;line-height:1.5;">
                 Where Credibility(n_HP) = 0.85 + 0.15 / [1 + exp(&minus;0.25 &times; (n_HP &minus; 8))], safeguarding against small-sample variance (minimum 12 total / 8 high-pressure matches).
             </p>
         </div>
 
         <div class="doc-box">
             <div class="doc-heading">Operational Definitions & Data Governance</div>
-            <p style="font-size:12.5px;color:#475569;line-height:1.6;">
-                <strong style="color:#111827;">1. High-Leverage Fixture:</strong> Matches meeting stern empirical pressure criteria: elimination knockout games (Finals, Semi-Finals, Eliminators), super-over resolutions, or finishes with winning margins &le; 15 runs or &le; 2 wickets.<br>
-                <strong style="color:#111827;">2. Regulatory Pre-Filter:</strong> Strict exclusion of non-auction eligible entities pursuant to BCCI IPL Player Regulations.<br>
-                <strong style="color:#111827;">3. Tactical Venue Model:</strong> Sawai Mansingh Stadium pitch metrics (72-78m boundaries, middle-overs spin grip, nocturnal dew factor).
+            <p style="font-size:12.5px;color:#1C1C20;line-height:1.6;">
+                <strong style="color:#09090B;">1. High-Leverage Fixture:</strong> Matches meeting stern empirical pressure criteria: elimination knockout games (Finals, Semi-Finals, Eliminators), super-over resolutions, or finishes with winning margins &le; 15 runs or &le; 2 wickets.<br>
+                <strong style="color:#09090B;">2. Regulatory Pre-Filter:</strong> Strict exclusion of non-auction eligible entities pursuant to BCCI IPL Player Regulations.<br>
+                <strong style="color:#09090B;">3. Tactical Venue Model:</strong> Sawai Mansingh Stadium pitch metrics (72-78m boundaries, middle-overs spin grip, nocturnal dew factor).
             </p>
         </div>
     </div>
@@ -3704,13 +3808,13 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             border-radius: 12px;
             padding: 24px;
             min-width: 0;
-            box-shadow: 0 4px 20px rgba(0, 29, 72, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
         .tactical-card-title {
             font-size: 16px;
             font-weight: 800;
-            color: #111827;
+            color: #09090B;
             margin-bottom: 6px;
             display: flex;
             align-items: center;
@@ -3727,8 +3831,8 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
 
         /* Clean Light Mode Playing XI Blueprint */
         .xi-blueprint-container {
-            background: #F8FAFC;
-            border: 1px solid #E2E8F0;
+            background: #F5F5F6;
+            border: 1px solid #D0D0D5;
             border-radius: 10px;
             padding: 16px;
             margin-bottom: 18px;
@@ -3742,7 +3846,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         .xi-phase-title {
             font-size: 11px;
             font-weight: 800;
-            color: #111827;
+            color: #09090B;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             margin-bottom: 8px;
@@ -3758,7 +3862,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         }
         .xi-player-pill {
             background: #FFFFFF;
-            border: 1px solid #E2E8F0;
+            border: 1px solid #D0D0D5;
             border-radius: 8px;
             padding: 8px 12px;
             display: flex;
@@ -3769,16 +3873,16 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         }
         .xi-player-pill:hover {
             border-color: var(--rr-pink);
-            box-shadow: 0 2px 8px rgba(0, 29, 72, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             transform: translateY(-1px);
         }
         .xi-num {
             font-size: 13px;
             font-weight: 800;
-            color: #111827;
+            color: #09090B;
             width: 24px;
             height: 24px;
-            background: #F1F5F9;
+            background: #E6E6E8;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -3799,7 +3903,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         .xi-name {
             font-size: 13px;
             font-weight: 700;
-            color: #111827;
+            color: #09090B;
         }
         .xi-badge {
             font-size: 9.5px;
@@ -3811,9 +3915,9 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             white-space: nowrap;
         }
         .xi-retained {
-            background: #F1F5F9;
-            color: #0F172A;
-            border: 1px solid #CBD5E1;
+            background: #E6E6E8;
+            color: #111111;
+            border: 1px solid #B4B4BC;
         }
         .xi-target {
             background: #FDF2F8;
@@ -3832,7 +3936,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             margin-top: 14px;
             padding: 10px 12px;
             background: #FFFFFF;
-            border: 1px dashed #CBD5E1;
+            border: 1px dashed #B4B4BC;
             border-radius: 8px;
         }
         .xi-bench-lbl {
@@ -3850,12 +3954,12 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         }
         .bench-pill {
             display: inline-block;
-            background: #F1F5F9;
-            border: 1px solid #E2E8F0;
+            background: #E6E6E8;
+            border: 1px solid #D0D0D5;
             border-radius: 4px;
             padding: 3px 8px;
             font-size: 11px;
-            color: #374151;
+            color: #141417;
             cursor: pointer;
             transition: all 0.15s ease;
         }
@@ -3876,15 +3980,15 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             }
         }
         .quadrant-box {
-            background: #F8FAFC;
-            border: 1px solid #E2E8F0;
+            background: #F5F5F6;
+            border: 1px solid #D0D0D5;
             border-radius: 8px;
             padding: 14px;
         }
         .q-box-1 { border-left: 4px solid #059669; }
-        .q-box-2 { border-left: 4px solid #64748B; }
+        .q-box-2 { border-left: 4px solid #27272A; }
         .q-box-3 { border-left: 4px solid #D97706; }
-        .q-box-4 { border-left: 4px solid #111827; }
+        .q-box-4 { border-left: 4px solid #09090B; }
         .q-tag {
             font-size: 11px;
             font-weight: 800;
@@ -3893,9 +3997,9 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             margin-bottom: 4px;
         }
         .q-tag-green { color: #059669; }
-        .q-tag-blue { color: #111827; }
+        .q-tag-blue { color: #09090B; }
         .q-tag-amber { color: #D97706; }
-        .q-tag-navy { color: #111827; }
+        .q-tag-navy { color: #09090B; }
         .q-desc {
             font-size: 11.5px;
             color: var(--text-muted);
@@ -3909,9 +4013,9 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         }
         .q-pill {
             font-size: 11px;
-            color: #374151;
+            color: #141417;
             background: #FFFFFF;
-            border: 1px solid #E2E8F0;
+            border: 1px solid #D0D0D5;
             border-radius: 4px;
             padding: 3px 8px;
         }
@@ -3922,20 +4026,20 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             font-size: 12px;
         }
         .purse-table th {
-            background: #F1F5F9;
-            color: #111827;
+            background: #E6E6E8;
+            color: #09090B;
             padding: 9px 12px;
             font-weight: 700;
             text-align: left;
-            border-bottom: 2px solid #CBD5E1;
+            border-bottom: 2px solid #B4B4BC;
         }
         .purse-table td {
             padding: 10px 12px;
-            border-bottom: 1px solid #E2E8F0;
+            border-bottom: 1px solid #D0D0D5;
             vertical-align: middle;
         }
         .purse-table tr:hover {
-            background: #F8FAFC;
+            background: #F5F5F6;
         }
         .tier-badge {
             display: inline-block;
@@ -3948,14 +4052,14 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
             white-space: nowrap;
         }
         .tier-1 { background: rgba(235, 26, 141, 0.12); color: var(--rr-pink); border: 1px solid rgba(235, 26, 141, 0.3); }
-        .tier-2 { background: rgba(0, 29, 72, 0.08); color: #111827; border: 1px solid rgba(0, 29, 72, 0.2); }
+        .tier-2 { background: rgba(0, 0, 0, 0.08); color: #09090B; border: 1px solid rgba(0, 0, 0, 0.2); }
 
         .budget-kpi-bar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 12px;
-            background: #F8FAFC;
-            border: 1px solid #E2E8F0;
+            background: #F5F5F6;
+            border: 1px solid #D0D0D5;
             border-radius: 8px;
             padding: 14px;
             margin-bottom: 18px;
@@ -3964,7 +4068,7 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         .budget-kpi-val {
             font-size: 18px;
             font-weight: 800;
-            color: #111827;
+            color: #09090B;
             font-variant-numeric: tabular-nums;
         }
         .budget-kpi-lbl {
@@ -3979,17 +4083,17 @@ master_dashboard_html = master_dashboard_html.replace('</style>', """
         /* Light Mode Documentation Boxes */
         .doc-box {
             background: #FFFFFF !important;
-            border: 1px solid #E2E8F0 !important;
+            border: 1px solid #D0D0D5 !important;
             border-radius: 10px;
             padding: 22px 24px;
             min-width: 0;
-            box-shadow: 0 4px 16px rgba(0, 29, 72, 0.04) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
         }
 
         .code-snippet {
-            background: #F8FAFC !important;
-            border: 1px solid #CBD5E1 !important;
-            color: #0F172A !important;
+            background: #F5F5F6 !important;
+            border: 1px solid #B4B4BC !important;
+            color: #111111 !important;
             padding: 8px 12px;
             border-radius: 6px;
             font-family: monospace;
@@ -4004,36 +4108,36 @@ target_pos = master_dashboard_html.find('</div>\n\n<!-- Interactive Power BI Sli
 if target_pos != -1:
     master_dashboard_html = master_dashboard_html[:target_pos] + """
     <!-- Simple Minimal Footer with Copyright -->
-    <footer class="simple-footer" style="margin-top:44px;margin-bottom:28px;padding-top:26px;border-top:1px solid #E2E8F0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#475569;">
+    <footer class="simple-footer" style="margin-top:44px;margin-bottom:28px;padding-top:26px;border-top:1px solid #D0D0D5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1C1C20;">
         <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr));gap:24px;margin-bottom:22px;">
             <div>
-                <div style="font-size:12.5px;font-weight:700;color:#111827;margin-bottom:6px;">Methodology</div>
-                <p style="margin:0;font-size:12px;line-height:1.65;color:#475569;">
+                <div style="font-size:12.5px;font-weight:700;color:#09090B;margin-bottom:6px;">Methodology</div>
+                <p style="margin:0;font-size:12px;line-height:1.65;color:#1C1C20;">
                     Evaluated 883 IPL &amp; T20I matches (2022&ndash;2026) to isolate 178 high-pressure games (MLI &ge; 30: knockouts, Super Overs, or close finishes). Players are ranked via the calibrated CPPI combining Bayesian HP Win Rate (35%), Normalized Pressure Lift &Delta; (25%), Knockout Win Rate (20%), HP POTM Density (10%), and Baseline Win Rate (10%), scaled by a sigmoid credibility curve and BCCI auction eligibility filters.
                 </p>
             </div>
             <div>
-                <div style="font-size:12.5px;font-weight:700;color:#111827;margin-bottom:6px;">Thought Process</div>
-                <p style="margin:0;font-size:12px;line-height:1.65;color:#475569;">
+                <div style="font-size:12.5px;font-weight:700;color:#09090B;margin-bottom:6px;">Thought Process</div>
+                <p style="margin:0;font-size:12px;line-height:1.65;color:#1C1C20;">
                     Traditional averages reward stat-padding in one-sided matches. Measuring True Pressure Lift (&Delta;) isolates who genuinely raises their team&rsquo;s win rate when stakes peak &mdash; highlighting high-value clutch winners like Shivam Dube and Jacob Duffy suited for Sawai Mansingh Stadium (Jaipur) within a &#8377;45 Cr auction budget, rather than overpaying for reputation.
                 </p>
             </div>
         </div>
 
-        <div class="footer-bottom-row" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #E2E8F0;font-size:12px;color:#64748B;">
+        <div class="footer-bottom-row" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #D0D0D5;font-size:12px;color:#27272A;">
             <div>
                 &copy; 2026 Ketan Rawat. All rights reserved. &middot; Rajasthan Royals SupeRR Selector Season 2
             </div>
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;">
-                <a href="https://rr-dashboard.onrender.com/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Live Dashboard</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Resume</a>
-                <span style="color:#CBD5E1;">|</span>
-                <a href="https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Season 1 Certificate (Additional Top 20)</a>
+                <a href="https://rr-dashboard.onrender.com/" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Live Dashboard</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Resume</a>
+                <span style="color:#71717A;">|</span>
+                <a href="https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color:#09090B;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Season 1 Certificate (Additional Top 20)</a>
             </div>
         </div>
     </footer>
