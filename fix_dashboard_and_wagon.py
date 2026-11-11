@@ -1332,7 +1332,7 @@ for idx, p in enumerate(all_players_pool):
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;">
                 <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
                 <span style="color:#CBD5E1;">|</span>
-                <a href="https://github.com/Ketanrawat2004" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
+                <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
                 <span style="color:#CBD5E1;">|</span>
                 <a href="https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Resume</a>
                 <span style="color:#CBD5E1;">|</span>
@@ -3908,7 +3908,7 @@ if target_pos != -1:
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;">
                 <a href="https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">LinkedIn</a>
                 <span style="color:#CBD5E1;">|</span>
-                <a href="https://github.com/Ketanrawat2004" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
+                <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
                 <span style="color:#CBD5E1;">|</span>
                 <a href="https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color:#111827;text-decoration:none;font-weight:600;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Resume</a>
                 <span style="color:#CBD5E1;">|</span>

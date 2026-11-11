@@ -725,7 +725,7 @@ def build_deck():
     pl = tfl.paragraphs[0]
     links = [
         ("LinkedIn", "https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/"),
-        ("GitHub", "https://github.com/Ketanrawat2004"),
+        ("GitHub", "https://github.com/Ketanrawat2004/RR-Dashboard"),
         ("Resume", "https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link"),
         ("Season 1 Certificate (Additional Top 20)", "https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing"),
     ]
