@@ -1,0 +1,55 @@
+================================================================================
+PHASE 1 — DELIVERY-LEVEL STATE RECONSTRUCTION & PRESSURE MODELING
+================================================================================
+
+[1] SCOPE SEPARATION
+  Total deliveries in ball_by_ball.csv: 200,999
+  Super Over deliveries (innings 3 & 4 across 6 matches): 38 (isolated for separate peak-pressure summary)
+  Innings deliveries (1 & 2): 200,961 across 867 matches
+  Rows where innings_ball_num decreases after (overid, over_ball_num) sort: 0
+  Deliveries where legal_balls_before >= alloc_balls: 0
+  Standard decided deliveries (has_winner & non-Super-Over): 197,513 (836 matches)
+
+[2] CONTEXTUAL PAR / REMAINING-RUN-RATE MODEL (GroupKFold by match_id)
+  Remaining Runs (State -> Final Score - Score_pre) OOF GroupKFold:
+    Simple (innings, over, wkts) baseline: RMSE=24.98 runs, R2=0.7829
+    HistGBR state model                  : RMSE=24.38 runs, R2=0.7931
+
+[3] WIN PROBABILITY & COUNTERFACTUAL LEVERAGE MODEL (GroupKFold by match_id)
+  Innings 1 WP OOF GroupKFold (n=103,119):
+    Simple Logistic Baseline : LogLoss=0.6362 | Brier=0.2226 | AUC=0.6911 | ECE=0.0185
+    HistGBR Contextual Model : LogLoss=0.6426 | Brier=0.2239 | AUC=0.6869 | ECE=0.0228
+  Innings 2 WP OOF GroupKFold (n=94,394):
+    Simple Logistic Baseline : LogLoss=0.4075 | Brier=0.1318 | AUC=0.8948 | ECE=0.0073
+    HistGBR Contextual Model : LogLoss=0.4254 | Brier=0.1380 | AUC=0.8855 | ECE=0.0205
+
+[4] SEPARATE BATTING & BOWLING PRESSURE INDICES
+  Summary of BPI & BWPI by Cricket Context:
+    All Innings 1-2                      | n=200,961 | BPI mean= 39.2 (p75= 55.6) | BWPI mean= 39.8 (p75= 56.3)
+    Innings 1                            | n=105,727 | BPI mean= 39.7 (p75= 56.6) | BWPI mean= 40.9 (p75= 53.0)
+    Innings 2                            | n=95,234 | BPI mean= 38.7 (p75= 55.0) | BWPI mean= 38.6 (p75= 61.6)
+    Powerplay (1-6)                      | n=64,008 | BPI mean= 37.4 (p75= 49.3) | BWPI mean= 46.0 (p75= 62.2)
+    Middle (7-15)                        | n=92,499 | BPI mean= 39.4 (p75= 59.7) | BWPI mean= 32.7 (p75= 47.2)
+    Death (16-20)                        | n=44,454 | BPI mean= 41.3 (p75= 57.3) | BWPI mean= 45.7 (p75= 61.8)
+    Collapse (w>=3 & ov<=10)             | n=19,415 | BPI mean= 62.2 (p75= 72.7) | BWPI mean= 28.8 (p75= 42.0)
+    Tight Chase (Inn2 RRR 9-13 & w<=6)   | n=36,210 | BPI mean= 53.4 (p75= 62.5) | BWPI mean= 52.1 (p75= 71.2)
+    Dead Blowout (Inn2 RRR>22 or <3)     | n= 7,012 | BPI mean= 20.7 (p75= 25.3) | BWPI mean= 13.0 (p75= 15.1)
+    Playoffs / Knockouts                 | n= 7,323 | BPI mean= 44.0 (p75= 60.4) | BWPI mean= 45.4 (p75= 63.2)
+  Correlation BPI vs BWPI across all deliveries: Pearson r = 0.272
+
+[5] PRESSURE THRESHOLD SENSITIVITY (15%, 20%, 25%, 30%)
+
+  Threshold Sensitivity Table:
+                  model  top_pct  bpi_cutoff  bwpi_cutoff  bat_p_deliveries  bowl_p_deliveries  bat_qual_players  bowl_qual_players  bat_median_p_balls  bowl_median_p_balls  bat_split_half_rho  bat_spearman_brown  bowl_split_half_rho  bowl_spearman_brown  bat_boot_top10_retention  bowl_boot_top10_retention  bat_pct_inn2  bat_pct_death  bat_pct_playoff  bowl_pct_inn2  bowl_pct_death  bat_rho_vs_25pct  bat_top10_overlap_vs_25pct  bowl_rho_vs_25pct  bowl_top10_overlap_vs_25pct
+ Domain_Hybrid_BPI_BWPI       15      64.480       64.910             29077              30156               133                168                 124                  111               0.148               0.258                0.112                0.202                     0.460                      0.506          40.3           23.5              4.9           67.1            30.5             0.803                           3              0.816                            7
+ Domain_Hybrid_BPI_BWPI       20      60.070       60.320             38757              40211               146                175                 150                  138               0.146               0.255                0.037                0.072                     0.515                      0.451          42.8           23.5              4.6           62.8            30.1             0.904                           6              0.888                            6
+ Domain_Hybrid_BPI_BWPI       25      55.640       56.300             48392              50247               163                179                 169                  172               0.158               0.273                0.053                0.101                     0.560                      0.475          45.6           24.1              4.5           58.6            29.7             1.000                          10              1.000                           10
+ Domain_Hybrid_BPI_BWPI       30      51.550       52.550             58059              60300               170                181                 196                  201               0.113               0.202                0.158                0.273                     0.606                      0.472          48.0           24.3              4.5           54.8            29.4             0.902                           8              0.909                            8
+Pure_Counterfactual_Lev       15       0.037        0.037             28863              30145               162                171                 113                  108               0.277               0.434                0.212                0.350                     0.516                      0.488          59.2           22.6              4.4           59.2            22.6             0.847                           5              0.802                            6
+Pure_Counterfactual_Lev       20       0.031        0.031             38500              40194               169                180                 147                  142               0.294               0.454                0.196                0.328                     0.554                      0.465          57.2           20.8              4.2           57.2            20.8             0.924                           6              0.918                            7
+Pure_Counterfactual_Lev       25       0.026        0.026             48187              50241               170                183                 182                  176               0.320               0.485                0.093                0.170                     0.555                      0.480          55.3           19.6              4.1           55.3            19.6             1.000                          10              1.000                           10
+Pure_Counterfactual_Lev       30       0.022        0.022             57852              60289               171                183                 219                  211               0.304               0.466                0.107                0.194                     0.587                      0.493          53.6           18.8              4.1           53.6            18.8             0.952                           7              0.939                            8
+
+  Cross-Model Agreement at 25% Cutoff (Domain_Hybrid vs Pure_Counterfactual):
+    Batting Spearman rho=0.546
+    Bowling Spearman rho=0.721

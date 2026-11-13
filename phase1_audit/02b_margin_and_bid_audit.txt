@@ -1,0 +1,5 @@
+State teams in Season 2 teams.csv?: []
+Top10Bat: <=6R=54.9%, 7-12R=61.4%, 13-15R=66.7%, Playoff=75.0%
+Top10Bowl: <=6R=65.3%, 7-12R=56.9%, 13-15R=52.9%, Playoff=81.0%
+Superstars5: <=6R=43.5%, 7-12R=46.4%, 13-15R=57.1%, Playoff=39.3%
+PPTX Slide 11 Table: [['Target Player', 'Tier', 'Max Bid', 'Share', 'Squad Need Addressed'], ['Rinku Singh', 'Priority 1', 'INR 11.00 Cr', '24.4%', 'Proven death finisher; 69.2% win rate in tight chases.'], ['Shivam Dube', 'Priority 1', 'INR 9.50 Cr', '21.1%', 'Middle-overs spin hitter; stops 7–15 overs slowdowns.'], ['Axar Patel', 'Priority 1', 'INR 8.00 Cr', '17.8%', 'Batting depth at #7 + 4 tight overs of left-arm spin.'], ['Jacob Duffy', 'Priority 1', 'INR 6.50 Cr', '14.4%', 'Peak +20.5% pressure lift; disciplined swing & seam.'], ['Varun Chakravarthy', 'Priority 2', 'INR 5.50 Cr', '12.2%', 'Middle-overs wicket threat; 100% knockout win rate.'], ['Romario Shepherd', 'Priority 2', 'INR 4.50 Cr', '10.0%', 'Heavy-ball pace option + late-order boundary hitting.']]

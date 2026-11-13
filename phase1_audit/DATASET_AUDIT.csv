@@ -1,0 +1,78 @@
+dataset,column,dtype,total_rows,non_null_count,missing_count,missing_pct,nunique,min_val,max_val,top_or_sample_values
+ball_by_ball.csv,match_id,int64,200999,200999,0,0.0,867,13511,55561,"13511, 13511, 13511"
+ball_by_ball.csv,innings,int64,200999,200999,0,0.0,4,1,4,"1, 1, 1"
+ball_by_ball.csv,overid,int64,200999,200999,0,0.0,20,1,20,"1, 1, 1"
+ball_by_ball.csv,over_ball_num,int64,200999,200999,0,0.0,13,1,13,"1, 2, 3"
+ball_by_ball.csv,innings_ball_num,int64,200999,200999,0,0.0,136,1,136,"1, 2, 3"
+ball_by_ball.csv,batting_team_id,int64,200999,200999,0,0.0,38,1,4444,"22, 22, 22"
+ball_by_ball.csv,bowling_team_id,int64,200999,200999,0,0.0,38,1,4444,"28, 28, 28"
+ball_by_ball.csv,striker_id,int64,200999,200999,0,0.0,888,8,71727,"1187, 1187, 1187"
+ball_by_ball.csv,striker_name,str,200999,200999,0,0.0,885,,,Jos Buttler (2920); Suryakumar Yadav (2850); Shubman Gill (2804); Namboori Tilak Varma (2631)
+ball_by_ball.csv,non_striker_id,int64,200999,200999,0,0.0,867,8,68410,"6273, 6273, 6273"
+ball_by_ball.csv,non_striker_name,str,200999,200999,0,0.0,864,,,Shubman Gill (3269); Jos Buttler (2912); Namboori Tilak Varma (2774); Suryakumar Yadav (2652)
+ball_by_ball.csv,bowler_id,int64,200999,200999,0,0.0,647,23,71727,"1772, 1772, 1772"
+ball_by_ball.csv,bowler_name,str,200999,200999,0,0.0,646,,,Arshdeep Singh (3432); Rashid Khan (2780); Axar Patel (2707); Ravi Bishnoi (2429)
+ball_by_ball.csv,batting_type,str,200999,200999,0,0.0,2,,,RHB (131006); LHB (69993)
+ball_by_ball.csv,bowling_type,str,200999,200999,0,0.0,12,,,Right-arm Leg-Break (28027); Right-arm medium-fast (27014); Right-arm Fast (26637); Right-arm medium (23919)
+ball_by_ball.csv,batting_order,int64,200999,200999,0,0.0,13,1,13,"1, 1, 1"
+ball_by_ball.csv,runs,int64,200999,200999,0,0.0,7,0,6,"0, 0, 0"
+ball_by_ball.csv,is_four,bool,200999,200999,0,0.0,2,False,True,"False, False, False"
+ball_by_ball.csv,is_six,bool,200999,200999,0,0.0,2,False,True,"False, False, False"
+ball_by_ball.csv,is_wicket,bool,200999,200999,0,0.0,2,False,True,"False, False, False"
+ball_by_ball.csv,dismissal_type_id,float64,200999,10881,190118,94.587,8,1.0,10.0,"1.0, 2.0, 2.0"
+ball_by_ball.csv,dismissal_type,str,200999,10881,190118,94.587,9,,,Caught (7557); Bowled (1775); LBW (709); RunOut (600)
+ball_by_ball.csv,dismissed_player_id,float64,200999,10892,190107,94.581,814,8.0,71727.0,"1187.0, 6273.0, 1596.0"
+ball_by_ball.csv,extras_type,str,200999,11832,189167,94.113,6,,,wide (7714); legbyes (2748); Overstep (576); byes (529)
+ball_by_ball.csv,extras1_runs,int64,200999,200999,0,0.0,7,1,7,"6, 6, 6"
+ball_by_ball.csv,extras_2_runs,int64,200999,200999,0,0.0,3,0,4,"0, 0, 0"
+ball_by_ball.csv,pace_or_spin,str,200999,200999,0,0.0,2,,,Pace (123886); Spin (77113)
+ball_by_ball.csv,bowl_speed,float64,200999,200999,0,0.0,1033,-1.0,1456.1,"0.0, 0.0, 0.0"
+ball_by_ball.csv,stroke,str,200999,194841,6158,3.064,30,,,Pull shot (24645); Cover Drive (20779); Worked (20757); Flick (14836)
+ball_by_ball.csv,delivery_style,str,200999,200608,391,0.195,34,,,Seamed In (22058); Orthodox (19239); Leg Break (15449); Off Cutter (15143)
+ball_by_ball.csv,over_or_around,str,200999,200592,407,0.202,2,,,Over (154670); Around (45922)
+ball_by_ball.csv,on_or_off,str,200999,200999,0,0.0,2,,,Off-side (104875); On-side (96124)
+ball_by_ball.csv,delivery_ist_time,str,200999,200999,0,0.0,200826,,,2022-01-23 00:00:00 UTC (34); 2023-08-13 00:00:00 UTC (5); 2022-06-12 19:02:23 UTC (2); 2022-06-14 19:00:42 UTC (2)
+matches.csv,match_id,int64,883,883,0,0.0,883,13511,55561,"13511, 13512, 13513"
+matches.csv,comp_id,int64,883,883,0,0.0,138,1331,3787,"1331, 1331, 1331"
+matches.csv,match_number,int64,883,883,0,0.0,75,1,75,"1, 2, 3"
+matches.csv,match_date,str,883,883,0,0.0,686,,,2024-05-12 (4); 2022-09-25 (3); 2023-04-02 (3); 2023-04-08 (3)
+matches.csv,stage,str,883,883,0,0.0,7,,,League (620); Others (226); Final (12); Qualifier (10)
+matches.csv,venue_id,int64,883,883,0,0.0,98,1,3692,"54, 54, 54"
+matches.csv,venue_country,str,883,883,0,0.0,17,,,India (425); United Arab Emirates (69); New Zealand (52); United Kingdom (49)
+matches.csv,home_team_id,int64,883,883,0,0.0,36,1,4444,"28, 28, 28"
+matches.csv,home_team,str,883,883,0,0.0,36,,,India (62); West Indies (51); New Zealand (47); Bangladesh (42)
+matches.csv,away_team_id,int64,883,883,0,0.0,36,1,4444,"22, 22, 22"
+matches.csv,away_team,str,883,883,0,0.0,36,,,India (58); Pakistan (53); England (42); West Indies (42)
+matches.csv,home_team_captain_id,float64,883,839,44,4.983,89,8.0,39444.0,"494.0, 494.0, 494.0"
+matches.csv,away_team_captain_id,float64,883,838,45,5.096,98,8.0,39444.0,"478.0, 1596.0, 1596.0"
+matches.csv,toss_win_team_id,float64,883,868,15,1.699,37,1.0,4444.0,"28.0, 28.0, 22.0"
+matches.csv,toss_opted,str,883,868,15,1.699,2,,,Fielding (639); Batting (229)
+matches.csv,man_of_the_match,int64,883,883,0,0.0,293,0,67864,"0, 0, 4986"
+matches.csv,first_inn_revised_overs,float64,883,25,858,97.169,13,30.0,114.0,"114.0, 84.0, 66.0"
+matches.csv,second_inn_revised_overs,float64,883,25,858,97.169,12,30.0,114.0,"114.0, 42.0, 48.0"
+matches.csv,revised_target,float64,883,23,860,97.395,23,33.0,213.0,"143.0, 56.0, 91.0"
+matches.csv,knock_out,int64,883,883,0,0.0,2,0,1,"0, 0, 0"
+matches.csv,win_team_id,float64,883,842,41,4.643,36,1.0,4444.0,"28.0, 22.0, 28.0"
+matches.csv,result,str,883,883,0,0.0,670,,,No Result (21); Match Abandoned (19); India Won by 7 wickets (8); Delhi Capitals Won by 6 wickets (7)
+competitions.csv,comp_id,int64,141,141,0,0.0,141,1331,3787,"3395, 3405, 3465"
+competitions.csv,comp_name,str,141,141,0,0.0,141,,,South Africa in New Zealand T20I Series 2026 (1); Afghanistan v Sri Lanka T20I Series 2026 (1); India in Zimbabwe T20I Series 2026 (1); Bangladesh in Zimbabwe T20I Series 2026 (1)
+competitions.csv,match_format,str,141,141,0,0.0,2,,,T20I (134); T20 (7)
+competitions.csv,season,str,141,141,0,0.0,8,,,2024 (33); 2025 (33); 2026 (25); 2022 (25)
+teams.csv,comp_id,int64,353,353,0,0.0,141,1331,3787,"1331, 1331, 1335"
+teams.csv,team_id,int64,353,353,0,0.0,38,1,4444,"22, 28, 18"
+teams.csv,team_name,str,353,353,0,0.0,38,,,India (33); West Indies (26); Bangladesh (26); New Zealand (24)
+playing_eleven.csv,match_id,int64,28381,28381,0,0.0,880,13511,55561,"13511, 13511, 13511"
+playing_eleven.csv,team_id,int64,28381,28381,0,0.0,38,1,4444,"22, 22, 22"
+playing_eleven.csv,player_id,int64,28381,28381,0,0.0,1082,8,71727,"1187, 6273, 1210"
+playing_eleven.csv,batting_order,float64,28381,19703,8678,30.577,13,1.0,13.0,"1.0, 2.0, 3.0"
+playing_eleven.csv,is_played,bool,28381,28381,0,0.0,2,False,True,"True, True, True"
+playing_eleven.csv,is_captain,object,28381,19714,8667,30.538,2,,,False (18031); True (1683)
+playing_eleven.csv,is_wk,object,28381,19714,8667,30.538,2,,,False (18039); True (1675)
+playing_eleven.csv,is_impact,int64,28381,28381,0,0.0,2,0,1,"0, 0, 0"
+playing_eleven.csv,is_impact_off,int64,28381,28381,0,0.0,2,0,1,"0, 0, 0"
+competition_team_player_mapping.csv,comp_id,int64,6413,6413,0,0.0,140,1331,3787,"1331, 1331, 1331"
+competition_team_player_mapping.csv,comp_name,str,6413,6413,0,0.0,140,,,IPL 2026 (275); IPL 2023 (264); IPL 2024 (263); IPL 2025 (255)
+competition_team_player_mapping.csv,team_id,int64,6413,6413,0,0.0,38,1,4444,"22, 22, 22"
+competition_team_player_mapping.csv,team_name,str,6413,6413,0,0.0,38,,,India (551); West Indies (415); Bangladesh (415); New Zealand (400)
+competition_team_player_mapping.csv,player_id,int64,6413,6413,0,0.0,1217,8,71727,"478, 479, 722"
+competition_team_player_mapping.csv,player_name,str,6413,6413,0,0.0,1210,,,Arshdeep Singh (33); Axar Patel (30); Rovman Powell (28); Romario Shepherd (28)

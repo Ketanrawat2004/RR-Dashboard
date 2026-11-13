@@ -1,0 +1,48 @@
+================================================================================
+PHASE 1 STEP 3 — TASKS 2 & 3: EXPECTED PERFORMANCE MODELING
+================================================================================
+Loaded bbb_enriched.pkl: 200,961 deliveries across 867 matches.
+High-Pressure Thresholds (25% Cutoff): BPI >= 55.640 | BWPI >= 56.300
+
+============================================================
+[TASK 2] BATTING EXPECTED RUNS MODEL (Target: df['runs'])
+============================================================
+Batting dataset size: 193,251 legal balls faced across 867 matches.
+  Bat Baseline (Phase+Wkts) : RMSE=1.7353 | MAE=1.3175 | R2=0.00889
+  Bat Ridge Regression      : RMSE=1.7242 | MAE=1.3061 | R2=0.02147
+  Bat HistGBR (Contextual)  : RMSE=1.7225 | MAE=1.3036 | R2=0.02346
+
+  Batting Model Performance Across Innings Phases:
+    Phase PP     (n=61,696): Actual SR=135.6 | Exp SR=135.1 | RMSE=1.7881 | MAE=1.4297
+    Phase Middle (n=89,552): Actual SR=132.8 | Exp SR=133.4 | RMSE=1.6133 | MAE=1.1497
+    Phase Death  (n=42,003): Actual SR=159.4 | Exp SR=159.6 | RMSE=1.8451 | MAE=1.4464
+
+  Batting Model Performance Across Pressure Categories:
+    Non-Pressure (<25% BPI)      (n=144,859): Actual SR=143.5 | Exp SR=143.3 | Dot%=36.6% | Bnd%=19.7% | RMSE=1.7522
+    High-Pressure (>=25% BPI)    (n=48,392): Actual SR=127.4 | Exp SR=128.7 | Dot%=38.7% | Bnd%=15.8% | RMSE=1.6303
+
+============================================================
+[TASK 3A] BOWLING EXPECTED RUNS CONCEDED MODEL (Target: df['bowl_runs_obs'])
+============================================================
+  BowlRuns Baseline         : RMSE=1.7057 | MAE=1.2779 | R2=0.00827
+  BowlRuns Ridge            : RMSE=1.6954 | MAE=1.2677 | R2=0.02015
+  BowlRuns HistGBR          : RMSE=1.6938 | MAE=1.2654 | R2=0.02203
+
+============================================================
+[TASK 3B] BOWLER-CREDITED WICKET PROBABILITY MODEL (Target: df['is_bowler_wicket'])
+============================================================
+  Wkt Baseline              : LogLoss=0.20029 | Brier=0.04830 | AUC=0.5613 | ECE=0.0002
+  Wkt Logistic Regression   : LogLoss=0.19930 | Brier=0.04820 | AUC=0.5838 | ECE=0.0003
+  Wkt HistGBC               : LogLoss=0.19916 | Brier=0.04819 | AUC=0.5854 | ECE=0.0003
+
+  Bowling Conceded Runs & Wickets Across Innings Phases:
+    Phase PP     (n=64,008): Actual Econ= 8.42 | Exp Econ= 8.41 | Wkts=2772 (Exp=2768.5)
+    Phase Middle (n=92,499): Actual Econ= 8.21 | Exp Econ= 8.24 | Wkts=4236 (Exp=4300.3)
+    Phase Death  (n=44,454): Actual Econ=10.04 | Exp Econ=10.02 | Wkts=3253 (Exp=3206.6)
+
+  Bowling Conceded Runs & Wickets Across Pressure Categories:
+    Non-Pressure (<25% BWPI)     (n=150,714): Actual Econ= 8.52 | Exp Econ= 8.54 | Dot%=35.6% | Wkts=7605 (Exp=7686.1)
+    High-Pressure (>=25% BWPI)   (n=50,247): Actual Econ= 9.14 | Exp Econ= 9.11 | Dot%=35.1% | Wkts=2656 (Exp=2589.2)
+
+Saved model comparison table to C:\RR NEW\phase1_audit\step3_individual_model\MODEL_COMPARISON.csv
+Saved modeled delivery dataset to C:\RR NEW\phase1_audit\step3_individual_model\bbb_step3_modeled.pkl (200,961 deliveries)

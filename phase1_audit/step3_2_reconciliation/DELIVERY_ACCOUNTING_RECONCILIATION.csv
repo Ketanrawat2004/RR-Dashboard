@@ -1,0 +1,11 @@
+delivery_category,regular_innings_count,super_over_count,total_dataset_count,step3_reported,step3_1_reported,accounting_status
+Total Delivery Rows,200961,38,200999,200961,201059,"Reconciled (200,961 regular, 38 SO, 200,999 total)"
+Wides (extras_type == 'wide'),7710,4,7714,7710,7710,"Reconciled (7,710 regular, 4 SO, 7,714 total)"
+Overstep No-Balls (extras_type == 'Overstep'),576,0,576,576,576,"Reconciled (576 regular, 0 SO, 576 total)"
+Other No-Balls (extras_type == 'other'),263,1,264,263,68 (Partial),"Reconciled (263 regular, 1 SO, 264 total). Batters scored off bat on 135 of these; proves other is a no-ball."
+Total No-Balls (Overstep + other),839,1,840,839,644,Reconciled. True total is 839 in regular innings. Step 3.1 narrative reported 644 (576 + 68 boundary others).
+Byes (extras_type == 'byes'),529,0,529,529,529,"Reconciled (529 regular, 0 SO, 529 total)"
+Leg-Byes (extras_type == 'legbyes'),2747,1,2748,2747,2747,"Reconciled (2,747 regular, 1 SO, 2,748 total)"
+Penalty Runs (extras_type == 'Penalty'),1,0,1,1,1,"Reconciled (1 regular, 0 SO, 1 total)"
+Legal Balls Faced by Batters (excludes wides),193251,34,193285,193251,193251,"Reconciled. Exact match: 193,251 in regular innings; 34 in Super Overs; 193,285 total."
+Legal Deliveries Bowled by Bowlers (excludes wides & all no-balls),192412,33,192445,192412,192607,"Reconciled. True dataset count in bbb_step3_modeled.pkl is 192,412. Step 3.1 narrative reported 192,607 (due to 644 NB instead of 839)."

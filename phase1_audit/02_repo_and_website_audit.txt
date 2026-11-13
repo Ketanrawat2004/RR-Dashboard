@@ -1,0 +1,258 @@
+================================================================================
+PHASE 1 — REPOSITORY, PIPELINE, DELIVERABLE & WEBSITE AUDIT
+================================================================================
+
+[1] ENTRY HTML FILES & GIT STATE
+  index.html                     |  2,791,623 B | 017210F1B681682C548B9554BB3D972929BC6EEB6DC00D4C1123CCDB2E16DF25
+  rr_pressure_dashboard.html     |  2,791,623 B | 017210F1B681682C548B9554BB3D972929BC6EEB6DC00D4C1123CCDB2E16DF25
+  rr_war_room_terminal.html      |  2,791,623 B | 017210F1B681682C548B9554BB3D972929BC6EEB6DC00D4C1123CCDB2E16DF25
+  Recent git commits:
+    1ff338d Add player-specific footers and shift dashboard palette toward black
+    650150d Add live Render dashboard link to footer, PPTX, and README
+    94ebc16 Make dashboard and all 25 player pages responsive for mobile, tablet, and laptop
+    7dbc39d Add simple, clean README.md
+    0d20557 Update GitHub links in PPTX and dashboard to RR-Dashboard repo
+    8428387 Rajasthan Royals SupeRR Selector Season 2 dashboard, reports, and presentation
+
+[2] REPRODUCE & COMPARE EXISTING SCORING SCRIPTS VS DELIVERABLES
+  top50_batters_pressure rows=50, cols=['player_id', 'player_name', 'teams', 'role', 'total_matches', 'total_wins', 'hp_matches', 'hp_wins', 'ko_matches', 'ko_wins', 'mom_all', 'mom_hp', 'baseline_win_rate', 'hp_win_rate', 'ko_win_rate', 'mom_rate_all', 'mom_rate_hp', 'avg_pressure_score', 'reliability_score', 'pressure_lift', 'bbb_bonus', 'cppi', 'role_category']
+  top50_bowlers_pressure rows=50, cols=['player_id', 'player_name', 'teams', 'role', 'total_matches', 'total_wins', 'hp_matches', 'hp_wins', 'ko_matches', 'ko_wins', 'mom_all', 'mom_hp', 'baseline_win_rate', 'hp_win_rate', 'ko_win_rate', 'mom_rate_all', 'mom_rate_hp', 'avg_pressure_score', 'reliability_score', 'pressure_lift', 'bbb_bonus', 'cppi', 'role_category']
+  CRITICAL BUG CHECK: top50_batters == top50_bowlers player_name order: True, identical cppi: True
+  top50_batters bbb_bonus non-zero count: 0 / 50
+  top50_batters contains bowlers like Hazlewood/Starc/Rashid/Duffy: ['Jacob Duffy', 'Josh Hazlewood', 'Mitchell Starc']
+  audit_match_pressure_scores matches calc_mli==pressure_score count: 31 / 883
+  Differences vs audit_match_pressure_scores: 852
+   match_id  calc_mli  calc_hp  pressure_score  is_high_pressure   stage                                 result
+0     13511        15    False               7             False  League           West Indies Won by 9 Wickets
+1     13512        50    False              43              True  League                   England Won by 1 Run
+2     13513        28    False              23             False  League             West Indies Won by 20 runs
+3     13515        28    False              23             False  League             West Indies Won by 17 runs
+4     13522        15    False              11             False  League                 India Won by 6 Wickets
+5     13523        40    False              37              True  League                    India Won by 8 Runs
+6     13524        28    False              23             False  League                   India Won by 17 runs
+7     13612        28    False              23             False  League  Australia Won by 20 runs (D/L method)
+8     13613        10    False               7             False  League  Australia Won the one over Eliminator
+9     13614        15    False               7             False  League                Australia Won by 6 Wkts
+
+[3] AUDIT OF ALL 25 DASHBOARD PLAYERS: players_db.json + superstars_audit VS OFFICIAL CSVs
+  Batter  #1   Shivam Dube          | pid=4755  | DB(tot=70,hp=18,hpWR=66.7,bWR=54.3,koWR=100.0,mom=1,bayes=64.0,CPPI=66.81) | CSV(tot=131[IPL:69,T20I:62],raw=132,hp_amp=20/WR=65.0,hp_ana=4/WR=100.0,bWR=55.0,koWR=100.0,mom_ana=0) | calcBayes5=64.0 | calcCalCPPI=66.81
+      BBB actuals -> BAT(BF=1544,R=2380,SR=154.1, PP=71.9,MID=147.2,DEATH=174.4) | BOWL(Balls=469,Econ=9.89, PP=6.0,MID=9.13,DEATH=14.58)
+  Batter  #2   Rinku Singh          | pid=4708  | DB(tot=72,hp=26,hpWR=69.2,bWR=63.8,koWR=100.0,mom=1,bayes=68.3,CPPI=66.26) | CSV(tot=117[IPL:65,T20I:52],raw=119,hp_amp=26/WR=69.2,hp_ana=4/WR=100.0,bWR=63.2,koWR=100.0,mom_ana=0) | calcBayes5=68.3 | calcCalCPPI=66.26
+      BBB actuals -> BAT(BF=1284,R=1958,SR=152.5, PP=132.8,MID=116.9,DEATH=191.8) | BOWL(Balls=10,Econ=6.0, PP=nan,MID=nan,DEATH=6.0)
+  Batter  #3   Axar Patel           | pid=2876  | DB(tot=85,hp=28,hpWR=64.3,bWR=56.5,koWR=100.0,mom=2,bayes=63.1,CPPI=65.82) | CSV(tot=155[IPL:70,T20I:85],raw=155,hp_amp=29/WR=65.5,hp_ana=2/WR=100.0,bWR=56.8,koWR=100.0,mom_ana=0) | calcBayes5=63.1 | calcCalCPPI=65.82
+      BBB actuals -> BAT(BF=1279,R=1761,SR=137.7, PP=111.1,MID=129.6,DEATH=152.6) | BOWL(Balls=2670,Econ=7.86, PP=8.17,MID=7.62,DEATH=8.85)
+  Batter  #4   Rajat Patidar        | pid=5039  | DB(tot=42,hp=14,hpWR=71.4,bWR=60.3,koWR=71.4,mom=2,bayes=68.5,CPPI=64.26) | CSV(tot=55[IPL:55,T20I:0],raw=55,hp_amp=14/WR=71.4,hp_ana=7/WR=71.4,bWR=60.0,koWR=71.4,mom_ana=1) | calcBayes5=68.5 | calcCalCPPI=64.26
+      BBB actuals -> BAT(BF=918,R=1541,SR=167.9, PP=116.8,MID=174.3,DEATH=215.3) | BOWL(Balls=0,Econ=nan, PP=nan,MID=nan,DEATH=nan)
+  Batter  #5   Ruturaj Gaikwad      | pid=6059  | DB(tot=79,hp=14,hpWR=57.1,bWR=50.6,koWR=100.0,mom=2,bayes=55.4,CPPI=62.41) | CSV(tot=82[IPL:63,T20I:19],raw=82,hp_amp=14/WR=57.1,hp_ana=2/WR=100.0,bWR=51.2,koWR=100.0,mom_ana=1) | calcBayes5=55.4 | calcCalCPPI=62.41
+      BBB actuals -> BAT(BF=1822,R=2533,SR=139.0, PP=130.2,MID=140.1,DEATH=189.9) | BOWL(Balls=0,Econ=nan, PP=nan,MID=nan,DEATH=nan)
+  Batter  #6   Devon Conway         | pid=1941  | DB(tot=65,hp=14,hpWR=64.3,bWR=46.2,koWR=66.7,mom=2,bayes=59.5,CPPI=61.97) | CSV(tot=90[IPL:43,T20I:47],raw=90,hp_amp=15/WR=60.0,hp_ana=3/WR=66.7,bWR=42.2,koWR=66.7,mom_ana=1) | calcBayes5=59.5 | calcCalCPPI=61.97
+      BBB actuals -> BAT(BF=1486,R=1968,SR=132.4, PP=118.8,MID=148.3,DEATH=134.4) | BOWL(Balls=0,Econ=nan, PP=nan,MID=nan,DEATH=nan)
+  Batter  #7   Virat Kohli          | pid=47    | DB(tot=85,hp=20,hpWR=70.0,bWR=62.4,koWR=71.4,mom=1,bayes=68.5,CPPI=61.47) | CSV(tot=93[IPL:77,T20I:16],raw=94,hp_amp=19/WR=68.4,hp_ana=7/WR=71.4,bWR=61.3,koWR=71.4,mom_ana=1) | calcBayes5=68.5 | calcCalCPPI=61.47
+      BBB actuals -> BAT(BF=2456,R=3567,SR=145.2, PP=149.2,MID=131.8,DEATH=186.5) | BOWL(Balls=6,Econ=6.0, PP=nan,MID=nan,DEATH=6.0)
+  Batter  #8   Bhanuka Rajapaksa    | pid=2003  | DB(tot=34,hp=9,hpWR=66.7,bWR=56.2,koWR=100.0,mom=1,bayes=51.3,CPPI=59.88) | CSV(tot=37[IPL:13,T20I:24],raw=37,hp_amp=11/WR=63.6,hp_ana=2/WR=50.0,bWR=54.1,koWR=50.0,mom_ana=1) | calcBayes5=63.0 | calcCalCPPI=59.88
+      BBB actuals -> BAT(BF=421,R=576,SR=136.8, PP=143.6,MID=129.7,DEATH=153.8) | BOWL(Balls=0,Econ=nan, PP=nan,MID=nan,DEATH=nan)
+  Batter  #9   Shreyas Iyer         | pid=3647  | DB(tot=66,hp=18,hpWR=55.6,bWR=54.5,koWR=60.0,mom=3,bayes=55.3,CPPI=54.18) | CSV(tot=107[IPL:62,T20I:45],raw=107,hp_amp=17/WR=58.8,hp_ana=5/WR=60.0,bWR=55.1,koWR=60.0,mom_ana=1) | calcBayes5=55.4 | calcCalCPPI=54.18
+      BBB actuals -> BAT(BF=1865,R=2856,SR=153.1, PP=131.7,MID=149.1,DEATH=199.0) | BOWL(Balls=8,Econ=6.75, PP=nan,MID=nan,DEATH=6.75)
+  Batter  #10  Sediqullah Atal      | pid=8647  | DB(tot=19,hp=8,hpWR=50.0,bWR=57.9,koWR=66.7,mom=2,bayes=53.0,CPPI=50.07) | CSV(tot=42[IPL:12,T20I:30],raw=42,hp_amp=9/WR=55.6,hp_ana=3/WR=66.7,bWR=54.8,koWR=66.7,mom_ana=1) | calcBayes5=53.0 | calcCalCPPI=50.07
+      BBB actuals -> BAT(BF=822,R=1056,SR=128.5, PP=114.6,MID=130.9,DEATH=192.9) | BOWL(Balls=0,Econ=nan, PP=nan,MID=nan,DEATH=nan)
+  Bowler  #1   Jacob Duffy          | pid=22920 | DB(tot=22,hp=8,hpWR=75.0,bWR=54.5,koWR=100.0,mom=1,bayes=67.1,CPPI=68.83) | CSV(tot=56[IPL:16,T20I:40],raw=56,hp_amp=11/WR=72.7,hp_ana=2/WR=100.0,bWR=53.6,koWR=100.0,mom_ana=0) | calcBayes5=67.1 | calcCalCPPI=68.83
+      BBB actuals -> BAT(BF=31,R=34,SR=109.7, PP=nan,MID=0.0,DEATH=113.3) | BOWL(Balls=877,Econ=8.74, PP=8.31,MID=8.32,DEATH=10.07)
+  Bowler  #2   Josh Hazlewood       | pid=830   | DB(tot=55,hp=14,hpWR=78.6,bWR=63.7,koWR=83.3,mom=1,bayes=74.7,CPPI=68.59) | CSV(tot=75[IPL:47,T20I:28],raw=75,hp_amp=15/WR=80.0,hp_ana=6/WR=83.3,bWR=62.7,koWR=83.3,mom_ana=0) | calcBayes5=74.7 | calcCalCPPI=68.59
+      BBB actuals -> BAT(BF=39,R=23,SR=59.0, PP=nan,MID=18.2,DEATH=75.0) | BOWL(Balls=1476,Econ=8.28, PP=7.44,MID=8.49,DEATH=9.79)
+  Bowler  #3   Yash Dayal           | pid=7322  | DB(tot=43,hp=10,hpWR=80.0,bWR=69.8,koWR=80.0,mom=0,bayes=76.6,CPPI=63.09) | CSV(tot=49[IPL:45,T20I:4],raw=49,hp_amp=11/WR=81.8,hp_ana=5/WR=80.0,bWR=67.3,koWR=80.0,mom_ana=0) | calcBayes5=76.6 | calcCalCPPI=63.09
+      BBB actuals -> BAT(BF=9,R=4,SR=44.4, PP=nan,MID=0.0,DEATH=50.0) | BOWL(Balls=871,Econ=9.55, PP=9.37,MID=8.4,DEATH=10.92)
+  Bowler  #4   Mitchell Starc       | pid=829   | DB(tot=41,hp=10,hpWR=60.0,bWR=68.3,koWR=100.0,mom=3,bayes=62.8,CPPI=62.8) | CSV(tot=57[IPL:45,T20I:12],raw=57,hp_amp=11/WR=54.5,hp_ana=2/WR=100.0,bWR=57.9,koWR=100.0,mom_ana=2) | calcBayes5=62.8 | calcCalCPPI=62.8
+      BBB actuals -> BAT(BF=30,R=22,SR=73.3, PP=nan,MID=nan,DEATH=73.3) | BOWL(Balls=803,Econ=9.63, PP=9.71,MID=8.36,DEATH=10.42)
+  Bowler  #5   Varun Chakravarthy   | pid=6256  | DB(tot=70,hp=21,hpWR=61.9,bWR=58.6,koWR=100.0,mom=1,bayes=61.3,CPPI=62.38) | CSV(tot=113[IPL:69,T20I:44],raw=113,hp_amp=21/WR=61.9,hp_ana=4/WR=100.0,bWR=55.8,koWR=100.0,mom_ana=0) | calcBayes5=61.3 | calcCalCPPI=62.38
+      BBB actuals -> BAT(BF=49,R=26,SR=53.1, PP=nan,MID=50.0,DEATH=53.8) | BOWL(Balls=2128,Econ=8.0, PP=7.92,MID=7.9,DEATH=8.54)
+  Bowler  #6   Romario Shepherd     | pid=6726  | DB(tot=96,hp=25,hpWR=56.0,bWR=49.0,koWR=100.0,mom=2,bayes=54.8,CPPI=62.0) | CSV(tot=123[IPL:50,T20I:73],raw=123,hp_amp=29/WR=51.7,hp_ana=4/WR=100.0,bWR=46.3,koWR=100.0,mom_ana=0) | calcBayes5=54.8 | calcCalCPPI=62.0
+      BBB actuals -> BAT(BF=687,R=1059,SR=154.1, PP=100.0,MID=124.6,DEATH=176.0) | BOWL(Balls=1539,Econ=10.44, PP=10.51,MID=9.95,DEATH=11.41)
+  Bowler  #7   Suyash Sharma        | pid=36982 | DB(tot=43,hp=11,hpWR=72.7,bWR=65.1,koWR=66.7,mom=1,bayes=70.3,CPPI=60.07) | CSV(tot=63[IPL:63,T20I:0],raw=63,hp_amp=16/WR=75.0,hp_ana=7/WR=85.7,bWR=63.5,koWR=85.7,mom_ana=1) | calcBayes5=70.3 | calcCalCPPI=60.07
+      BBB actuals -> BAT(BF=2,R=0,SR=0.0, PP=nan,MID=nan,DEATH=0.0) | BOWL(Balls=899,Econ=8.63, PP=6.33,MID=8.63,DEATH=9.45)
+  Bowler  #8   Bhuvneshwar Kumar    | pid=360   | DB(tot=89,hp=25,hpWR=60.0,bWR=57.3,koWR=71.4,mom=2,bayes=59.6,CPPI=56.86) | CSV(tot=107[IPL:77,T20I:30],raw=107,hp_amp=24/WR=62.5,hp_ana=7/WR=71.4,bWR=56.1,koWR=71.4,mom_ana=0) | calcBayes5=59.5 | calcCalCPPI=56.86
+      BBB actuals -> BAT(BF=169,R=149,SR=88.2, PP=nan,MID=79.5,DEATH=91.2) | BOWL(Balls=2221,Econ=8.24, PP=7.11,MID=9.5,DEATH=10.09)
+  Bowler  #9   Arshdeep Singh       | pid=6464  | DB(tot=153,hp=25,hpWR=68.0,bWR=56.9,koWR=33.3,mom=2,bayes=66.1,CPPI=55.26) | CSV(tot=167[IPL:74,T20I:93],raw=167,hp_amp=26/WR=73.1,hp_ana=5/WR=60.0,bWR=58.1,koWR=50.0,mom_ana=0) | calcBayes5=66.1 | calcCalCPPI=55.26
+      BBB actuals -> BAT(BF=132,R=129,SR=97.7, PP=nan,MID=88.9,DEATH=98.4) | BOWL(Balls=3202,Econ=9.11, PP=8.69,MID=8.98,DEATH=9.8)
+  Bowler  #10  Lockie Ferguson      | pid=4692  | DB(tot=57,hp=9,hpWR=55.6,bWR=49.1,koWR=50.0,mom=2,bayes=53.3,CPPI=52.0) | CSV(tot=89[IPL:57,T20I:32],raw=89,hp_amp=9/WR=66.7,hp_ana=2/WR=50.0,bWR=47.2,koWR=50.0,mom_ana=0) | calcBayes5=53.3 | calcCalCPPI=52.0
+      BBB actuals -> BAT(BF=30,R=25,SR=83.3, PP=nan,MID=30.0,DEATH=110.0) | BOWL(Balls=1076,Econ=8.86, PP=8.48,MID=8.01,DEATH=10.33)
+  Bowler  #Audit Jasprit Bumrah       | pid=2933  | DB(tot=77,hp=14,hpWR=42.9,bWR=51.9,koWR=40.0,mom=4,bayes=44.5,CPPI=50.2) | CSV(tot=89[IPL:58,T20I:31],raw=89,hp_amp=16/WR=50.0,hp_ana=4/WR=75.0,bWR=51.7,koWR=66.7,mom_ana=0) | calcBayes5=45.3 | calcCalCPPI=44.49
+      BBB actuals -> BAT(BF=31,R=23,SR=74.2, PP=nan,MID=250.0,DEATH=62.1) | BOWL(Balls=1708,Econ=7.18, PP=7.17,MID=6.88,DEATH=7.41)
+  Bowler  #Audit Mohammed Siraj       | pid=5944  | DB(tot=83,hp=18,hpWR=38.9,bWR=55.4,koWR=28.6,mom=1,bayes=41.2,CPPI=47.8) | CSV(tot=84[IPL:76,T20I:8],raw=84,hp_amp=16/WR=37.5,hp_ana=7/WR=28.6,bWR=54.8,koWR=28.6,mom_ana=0) | calcBayes5=42.5 | calcCalCPPI=32.05
+      BBB actuals -> BAT(BF=72,R=58,SR=80.6, PP=nan,MID=50.0,DEATH=85.5) | BOWL(Balls=1806,Econ=8.76, PP=8.16,MID=8.55,DEATH=10.46)
+  Bowler  #Audit Rashid Khan          | pid=4722  | DB(tot=122,hp=26,hpWR=38.5,bWR=57.4,koWR=42.9,mom=4,bayes=42.0,CPPI=48.5) | CSV(tot=126[IPL:79,T20I:47],raw=126,hp_amp=27/WR=40.7,hp_ana=10/WR=40.0,bWR=57.1,koWR=40.0,mom_ana=0) | calcBayes5=41.5 | calcCalCPPI=37.57
+      BBB actuals -> BAT(BF=507,R=791,SR=156.0, PP=nan,MID=127.3,DEATH=170.7) | BOWL(Balls=2747,Econ=7.4, PP=8.0,MID=7.08,DEATH=8.3)
+  Batter  #Audit Heinrich Klaasen     | pid=4260  | DB(tot=76,hp=15,hpWR=40.0,bWR=48.7,koWR=25.0,mom=1,bayes=42.3,CPPI=49.1) | CSV(tot=78[IPL:58,T20I:20],raw=78,hp_amp=15/WR=40.0,hp_ana=4/WR=25.0,bWR=47.4,koWR=25.0,mom_ana=0) | calcBayes5=42.2 | calcCalCPPI=34.48
+      BBB actuals -> BAT(BF=1417,R=2363,SR=166.8, PP=119.4,MID=158.7,DEATH=198.0) | BOWL(Balls=0,Econ=nan, PP=nan,MID=nan,DEATH=nan)
+  Batter  #Audit Rohit Sharma         | pid=126   | DB(tot=92,hp=19,hpWR=47.4,bWR=51.1,koWR=40.0,mom=2,bayes=48.0,CPPI=52.4) | CSV(tot=97[IPL:74,T20I:23],raw=98,hp_amp=18/WR=44.4,hp_ana=4/WR=50.0,bWR=48.5,koWR=50.0,mom_ana=1) | calcBayes5=48.2 | calcCalCPPI=43.51
+      BBB actuals -> BAT(BF=1619,R=2329,SR=143.9, PP=141.4,MID=140.5,DEATH=233.3) | BOWL(Balls=0,Econ=nan, PP=nan,MID=nan,DEATH=nan)
+
+[4] HARDCODED WAGON WHEEL & PITCH MAP SPECS AUDIT
+  BATTER_WAGON rajat_patidar     : sector_sum=100% (!=100 if wrong) | FakePhaseSR=(136.4, 178.6, 192.4) vs TRUE BBB PhaseSR=(116.8, 174.3, 215.3)
+  BATTER_WAGON rinku_singh       : sector_sum=100% (!=100 if wrong) | FakePhaseSR=(124.0, 142.5, 208.7) vs TRUE BBB PhaseSR=(132.8, 116.9, 191.8)
+  BATTER_WAGON devon_conway      : sector_sum=108% (!=100 if wrong) | FakePhaseSR=(144.2, 138.0, 172.5) vs TRUE BBB PhaseSR=(118.8, 148.3, 134.4)
+  BATTER_WAGON sediqullah_atal   : sector_sum=100% (!=100 if wrong) | FakePhaseSR=(156.0, 148.0, 185.0) vs TRUE BBB PhaseSR=(114.6, 130.9, 192.9)
+  BATTER_WAGON ruturaj_gaikwad   : sector_sum=106% (!=100 if wrong) | FakePhaseSR=(138.5, 146.2, 188.0) vs TRUE BBB PhaseSR=(130.2, 140.1, 189.9)
+  BATTER_WAGON shivam_dube       : sector_sum=100% (!=100 if wrong) | FakePhaseSR=(128.0, 168.4, 195.0) vs TRUE BBB PhaseSR=(71.9, 147.2, 174.4)
+  BATTER_WAGON shreyas_iyer      : sector_sum=108% (!=100 if wrong) | FakePhaseSR=(132.0, 152.0, 184.0) vs TRUE BBB PhaseSR=(131.7, 149.1, 199.0)
+  BATTER_WAGON virat_kohli       : sector_sum=110% (!=100 if wrong) | FakePhaseSR=(142.0, 144.8, 202.0) vs TRUE BBB PhaseSR=(149.2, 131.8, 186.5)
+  BATTER_WAGON axar_patel        : sector_sum=106% (!=100 if wrong) | FakePhaseSR=(122.0, 136.0, 182.0) vs TRUE BBB PhaseSR=(111.1, 129.6, 152.6)
+  BATTER_WAGON bhanuka_rajapaksa : sector_sum=104% (!=100 if wrong) | FakePhaseSR=(152.0, 158.0, 186.0) vs TRUE BBB PhaseSR=(143.6, 129.7, 153.8)
+  Batters MISSING from BATTER_WAGON_SPECS (silently fall back to rajat_patidar!): ['heinrich_klaasen', 'rohit_sharma']
+  BOWLER_PITCH mitchell_starc      : len_sum=100% | FakePhaseEcon=(7.2, 7.6, 9.1) vs TRUE BBB PhaseEcon=(9.71, 8.36, 10.42)
+  BOWLER_PITCH josh_hazlewood      : len_sum=100% | FakePhaseEcon=(6.6, 6.9, 8.4) vs TRUE BBB PhaseEcon=(7.44, 8.49, 9.79)
+  BOWLER_PITCH jacob_duffy         : len_sum=100% | FakePhaseEcon=(7.4, 7.8, 9.0) vs TRUE BBB PhaseEcon=(8.31, 8.32, 10.07)
+  BOWLER_PITCH suyash_sharma       : len_sum=100% | FakePhaseEcon=(8.2, 7.2, 9.4) vs TRUE BBB PhaseEcon=(6.33, 8.63, 9.45)
+  BOWLER_PITCH lockie_ferguson     : len_sum=100% | FakePhaseEcon=(7.6, 7.4, 9.2) vs TRUE BBB PhaseEcon=(8.48, 8.01, 10.33)
+  BOWLER_PITCH yash_dayal          : len_sum=100% | FakePhaseEcon=(7.8, 7.9, 9.2) vs TRUE BBB PhaseEcon=(9.37, 8.4, 10.92)
+  BOWLER_PITCH romario_shepherd    : len_sum=100% | FakePhaseEcon=(8.4, 8.2, 9.8) vs TRUE BBB PhaseEcon=(10.51, 9.95, 11.41)
+  BOWLER_PITCH varun_chakravarthy  : len_sum=100% | FakePhaseEcon=(6.8, 6.7, 8.6) vs TRUE BBB PhaseEcon=(7.92, 7.9, 8.54)
+  BOWLER_PITCH bhuvneshwar_kumar   : len_sum=100% | FakePhaseEcon=(6.4, 7.2, 8.6) vs TRUE BBB PhaseEcon=(7.11, 9.5, 10.09)
+  BOWLER_PITCH arshdeep_singh      : len_sum=100% | FakePhaseEcon=(7.1, 7.5, 8.7) vs TRUE BBB PhaseEcon=(8.69, 8.98, 9.8)
+  Bowlers MISSING from BOWLER_PITCH_SPECS (silently fall back to mitchell_starc!): ['jasprit_bumrah', 'mohammed_siraj', 'rashid_khan']
+
+[5] NARRATIVE CONTRADICTIONS IN players_db.json & PLAYER_FOOTER_NOTES
+  Batter #1 Shivam Dube: DB=(tot=70,hp=18,hpWR=66.7,baseWR=54.3,lift=12.4,mom=1,cppi=66.81)
+     DB text snippet -> why_chose='Dube posted a 58.7% win conversion in 11 pressure games (+12.4% lift), earning 2 Player-of-the-Match awards through deci...' | why_not='#ranks:[]'
+     Footer note     -> 'Evaluated across 70 total fixtures with 18 qualifying high-pressure games. Shivam Dube's win rate rises from 54.3% overall to 66.7% under pr...'
+  Batter #2 Rinku Singh: DB=(tot=72,hp=26,hpWR=69.2,baseWR=63.8,lift=5.4,mom=1,cppi=66.26)
+     DB text snippet -> why_chose='Rinku Singh has competed in 26 high-leverage fixtures with an 18-win record (69.2% HP Win Rate). Maintains an unbeaten t...' | why_not='#ranks:[]'
+     Footer note     -> 'Measured across 72 total matches including 26 high-pressure games, one of the largest close-game batting samples in the pool. His win rate c...'
+  Batter #3 Axar Patel: DB=(tot=85,hp=28,hpWR=64.3,baseWR=56.5,lift=7.8,mom=2,cppi=65.82)
+     DB text snippet -> why_chose='Axar has won 18 of his 28 pressure fixtures (+7.8% lift) and maintains a flawless 100% knockout record. In pressure mome...' | why_not='#ranks:[]'
+     Footer note     -> 'Scored across 85 matches with 28 high-pressure appearances, the largest pressure volume among batters. His win rate moves from 56.5% baselin...'
+  Batter #4 Rajat Patidar: DB=(tot=42,hp=14,hpWR=71.4,baseWR=60.3,lift=11.1,mom=2,cppi=64.26)
+     DB text snippet -> why_chose='Rajat Patidar recorded a 71.4% win rate across 14 high-leverage fixtures, reflecting a +11.1% lift over baseline. His pl...' | why_not='#ranks:[]'
+     Footer note     -> 'Tracked across 42 matches and 14 high-pressure games, posting a 71.4% pressure win rate versus 60.3% baseline (+11.1% lift). Combined with a...'
+  Batter #5 Ruturaj Gaikwad: DB=(tot=79,hp=14,hpWR=57.1,baseWR=50.6,lift=6.5,mom=2,cppi=62.41)
+     DB text snippet -> why_chose='Gaikwad combines low-risk powerplay accumulation with sharp acceleration in overs 7–15, holding a 75.0% playoff win conv...' | why_not='#ranks:[]'
+     Footer note     -> 'Evaluated over 79 matches and 14 high-pressure fixtures. Gaikwad converts 57.1% under pressure compared with a 50.6% baseline (+6.5% lift), ...'
+  Batter #6 Devon Conway: DB=(tot=65,hp=14,hpWR=64.3,baseWR=46.2,lift=18.1,mom=2,cppi=61.97)
+     DB text snippet -> why_chose='Conway demonstrated big-match application with a decisive 47 off 25 in the rain-affected 2023 IPL Final, lifting his tea...' | why_not='#ranks:[]'
+     Footer note     -> 'Assessed across 65 fixtures and 14 high-pressure matches, recording a +18.1% pressure lift - the highest jump among Top 10 batters (64.3% HP...'
+  Batter #7 Virat Kohli: DB=(tot=85,hp=20,hpWR=70.0,baseWR=62.4,lift=7.6,mom=1,cppi=61.47)
+     DB text snippet -> why_chose='Kohli’s 70.0% pressure win rate across 20 matches confirms his legendary chase mastery. He elevates his team’s performan...' | why_not='#ranks:['8']'
+     Footer note     -> 'Sampled across 85 total matches and 20 high-pressure contests. Kohli converts 70.0% of pressure fixtures against a 62.4% overall win rate (+...'
+  Batter #8 Bhanuka Rajapaksa: DB=(tot=34,hp=9,hpWR=66.7,baseWR=56.2,lift=10.4,mom=1,cppi=59.88)
+     DB text snippet -> why_chose='Maintains an immediate-attack approach against pace and spin from ball one, achieving 100% win conversion in playoff kno...' | why_not='#ranks:[]'
+     Footer note     -> 'Evaluated over 34 total matches and 9 high-pressure games just above the 8-game threshold. A jump from 56.2% baseline to 66.7% HP win rate (...'
+  Batter #9 Shreyas Iyer: DB=(tot=66,hp=18,hpWR=55.6,baseWR=54.5,lift=1.1,mom=3,cppi=54.18)
+     DB text snippet -> why_chose='Iyer led KKR to the 2024 IPL title while demonstrating consistent middle-order control, earning 2 Player-of-the-Match aw...' | why_not='#ranks:[]'
+     Footer note     -> 'Analysed across 66 fixtures including 18 high-pressure games, posting 55.6% HP win rate against 54.5% baseline (+1.1% lift) plus 3 HP POTM a...'
+  Batter #10 Sediqullah Atal: DB=(tot=19,hp=8,hpWR=50.0,baseWR=57.9,lift=-7.9,mom=2,cppi=50.07)
+     DB text snippet -> why_chose='Atal registered an 80.0% win rate in 5 high-leverage fixtures (+8.2% lift), showing an ability to take on powerplay rest...' | why_not='#ranks:[]'
+     Footer note     -> 'Measured across 19 matches with 8 high-pressure contests at the model's minimum sample boundary. His 50.0% HP win rate trails his 57.9% base...'
+  Bowler #1 Jacob Duffy: DB=(tot=22,hp=8,hpWR=75.0,baseWR=54.5,lift=20.5,mom=1,cppi=68.83)
+     DB text snippet -> why_chose='Duffy produced 3 Player-of-the-Match awards across 6 close finishes, excelling with upright seam presentation under nigh...' | why_not='#ranks:[]'
+     Footer note     -> 'Tracked over 22 matches with 8 high-pressure appearances. Duffy posts a 75.0% pressure win rate versus 54.5% baseline for a dataset-best +20...'
+  Bowler #2 Josh Hazlewood: DB=(tot=55,hp=14,hpWR=78.6,baseWR=63.7,lift=14.9,mom=1,cppi=68.59)
+     DB text snippet -> why_chose='Hazlewood delivered a 60.0% win rate across 10 high-leverage games, keeping economy rates under 7.0 RPO while challengin...' | why_not='#ranks:[]'
+     Footer note     -> 'Assessed across 55 matches and 14 high-pressure games. His win rate climbs from 63.7% baseline to 78.6% in close games (+14.9% lift), suppor...'
+  Bowler #3 Yash Dayal: DB=(tot=43,hp=10,hpWR=80.0,baseWR=69.8,lift=10.2,mom=0,cppi=63.09)
+     DB text snippet -> why_chose='Successfully defended the final over in the 2024 IPL eliminator race against CSK, showing calm execution under extreme s...' | why_not='#ranks:[]'
+     Footer note     -> 'Evaluated across 43 total games and 10 high-pressure matches, converting 80.0% under pressure compared with 69.8% baseline (+10.2% lift) and...'
+  Bowler #4 Mitchell Starc: DB=(tot=41,hp=10,hpWR=60.0,baseWR=68.3,lift=-8.3,mom=3,cppi=62.8)
+     DB text snippet -> why_chose='Player of the Match in the 2024 IPL Final and Qualifier. Generated 11 wins in 17 high-leverage games through decisive ea...' | why_not='#ranks:[]'
+     Footer note     -> 'Measured over 41 total matches and 10 high-pressure outings. Although his 60.0% HP win rate sits below his 68.3% baseline (-8.3% lift), 3 HP...'
+  Bowler #5 Varun Chakravarthy: DB=(tot=70,hp=21,hpWR=61.9,baseWR=58.6,lift=3.3,mom=1,cppi=62.38)
+     DB text snippet -> why_chose='Claimed 3 Player-of-the-Match awards in pressure games, using carrom balls and sharp leg-breaks to restrict scoring in o...' | why_not='#ranks:[]'
+     Footer note     -> 'Analysed across 70 matches and 21 high-pressure games, showing a 61.9% pressure win rate over 58.6% baseline (+3.3% lift), a 100.0% knockout...'
+  Bowler #6 Romario Shepherd: DB=(tot=96,hp=25,hpWR=56.0,baseWR=49.0,lift=7.0,mom=2,cppi=62.0)
+     DB text snippet -> why_chose='Demonstrated dual capability in 25 high-leverage matches, providing lower-order power hitting and back-of-length seam bo...' | why_not='#ranks:[]'
+     Footer note     -> 'Tracked across 96 matches including 25 high-pressure appearances - tied for largest bowling pressure volume. His win conversion improves fro...'
+  Bowler #7 Suyash Sharma: DB=(tot=43,hp=11,hpWR=72.7,baseWR=65.1,lift=7.6,mom=1,cppi=60.07)
+     DB text snippet -> why_chose='Delivered 2 Player-of-the-Match awards in close finishes despite early career stage, attacking the stumps with sharp goo...' | why_not='#ranks:[]'
+     Footer note     -> 'Evaluated across 43 matches and 11 high-pressure games. Suyash lifts his win conversion from 65.1% baseline to 72.7% in tight contests (+7.6...'
+  Bowler #8 Bhuvneshwar Kumar: DB=(tot=89,hp=25,hpWR=60.0,baseWR=57.3,lift=2.7,mom=2,cppi=56.86)
+     DB text snippet -> why_chose='Recorded 11 high-leverage wins and a 71.4% playoff knockout record, utilizing conventional swing and knuckle balls to ke...' | why_not='#ranks:[]'
+     Footer note     -> 'Measured across 89 matches and 25 high-pressure outings, lifting from 57.3% baseline to 60.0% under pressure (+2.7% lift). Two HP POTM award...'
+  Bowler #9 Arshdeep Singh: DB=(tot=153,hp=25,hpWR=68.0,baseWR=56.9,lift=11.1,mom=2,cppi=55.26)
+     DB text snippet -> why_chose='Produced 17 wins in 25 pressure appearances, using natural left-arm angle and yorker accuracy to defend targets in overs...' | why_not='#ranks:[]'
+     Footer note     -> 'Built on the largest sample in the pool: 153 matches and 25 high-pressure games. His win rate rises sharply from 56.9% baseline to 68.0% und...'
+  Bowler #10 Lockie Ferguson: DB=(tot=57,hp=9,hpWR=55.6,baseWR=49.1,lift=6.5,mom=2,cppi=52.0)
+     DB text snippet -> why_chose='Consistent playoff performer holding a 71.4% knockout win record, using pace and hard lengths to push batters deep into ...' | why_not='#ranks:[]'
+     Footer note     -> 'Evaluated across 57 matches and 9 high-pressure appearances. Winning 55.6% under pressure versus 49.1% baseline (+6.5% lift) with 2 HP POTM ...'
+
+[6] SUBMISSION CSVs VS players_db.json & SCRIPT REPRODUCTION
+  BATTERS: CSV names == DB names: True | CPPI match: True
+  BOWLERS: CSV names == DB names: True | CPPI match: True
+  audit_match_pressure_scores is_high_pressure True count: 178 / 883 (min score where True=31, max where False=29)
+  Season<=2025 match count check: Shivam Dube        DB=70 | All=131 | Pre-2026=88
+  Season<=2025 match count check: Rinku Singh        DB=72 | All=117 | Pre-2026=95
+  Season<=2025 match count check: Rajat Patidar      DB=42 | All=55 | Pre-2026=39
+  Season<=2025 match count check: Jacob Duffy        DB=22 | All=56 | Pre-2026=30
+  Season<=2025 match count check: Arshdeep Singh     DB=153 | All=167 | Pre-2026=127
+  Reproduced calibrated match-level CPPI across ALL 273 qualified players (using audit_match_pressure_scores on 883 matches, no role/country filter) Top 15:
+  pid                 name  tot  hp  hp_wr  b_wr  lift  ko_wr  mom_hp  cppi_cal
+58727     Abhinandan Singh   32   9   88.9  68.8  20.1  100.0       0     71.97
+45989      Swastik Chikara   30   8   87.5  60.0  27.5  100.0       0     71.96
+  830       Josh Hazlewood   75  15   80.0  62.7  17.3   83.3       1     70.12
+22920          Jacob Duffy   56  11   72.7  53.6  19.2  100.0       1     69.07
+  198        Manish Pandey   60  14   71.4  50.0  21.4  100.0       0     68.25
+36982        Suyash Sharma   63  16   75.0  63.5  11.5   85.7       1     67.11
+ 2876           Axar Patel  155  29   65.5  56.8   8.7  100.0       2     66.61
+ 4708          Rinku Singh  117  26   69.2  63.2   6.0  100.0       1     66.45
+ 7327         Rasikh Salam   52  14   78.6  63.5  15.1   80.0       0     65.90
+ 3916        Jitesh Sharma  111  23   73.9  61.3  12.7   83.3       0     65.84
+ 4755          Shivam Dube  131  20   65.0  55.0  10.0  100.0       1     65.59
+ 7322           Yash Dayal   49  11   81.8  67.3  14.5   80.0       0     65.49
+26906 Angkrish Raghuvanshi   43  10   70.0  51.2  18.8  100.0       0     64.52
+ 6284           Anukul Roy   50  12   66.7  48.0  18.7  100.0       0     64.40
+ 5039        Rajat Patidar   55  14   71.4  60.0  11.4   71.4       2     64.35
+
+[7] POWERPOINT DECK AUDIT (RR_SupeRR_Selector_Season2_Ketan_Rawat.pptx)
+  Slides count: 13
+  Slide  1: Rajasthan Royals  |  SupeRR Selector Season 2 (Round 1)
+      Snippet: Rajasthan Royals  |  SupeRR Selector Season 2 (Round 1) | Identifying the Most Reliable PlayersUnder Match Pressure | Measuring Match Leverage, True Pressure Lift, and Building a Balanced IPL 2027 Auction Plan for Sawai
+  Slide  2: Dataset Scope & High-Pressure Sample Overview Summary of 883 IPL and T20I fixtures (2022–2026) filte
+      Table(4x5 hdr=['Group', '<=6 R', '7-12 R', '13-15 R', 'Playoff'] r1=['Top 10 Batters', '68.4%', '71.2%', '64.5%', '72.0%'])
+      Snippet: Dataset Scope & High-Pressure Sample Overview Summary of 883 IPL and T20I fixtures (2022–2026) filtered by Match Leverage Index (MLI >= 30) | MATCHES EVALUATED | 883 | IPL & T20I (2022–2026) | HIGH-PRESSURE SAMPLE | 178 
+  Slide  3: How Pressure Is Defined and Scored Transparent rules separating high-stakes games from routine fixtu
+      Table(5x3 hdr=['Factor', 'Points', 'Scoring Thresholds'] r1=['Stage Stakes', '0–40', 'Final 40 | Semi-Final 35 | Qualifier/Eliminator 30 | Super 4 20 | League 5'])
+      Snippet: How Pressure Is Defined and Scored Transparent rules separating high-stakes games from routine fixtures and controlling small-sample noise | 1. Match Leverage Index (MLI >= 30 Points) | Each match is scored on a 0–100 po
+  Slide  4: Top 10 Batters Under Pressure (Official Ranking) Calibrated CPPI order matching Unstop Component 01 
+      Table(11x10 hdr=['Rank', 'Player', 'Tactical Role', 'Franchise / Teams', 'HP M'] r1=['1', 'Shivam Dube', 'Specialist Boundary Striker vs Spin', 'Chennai Super Kings, India, Mumbai', '18'])
+      Snippet: Top 10 Batters Under Pressure (Official Ranking) Calibrated CPPI order matching Unstop Component 01 submission dropdowns | Key Observation: Middle-order spin hitters and death finishers hold the top spots — Shivam Dube (
+  Slide  5: Top 10 Bowlers Under Pressure (Official Ranking) Calibrated CPPI order matching Unstop Component 01 
+      Table(11x10 hdr=['Rank', 'Player', 'Tactical Role', 'Franchise / Teams', 'HP M'] r1=['1', 'Jacob Duffy', 'High-Value Seam & Swing Bowler', 'New Zealand, Royal Challengers Bengaluru', '8'])
+      Snippet: Top 10 Bowlers Under Pressure (Official Ranking) Calibrated CPPI order matching Unstop Component 01 submission dropdowns | Key Observation: Disciplined length bowlers stand out under pressure — Jacob Duffy posts the larg
+  Slide  6: Why Famous Players Missed the Top 10 Testing five well-known stars reveals negative win-rate lift in
+      Table(6x8 hdr=['Player', 'Total M', 'Base WR', 'HP M', 'HP WR'] r1=['Jasprit Bumrah', '77', '51.9%', '14', '42.9%'])
+  Slide  7: Pressure Win Rate vs True Pressure Lift Quadrant plot comparing close-game win conversion (x-axis) a
+      Snippet: Pressure Win Rate vs True Pressure Lift Quadrant plot comparing close-game win conversion (x-axis) against change from baseline win rate (y-axis) | Players in the upper-right quadrant (HP Win Rate >= 60% and positive Lif
+  Slide  8: Quadrant Findings & Takeaways for Rajasthan Royals Translating the scatter plot into auction priorit
+      Snippet: Quadrant Findings & Takeaways for Rajasthan Royals Translating the scatter plot into auction priorities for Sawai Mansingh Stadium, Jaipur | Quadrant I: High-Pressure Match-Winners | Significant positive win lift in tigh
+  Slide  9: Recommended Rajasthan Royals 2027 Playing XI Retaining core match-winners while targeting high-lift 
+      Snippet: Recommended Rajasthan Royals 2027 Playing XI Retaining core match-winners while targeting high-lift pressure specialists for weak phases | TOP ORDER (OVERS 1–6) | 1. Yashasvi Jaiswal | RETAINED | Aggressive LHB Opener | 
+  Slide 10: Auction Target Pool: Normal vs High-Pressure Win Conversion Side-by-side comparison of 11 top auctio
+      Table(12x6 hdr=['#', 'Player', 'Role in Team', 'Normal Win%', 'Pressure Win%'] r1=['1', 'Devon Conway (wk)', 'Top-Order Anchor & Wicketkeeper', '46.2%', '64.3%'])
+  Slide 11: Auction Budget Plan (INR 45.0 Cr Purse) & Backup Triggers Strict valuation ceilings and automated st
+      Table(7x5 hdr=['Target Player', 'Tier', 'Max Bid', 'Share', 'Squad Need Addressed'] r1=['Rinku Singh', 'Priority 1', 'INR 11.00 Cr', '24.4%', 'Proven death finisher; 69.2% win rate in tight chases.'])
+      Snippet: Auction Budget Plan (INR 45.0 Cr Purse) & Backup Triggers Strict valuation ceilings and automated step-down pivots prevent overspending | Primary Purse Allocation (INR 45.00 Cr = 100%) | 10% Auction Walk-Away Rule | If b
+  Slide 12: Thought Process, Checks & Honest Limitations Transparency across data verification, tactical assumpt
+      Snippet: Thought Process, Checks & Honest Limitations Transparency across data verification, tactical assumptions, and statistical boundaries | Thought Process & Audit Verification | Look Beyond Career Averages: | Standard battin
+  Slide 13: Conclusion & Submission Summary
+      Snippet: Conclusion & Submission Summary | Ranked Top 10 Lists Ready for Unstop: | Batters led by Shivam Dube (66.81), Rinku Singh (66.26), and Axar Patel (65.82); Bowlers led by Jacob Duffy (68.83), Josh Hazlewood (68.59), and Y
+
+[8] PDF SCRIPTS & REPORT INCONSISTENCY SCAN
+  File: build_submission_pdf.py | size=37,348 chars
+    -> Sediqullah Atal</b>", table_cell_bold), Paragraph("Afghanistan, Delhi Capitals", table_cell_style), Paragraph("8", table_cell_center),
+    -> Sediqullah Atal #10; Starc #4), establishing positive-lift dominance
+    -> Rinku Singh (Designated Elite Finisher #6/#7):</b> With a 100% Knockout Win Rate acr
+  File: build_clean_submission_pptx.py | size=43,572 chars
+    -> Sediqullah Atal (152
+    -> Sediqullah Atal 8, Bhanuka Rajapaksa 9, Lockie Ferguson 9) naturally have wider binomial confidence intervals despite credibility scali
+  File: pressure_output/methodology_report.md | size=14,151 chars
+    -> Sediqullah Atal** | Afghanistan, Afghanistan A | 8 | 50
+    -> Sediqullah Atal, Bhanuka Rajapaksa, and Lockie Ferguson) naturally carry wider binomial confidence intervals despite the sigmoid credib
+
+[9] WEBSITE & PLAYER HTML PAGES AUDIT
+  index.html size: 2,788,442 chars
+  Navigation tabs (4): [('batters', 'Batting Evaluation (Top 10)'), ('bowlers', 'Bowling Evaluation (Top 10)'), ('tactical-xi', 'IPL 2027 RR Squad &amp; Auction Strategy'), ('superstars', 'Leverage Variance Audit')]
+  Slicer dropdown options: [('ALL', 'All Roles'), ('TOP', 'Top Order &amp; Anchors (#1&ndash;#3)'), ('MIDDLE', 'Middle-Overs Enforcers (#4&ndash;#5)'), ('FINISHER', 'Finishers / Death Specialists (#5&ndash;#7)'), ('SEAM', 'Fast Bowlers / Seam'), ('SPIN', 'Spin / All-Rounders'), ('RANK', 'Rank (Ascending)'), ('DIFF', 'Win Differential (&Delta;)'), ('WIN', 'High-Leverage Win%'), ('INDEX', 'Index Score (CPPI)')]
+  Embedded base64 images in index.html: 27 (['jpeg', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png', 'png'])
+  Player links in index.html: 65 unique=25
+  Other hrefs in index.html: ['https://rr-dashboard.onrender.com/', 'https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/', 'https://github.com/Ketanrawat2004/RR-Dashboard', 'https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link', 'https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing']
+  External scripts: []
+  Percentage table cells in index.html (count=115), sample: ['68.4%', '71.2%', '64.5%', '72.0%', '66.7%', '63.8%', '69.1%', '74.2%', '44.2%', '48.1%', '49.6%', '41.8%', '66.7%', '54.3%', '100.0%']
+  Player pages on disk: 25 | Linked from index.html: 25 | Missing targets: set() | Unlinked pages: set()
+  Sample player page (shivam_dube.html): size=132,016 chars, SVGs=1, back_links=['../index.html', '../index.html']

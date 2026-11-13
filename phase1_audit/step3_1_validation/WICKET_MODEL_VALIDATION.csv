@@ -1,0 +1,11 @@
+task,model,log_loss,brier_score,brier_skill_score_pct,roc_auc,pr_auc,ece
+Bowler_Wicket,Constant Prior Rate,0.20162,0.04845,0.0,0.5,0.05106,0.0
+Bowler_Wicket,Phase Empirical Rate,0.20032,0.04832,0.28,0.55,0.08884,0.0
+Bowler_Wicket,Phase x Wkts Rate,0.20012,0.04829,0.34,0.5583,0.06556,8e-05
+Bowler_Wicket,Logistic Regression,0.1993,0.0482,0.52,0.5838,0.07124,0.00029
+Bowler_Wicket,HistGBC (Contextual),0.19916,0.04819,0.55,0.5854,0.07174,0.00027
+Batter_Dismissal_Hazard,Constant Prior Rate,0.21191,0.05164,-0.0,0.5,0.05462,0.0
+Batter_Dismissal_Hazard,Phase Empirical Rate,0.21007,0.05143,0.4,0.5572,0.09638,0.0
+Batter_Dismissal_Hazard,Phase x Wkts Rate,0.20994,0.05139,0.49,0.5634,0.07677,6e-05
+Batter_Dismissal_Hazard,Logistic Regression,0.20885,0.05128,0.69,0.5916,0.07943,0.00017
+Batter_Dismissal_Hazard,HistGBC (Contextual),0.20858,0.05124,0.77,0.594,0.08159,0.00023

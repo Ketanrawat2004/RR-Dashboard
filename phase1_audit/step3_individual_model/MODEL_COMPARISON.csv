@@ -1,0 +1,10 @@
+task,model,rmse,mae,r2,log_loss,brier,auc,ece
+Batting_Runs,Bat Baseline (Phase+Wkts),1.7353,1.3175,0.00889,,,,
+Batting_Runs,Bat Ridge Regression,1.7242,1.3061,0.02147,,,,
+Batting_Runs,Bat HistGBR (Contextual),1.7225,1.3036,0.02346,,,,
+Bowling_Runs_Conceded,BowlRuns Baseline,1.7057,1.2779,0.00827,,,,
+Bowling_Runs_Conceded,BowlRuns Ridge,1.6954,1.2677,0.02015,,,,
+Bowling_Runs_Conceded,BowlRuns HistGBR,1.6938,1.2654,0.02203,,,,
+Bowling_Wickets,Wkt Baseline,,,,0.20029,0.0483,0.5613,0.0002
+Bowling_Wickets,Wkt Logistic Regression,,,,0.1993,0.0482,0.5838,0.0003
+Bowling_Wickets,Wkt HistGBC,,,,0.19916,0.04819,0.5854,0.0003

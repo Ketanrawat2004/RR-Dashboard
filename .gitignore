@@ -5,3 +5,20 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Six original official datasets (preserved locally, excluded from git)
+ball_by_ball.csv
+matches.csv
+competitions.csv
+teams.csv
+competition_team_player_mapping.csv
+playing_eleven.csv
+
+# Large intermediate model files and pickle dumps (>100MB)
+*.pkl
+*.dmp
+
+# Temporary browser artifacts and crashpad reports
+phase1_audit/phase2c_data_update/screenshots/
+
+# Pre-implementation backups
+phase1_audit/phase2_backup_pre_implementation/

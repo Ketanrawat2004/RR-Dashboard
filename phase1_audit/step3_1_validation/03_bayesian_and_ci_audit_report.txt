@@ -1,0 +1,87 @@
+================================================================================
+PHASE 1 STEP 3.1 — SECTIONS 5 & 6: BAYESIAN RELIABILITY & CI AUDIT
+================================================================================
+
+[1] MONTE CARLO RANDOMIZED MATCH-LEVEL SPLIT-HALF RELIABILITY (50 Replicates)
+  Qualified batters (>=40 P BF): 288
+  Qualified bowlers (>=40 P Balls): 242
+
+  Split-Half Reliability Comparison: Odd/Even Match vs 50 Random Match Splits:
+  Metric / Prior                Odd/Even rho  Rand Mean rho         Rand 95% CI  Spearman-Brown
+  -----------------------------------------------------------------------------------------------
+  Batting RAE (M0= 30)                   —         0.1089      [0.026, 0.201]          0.1965
+  Bowling RPAE (M0= 30)                  —         0.0395     [-0.035, 0.113]          0.0759
+  Batting RAE (M0= 50)                   —         0.0996      [0.016, 0.203]          0.1811
+  Bowling RPAE (M0= 50)                  —         0.0437     [-0.057, 0.171]          0.0837
+  Batting RAE (M0= 75)                   —         0.1007      [0.021, 0.194]          0.1829
+  Bowling RPAE (M0= 75)                  —         0.0584     [-0.014, 0.155]          0.1103
+  Batting RAE (M0=100)                   —         0.1038      [0.026, 0.173]          0.1880
+  Bowling RPAE (M0=100)                  —         0.0488     [-0.052, 0.140]          0.0930
+  Batting RAE (M0=150)                   —         0.0978     [-0.003, 0.189]          0.1782
+  Bowling RPAE (M0=150)                  —         0.0636     [-0.040, 0.152]          0.1196
+  Batting RAE (M0=200)                   —         0.1057      [0.035, 0.198]          0.1913
+  Bowling RPAE (M0=200)                  —         0.0629     [-0.027, 0.134]          0.1184
+  Batting RAE (M0=250)                   —         0.0932      [0.020, 0.184]          0.1705
+  Bowling RPAE (M0=250)                  —         0.0604     [-0.040, 0.156]          0.1139
+
+  Reliability vs Minimum Pressure Sample Size (M0=150):
+  Sample Threshold         Qualified Batters  Batting SB Reliability Qualified Bowlers  Bowling SB Reliability
+  --------------------------------------------------------------------------------------------------------------
+  N_min >= 30   pressure balls                337                  0.2022               277                  0.1137
+  N_min >= 40   pressure balls                288                  0.1756               242                  0.1104
+  N_min >= 50   pressure balls                237                  0.1070               219                  0.0947
+  N_min >= 75   pressure balls                175                  0.1791               174                  0.1216
+  N_min >= 100  pressure balls                140                  0.2298               150                  0.0946
+  N_min >= 150  pressure balls                 93                  0.2679               104                  0.1211
+
+[2] CONFIDENCE INTERVAL AUDIT & MATCH-CLUSTERED BOOTSTRAP (500 Replicates)
+  AUDIT FINDING ON STEP 3 REPORTED INTERVALS:
+  In Step 3, the provisional report displayed: Umran Malik Score +24.76, CI [-9.4, +33.0]; Andre Russell Score +20.09, CI [+11.9, +41.3].
+  Statistical Root Causes Identified:
+  1. Metric Disconnect: Score +24.76 was calculated using the composite (60% RPAE + 40% WAE), whereas the printed confidence interval
+     was computed strictly on the unscaled rate residual (p_rpae_rate) before adding the wicket component!
+  2. Failure to Account for Match Clustering: The standard error formula sigma_w / sqrt(N + M0) treated deliveries as independent,
+     ignoring intra-match correlation (dew, pitch deterioration, opposition strength).
+  3. Independent deliveries assumption underestimates standard errors by 25-40% compared with clustered resampling.
+
+  Executing 500-Replicate Match-Clustered Bootstrap...
+
+  Recalculated 95% Match-Clustered Bootstrap Confidence Intervals (Batting Pure RAE):
+  Player                 Obs Score  Boot Mean  Boot SE      95% Cluster CI     Rank 90% CI  Top10 Prob
+  ----------------------------------------------------------------------------------------------------
+  Andre Russell             +26.59     +25.68     8.13     [+9.23, +41.02]       #1 to #29       79.8%
+  Vaibhav Sooryavanshi      +22.48     +20.51    10.30     [+1.52, +39.77]       #1 to #86       56.0%
+  Glenn Maxwell             +22.45     +21.85     7.79     [+6.27, +36.40]       #1 to #45       63.6%
+  Tim David                 +20.11     +19.52     8.29     [+5.64, +36.32]       #1 to #59       51.0%
+  Abhishek Sharma           +18.52     +18.28     9.54     [+0.51, +35.99]       #1 to #89       42.6%
+  Priyansh Arya             +18.11     +17.11    14.95     [-7.79, +46.37]      #1 to #209       44.6%
+  Heinrich Klaasen          +18.08     +18.09     5.75     [+6.96, +29.75]       #2 to #48       43.6%
+  Prabhsimran Singh         +17.76     +17.39     7.26     [+2.87, +31.48]       #2 to #69       40.2%
+  Suryakumar Yadav          +16.14     +16.07     4.92     [+7.08, +25.90]       #4 to #46       26.8%
+  Patrick Cummins           +15.30     +14.98     8.04     [-1.76, +30.25]      #3 to #113       30.8%
+  Donovan Ferreira          +15.08     +14.57     7.22     [+1.07, +28.00]       #4 to #93       26.2%
+  Jos Buttler               +13.70     +13.39     6.28     [+1.43, +25.56]       #5 to #86       19.0%
+  Ashutosh Sharma           +12.98     +12.04    10.99     [-7.89, +34.56]      #2 to #199       25.2%
+  Fakhar Zaman              +12.88     +12.98     5.42     [+2.40, +23.06]       #7 to #79       13.4%
+  Edson Silva               +12.86     +11.79     7.83     [+0.00, +27.16]      #4 to #128       19.8%
+
+  Recalculated 95% Match-Clustered Bootstrap Confidence Intervals (Bowling Composite):
+  Player                 Obs Score  Boot Mean  Boot SE      95% Cluster CI     Rank 90% CI  Top10 Prob
+  ----------------------------------------------------------------------------------------------------
+  Umran Malik               +24.75     +23.28    12.51     [-0.74, +45.71]      #1 to #108       62.8%
+  Sufiyan Muqeem            +16.76     +15.71     5.65     [+4.53, +26.08]       #4 to #69       26.6%
+  Mayank Yadav              +16.60     +16.49     8.50     [-0.14, +33.04]      #2 to #111       36.8%
+  Shoriful Islam            +16.36     +16.71     6.27     [+4.15, +29.40]       #2 to #73       34.6%
+  Mark Wood                 +16.15     +15.57     6.67     [+4.38, +30.74]       #3 to #70       28.0%
+  Jacob Duffy               +14.16     +14.06     7.71     [-0.12, +29.39]      #3 to #107       24.6%
+  Mohammad Nawaz            +14.10     +13.80     6.43     [+2.25, +26.92]       #4 to #91       19.2%
+  Anukul Roy                +13.43     +13.17     6.45     [+0.99, +25.47]       #4 to #99       16.8%
+  Ehsan Khan                +13.42     +13.02     6.80     [+1.02, +25.66]      #4 to #106       20.4%
+  Piyush Chawla             +13.39     +12.92     6.86     [-0.26, +26.45]      #4 to #113       16.8%
+  Yash Thakur               +13.04     +12.58     6.46     [-0.14, +24.86]      #5 to #107       14.4%
+  Josh Hazlewood            +12.27     +12.13     7.08     [-1.76, +26.64]      #5 to #113       14.8%
+  Murugan Ashwin            +11.99     +11.27     7.94     [-3.55, +26.45]      #3 to #139       16.4%
+  Allah Ghazanfar           +11.73     +12.09     9.43     [-5.61, +32.51]      #2 to #148       20.2%
+  Riley Meredith            +11.44     +10.82     7.32     [-2.23, +25.39]      #5 to #128       14.0%
+
+Saved Confidence Interval Audit table to C:\RR NEW\phase1_audit\step3_1_validation\CONFIDENCE_INTERVAL_AUDIT.csv

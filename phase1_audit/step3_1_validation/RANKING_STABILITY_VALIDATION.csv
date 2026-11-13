@@ -1,0 +1,9 @@
+discipline,metric,threshold_pct,deliveries,qualified_players,spearman_rho_vs_25pct,kendall_tau_vs_25pct,top10_overlap,top20_overlap,stability_status
+Batting,Pure_RAE,Top 15%,28988,133,0.8097,0.6181,3/10,12/20,MODERATE
+Bowling,Composite_60_40,Top 15%,28865,166,0.8244,0.6426,6/10,12/20,MODERATE
+Batting,Pure_RAE,Top 20%,38658,146,0.8999,0.7238,5/10,13/20,HIGH STABILITY
+Bowling,Composite_60_40,Top 20%,38501,175,0.8907,0.7186,6/10,13/20,HIGH STABILITY
+Batting,Pure_RAE,Top 25%,48323,163,1.0,1.0,10/10,20/20,BASELINE
+Bowling,Composite_60_40,Top 25%,48137,179,1.0,1.0,10/10,20/20,BASELINE
+Batting,Pure_RAE,Top 30%,57994,170,0.8971,0.7316,7/10,16/20,HIGH STABILITY
+Bowling,Composite_60_40,Top 30%,57735,181,0.9124,0.7436,6/10,14/20,HIGH STABILITY

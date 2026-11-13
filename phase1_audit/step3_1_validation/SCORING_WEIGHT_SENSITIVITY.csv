@@ -1,0 +1,25 @@
+discipline,scheme_name,spearman_rho_vs_ref,top10_overlap,top_player,top_player_score
+Batting,Pure RAE (M0=150) [Recommended],1.0,10/10,Andre Russell,26.59
+Batting,Step 3 Provisional (75% RAE + 25% WktSaved),0.9007,8/10,Andre Russell,20.09
+Batting,Clutch Hybrid (60% RAE + 20% Wkt + 20% Lift),0.9113,8/10,Andre Russell,17.44
+Batting,Pure RAE (M0=75),0.9981,9/10,Vaibhav Sooryavanshi,36.82
+Batting,Pure RAE (M0=100),0.9993,10/10,Vaibhav Sooryavanshi,30.84
+Batting,Pure RAE (M0=200),0.9996,10/10,Andre Russell,24.05
+Batting,Provisional 75/25 (WktEquiv=8 runs),0.9482,9/10,Andre Russell,20.04
+Batting,Provisional 75/25 (WktEquiv=10 runs),0.9245,8/10,Andre Russell,20.06
+Batting,Provisional 75/25 (WktEquiv=15 runs),0.863,8/10,Andre Russell,20.12
+Batting,Provisional 75/25 (WktEquiv=20 runs),0.8,8/10,Tim David,21.45
+Bowling,"Step 3 Provisional (60/40, W=12) [Ref]",1.0,10/10,Umran Malik,25.99
+Bowling,Pure RPAE (100% Run Prevention),0.7612,4/10,Jasprit Bumrah,17.81
+Bowling,80% RPAE / 20% WAE (W=12),0.9354,7/10,Umran Malik,19.28
+Bowling,70% RPAE / 30% WAE (W=12),0.9831,8/10,Umran Malik,22.63
+Bowling,50% RPAE / 50% WAE (W=12),0.9854,9/10,Umran Malik,29.35
+Bowling,40% RPAE / 60% WAE (W=12),0.9537,7/10,Umran Malik,32.71
+Bowling,30% RPAE / 70% WAE (W=12),0.9172,4/10,Umran Malik,36.06
+Bowling,60/40 Split (WktEquiv=8 runs),0.9853,8/10,Umran Malik,19.84
+Bowling,60/40 Split (WktEquiv=10 runs),0.9968,10/10,Umran Malik,22.92
+Bowling,60/40 Split (WktEquiv=15 runs),0.9949,10/10,Umran Malik,30.61
+Bowling,60/40 Split (WktEquiv=20 runs),0.9779,9/10,Umran Malik,38.29
+Bowling,60/40 Split (M0=75),0.9977,10/10,Umran Malik,34.71
+Bowling,60/40 Split (M0=100),0.999,10/10,Umran Malik,31.21
+Bowling,60/40 Split (M0=200),0.9993,10/10,Umran Malik,22.28

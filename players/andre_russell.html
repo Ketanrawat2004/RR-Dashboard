@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre Russell — Quantitative Scouting Dossier | Rajasthan Royals Analytics</title>
+    <style>
+        :root {
+            --rr-navy: #09090B;
+            --rr-navy-light: #111111;
+            --rr-pink: #EB1A8D;
+            --bg-page: #ECECED;
+            --bg-card: #FFFFFF;
+            --border: #D0D0D5;
+            --text-main: #111111;
+            --text-muted: #27272A;
+            --success: #059669;
+            --success-bg: #ECFDF5;
+            --danger: #DC2626;
+            --danger-bg: #FEF2F2;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            padding: 16px;
+            line-height: 1.5;
+            font-size: 13.5px;
+        }
+        .container { max-width: 960px; margin: 0 auto; }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            background: #FFFFFF;
+            padding: 7px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-size: 12.5px;
+            transition: all 0.15s ease;
+        }
+        .nav-back:hover {
+            background: #F4F4F5;
+            border-color: #A1A1AA;
+        }
+        .cand-nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .cand-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            background: #FFFFFF;
+            padding: 7px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.15s ease;
+        }
+        .cand-nav a:hover {
+            color: var(--text-main);
+            border-color: #A1A1AA;
+            background: #F4F4F5;
+        }
+        .profile-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            padding: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .profile-img {
+            width: 108px;
+            height: 108px;
+            border-radius: 50%;
+            border: 3px solid #EB1A8D;
+            overflow: hidden;
+            background: #FFFFFF;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .profile-info { flex: 1; min-width: 240px; }
+        .rank-label {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #EB1A8D;
+            margin-bottom: 4px;
+        }
+        .player-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #09090B;
+            line-height: 1.15;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
+        }
+        .player-teams {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .role-badge {
+            display: inline-block;
+            background: #F4F4F5;
+            color: #09090B;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-weight: 700;
+            border: 1px solid #D4D4D8;
+        }
+        .rating-box {
+            text-align: right;
+            padding-left: 20px;
+            border-left: 1px solid #E4E4E7;
+            min-width: 150px;
+        }
+        .rating-val {
+            font-size: 34px;
+            font-weight: 900;
+            color: #09090B;
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .rating-lbl {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .metric-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            padding: 14px;
+            text-align: center;
+        }
+        .metric-val {
+            font-size: 19px;
+            font-weight: 800;
+            color: #09090B;
+            line-height: 1.2;
+            margin-bottom: 3px;
+        }
+        .metric-lbl {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .metric-sub {
+            font-size: 10.5px;
+            color: #71717A;
+            margin-top: 2px;
+        }
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+        .section-header {
+            font-size: 15px;
+            font-weight: 800;
+            color: #09090B;
+            margin-bottom: 4px;
+            letter-spacing: -0.2px;
+        }
+        .graphic-flex {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .graphic-col-visual {
+            flex: 1 1 340px;
+            min-width: 280px;
+        }
+        .graphic-col-data {
+            flex: 1 1 320px;
+            min-width: 260px;
+            background: #F8F8F9;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px;
+        }
+        footer {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-nav">
+        <a href="../index.html" class="nav-back">&larr; Back to Master Leaderboard</a>
+        <div class="cand-nav">
+            <a href="maheesh_theekshana.html">&larr; Previous (Maheesh Theekshana)</a>
+            <a href="vaibhav_sooryavanshi.html">Next (Vaibhav Sooryavanshi) &rarr;</a>
+        </div>
+    </div>
+    
+    
+
+    <div class="profile-card">
+        <div class="profile-img">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+DQogIDxkZWZzPg0KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icnJHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4NCiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNFQjFBOEQiLz4NCiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMUQ0OCIvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogIDwvZGVmcz4NCiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI5NiIgZmlsbD0idXJsKCNyckdyYWQpIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNCIvPg0KICA8dGV4dCB4PSIxMDAiIHk9IjEyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgUm9ib3RvLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjRkZGRkZGIj5BUjwvdGV4dD4NCjwvc3ZnPg==" alt="Andre Russell">
+        </div>
+        <div class="profile-info">
+            <div class="rank-label">Rank #1 — Official Step 4 Quantitative Leaderboard</div>
+            <h1 class="player-name">Andre Russell</h1>
+            <div class="player-teams">Kolkata Knight Riders, West Indies</div>
+            <div class="role-badge">Specialist High-Leverage Batter</div>
+            <div><span style="display:inline-block;padding:4px 10px;border-radius:6px;font-size:11.5px;font-weight:700;background:#ECFDF5;color:#059669;border:1px solid #A7F3D0;margin-top:6px;">✅ High Volume (N >= 150)</span></div>
+        </div>
+        <div class="rating-box">
+            <div class="rating-val">+26.59</div>
+            <div class="rating-lbl">Pure Shrunk RAE</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Prior M0 = 150 balls</div>
+            <div style="font-size:12px;color:var(--rr-pink);font-weight:700;margin-top:6px;">₹15.0 - 18.0 Cr</div>
+        </div>
+    </div>
+
+    <!-- Quantitative Metrics Summary -->
+    <div class="metric-grid">
+        <div class="metric-card">
+            <div class="metric-val">733</div>
+            <div class="metric-lbl">Career Balls Faced</div>
+            <div class="metric-sub">Gate: &ge; 300 Legal Balls</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-val" style="color:#09090B;">323</div>
+            <div class="metric-lbl">High-Pressure Balls</div>
+            <div class="metric-sub">Gate: &ge; 40 High-Pressure BF</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-val">165.6</div>
+            <div class="metric-lbl">Pressure Strike Rate</div>
+            <div class="metric-sub">Expected Baseline: 142.2 SR</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-val" style="color:#059669;">+38.94</div>
+            <div class="metric-lbl">Raw RAE Rate</div>
+            <div class="metric-sub">Runs scored / 100 balls vs exp</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-val">[+9.0, +40.4]</div>
+            <div class="metric-lbl">95% Cluster CI</div>
+            <div class="metric-sub">Match-Clustered Bootstrap</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-val" style="color:#09090B;">#1 to #25</div>
+            <div class="metric-lbl">Rank Uncertainty (90%)</div>
+            <div class="metric-sub">Top-10 Prob: 84.8%</div>
+        </div>
+    </div>
+
+    <!-- Power BI / Quantitative Execution Corridor -->
+    <div class="section-card">
+        <div class="section-header">Wagon Wheel: High-Leverage Scoring Zones</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Primary Execution Corridor: Mid-Wicket & Death Arc (28%)</div>
+        <div class="graphic-flex">
+            <div class="graphic-col-visual">
+                <svg viewBox="0 0 380 380" style="width:100%;max-width:360px;height:auto;margin:0 auto;display:block;"><defs>
+        <radialGradient id="fieldGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="88%" stop-color="#F5F5F6"/>
+            <stop offset="100%" stop-color="#E6E6E8"/>
+        </radialGradient>
+        <filter id="badgeFilt" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.06"/>
+        </filter>
+    </defs><circle cx="190" cy="190" r="120" fill="url(#fieldGrad)" stroke="#111111" stroke-width="2.5"/><circle cx="190" cy="190" r="62" fill="none" stroke="#B4B4BC" stroke-width="1.2" stroke-dasharray="3,3"/><line x1="190" y1="190" x2="190.0" y2="74.0" stroke="#D0D0D5" stroke-width="1"/><line x1="190" y1="190" x2="272.0" y2="108.0" stroke="#D0D0D5" stroke-width="1"/><line x1="190" y1="190" x2="306.0" y2="190.0" stroke="#D0D0D5" stroke-width="1"/><line x1="190" y1="190" x2="272.0" y2="272.0" stroke="#D0D0D5" stroke-width="1"/><line x1="190" y1="190" x2="190.0" y2="306.0" stroke="#D0D0D5" stroke-width="1"/><line x1="190" y1="190" x2="108.0" y2="272.0" stroke="#D0D0D5" stroke-width="1"/><line x1="190" y1="190" x2="74.0" y2="190.0" stroke="#D0D0D5" stroke-width="1"/><line x1="190" y1="190" x2="108.0" y2="108.0" stroke="#D0D0D5" stroke-width="1"/><rect x="185" y="178" width="10" height="24" fill="#D97706" rx="2"/><line x1="183" y1="199" x2="197" y2="199" stroke="#FFFFFF" stroke-width="1"/><line x1="183" y1="181" x2="197" y2="181" stroke="#FFFFFF" stroke-width="1"/><line x1="190" y1="190" x2="135.9" y2="88.3" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="135.9" cy="88.3" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="155.8" y2="70.8" stroke="#059669" stroke-width="2.5"  stroke-linecap="round" opacity="0.9"/><circle cx="155.8" cy="70.8" r="3.5" fill="#059669"/><line x1="190" y1="190" x2="163.0" y2="123.2" stroke="#27272A" stroke-width="1.2" stroke-dasharray="2,2" stroke-linecap="round" opacity="0.9"/><circle cx="163.0" cy="123.2" r="2.0" fill="#27272A"/><line x1="190" y1="190" x2="221.1" y2="81.6" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="221.1" cy="81.6" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="248.2" y2="80.5" stroke="#059669" stroke-width="2.5"  stroke-linecap="round" opacity="0.9"/><circle cx="248.2" cy="80.5" r="3.5" fill="#059669"/><line x1="190" y1="190" x2="216.1" y2="125.5" stroke="#27272A" stroke-width="1.2" stroke-dasharray="2,2" stroke-linecap="round" opacity="0.9"/><circle cx="216.1" cy="125.5" r="2.0" fill="#27272A"/><line x1="190" y1="190" x2="291.7" y2="135.9" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="291.7" cy="135.9" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="307.9" y2="151.7" stroke="#059669" stroke-width="2.5"  stroke-linecap="round" opacity="0.9"/><circle cx="307.9" cy="151.7" r="3.5" fill="#059669"/><line x1="190" y1="190" x2="264.5" y2="156.8" stroke="#27272A" stroke-width="1.2" stroke-dasharray="2,2" stroke-linecap="round" opacity="0.9"/><circle cx="264.5" cy="156.8" r="2.0" fill="#27272A"/><line x1="190" y1="190" x2="298.4" y2="225.2" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="298.4" cy="225.2" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="255.7" y2="224.9" stroke="#27272A" stroke-width="1.2" stroke-dasharray="2,2" stroke-linecap="round" opacity="0.9"/><circle cx="255.7" cy="224.9" r="2.0" fill="#27272A"/><line x1="190" y1="190" x2="239.4" y2="291.4" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="239.4" cy="291.4" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="210.4" y2="252.8" stroke="#27272A" stroke-width="1.2" stroke-dasharray="2,2" stroke-linecap="round" opacity="0.9"/><circle cx="210.4" cy="252.8" r="2.0" fill="#27272A"/><line x1="190" y1="190" x2="155.1" y2="297.3" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="155.1" cy="297.3" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="160.7" y2="245.1" stroke="#27272A" stroke-width="1.2" stroke-dasharray="2,2" stroke-linecap="round" opacity="0.9"/><circle cx="160.7" cy="245.1" r="2.0" fill="#27272A"/><line x1="190" y1="190" x2="89.3" y2="243.5" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="89.3" cy="243.5" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="117.0" y2="213.7" stroke="#27272A" stroke-width="1.2" stroke-dasharray="2,2" stroke-linecap="round" opacity="0.9"/><circle cx="117.0" cy="213.7" r="2.0" fill="#27272A"/><line x1="190" y1="190" x2="78.7" y2="160.2" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="78.7" cy="160.2" r="2.5" fill="#EB1A8D"/><line x1="190" y1="190" x2="77.6" y2="137.6" stroke="#059669" stroke-width="2.5"  stroke-linecap="round" opacity="0.9"/><circle cx="77.6" cy="137.6" r="3.5" fill="#059669"/><line x1="190" y1="190" x2="94.4" y2="134.8" stroke="#EB1A8D" stroke-width="2.0"  stroke-linecap="round" opacity="0.9"/><circle cx="94.4" cy="134.8" r="2.5" fill="#EB1A8D"/><g filter="url(#badgeFilt)"><rect x="97.1" y="37.7" width="68" height="20" rx="4" fill="#FFFFFF" stroke="#B4B4BC" stroke-width="1.2"/><text x="131.1" y="51.5" font-size="9" font-weight="700" fill="#111111" text-anchor="middle">Long Off 16%</text></g><g filter="url(#badgeFilt)"><rect x="214.9" y="37.7" width="68" height="20" rx="4" fill="#FDF2F8" stroke="#EB1A8D" stroke-width="1.2"/><text x="248.9" y="51.5" font-size="9" font-weight="800" fill="#EB1A8D" text-anchor="middle">Long On 20%</text></g><g filter="url(#badgeFilt)"><rect x="298.3" y="121.1" width="68" height="20" rx="4" fill="#FDF2F8" stroke="#EB1A8D" stroke-width="1.2"/><text x="332.3" y="134.9" font-size="9" font-weight="800" fill="#EB1A8D" text-anchor="middle">Mid-Wicket 28%</text></g><g filter="url(#badgeFilt)"><rect x="298.3" y="238.9" width="68" height="20" rx="4" fill="#FFFFFF" stroke="#B4B4BC" stroke-width="1.2"/><text x="332.3" y="252.7" font-size="9" font-weight="700" fill="#111111" text-anchor="middle">Square Leg 10%</text></g><g filter="url(#badgeFilt)"><rect x="214.9" y="322.3" width="68" height="20" rx="4" fill="#FFFFFF" stroke="#B4B4BC" stroke-width="1.2"/><text x="248.9" y="336.1" font-size="9" font-weight="700" fill="#111111" text-anchor="middle">Fine Leg 4%</text></g><g filter="url(#badgeFilt)"><rect x="97.1" y="322.3" width="68" height="20" rx="4" fill="#FFFFFF" stroke="#B4B4BC" stroke-width="1.2"/><text x="131.1" y="336.1" font-size="9" font-weight="700" fill="#111111" text-anchor="middle">Third Man 2%</text></g><g filter="url(#badgeFilt)"><rect x="13.7" y="238.9" width="68" height="20" rx="4" fill="#FFFFFF" stroke="#B4B4BC" stroke-width="1.2"/><text x="47.7" y="252.7" font-size="9" font-weight="700" fill="#111111" text-anchor="middle">Point 6%</text></g><g filter="url(#badgeFilt)"><rect x="13.7" y="121.1" width="68" height="20" rx="4" fill="#FFFFFF" stroke="#B4B4BC" stroke-width="1.2"/><text x="47.7" y="134.9" font-size="9" font-weight="700" fill="#111111" text-anchor="middle">Cover 14%</text></g></svg>
+    <div class="wagon-legend" style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px 18px;font-size:11.5px;color:var(--text-muted);margin-top:10px;font-weight:600;">
+        <div><span style="display:inline-block;width:12px;height:3px;background:#EB1A8D;margin-right:5px;vertical-align:middle;"></span>Fours (Boundaries)</div>
+        <div><span style="display:inline-block;width:12px;height:3px;background:#059669;margin-right:5px;vertical-align:middle;"></span>Sixes (Maximums)</div>
+        <div><span style="display:inline-block;width:12px;height:2px;background:#27272A;border-top:1px dashed #27272A;margin-right:5px;vertical-align:middle;"></span>1s & 2s (Rotation)</div>
+    </div>
+    
+            </div>
+            
+        <div class="graphic-col-data">
+            <div style="font-size:13px;font-weight:700;color:#09090B;text-transform:uppercase;margin-bottom:12px;letter-spacing:0.5px;">
+                Situational Scoring Velocity
+            </div>
+            <div style="margin-bottom:12px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
+                    <span>Pressure Strike Rate</span>
+                    <strong>165.6 SR</strong>
+                </div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:#27272A;width:66.3%;height:100%;border-radius:5px;"></div></div>
+            </div>
+            <div style="margin-bottom:12px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
+                    <span style="font-weight:700;color:#09090B;">Contextual Expected Strike Rate</span>
+                    <strong style="color:var(--rr-pink);">142.2 Exp SR</strong>
+                </div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--rr-pink);width:56.9%;height:100%;border-radius:5px;"></div></div>
+            </div>
+            <div style="margin-bottom:12px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;margin-bottom:3px;">
+                    <span>Clutch Lift (&Delta;)</span>
+                    <strong style="color:var(--success);">+17.94 RAE Lift</strong>
+                </div>
+                <div style="background:#E6E6E8;height:10px;border-radius:5px;overflow:hidden;"><div style="background:var(--success);width:75%;height:100%;border-radius:5px;"></div></div>
+            </div>
+            <p style="font-size:11.5px;color:var(--text-muted);margin-top:14px;line-height:1.5;">
+                Evaluated under MCC Law 22/21 (193,251 regular legal deliveries). RAE metric eliminates binary dismissal hazard noise ($BSS < 0.8\%$), capturing pure contextual boundary creation.
+            </p>
+        </div>
+        
+        </div>
+    </div>
+
+    <!-- Quantitative Scouting Narrative -->
+    <div class="section-card">
+        <div class="section-header">Rajasthan Royals Tactical & Strategic Assessment</div>
+        <div style="margin-top:12px;font-size:13px;line-height:1.65;color:#1C1C20;">
+            <p style="margin-bottom:12px;">
+                <strong>Executive Performance Summary:</strong> Andre Russell generated +125.79 runs above contextual expectation across 323 high-pressure deliveries with a 84.8% Top-10 bootstrap inclusion probability.
+            </p>
+            <p style="margin-bottom:12px;">
+                <strong>Quantitative Advantage:</strong> Elite pressure scoring rate of +38.94 runs/100b relative to phase and wickets in hand.
+            </p>
+            <p style="margin-bottom:12px;">
+                <strong>Risk & Comparative Analysis:</strong> Maintains superior Empirical Bayes shrunk performance (+26.59) with bounded rank uncertainty (#1 to #25).
+            </p>
+            <p style="margin-bottom:0;">
+                <strong>Tactical Fit for RR IPL 2027:</strong> Provides Rajasthan Royals with proven leverage boundary scoring firepower across critical match phases.
+            </p>
+        </div>
+    </div>
+
+    <!-- Methodology & Governance Disclosures -->
+    <div class="section-card" style="background:#FAFAFB;border-color:#E4E4E7;">
+        <div class="section-header" style="font-size:13.5px;">Methodological Governance & Statistical Audit Disclosures</div>
+        <div style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:8px;">
+            <p style="margin-bottom:8px;">
+                &bull; <strong>Strict Delivery Accounting:</strong> Reconciled across 200,999 raw tournament deliveries. Super Over balls (38 balls across 6 matches) are isolated into dedicated clutch registries to prevent extreme small-sample distortion. Under MCC Law 22/21, wides are excluded from legal balls faced, while no-balls are counted as balls faced.
+            </p>
+            <p style="margin-bottom:8px;">
+                &bull; <strong>19-Feature Contextual Expected Runs Model:</strong> Non-linear HistGBR trained on 867 independent match clusters (5-Fold GroupKFold) with zero future data leakage. RMSE = 1.7225 (Batting) / 1.6938 (Bowling), significantly outperforming baseline phase averages ($p < 10^{-60}$).
+            </p>
+            <p style="margin-bottom:8px;">
+                &bull; <strong>Empirical Bayes Shrinkage:</strong> Shrunk toward zero prior with strength $M_0 = 150.0$ legal balls (Batting RAE & Bowling RPAE) and $M_w = 100.0$ legal balls (Bowling WAE), maximizing Spearman-Brown out-of-sample split-half reliability.
+            </p>
+            <p style="margin-bottom:0;">
+                &bull; <strong>Match-Clustered Uncertainty Estimation:</strong> 500-replicate match-clustered bootstrap resamples entire matches with replacement to capture pitch, dew, and opposition correlation. Simulation error is $\pm 0.36$ points on score means and $\pm 1.8\%$ on Top-10 probabilities.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:#27272A;">
+            <div>
+                &copy; 2026 Ketan Rawat. All rights reserved. &middot; Rajasthan Royals SupeRR Selector Season 2
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;">
+                <a href="../index.html" style="color:#09090B;text-decoration:none;font-weight:600;">Live Dashboard</a>
+                <span>|</span>
+                <a href="https://github.com/Ketanrawat2004/RR-Dashboard" target="_blank" style="color:#09090B;text-decoration:none;font-weight:600;">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

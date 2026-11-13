@@ -1,0 +1,64 @@
+====================================================================================================
+PHASE 2A PRODUCTION BASELINE CRYPTOGRAPHIC HASH REGISTER
+Generated: 2026-11-14T00:19:51.942202
+Repository: C:\RR NEW
+Strict Constraint: READ-ONLY BASELINE CAPTURE BEFORE PHASE 2 IMPLEMENTATION
+====================================================================================================
+
+Category / Relative Path                      | Size (Bytes) | SHA-256 Checksum                                                 | Last Modified
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[CORE PRODUCTION WEB FILES & DATABASES]
+index.html                                    | 2791623      | 017210f1b681682c548b9554bb3d972929bc6eeb6dc00d4c1123ccdb2e16df25 | 2026-11-11T15:30:44.904821
+rr_pressure_dashboard.html                    | 2791623      | 017210f1b681682c548b9554bb3d972929bc6eeb6dc00d4c1123ccdb2e16df25 | 2026-11-11T15:30:44.892230
+rr_war_room_terminal.html                     | 2791623      | 017210f1b681682c548b9554bb3d972929bc6eeb6dc00d4c1123ccdb2e16df25 | 2026-11-11T15:30:44.913225
+players_db.json                               | 33508        | b9a498686304d3ae4633cbde3f1a3833510670d2156d85d3e018c5d25f503752 | 2026-11-11T02:03:08.603534
+
+[PRODUCTION BUILD & GENERATION SCRIPTS]
+fix_dashboard_and_wagon.py                    | 221016       | 87ba1a293aedcfd8b9aa0589530de7c60e8a1af500a907bcae3d8b3590a566ef | 2026-11-11T14:32:25.679493
+clean_powerbi_dashboard.py                    | 59743        | 30fe0f71fa56db65dcec90709171a5426ba10e6c29f088a9a91d669e094e7339 | 2026-11-10T22:28:47.234551
+build_player_pages_and_dashboard.py           | 74991        | bf30347148aa47eba95f8b4cb0c2112b75c9e949b071464bc9e9a0186c239150 | 2026-11-10T22:10:37.411119
+generate_powerbi_wagon_dashboard.py           | 85589        | e87b4732e466ceb66addc6596bb418baa4c66dbe1ca1ff85f00e6213c2082c25 | 2026-11-10T22:53:04.690057
+build_plain_english_dashboard.py              | 57629        | 88b01eab56dc60cb24230bafda347431b4fc49eee84d2c1cccb213b26602eca4 | 2026-11-10T22:24:28.078010
+
+[PRESENTATION SCRIPTS & OFFICIAL SUBMISSION ARTIFACTS]
+build_submission_pdf.py                       | 38384        | 65d570c2206ef438d242a1e391fe8d7ebca05de4d434ca18ec29a0d64c3553f0 | 2026-11-11T05:36:07.714997
+build_submission_pptx.py                      | 30560        | 1032eb34ea50d5bff1abc49f84d8f9ce01dd1a7469ead52cf270f32a3d288254 | 2026-11-11T05:36:07.811551
+build_clean_submission_pptx.py                | 46904        | 6afe6d2f804f120d8a460c2ae6230fb1c389803a25de5ffc1981c98651cde79d | 2026-11-11T06:22:17.054380
+RR_SupeRR_Selector_Season2_Report_Ketan_Rawat.pdf | 367981       | a3cedfb9eb6e4eded06fad1b482f4d24e18b434e575ca4b9782adcf2ee4a6372 | 2026-11-11T05:33:07.857700
+RR_SupeRR_Selector_Season2_Ketan_Rawat.pptx   | 506176       | 536ef72bc8d75df4e928375cf30baf0de33ecd50678220fc864c64aa73d2587f | 2026-11-11T06:22:37.963910
+
+[ORIGINAL OFFICIAL DATASETS (PRESERVATION BASELINE)]
+ball_by_ball.csv                              | 41071609     | a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889 | 2026-11-10T18:47:52.197422
+matches.csv                                   | 123864       | bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef | 2026-11-10T18:47:52.228774
+competitions.csv                              | 7624         | 507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b | 2026-11-10T18:47:52.228774
+teams.csv                                     | 6922         | a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d | 2026-11-10T18:47:52.280894
+playing_eleven.csv                            | 966287       | 7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27 | 2026-11-10T18:47:52.244667
+competition_team_player_mapping.csv           | 462969       | 1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12 | 2026-11-10T18:47:52.213084
+
+[STANDALONE PLAYER DOSSIER PAGES (PLAYERS/ DIRECTORY)]
+players\arshdeep_singh.html                   | 120153       | 6053a382737567f5705d14cb6545bdfa065826da0d990ac08494ec010d085d04 | 2026-11-11T15:30:44.848013
+players\axar_patel.html                       | 157391       | 4d1b27af75a87b0a7fa287f05c3a5e7c5612898e42ab530493925bd93791c1d8 | 2026-11-11T15:30:44.821116
+players\bhanuka_rajapaksa.html                | 126882       | d21168ffab86b6c8cd7334f165af46966e38c1032de5956e81d94ebfcac96bf8 | 2026-11-11T15:30:44.829456
+players\bhuvneshwar_kumar.html                | 130528       | 7acd0d7d448d833262539b0df00bdedbce08fe9a3306c57e5d87fbcbb4f6bf9b | 2026-11-11T15:30:44.844916
+players\devon_conway.html                     | 117384       | 2d4cb5c84f723db1a27ef2e654685a92d3146a630086eb4c50d6c9f19f8ab17a | 2026-11-11T15:30:44.823824
+players\heinrich_klaasen.html                 | 116760       | 9b650214c444513d1ad0fb2bb7f6ddef163e2e7a96ba7a4a9fe6fee9259e6b41 | 2026-11-11T15:30:44.855551
+players\jacob_duffy.html                      | 118133       | f1a83e6562bda0c22f0356a55779570b2eeab74e0ba3b89e5cbef7a17367c752 | 2026-11-11T15:30:44.834532
+players\jasprit_bumrah.html                   | 152104       | f99291bbf22107df92de98af8a649b315c6719e286d33196e8f3c2e72708511b | 2026-11-11T15:30:44.850766
+players\josh_hazlewood.html                   | 126047       | da6a153109fcf02666767d3ed5cad0415b8c101410dfac9280359d6bdd7d6444 | 2026-11-11T15:30:44.834532
+players\lockie_ferguson.html                  | 124064       | 6c1a683857bd332e3a088f8b0dc483e247377c77a4e4c145b9eb9d6c9b6a1f19 | 2026-11-11T15:30:44.848013
+players\mitchell_starc.html                   | 140238       | 637ab61383c1824b269b9bf6b1dc1d3da3fe4ad413c207bb6f12f40244e94fbb | 2026-11-11T15:30:44.838907
+players\mohammed_siraj.html                   | 142429       | 8e520e3ad09711c7b02f58c4df389830bb45e9c913c4e09c367a0404a18f8c8f | 2026-11-11T15:30:44.853521
+players\rajat_patidar.html                    | 134370       | 7267626d19ba9e4bb84433196129b5d55e0840e1663396422e2e38581c6d96cc | 2026-11-11T15:30:44.823824
+players\rashid_khan.html                      | 97308        | ce208da00cda184250ff99db45b3ab75e0c96449a6be8edce92bd0556ce0b512 | 2026-11-11T15:30:44.853521
+players\rinku_singh.html                      | 120827       | 6e619c3eb51cb63b42398e00ae997fe879bdaf6e7f91c5c9021da60fc936f98a | 2026-11-11T15:30:44.819157
+players\rohit_sharma.html                     | 97941        | 7124ffa5480ca7aa2d1cc3104053cdb1da275bcb1a0683b612bf0f5ae90c30c8 | 2026-11-11T15:30:44.857271
+players\romario_shepherd.html                 | 131722       | 96a0cd6bc8af0516379a9a6ae2e2ccac6c60d2119435dc9d9f58fdacf2cc81e2 | 2026-11-11T15:30:44.842899
+players\ruturaj_gaikwad.html                  | 142711       | 5d7dd03ac54f88b7ba5e8bfea9cf50ca689358df93b8114f1f613ebba6e679c2 | 2026-11-11T15:30:44.823824
+players\sediqullah_atal.html                  | 130728       | 9c16a56e18e0937c932ec69e9a48546a6554eaff6a989540e2670d564f60efef | 2026-11-11T15:30:44.833435
+players\shivam_dube.html                      | 132689       | aadb757690db2cd1ffb8ec738397d0e8290fcd971346fcfe54843c445175665e | 2026-11-11T15:30:44.817283
+players\shreyas_iyer.html                     | 133118       | 318170f014ebd0a11b27d74a12f14f710aee300f4af9706fa7ad2511d4d112c2 | 2026-11-11T15:30:44.831426
+players\suyash_sharma.html                    | 127302       | 371d99e97ba31abbaf84a44290d6c9e034219d5dc974146d6037dfb15bd55738 | 2026-11-11T15:30:44.844916
+players\varun_chakravarthy.html               | 139809       | c78d00a3524520f1e3c225455c616233867520364c6b48a1ae6dbe65df84fac5 | 2026-11-11T15:30:44.838907
+players\virat_kohli.html                      | 157452       | a7b1a9b20b40ffadfe6bab15e35fac40f19113c4018b118dc256c381ddf0fe40 | 2026-11-11T15:30:44.827434
+players\yash_dayal.html                       | 139838       | 804c5af9d576446e887d534de169f056d77f2a531f2489bdcaaa8b8a745af0bf | 2026-11-11T15:30:44.838907

@@ -1,0 +1,7 @@
+validation_item,reported_value,recalculated_value,status,unit_of_analysis,significance_vs_baseline
+Batting 5-Fold CV HistGBR RMSE,1.7284,1.7284,VERIFIED,Out-of-fold match-grouped deliveries (867 clusters),"t = 17.81, p = 1.05e-60 vs Phase x Wkts"
+Bowling 5-Fold CV HistGBR RMSE,1.731,1.731,VERIFIED,Out-of-fold match-grouped deliveries (867 clusters),"t = 18.20, p = 7.00e-63 vs Phase x Wkts"
+Bowler Wicket Model Log Loss,0.19916,0.19916,VERIFIED,"200,961 regular deliveries",Brier Skill Score = +0.55% over constant prior
+Batter Dismissal Hazard Log Loss,0.20858,0.20858,VERIFIED,"193,251 legal balls faced",Brier Skill Score = +0.77% over constant prior
+Match-Clustered Bootstrap Resampling,500 Replicates,500 Replicates,"VERIFIED (Recommendation: 2,000 for production auction board)",867 matches resampled with replacement,Standard errors robust to intra-match correlation
+Monte Carlo Randomized Split-Half Reliability,"Mean rho = 0.1057 (Batting), 0.0636 (Bowling)","Mean rho = 0.1057 (Batting), 0.0636 (Bowling)",VERIFIED,50 randomized match partitions (no odd/even bias),"Spearman-Brown = 0.1913 (Batting), 0.1196 (Bowling)"

@@ -1,0 +1,6 @@
+PHASE 2C BEFORE IMPLEMENTATION PRODUCTION HASHES
+--------------------------------------------------------------------------------
+index.html                   | Size:  2,791,623 B | SHA256: 017210f1b681682c548b9554bb3d972929bc6eeb6dc00d4c1123ccdb2e16df25
+rr_pressure_dashboard.html   | Size:  2,791,623 B | SHA256: 017210f1b681682c548b9554bb3d972929bc6eeb6dc00d4c1123ccdb2e16df25
+rr_war_room_terminal.html    | Size:  2,791,623 B | SHA256: 017210f1b681682c548b9554bb3d972929bc6eeb6dc00d4c1123ccdb2e16df25
+players_db.json              | Size:    747,716 B | SHA256: 1510174282a33819107c663d6bd6a3634c346b96d9373036eee93ad322935c8a

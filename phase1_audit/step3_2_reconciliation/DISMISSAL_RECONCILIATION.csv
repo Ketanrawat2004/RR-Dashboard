@@ -1,0 +1,10 @@
+dismissal_type,credited_to,regular_innings_count,super_over_count,total_dataset_count,percentage_of_dismissals_reg,rules_and_cricket_law
+Caught,Bowler,7549,8,7557,69.46,Bowler credited
+Bowled,Bowler,1772,3,1775,16.3,Bowler credited
+LBW,Bowler,709,0,709,6.52,Bowler credited
+RunOut,Fielding / Batter (Non-Bowler),598,2,600,5.5,Non-bowler event (Run-out / Retired / Obstructing)
+Stump,Bowler,214,0,214,1.97,Bowler credited
+Hit Wicket,Bowler,17,0,17,0.16,Bowler credited
+Retire Out,Fielding / Batter (Non-Bowler),6,0,6,0.06,Non-bowler event (Run-out / Retired / Obstructing)
+Obstracting the field,Fielding / Batter (Non-Bowler),2,0,2,0.02,Non-bowler event (Run-out / Retired / Obstructing)
+Obstructing the field,Fielding / Batter (Non-Bowler),1,0,1,0.01,Non-bowler event (Run-out / Retired / Obstructing)

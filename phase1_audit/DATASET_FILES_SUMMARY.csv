@@ -1,0 +1,7 @@
+dataset,primary_path,copy_paths,size_bytes,sha256,copies_identical,rows,cols,exact_duplicate_rows
+ball_by_ball.csv,c:\Rajasthan Royals\ball_by_ball.csv,c:\Rajasthan Royals\ball_by_ball.csv,41071609,A3926F49D2C684DCA2A5D2DE535A02C5EE46EA654CA1E79DD31C69E7544E9889,True,200999,33,0
+matches.csv,c:\Rajasthan Royals\matches.csv,c:\Rajasthan Royals\matches.csv; c:\Rajasthan Royals\season2_data\matches.csv,123864,BB100AB84B8B9A15160C1F2315CF675210131A30E779EC5079FD5403DCF56EEF,True,883,22,0
+competitions.csv,c:\Rajasthan Royals\competitions.csv,c:\Rajasthan Royals\competitions.csv; c:\Rajasthan Royals\season2_data\competitions.csv,7624,507CEB7189F972D4E4F299DDCFC97F3C3247AF1913F6291106F161FA8353FD9B,True,141,4,0
+teams.csv,c:\Rajasthan Royals\teams.csv,c:\Rajasthan Royals\teams.csv; c:\Rajasthan Royals\season2_data\teams.csv,6922,A65E5922A9B3BF49247B24FC9471782E700EFB31F8DCC5042923238B87C50A5D,True,353,3,0
+playing_eleven.csv,c:\Rajasthan Royals\playing_eleven.csv,c:\Rajasthan Royals\playing_eleven.csv; c:\Rajasthan Royals\season2_data\playing_eleven.csv,966287,7517C73722A28D5D61C808CCF0CBED315A8780586D02E946EB9A7F5DAF011C27,True,28381,9,0
+competition_team_player_mapping.csv,c:\Rajasthan Royals\competition_team_player_mapping.csv,c:\Rajasthan Royals\competition_team_player_mapping.csv; c:\Rajasthan Royals\season2_data\competition_team_player_mapping.csv,462969,1DED4E42A933618572D6E2C3A521C3257EB1844FAB4456D567D77CBB2D3BBB12,True,6413,6,0

@@ -1,0 +1,41 @@
+discipline,player_id,player_name,step3_reported_p_balls,step3_1_table_p_balls,true_dataset_p_balls,balls_reconciliation_verdict,true_sum_residual,step3_composite_score,step3_1_pure_rae_score,bootstrap_mean,bootstrap_se,bootstrap_95_ci,reason_for_difference
+Batter,1318,Andre Russell,323,240,323,MATCH (True N == Step 3 N),125.79,20.09,26.59,25.68,8.13,"[+9.23, +41.02]",Calculation executed on true N=323 (pure RAE score +26.59). The 240 in Step 3.1 report was a narrative prose error.
+Batter,6396,Tim David,505,148,505,MATCH (True N == Step 3 N),131.73,18.89,20.11,19.52,8.29,"[+5.64, +36.32]",Exact match between True N and calculation.
+Batter,838,Glenn Maxwell,315,315,315,MATCH (True N == Step 3 N),104.38,16.26,22.45,21.85,7.79,"[+6.27, +36.40]",Exact match between True N and calculation.
+Batter,50284,Vaibhav Sooryavanshi,55,43,55,MATCH (True N == Step 3 N),46.08,16.03,22.48,20.51,10.3,"[+1.52, +39.77]",Calculation executed on true N=55. The 43 in Step 3.1 report was a narrative prose error.
+Batter,4260,Heinrich Klaasen,487,487,487,MATCH (True N == Step 3 N),115.18,15.72,18.08,18.09,5.75,"[+6.96, +29.75]",Exact match between True N and calculation.
+Batter,1699,Suryakumar Yadav,682,682,682,MATCH (True N == Step 3 N),134.25,15.39,16.14,16.07,4.92,"[+7.08, +25.90]",Exact match between True N and calculation.
+Batter,7216,Prabhsimran Singh,165,165,165,MATCH (True N == Step 3 N),55.93,14.02,17.76,17.39,7.26,"[+2.87, +31.48]",Exact match between True N and calculation.
+Batter,25669,Priyansh Arya,52,52,52,MATCH (True N == Step 3 N),36.57,13.75,18.11,17.11,14.95,"[-7.79, +46.37]",Exact match between True N and calculation.
+Batter,2921,Fakhar Zaman,227,227,227,MATCH (True N == Step 3 N),48.57,13.41,12.88,12.98,5.42,"[+2.40, +23.06]",Exact match between True N and calculation.
+Batter,768,Reeza Hendricks,199,199,199,MATCH (True N == Step 3 N),41.51,11.79,11.89,,,N/A,Exact match between True N and calculation.
+Batter,1077,David Miller,457,457,457,MATCH (True N == Step 3 N),59.09,11.15,9.74,,,N/A,Exact match between True N and calculation.
+Batter,4755,Shivam Dube,393,393,393,MATCH (True N == Step 3 N),62.66,10.97,11.54,,,N/A,Exact match between True N and calculation.
+Batter,953,Lokesh Rahul,339,339,339,MATCH (True N == Step 3 N),54.83,10.95,11.21,,,N/A,Exact match between True N and calculation.
+Batter,3125,Nicholas Pooran,553,553,553,MATCH (True N == Step 3 N),79.64,10.9,11.33,,,N/A,Exact match between True N and calculation.
+Batter,8101,Ashutosh Sharma,211,211,211,MATCH (True N == Step 3 N),46.86,10.75,12.98,12.04,10.99,"[-7.89, +34.56]",Exact match between True N and calculation.
+Batter,2003,Bhanuka Rajapaksa,136,136,136,MATCH (True N == Step 3 N),30.11,10.54,10.53,,,N/A,Exact match between True N and calculation.
+Batter,220,David Warner,134,134,134,MATCH (True N == Step 3 N),22.86,10.3,8.05,,,N/A,Exact match between True N and calculation.
+Batter,6281,Abhishek Sharma,204,204,204,MATCH (True N == Step 3 N),65.56,9.95,18.52,18.28,9.54,"[+0.51, +35.99]",Exact match between True N and calculation.
+Batter,813,Jos Buttler,250,250,250,MATCH (True N == Step 3 N),54.81,9.88,13.7,13.39,6.28,"[+1.43, +25.56]",Exact match between True N and calculation.
+Batter,2756,Shashank Singh,232,232,232,MATCH (True N == Step 3 N),31.2,9.83,8.17,,,N/A,Exact match between True N and calculation.
+Bowler,25048,Umran Malik,111,61,111,MATCH (True N == Step 3 N),30.82,24.76,24.75,23.28,12.51,"[-0.74, +45.71]",Calculation executed on true N=111. The 61 in Step 3.1 report was a narrative prose error.
+Bowler,34485,Sufiyan Muqeem,84,84,84,MATCH (True N == Step 3 N),39.65,16.75,16.76,15.71,5.65,"[+4.53, +26.08]",Exact match between True N and calculation.
+Bowler,27960,Mayank Yadav,121,121,121,MATCH (True N == Step 3 N),37.41,16.6,16.6,16.49,8.5,"[-0.14, +33.04]",Exact match between True N and calculation.
+Bowler,7344,Shoriful Islam,205,205,205,MATCH (True N == Step 3 N),60.29,16.36,16.36,16.71,6.27,"[+4.15, +29.40]",Exact match between True N and calculation.
+Bowler,22920,Jacob Duffy,191,191,191,MATCH (True N == Step 3 N),23.0,14.16,14.16,14.06,7.71,"[-0.12, +29.39]",Exact match between True N and calculation.
+Bowler,2490,Mohammad Nawaz,221,221,221,MATCH (True N == Step 3 N),24.02,14.09,14.1,13.8,6.43,"[+2.25, +26.92]",Exact match between True N and calculation.
+Bowler,6284,Anukul Roy,73,73,73,MATCH (True N == Step 3 N),23.39,13.43,13.43,13.17,6.45,"[+0.99, +25.47]",Exact match between True N and calculation.
+Bowler,5750,Ehsan Khan,43,43,43,MATCH (True N == Step 3 N),19.62,13.41,13.42,13.02,6.8,"[+1.02, +25.66]",Exact match between True N and calculation.
+Bowler,23,Piyush Chawla,85,85,85,MATCH (True N == Step 3 N),20.78,13.41,13.39,12.92,6.86,"[-0.26, +26.45]",Exact match between True N and calculation.
+Bowler,6287,Yash Thakur,142,142,142,MATCH (True N == Step 3 N),28.81,13.04,13.04,12.58,6.46,"[-0.14, +24.86]",Exact match between True N and calculation.
+Bowler,830,Josh Hazlewood,399,399,399,MATCH (True N == Step 3 N),52.91,12.26,12.27,12.13,7.08,"[-1.76, +26.64]",Exact match between True N and calculation.
+Bowler,32862,Allah Ghazanfar,131,131,131,MATCH (True N == Step 3 N),-0.1,11.72,11.73,12.09,9.43,"[-5.61, +32.51]",Exact match between True N and calculation.
+Bowler,5940,Riley Meredith,80,80,80,MATCH (True N == Step 3 N),17.55,11.45,11.44,10.82,7.32,"[-2.23, +25.39]",Exact match between True N and calculation.
+Bowler,7364,Haris Rauf,305,305,305,MATCH (True N == Step 3 N),18.33,11.41,11.40874236874237,,,N/A,Exact match between True N and calculation.
+Bowler,8661,Matheesha Pathirana,290,290,290,MATCH (True N == Step 3 N),93.18,11.4,11.404475524475524,,,N/A,Exact match between True N and calculation.
+Bowler,58134,Digvesh Rathi,139,139,139,MATCH (True N == Step 3 N),31.94,11.38,11.382670006225478,,,N/A,Exact match between True N and calculation.
+Bowler,2933,Jasprit Bumrah,469,469,469,MATCH (True N == Step 3 N),108.57,10.97,10.973756072354355,,,N/A,Exact match between True N and calculation.
+Bowler,4658,Nasum Ahmed,120,120,120,MATCH (True N == Step 3 N),34.88,10.53,10.526464646464646,,,N/A,Exact match between True N and calculation.
+Bowler,1612,Yuzvendra Chahal,539,539,539,MATCH (True N == Step 3 N),50.38,10.12,10.120424920106023,,,N/A,Exact match between True N and calculation.
+Bowler,4874,Richard Ngarava,247,247,247,MATCH (True N == Step 3 N),36.46,9.98,9.984384323347296,,,N/A,Exact match between True N and calculation.

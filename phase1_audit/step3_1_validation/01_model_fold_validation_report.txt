@@ -1,0 +1,103 @@
+================================================================================
+PHASE 1 STEP 3.1 — SECTION 1: MODEL FOLD VALIDATION & LEAKAGE AUDIT
+================================================================================
+Loaded deliveries: 200,961 across 867 matches.
+
+[1] PRE-DELIVERY FEATURE LEAKAGE AUDIT
+Features inspected (19): innings, overid, legal_balls_before, balls_remaining_pre, score_before, wkts_before, wkts_in_hand_pre, crr_pre_smoothed, is_inn2, target_clean, runs_req_clean, rrr_clean, pp_flag, mid_flag, death_flag, chase_stress, death_wkts, is_t20i, season_num
+  score_before == cumsum(prev_runs) violations: 0
+  wkts_before  == cumsum(prev_wkts) violations: 0
+  Innings 1 deliveries with non-zero target_clean: 0
+  Innings 1 deliveries with non-zero rrr_clean   : 0
+  -> Zero feature leakage verified across all feature definitions.
+
+[2] FOLD-LEVEL PREDICTIVE ACCURACY (5-Fold GroupKFold by match_id)
+
+--- BATTING MODEL FOLD-LEVEL BENCHMARK ---
+Fold  Model / Baseline         OOF Samples     RMSE      MAE        R2
+------------------------------------------------------------------------
+Fold 1  Global_Mean                   38,649   1.7478   1.3278  -0.00016
+Fold 1  Phase_Mean                    38,649   1.7437   1.3218   0.00444
+Fold 1  Over_Mean                     38,649   1.7405   1.3169   0.00816
+Fold 1  Phase_Wkts_Mean               38,649   1.7395   1.3143   0.00930
+Fold 1  Ridge                         38,649   1.7285   1.3058   0.02183
+Fold 1  HistGBR                       38,649   1.7263   1.3029   0.02425
+Fold 2  Global_Mean                   38,650   1.7334   1.3247  -0.00003
+Fold 2  Phase_Mean                    38,650   1.7310   1.3192   0.00278
+Fold 2  Over_Mean                     38,650   1.7274   1.3137   0.00696
+Fold 2  Phase_Wkts_Mean               38,650   1.7284   1.3159   0.00581
+Fold 2  Ridge                         38,650   1.7157   1.3016   0.02028
+Fold 2  HistGBR                       38,650   1.7132   1.2962   0.02313
+Fold 3  Global_Mean                   38,647   1.7374   1.3266  -0.00006
+Fold 3  Phase_Mean                    38,647   1.7337   1.3208   0.00417
+Fold 3  Over_Mean                     38,647   1.7306   1.3156   0.00777
+Fold 3  Phase_Wkts_Mean               38,647   1.7283   1.3116   0.01042
+Fold 3  Ridge                         38,647   1.7162   1.2987   0.02426
+Fold 3  HistGBR                       38,647   1.7152   1.2978   0.02531
+Fold 4  Global_Mean                   38,647   1.7363   1.3309  -0.00017
+Fold 4  Phase_Mean                    38,647   1.7337   1.3258   0.00287
+Fold 4  Over_Mean                     38,647   1.7309   1.3210   0.00605
+Fold 4  Phase_Wkts_Mean               38,647   1.7284   1.3180   0.00891
+Fold 4  Ridge                         38,647   1.7175   1.3029   0.02133
+Fold 4  HistGBR                       38,647   1.7154   1.3015   0.02374
+Fold 5  Global_Mean                   38,658   1.7603   1.3367  -0.00018
+Fold 5  Phase_Mean                    38,658   1.7572   1.3306   0.00336
+Fold 5  Over_Mean                     38,658   1.7542   1.3252   0.00677
+Fold 5  Phase_Wkts_Mean               38,658   1.7527   1.3293   0.00847
+Fold 5  Ridge                         38,658   1.7431   1.3214   0.01932
+Fold 5  HistGBR                       38,658   1.7420   1.3193   0.02058
+
+--- BOWLING CONCEDED RUNS FOLD-LEVEL BENCHMARK ---
+Fold  Model / Baseline         OOF Samples     RMSE      MAE        R2
+------------------------------------------------------------------------
+Fold 1  Global_Mean                   40,190   1.6949   1.2763  -0.00003
+Fold 1  Phase_Mean                    40,190   1.6915   1.2712   0.00391
+Fold 1  Over_Mean                     40,190   1.6882   1.2666   0.00790
+Fold 1  Phase_Wkts_Mean               40,190   1.6881   1.2708   0.00797
+Fold 1  Ridge                         40,190   1.6790   1.2592   0.01858
+Fold 1  HistGBR                       40,190   1.6766   1.2556   0.02142
+Fold 2  Global_Mean                   40,201   1.7348   1.3010  -0.00027
+Fold 2  Phase_Mean                    40,201   1.7320   1.2967   0.00302
+Fold 2  Over_Mean                     40,201   1.7305   1.2923   0.00470
+Fold 2  Phase_Wkts_Mean               40,201   1.7273   1.2932   0.00832
+Fold 2  Ridge                         40,201   1.7180   1.2922   0.01896
+Fold 2  HistGBR                       40,201   1.7175   1.2900   0.01955
+Fold 3  Global_Mean                   40,192   1.7118   1.2890  -0.00000
+Fold 3  Phase_Mean                    40,192   1.7098   1.2845   0.00238
+Fold 3  Over_Mean                     40,192   1.7072   1.2799   0.00543
+Fold 3  Phase_Wkts_Mean               40,192   1.7056   1.2745   0.00725
+Fold 3  Ridge                         40,192   1.6949   1.2610   0.01969
+Fold 3  HistGBR                       40,192   1.6935   1.2590   0.02133
+Fold 4  Global_Mean                   40,190   1.7161   1.2903  -0.00000
+Fold 4  Phase_Mean                    40,190   1.7129   1.2853   0.00373
+Fold 4  Over_Mean                     40,190   1.7097   1.2806   0.00747
+Fold 4  Phase_Wkts_Mean               40,190   1.7080   1.2772   0.00940
+Fold 4  Ridge                         40,190   1.6967   1.2638   0.02245
+Fold 4  HistGBR                       40,190   1.6949   1.2628   0.02456
+Fold 5  Global_Mean                   40,188   1.7061   1.2836  -0.00011
+Fold 5  Phase_Mean                    40,188   1.7033   1.2790   0.00323
+Fold 5  Over_Mean                     40,188   1.6990   1.2731   0.00823
+Fold 5  Phase_Wkts_Mean               40,188   1.6997   1.2745   0.00734
+Fold 5  Ridge                         40,188   1.6882   1.2623   0.02078
+Fold 5  HistGBR                       40,188   1.6862   1.2597   0.02308
+
+[3] PAIRED STATISTICAL SIGNIFICANCE TESTS ACROSS MATCHES (n=867 matches)
+  Batting (HistGBR vs Phase_Wkts_Mean):
+    Paired t-test    : t = 17.813, p-value = 1.05e-60 (Statistically significant: True)
+    Wilcoxon test    : W = 58632.0, p-value = 8.50e-69
+    Mean Match RMSE  : Phase_Wkts_Mean = 1.7259 -> HistGBR = 1.7128 (Delta = +0.0131)
+
+  Bowling (HistGBR vs Phase_Wkts_Mean):
+    Paired t-test    : t = 18.195, p-value = 7.00e-63 (Statistically significant: True)
+    Wilcoxon test    : W = 59727.0, p-value = 1.15e-67
+    Mean Match RMSE  : Phase_Wkts_Mean = 1.6959 -> HistGBR = 1.6837 (Delta = +0.0122)
+
+[4] FEATURE ABLATION EXPERIMENT (Testing Marginal Value of Match Context)
+  Feature Set 1: Macro Temporal (Overs, Phases) : RMSE = 1.7353 | R2 = 0.00884
+  Feature Set 2: Macro + Wickets in Hand        : RMSE = 1.7263 | R2 = 0.01911 (Delta R2 = +0.01027)
+  Feature Set 3: Full Contextual (CRR, RRR, Target): RMSE = 1.7224 | R2 = 0.02351 (Delta R2 = +0.00440)
+  Innings 2 Chase Subset (n=91,612):
+    Without RRR/Target Context: R2 = 0.01386
+    With Full RRR/Target Context: R2 = 0.02082 (Delta R2 = +0.00696, +50.3% gain)
+
+Saved fold validation table to C:\RR NEW\phase1_audit\step3_1_validation\MODEL_FOLD_VALIDATION.csv

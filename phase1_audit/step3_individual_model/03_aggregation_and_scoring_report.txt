@@ -1,0 +1,117 @@
+================================================================================
+PHASE 1 STEP 3 — PLAYER AGGREGATION, EMPIRICAL BAYES & SCORING METHODOLOGY
+================================================================================
+Loaded modeled regular deliveries: 200,961
+Loaded Super Over deliveries       : 38
+
+============================================================
+[TASK 4 & 5] BATTING PLAYER AGGREGATION
+============================================================
+Aggregated 736 batters.
+Qualified batters (career_bf >= 300 & p_bf >= 40): 163
+
+============================================================
+[TASK 4 & 5] BOWLING PLAYER AGGREGATION
+============================================================
+Aggregated 610 bowlers.
+Qualified bowlers (career_b >= 300 & p_b >= 40): 179
+
+============================================================
+[TASK 6] EMPIRICAL BAYES SHRINKAGE ESTIMATION & TESTING
+============================================================
+Batting Residual Delivery Variance sigma_w^2: 2.6577
+Batting Between-Player Rate Variance sigma_b^2: 81.07 (Total observed var: 286.61)
+Implied Natural Prior Strength M0 (Batting): ~61.8 balls
+
+Testing Batting Shrinkage Priors across 146 split-half qualified batters:
+  M0 =  50: Split-Half rho=0.0642 | Spearman-Brown=0.1207 | StDev of Shrunk Score=11.33
+  M0 = 100: Split-Half rho=0.0831 | Spearman-Brown=0.1535 | StDev of Shrunk Score=9.01
+  M0 = 150: Split-Half rho=0.0880 | Spearman-Brown=0.1617 | StDev of Shrunk Score=7.61
+  M0 = 200: Split-Half rho=0.0940 | Spearman-Brown=0.1718 | StDev of Shrunk Score=6.64
+  M0 = 250: Split-Half rho=0.0952 | Spearman-Brown=0.1738 | StDev of Shrunk Score=5.91
+
+Bowling Residual Delivery Variance sigma_w^2: 3.0463
+Bowling Total Observed Rate Variance: 289.85
+Implied Natural Prior Strength M0 (Bowling RPAE): ~70.1 balls
+
+Testing Bowling Shrinkage Priors across 175 split-half qualified bowlers:
+  M0 =  50: Split-Half rho=0.0241 | Spearman-Brown=0.0471 | StDev of Shrunk Score=11.77
+  M0 = 100: Split-Half rho=0.0230 | Spearman-Brown=0.0449 | StDev of Shrunk Score=9.32
+  M0 = 150: Split-Half rho=0.0201 | Spearman-Brown=0.0395 | StDev of Shrunk Score=7.81
+  M0 = 200: Split-Half rho=0.0276 | Spearman-Brown=0.0537 | StDev of Shrunk Score=6.77
+  M0 = 250: Split-Half rho=0.0267 | Spearman-Brown=0.0521 | StDev of Shrunk Score=5.99
+
+============================================================
+[TASK 7] SCORING METHODOLOGY EVALUATION & ALTERNATIVES
+============================================================
+  Batting Formula Pairwise Rank Correlations & Top-10 Overlap:
+    Opt1 vs Opt2: Spearman rho=0.9003 | Top-10 Overlap=8/10
+    Opt1 vs Opt3: Spearman rho=0.9129 | Top-10 Overlap=8/10
+    Opt2 vs Opt3: Spearman rho=0.9882 | Top-10 Overlap=9/10
+
+  Bowling Formula Pairwise Rank Correlations & Top-10 Overlap:
+    Opt1 vs Opt2: Spearman rho=0.9347 | Top-10 Overlap=6/10
+    Opt1 vs Opt3: Spearman rho=0.9389 | Top-10 Overlap=6/10
+    Opt2 vs Opt3: Spearman rho=0.9941 | Top-10 Overlap=10/10
+
+============================================================
+[TASK 8] PROVISIONAL TOP 10 RANKINGS & TRACEABILITY AUDIT
+============================================================
+
+--- PROVISIONAL TOP 12 INDIVIDUAL BATTERS UNDER PRESSURE ---
+Rank Player Name             P BF  P Runs    P SR  Exp SR   P RAE  EB Score            95% CI
+------------------------------------------------------------------------------------------------
+1    Andre Russell            323     535   165.6   126.7  +125.8    +20.09    [+11.9, +41.3]
+2    Tim David                505     822   162.8   136.7  +131.7    +18.89    [ +7.6, +32.6]
+3    Glenn Maxwell            315     517   164.1   131.0  +104.4    +16.26    [ +7.6, +37.3]
+4    Vaibhav Sooryavanshi      55     129   234.5   150.8   +46.1    +16.03    [ +0.2, +44.8]
+5    Heinrich Klaasen         487     746   153.2   129.5  +115.2    +15.72    [ +5.4, +30.7]
+6    Suryakumar Yadav         682    1027   150.6   130.9  +134.3    +15.39    [ +5.1, +27.2]
+7    Prabhsimran Singh        165     290   175.8   141.9   +55.9    +14.02    [ -0.3, +35.7]
+8    Priyansh Arya             52     112   215.4   145.0   +36.6    +13.75    [ -4.4, +40.6]
+9    Fakhar Zaman             227     317   139.6   118.3   +48.6    +13.41    [ -3.6, +29.3]
+10   Reeza Hendricks          199     315   158.3   137.4   +41.5    +11.79    [ -5.2, +29.0]
+11   David Miller             457     715   156.5   143.5   +59.1    +11.15    [ -3.2, +22.7]
+12   Shivam Dube              393     581   147.8   131.9   +62.7    +10.97    [ -2.2, +25.3]
+
+--- PROVISIONAL TOP 12 INDIVIDUAL BOWLERS UNDER PRESSURE ---
+Rank Player Name            P Balls  P Econ Exp Econ  P RPAE  P Wkts  EB Score            95% CI
+----------------------------------------------------------------------------------------------------
+1    Umran Malik                111    7.68     9.34   +30.8      14    +24.76    [ -9.4, +33.0]
+2    Sufiyan Muqeem              84    5.29     8.12   +39.6       7    +16.75    [ -5.4, +39.3]
+3    Mayank Yadav               121    8.03     9.89   +37.4      10    +16.60    [ -7.0, +34.6]
+4    Shoriful Islam             205    6.76     8.53   +60.3      15    +16.36    [ -1.2, +35.1]
+5    Jacob Duffy                191    8.07     8.80   +23.0      17    +14.16    [-11.8, +25.3]
+6    Mohammad Nawaz             221    6.87     7.52   +24.0      17    +14.09    [-11.3, +24.2]
+7    Anukul Roy                  73    6.99     8.91   +23.4       6    +13.43    [-12.4, +33.4]
+8    Ehsan Khan                  43    6.70     9.44   +19.6       5    +13.41    [-14.5, +34.8]
+9    Piyush Chawla               85    7.27     8.74   +20.8       7    +13.41    [-13.5, +31.2]
+10   Yash Thakur                142    9.17    10.39   +28.8      12    +13.04    [-10.2, +29.9]
+11   Josh Hazlewood             399    8.14     8.93   +52.9      27    +12.26    [ -5.0, +24.2]
+12   Allah Ghazanfar            131    8.93     8.93    -0.1      12    +11.72    [-20.4, +20.4]
+
+--- AUDIT OF CURRENT 20 DASHBOARD PLAYERS IN BALL-BY-BALL MODEL ---
+
+Existing Dashboard Batters in Individual Model:
+  Shivam Dube          | BBB Rank # 12 / 163 | P BF= 393 | P SR=147.8 (Exp=131.9) | P RAE= +62.7 | LiftSR= -6.3 | EB Score=+10.97
+  Rinku Singh          | BBB Rank # 40 / 163 | P BF= 444 | P SR=130.4 (Exp=126.8) | P RAE= +15.9 | LiftSR=-22.1 | EB Score= +4.88
+  Axar Patel           | BBB Rank # 56 / 163 | P BF= 660 | P SR=133.2 (Exp=132.2) | P RAE=  +6.7 | LiftSR= -4.5 | EB Score= +2.98
+  Rajat Patidar        | BBB Rank # 33 / 163 | P BF= 188 | P SR=148.4 (Exp=129.3) | P RAE= +35.9 | LiftSR=-19.5 | EB Score= +6.36
+  Ruturaj Gaikwad      | BBB Rank # 73 / 163 | P BF= 139 | P SR=129.5 (Exp=129.7) | P RAE=  -0.3 | LiftSR= -9.5 | EB Score= +1.50
+  Devon Conway         | BBB Rank # 62 / 163 | P BF=  49 | P SR=161.2 (Exp=144.8) | P RAE=  +8.0 | LiftSR=+28.8 | EB Score= +2.53
+  Virat Kohli          | BBB Rank # 92 / 163 | P BF= 172 | P SR=137.8 (Exp=140.9) | P RAE=  -5.3 | LiftSR= -7.4 | EB Score= -0.13
+  Bhanuka Rajapaksa    | BBB Rank # 16 / 163 | P BF= 136 | P SR=143.4 (Exp=121.2) | P RAE= +30.1 | LiftSR= +6.6 | EB Score=+10.54
+  Shreyas Iyer         | BBB Rank # 58 / 163 | P BF= 444 | P SR=144.1 (Exp=134.3) | P RAE= +43.9 | LiftSR= -9.0 | EB Score= +2.82
+  Sediqullah Atal      | BBB Rank # 34 / 163 | P BF= 135 | P SR=135.6 (Exp=117.3) | P RAE= +24.6 | LiftSR= +7.1 | EB Score= +6.29
+
+Existing Dashboard Bowlers in Individual Model:
+  Jacob Duffy          | BBB Rank #  5 / 179 | P Balls= 191 | P Econ= 8.07 (Exp= 8.80) | P RPAE= +23.0 | P Wkts=17 | EB Score=+14.16
+  Josh Hazlewood       | BBB Rank # 11 / 179 | P Balls= 399 | P Econ= 8.14 (Exp= 8.93) | P RPAE= +52.9 | P Wkts=27 | EB Score=+12.26
+  Yash Dayal           | BBB Rank #143 / 179 | P Balls= 305 | P Econ=10.25 (Exp= 9.84) | P RPAE= -20.6 | P Wkts=14 | EB Score= -6.05
+  Mitchell Starc       | BBB Rank #107 / 179 | P Balls= 311 | P Econ=10.28 (Exp= 9.31) | P RPAE= -50.2 | P Wkts=21 | EB Score= -1.00
+  Varun Chakravarthy   | BBB Rank # 60 / 179 | P Balls= 371 | P Econ= 8.88 (Exp= 9.09) | P RPAE= +13.3 | P Wkts=22 | EB Score= +4.82
+  Romario Shepherd     | BBB Rank # 77 / 179 | P Balls= 326 | P Econ=10.27 (Exp= 9.75) | P RPAE= -28.4 | P Wkts=25 | EB Score= +2.40
+  Suyash Sharma        | BBB Rank #166 / 179 | P Balls= 177 | P Econ= 9.32 (Exp= 8.89) | P RPAE= -12.8 | P Wkts= 4 | EB Score=-10.96
+  Bhuvneshwar Kumar    | BBB Rank # 64 / 179 | P Balls= 830 | P Econ= 7.94 (Exp= 8.64) | P RPAE= +96.5 | P Wkts=40 | EB Score= +4.14
+  Arshdeep Singh       | BBB Rank # 72 / 179 | P Balls=1020 | P Econ= 9.44 (Exp= 9.76) | P RPAE= +55.5 | P Wkts=62 | EB Score= +2.95
+  Lockie Ferguson      | BBB Rank # 45 / 179 | P Balls= 265 | P Econ= 8.81 (Exp= 9.67) | P RPAE= +38.0 | P Wkts=15 | EB Score= +6.13

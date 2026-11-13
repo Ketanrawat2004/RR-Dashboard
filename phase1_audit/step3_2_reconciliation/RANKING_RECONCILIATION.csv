@@ -1,0 +1,9 @@
+discipline,rank_position,player_name,step3_rank,step3_score,step3_formula,step3_1_rank,step3_1_score,step3_1_formula,bootstrap_rank_90_ci,top10_prob_pct,verdict
+Batting,1,Andre Russell,1,20.09,Proposed 75/25 Composite,1,26.59,Pure RAE (M0=150),#1 to #29,79.8,DEFENSIBLE #1 (Clear leader in both formulas)
+Batting,2,Vaibhav Sooryavanshi,4,16.03,Proposed 75/25 Composite,2,22.48,Pure RAE (M0=150),#1 to #86,56.0,"CAUTION REQUIRED (Small sample N=55, wide rank CI #1 to #86)"
+Batting,3,Glenn Maxwell,2,19.34,Proposed 75/25 Composite,3,22.45,Pure RAE (M0=150),#1 to #45,63.6,"DEFENSIBLE TOP 3 (High volume N=315, robust skill)"
+Batting,4,Tim David,3,18.25,Proposed 75/25 Composite,4,20.11,Pure RAE (M0=150),#1 to #59,51.0,"DEFENSIBLE TOP 5 (High volume N=505, robust death finisher)"
+Batting,5,Abhishek Sharma,5,15.63,Proposed 75/25 Composite,5,18.52,Pure RAE (M0=150),#1 to #89,42.6,"DEFENSIBLE TOP 5 (Powerplay enforcer, high RAE)"
+Bowling,1,Umran Malik,1,24.76,Proposed 60/40 Composite,1,24.75,Proposed 60/40 Composite,#1 to #108,62.8,DEFENSIBLE UNDER 60/40 COMPOSITE (Caution: Pure RPAE ranks Bumrah #1)
+Bowling,2,Sufiyan Muqeem,2,16.76,Proposed 60/40 Composite,2,16.76,Proposed 60/40 Composite,#4 to #69,26.6,"DEFENSIBLE (Tight cluster CI [+4.5, +26.1])"
+Bowling,3,Mayank Yadav,3,16.6,Proposed 60/40 Composite,3,16.6,Proposed 60/40 Composite,#2 to #111,36.8,"CAUTION REQUIRED (High upside express pace, but N=121 balls, wide CI)"

@@ -1,0 +1,57 @@
+================================================================================
+PHASE 1 STEP 3.1 — SECTIONS 7 & 8: RANKING STABILITY & WEIGHT SENSITIVITY
+================================================================================
+
+[1] RANKING STABILITY ACROSS PRESSURE THRESHOLDS (15%, 20%, 25%, 30%)
+
+  Threshold Stability Summary (Compared with 25% Baseline):
+  DisciplineThreshold      Delivs  Qual N  Spearman rho  Kendall tau  Top-10 In  Top-20 In      Status
+  -----------------------------------------------------------------------------------------------
+  Batting   Top 15%        28,988     133        0.8097       0.6181       3/10      12/20    MODERATE
+  Bowling   Top 15%        28,865     166        0.8244       0.6426       6/10      12/20    MODERATE
+  Batting   Top 20%        38,658     146        0.8999       0.7238       5/10      13/20HIGH STABILITY
+  Bowling   Top 20%        38,501     175        0.8907       0.7186       6/10      13/20HIGH STABILITY
+  Batting   Top 25%        48,323     163        1.0000       1.0000      10/10      20/20    BASELINE
+  Bowling   Top 25%        48,137     179        1.0000       1.0000      10/10      20/20    BASELINE
+  Batting   Top 30%        57,994     170        0.8971       0.7316       7/10      16/20HIGH STABILITY
+  Bowling   Top 30%        57,735     181        0.9124       0.7436       6/10      14/20HIGH STABILITY
+
+Saved threshold stability table to C:\RR NEW\phase1_audit\step3_1_validation\RANKING_STABILITY_VALIDATION.csv
+
+================================================================================
+[2] SCORING FORMULA & WEIGHT SENSITIVITY ANALYSIS
+================================================================================
+
+  [2.1] BATTING FORMULA SENSITIVITY:
+  Formula Scheme                        Spearman rho  Top-10 OverlapTop Player              Top Player Score
+  --------------------------------------------------------------------------------------------------------------
+  Pure RAE (M0=150) [Recommended]             1.0000           10/10Andre Russell                      26.59
+  Step 3 Provisional (75% RAE + 25% WktSaved)        0.9007            8/10Andre Russell                      20.09
+  Clutch Hybrid (60% RAE + 20% Wkt + 20% Lift)        0.9113            8/10Andre Russell                      17.44
+  Pure RAE (M0=75)                            0.9981            9/10Vaibhav Sooryavanshi               36.82
+  Pure RAE (M0=100)                           0.9993           10/10Vaibhav Sooryavanshi               30.84
+  Pure RAE (M0=200)                           0.9996           10/10Andre Russell                      24.05
+  Provisional 75/25 (WktEquiv=8 runs)         0.9482            9/10Andre Russell                      20.04
+  Provisional 75/25 (WktEquiv=10 runs)        0.9245            8/10Andre Russell                      20.06
+  Provisional 75/25 (WktEquiv=15 runs)        0.8630            8/10Andre Russell                      20.12
+  Provisional 75/25 (WktEquiv=20 runs)        0.8000            8/10Tim David                          21.45
+
+  [2.2] BOWLING FORMULA SENSITIVITY:
+  Formula Scheme                        Spearman rho  Top-10 OverlapTop Player              Top Player Score
+  --------------------------------------------------------------------------------------------------------------
+  Step 3 Provisional (60/40, W=12) [Ref]        1.0000           10/10Umran Malik                        25.99
+  Pure RPAE (100% Run Prevention)             0.7612            4/10Jasprit Bumrah                     17.81
+  80% RPAE / 20% WAE (W=12)                   0.9354            7/10Umran Malik                        19.28
+  70% RPAE / 30% WAE (W=12)                   0.9831            8/10Umran Malik                        22.63
+  50% RPAE / 50% WAE (W=12)                   0.9854            9/10Umran Malik                        29.35
+  40% RPAE / 60% WAE (W=12)                   0.9537            7/10Umran Malik                        32.71
+  30% RPAE / 70% WAE (W=12)                   0.9172            4/10Umran Malik                        36.06
+  60/40 Split (WktEquiv=8 runs)               0.9853            8/10Umran Malik                        19.84
+  60/40 Split (WktEquiv=10 runs)              0.9968           10/10Umran Malik                        22.92
+  60/40 Split (WktEquiv=15 runs)              0.9949           10/10Umran Malik                        30.61
+  60/40 Split (WktEquiv=20 runs)              0.9779            9/10Umran Malik                        38.29
+  60/40 Split (M0=75)                         0.9977           10/10Umran Malik                        34.71
+  60/40 Split (M0=100)                        0.9990           10/10Umran Malik                        31.21
+  60/40 Split (M0=200)                        0.9993           10/10Umran Malik                        22.28
+
+Saved scoring weight sensitivity table to C:\RR NEW\phase1_audit\step3_1_validation\SCORING_WEIGHT_SENSITIVITY.csv

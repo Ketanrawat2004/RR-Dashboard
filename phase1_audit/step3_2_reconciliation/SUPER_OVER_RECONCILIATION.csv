@@ -1,0 +1,9 @@
+match_id,match_date,home_team,away_team,result_text,super_over_innings_present,inn3_deliveries,inn4_deliveries,total_super_over_deliveries,status_in_ball_by_ball
+34429,2024-07-30,Sri Lanka,India,India Tied with Srilanka (India Won the Super Over by 2 wickets),Innings 3 & 4 (2 Innings),4,1,5,Deliveries Recorded
+40725,2025-04-16,Delhi Capitals,Rajasthan Royals,Delhi Capitals Tied with Rajasthan Royals (DC won the Super Over),Innings 3 & 4 (2 Innings),6,4,10,Deliveries Recorded
+45512,2025-09-26,India,Sri Lanka,India won the Super Over(Match Tied),Innings 3 & 4 (2 Innings),6,1,7,Deliveries Recorded
+48027,2025-11-21,Bangladesh A,India A,Bangladesh A Won The Super Over,Innings 3 & 4 (2 Innings),2,2,4,Deliveries Recorded
+48029,2025-11-23,Bangladesh A,Pakistan A,Pakistan A Won the super over,Innings 3 & 4 (2 Innings),4,4,8,Deliveries Recorded
+50359,2026-04-26,Lucknow Super Giants,Kolkata Knight Riders,Kolkata Knight Riders Won by Super over (Match Tied),Innings 3 & 4 (2 Innings),3,1,4,Deliveries Recorded
+21176,2023-04-02,New Zealand,Sri Lanka,Sri Lanka won the super over,None (Only Innings 1 & 2 in bbb),0,0,0,"Match ended in Super Over per result text, but SO balls not recorded in CSV"
+28962,2024-01-17,India,Afghanistan,India Won Super Over By 10 Runs,None (Only Innings 1 & 2 in bbb),0,0,0,"Match ended in Super Over per result text, but SO balls not recorded in CSV"

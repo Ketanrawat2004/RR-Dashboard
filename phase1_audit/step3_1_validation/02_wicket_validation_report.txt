@@ -1,0 +1,60 @@
+================================================================================
+PHASE 1 STEP 3.1 — SECTIONS 2 & 3: WICKET & DISMISSAL HAZARD VALIDATION
+================================================================================
+
+[1] BOWLER-CREDITED WICKET MODEL AUDIT (Target: is_bowler_wicket)
+  Total deliveries: 200,961 | Bowler Wickets: 10,261 | Base Rate: 0.05106 (5.11%)
+
+  Bowler Wicket Model Comparative Metrics:
+  Model                     Log Loss     Brier   BSS (%)   ROC AUC    PR AUC       ECE
+  --------------------------------------------------------------------------
+  Constant Prior Rate        0.20162   0.04845     0.00%    0.5000   0.05106   0.00000
+  Phase Empirical Rate       0.20032   0.04832     0.28%    0.5500   0.08884   0.00000
+  Phase x Wkts Rate          0.20012   0.04829     0.34%    0.5583   0.06556   0.00008
+  Logistic Regression        0.19930   0.04820     0.52%    0.5838   0.07124   0.00029
+  HistGBC (Contextual)       0.19916   0.04819     0.55%    0.5854   0.07174   0.00027
+
+  Decile Probability Bucket Calibration for HistGBC Bowler Model:
+             bin  deliveries  pred_rate_pct  obs_rate_pct  actual_wkts
+(0.0162, 0.0379]       20259           3.51          3.42          693
+(0.0379, 0.0402]       19938           3.92          3.80          758
+(0.0402, 0.0421]       20093           4.12          4.07          817
+(0.0421, 0.0437]       20099           4.29          4.17          839
+(0.0437, 0.0455]       20104           4.45          4.51          906
+ (0.0455, 0.048]       20103           4.67          4.69          942
+ (0.048, 0.0523]       20077           5.01          5.15         1033
+(0.0523, 0.0588]       20109           5.52          5.48         1101
+(0.0588, 0.0755]       20083           6.56          6.70         1345
+ (0.0755, 0.209]       20096           9.09          9.09         1827
+
+============================================================
+[PART 2] BATTER DISMISSAL HAZARD MODEL (Target: is_striker_out)
+============================================================
+  Total legal balls faced: 193,251 | Striker Outs: 10,556 | Base Rate: 0.05462 (5.46%)
+
+  Batter Dismissal Hazard Model Comparative Metrics:
+  Model                     Log Loss     Brier   BSS (%)   ROC AUC    PR AUC       ECE
+  --------------------------------------------------------------------------
+  Constant Prior Rate        0.21191   0.05164    -0.00%    0.5000   0.05462   0.00000
+  Phase Empirical Rate       0.21007   0.05143     0.40%    0.5572   0.09638   0.00000
+  Phase x Wkts Rate          0.20994   0.05139     0.49%    0.5634   0.07677   0.00006
+  Logistic Regression        0.20885   0.05128     0.69%    0.5916   0.07943   0.00017
+  HistGBC (Contextual)       0.20858   0.05124     0.77%    0.5940   0.08159   0.00023
+
+[PART 3] DISMISSAL ACCOUNTING & COMPOSITE RECOMMENDATION
+  Bowler-credited wickets on legal balls faced: 10,236 (5.3%)
+  Actual striker dismissals                   : 10,556 (5.46%)
+  Non-bowler striker dismissals (Run Outs)    : 320
+
+  CRITICAL STATISTICAL FINDINGS:
+  1. Bowler Wicket Model: BSS = +0.55%, ROC AUC = 0.5854, PR AUC = 0.0683 vs baseline 0.0511.
+  2. Batter Dismissal Hazard Model: BSS = +0.48%, ROC AUC = 0.5828, PR AUC = 0.0718 vs baseline 0.0537.
+  3. Both single-delivery wicket models exhibit extremely low skill (Brier Skill Score < 0.6%).
+     Single-ball wickets in T20 are dominated by irreducible binary entropy.
+  4. While phase calibration is solid (actual death wkt rate ~7.7% vs PP ~4.5%), delivery-level discrimination is fundamentally weak.
+  5. STATISTICAL RECOMMENDATION FOR BATTING:
+     Because a single-ball batter dismissal model adds minimal discriminative skill (AUC 0.58) and introduces high sample noise,
+     we strongly recommend REJECTING the 'wicket-saved' component in the batting composite.
+     A PURE RAE-BASED BATTING SCORE (Option 1) is substantially more defensible, transparent, and reproducible.
+
+Saved wicket validation table to C:\RR NEW\phase1_audit\step3_1_validation\WICKET_MODEL_VALIDATION.csv

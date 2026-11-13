@@ -1,0 +1,59 @@
+================================================================================
+PHASE 1 STEP 3 — TASK 1: DELIVERY DATA VERIFICATION & PROVENANCE AUDIT
+================================================================================
+
+[1] ORIGINAL CSV INTEGRITY CHECKSUMS
+  ball_by_ball.csv                       | 41,071,609 B | SHA256 Match: True
+  matches.csv                            |    123,864 B | SHA256 Match: True
+  competitions.csv                       |      7,624 B | SHA256 Match: True
+  teams.csv                              |      6,922 B | SHA256 Match: True
+  playing_eleven.csv                     |    966,287 B | SHA256 Match: True
+  competition_team_player_mapping.csv    |    462,969 B | SHA256 Match: True
+  -> All 6 original dataset checksums match Step 1 & Step 2: True
+
+[2] INTERMEDIATE PICKLE PROVENANCE & ROW COUNTS
+  Raw ball_by_ball.csv total rows: 200,999
+  bbb_enriched.pkl total rows    : 200,961 (innings 1 & 2)
+  so_bbb.pkl total rows          : 38 (innings 3 & 4)
+  Sum of enriched + super over   : 200,999
+  -> Row count conservation verified: Exactly 200,999 rows.
+
+[3] MATCH ID COVERAGE & SUPER OVER TREATMENT
+  Matches in matches.csv          : 883
+  Matches in ball_by_ball.csv     : 867
+  Matches in bbb_enriched.pkl     : 867
+  Matches in so_bbb.pkl           : 6
+  Matches abandoned (0 balls)     : 16
+  Super Over matches              : [34429, 40725, 45512, 48027, 48029, 50359]
+  -> Scope separation verified: 38 Super Over deliveries across 6 matches isolated into so_bbb.pkl.
+
+[4] CHRONOLOGICAL ORDERING & ZERO OUTCOME LEAKAGE
+  Deliveries where innings_ball_num decreases chronologically: 0
+  score_before == prev_score + prev_delivery_runs violations: 0
+  wkts_before == prev_wkts + prev_delivery_wkt violations     : 0
+  -> Zero outcome leakage verified: score_before and wkts_before strictly lag delivery outcome.
+
+[5] DELIVERY SEMANTICS & ACCOUNTING BOUNDARIES
+  Total legal balls faced by batters (excludes wides)           : 193,251 (96.16%)
+  Total legal deliveries bowled (excludes wides & no-balls)     : 192,412 (95.75%)
+  Total batter runs off the bat                                 : 269,506
+  Total minimal observable team runs                            : 281,420
+  Total minimal observable bowler-conceded runs                 : 278,138
+  Team extras runs (team_runs_obs - runs)                       : 11,914
+  Bowler-charged extras (bowl_runs_obs - runs)                  : 8,632
+  Fielding extras (byes, legbyes, penalties = team - bowl)      : 3,282
+  Total wickets in innings 1-2                                  : 10,868
+  Bowler-credited wickets (excludes RunOut, Retire Out, etc.)   : 10,261 (94.4% of wickets)
+  Fielding/non-bowler wickets (RunOut, Retire Out)              : 607
+
+[6] PRE-DELIVERY PRESSURE METRICS (BPI & BWPI)
+  BPI range : min=0.24, median=37.00, mean=39.19, max=100.00
+  BWPI range: min=0.33, median=39.15, mean=39.82, max=100.00
+  25% High-Pressure Cutoffs: BPI >= 55.640 | BWPI >= 56.300
+  High-pressure batting deliveries: 50,241 (25.0%)
+  High-pressure bowling deliveries: 50,247 (25.0%)
+
+[7] PLAYER IDENTITY INTEGRITY
+  Distinct strikers in deliveries: 888 (unknown IDs: 0)
+  Distinct bowlers in deliveries : 647 (unknown IDs: 0)
+  -> All striker and bowler IDs cleanly mapped to ctpm.

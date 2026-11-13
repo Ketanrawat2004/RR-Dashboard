@@ -1,0 +1,359 @@
+framework,rank,player_id,player_name,step4_pressure_b,db_pressure_balls,html_displayed_leverage_deliveries,discrepancy,status,html_pressure_econ,html_exp_econ,step4_shrunk_score,html_shrunk_score,step4_rank_ci_90,html_rank_ci_90
+Composite (60/40),1,25048,Umran Malik,111,111,111,0,MATCH,7.68,9.34,+24.75,+24.75,#1 to #74,#1 to #74
+Composite (60/40),2,34485,Sufiyan Muqeem,84,84,84,0,MATCH,5.29,8.12,+16.76,+16.76,#2 to #56,#2 to #56
+Composite (60/40),3,27960,Mayank Yadav,121,121,121,0,MATCH,8.03,9.89,+16.60,+16.60,#1 to #79,#1 to #79
+Composite (60/40),4,7344,Shoriful Islam,205,205,205,0,MATCH,6.76,8.53,+16.36,+16.36,#2 to #50,#2 to #50
+Composite (60/40),5,22920,Jacob Duffy,191,191,191,0,MATCH,8.07,8.8,+14.16,+14.16,#2 to #80,#2 to #80
+Composite (60/40),6,2490,Mohammad Nawaz,221,221,221,0,MATCH,6.87,7.52,+14.10,+14.10,#2 to #74,#2 to #74
+Composite (60/40),7,6284,Anukul Roy,73,73,73,0,MATCH,6.99,8.91,+13.43,+13.43,#3 to #85,#3 to #85
+Composite (60/40),8,5750,Ehsan Khan,43,43,43,0,MATCH,6.7,9.44,+13.43,+13.43,#3 to #84,#3 to #84
+Composite (60/40),9,23,Piyush Chawla,85,85,85,0,MATCH,7.27,8.74,+13.39,+13.39,#4 to #82,#4 to #82
+Composite (60/40),10,6287,Yash Thakur,142,142,142,0,MATCH,9.17,10.39,+13.03,+13.03,#4 to #77,#4 to #77
+Composite (60/40),11,830,Josh Hazlewood,399,399,399,0,MATCH,8.14,8.93,+12.27,+12.27,#4 to #91,#4 to #91
+Composite (60/40),12,32862,Allah Ghazanfar,131,131,131,0,MATCH,8.93,8.93,+11.73,+11.73,#2 to #100,#2 to #100
+Composite (60/40),13,5940,Riley Meredith,80,80,80,0,MATCH,9.07,10.39,+11.45,+11.45,#4 to #92,#4 to #92
+Composite (60/40),14,7364,Haris Rauf,305,305,305,0,MATCH,8.81,9.17,+11.41,+11.41,#2 to #124,#2 to #124
+Composite (60/40),15,8661,Matheesha Pathirana,290,290,290,0,MATCH,9.02,10.95,+11.40,+11.40,#4 to #98,#4 to #98
+Composite (60/40),16,58134,Digvesh Rathi,139,139,139,0,MATCH,7.77,9.15,+11.39,+11.39,#5 to #88,#5 to #88
+Composite (60/40),17,2933,Jasprit Bumrah,469,469,469,0,MATCH,7.79,9.18,+10.96,+10.96,#3 to #89,#3 to #89
+Composite (60/40),18,4658,Nasum Ahmed,120,120,120,0,MATCH,6.25,7.99,+10.52,+10.52,#4 to #117,#4 to #117
+Composite (60/40),19,1612,Yuzvendra Chahal,539,539,539,0,MATCH,8.89,9.46,+10.12,+10.12,#7 to #87,#7 to #87
+Composite (60/40),20,4874,Richard Ngarava,247,247,247,0,MATCH,7.85,8.73,+9.97,+9.97,#4 to #107,#4 to #107
+Composite (60/40),21,39657,Eshan Malinga,179,179,179,0,MATCH,9.18,10.86,+9.74,+9.74,#5 to #112,#5 to #112
+Composite (60/40),22,4840,Odean Smith,84,84,84,0,MATCH,10.14,9.91,+9.65,+9.65,#2 to #155,#2 to #155
+Composite (60/40),23,6643,Hasan Mahmud,114,114,114,0,MATCH,7.68,8.54,+9.52,+9.52,#5 to #115,#5 to #115
+Composite (60/40),24,2681,Taskin Ahmed,212,212,212,0,MATCH,7.61,8.07,+9.49,+9.49,#2 to #140,#2 to #140
+Composite (60/40),25,722,Liam Dawson,76,76,76,0,MATCH,6.55,8.59,+9.38,+9.38,#3 to #127,#3 to #127
+Composite (60/40),26,4856,Benjamin Sears,72,72,72,0,MATCH,7.67,8.74,+9.33,+9.33,#6 to #118,#6 to #118
+Composite (60/40),27,7052,Dunith Wellalage,80,80,80,0,MATCH,8.1,8.66,+9.13,+9.13,#3 to #121,#3 to #121
+Composite (60/40),28,3641,Ben Dwarshuis,61,61,61,0,MATCH,10.03,9.82,+8.99,+8.99,#4 to #115,#4 to #115
+Composite (60/40),29,499,Shakib Al Hasan,73,73,73,0,MATCH,8.05,8.35,+8.82,+8.82,#4 to #134,#4 to #134
+Composite (60/40),30,6354,Spencer Johnson,106,106,106,0,MATCH,8.26,9.77,+8.77,+8.77,#4 to #138,#4 to #138
+Composite (60/40),31,3275,Alzarri Joseph,303,303,303,0,MATCH,8.91,9.23,+8.75,+8.75,#4 to #134,#4 to #134
+Composite (60/40),32,4101,Mitchell Santner,325,325,325,0,MATCH,7.92,8.58,+8.37,+8.37,#11 to #104,#11 to #104
+Composite (60/40),33,7920,Nathan Ellis,273,273,273,0,MATCH,8.86,9.76,+8.06,+8.06,#6 to #120,#6 to #120
+Composite (60/40),34,5189,Faheem Ashraf,65,65,65,0,MATCH,7.2,8.29,+8.03,+8.03,#8 to #117,#8 to #117
+Composite (60/40),35,4219,Krunal Pandya,274,274,274,0,MATCH,8.01,8.49,+7.93,+7.93,#8 to #120,#8 to #120
+Composite (60/40),36,781,Sunil Narine,353,353,353,0,MATCH,7.6,8.86,+7.69,+7.69,#7 to #120,#7 to #120
+Composite (60/40),37,1487,Adam Milne,130,130,130,0,MATCH,10.29,9.57,+7.52,+7.52,#2 to #146,#2 to #146
+Composite (60/40),38,4900,Wanindu Hasaranga,408,408,408,0,MATCH,8.32,8.52,+7.39,+7.39,#9 to #119,#9 to #119
+Composite (60/40),39,27964,Anshul Kamboj,182,182,182,0,MATCH,9.3,9.57,+6.78,+6.78,#11 to #117,#11 to #117
+Composite (60/40),40,8009,Junaid Siddique,104,104,104,0,MATCH,8.71,8.58,+6.62,+6.62,#13 to #116,#13 to #116
+Composite (60/40),41,1566,Mohammed Shami,355,355,355,0,MATCH,8.43,8.3,+6.60,+6.60,#10 to #121,#10 to #121
+Composite (60/40),42,2054,Jason Behrendorff,105,105,105,0,MATCH,8.06,7.95,+6.58,+6.58,#6 to #134,#6 to #134
+Composite (60/40),43,1596,Moeen Ali,149,149,149,0,MATCH,8.86,8.13,+6.39,+6.39,#10 to #139,#10 to #139
+Composite (60/40),44,6518,Daniel Sams,114,114,114,0,MATCH,7.95,8.52,+6.30,+6.30,#9 to #136,#9 to #136
+Composite (60/40),45,4692,Lockie Ferguson,265,265,265,0,MATCH,8.81,9.67,+6.13,+6.13,#7 to #145,#7 to #145
+Composite (60/40),46,3628,Kagiso Rabada,474,474,474,0,MATCH,8.85,9.29,+6.05,+6.05,#15 to #115,#15 to #115
+Composite (60/40),47,479,Adil Rashid,166,166,166,0,MATCH,8.24,8.53,+6.00,+6.00,#6 to #138,#6 to #138
+Composite (60/40),48,19316,Maheesh Theekshana,493,493,493,0,MATCH,7.64,9.01,+5.95,+5.95,#20 to #104,#20 to #104
+Composite (60/40),49,7696,Mohammad Wasim,88,88,88,0,MATCH,8.59,8.78,+5.86,+5.86,#17 to #116,#17 to #116
+Composite (60/40),50,2261,Harshal Patel,448,448,448,0,MATCH,10.04,10.16,+5.78,+5.78,#13 to #129,#13 to #129
+Composite (60/40),51,8805,Ottneil Baartman,52,52,52,0,MATCH,6.58,8.88,+5.66,+5.66,#19 to #111,#19 to #111
+Composite (60/40),52,21784,Brad Evans,120,120,120,0,MATCH,9.55,9.59,+5.64,+5.64,#17 to #116,#17 to #116
+Composite (60/40),53,6450,Mujeeb Ur Rahman,261,261,261,0,MATCH,7.52,8.5,+5.57,+5.57,#16 to #123,#16 to #123
+Composite (60/40),54,8530,Kartik Tyagi,110,110,110,0,MATCH,10.15,10.74,+5.50,+5.50,#6 to #152,#6 to #152
+Composite (60/40),55,8380,Mohammad Rishad Hossain,162,162,162,0,MATCH,8.19,8.29,+5.42,+5.42,#17 to #122,#17 to #122
+Composite (60/40),56,1318,Andre Russell,235,235,235,0,MATCH,11.36,9.88,+5.40,+5.40,#6 to #162,#6 to #162
+Composite (60/40),57,8177,Akash Madhwal,96,96,96,0,MATCH,11.38,11.68,+5.38,+5.38,#2 to #168,#2 to #168
+Composite (60/40),58,4807,Joshua Little,158,158,158,0,MATCH,8.32,8.54,+5.28,+5.28,#4 to #149,#4 to #149
+Composite (60/40),59,2876,Axar Patel,513,513,513,0,MATCH,8.63,8.93,+5.11,+5.11,#15 to #127,#15 to #127
+Composite (60/40),60,6256,Varun Chakravarthy,371,371,371,0,MATCH,8.88,9.09,+4.82,+4.82,#16 to #123,#16 to #123
+Composite (60/40),61,2636,Adam Zampa,231,231,231,0,MATCH,8.65,8.5,+4.51,+4.51,#11 to #143,#11 to #143
+Composite (60/40),62,4201,Fareed Malik,104,104,104,0,MATCH,9.92,8.88,+4.35,+4.35,#4 to #158,#4 to #158
+Composite (60/40),63,7327,Rasikh Salam,129,129,129,0,MATCH,10.23,10.54,+4.22,+4.22,#9 to #150,#9 to #150
+Composite (60/40),64,360,Bhuvneshwar Kumar,830,830,830,0,MATCH,7.94,8.64,+4.14,+4.14,#24 to #118,#24 to #118
+Composite (60/40),65,278,Tim Southee,218,218,218,0,MATCH,8.75,8.39,+3.93,+3.93,#11 to #151,#11 to #151
+Composite (60/40),66,29888,Harshit Rana,271,271,271,0,MATCH,10.01,9.39,+3.81,+3.81,#16 to #137,#16 to #137
+Composite (60/40),67,1944,Keshav Maharaj,104,104,104,0,MATCH,8.08,8.36,+3.56,+3.56,#17 to #148,#17 to #148
+Composite (60/40),68,7741,Gareth Delany,150,150,150,0,MATCH,7.64,7.96,+3.49,+3.49,#17 to #136,#17 to #136
+Composite (60/40),69,19312,Nuwan Thushara,212,212,212,0,MATCH,8.66,8.84,+3.30,+3.30,#9 to #151,#9 to #151
+Composite (60/40),70,3697,Kyle Jamieson,148,148,148,0,MATCH,9.0,9.19,+3.06,+3.06,#13 to #158,#13 to #158
+Composite (60/40),71,3644,Kuldeep Yadav,376,376,376,0,MATCH,9.02,9.09,+2.98,+2.98,#22 to #141,#22 to #141
+Composite (60/40),72,6464,Arshdeep Singh,1020,1020,1020,0,MATCH,9.44,9.76,+2.95,+2.95,#27 to #122,#27 to #122
+Composite (60/40),73,7967,Noor Ahmad,319,319,319,0,MATCH,9.25,9.29,+2.83,+2.83,#12 to #149,#12 to #149
+Composite (60/40),74,4722,Rashid Khan,619,619,619,0,MATCH,8.37,8.85,+2.71,+2.71,#23 to #140,#23 to #140
+Composite (60/40),75,4489,Prasidh Krishna,338,338,338,0,MATCH,9.59,9.58,+2.50,+2.50,#15 to #150,#15 to #150
+Composite (60/40),76,6683,Mayank Markande,75,75,75,0,MATCH,9.76,9.52,+2.42,+2.42,#6 to #163,#6 to #163
+Composite (60/40),77,6726,Romario Shepherd,326,326,326,0,MATCH,10.27,9.75,+2.40,+2.40,#21 to #144,#21 to #144
+Composite (60/40),78,7325,Harpreet Brar,160,160,160,0,MATCH,8.51,9.15,+2.39,+2.39,#12 to #151,#12 to #151
+Composite (60/40),79,2320,Trent Boult,536,536,536,0,MATCH,8.27,8.34,+1.96,+1.96,#27 to #134,#27 to #134
+Composite (60/40),80,6669,Mohsin Khan,250,250,250,0,MATCH,8.35,8.98,+1.89,+1.89,#16 to #148,#16 to #148
+Composite (60/40),81,4641,Lungi Ngidi,302,302,302,0,MATCH,8.86,9.51,+1.65,+1.65,#19 to #153,#19 to #153
+Composite (60/40),82,4816,Khaleel Ahmed,403,403,403,0,MATCH,9.08,9.02,+1.63,+1.63,#30 to #144,#30 to #144
+Composite (60/40),83,295,Wayne Parnell,67,67,67,0,MATCH,10.21,9.86,+1.55,+1.55,#22 to #148,#22 to #148
+Composite (60/40),84,7690,Saim Ayub,150,150,150,0,MATCH,6.76,7.53,+1.48,+1.48,#24 to #140,#24 to #140
+Composite (60/40),85,20704,Salman Mirza,52,52,52,0,MATCH,6.92,7.97,+1.48,+1.48,#23 to #151,#23 to #151
+Composite (60/40),86,2984,Sikandar Raza,177,177,177,0,MATCH,7.39,8.35,+1.38,+1.38,#27 to #141,#27 to #141
+Composite (60/40),87,3276,Gudakesh Motie,163,163,163,0,MATCH,7.88,8.69,+1.25,+1.25,#22 to #150,#22 to #150
+Composite (60/40),88,3629,Corbin Bosch,78,78,78,0,MATCH,9.15,8.95,+0.93,+0.93,#20 to #160,#20 to #160
+Composite (60/40),89,6512,Michael Bracewell,147,147,147,0,MATCH,8.69,9.07,+0.78,+0.78,#23 to #155,#23 to #155
+Composite (60/40),90,7250,Mukesh Choudhary,151,151,151,0,MATCH,8.86,8.75,+0.72,+0.72,#30 to #146,#30 to #146
+Composite (60/40),91,29066,Zakary Foulkes,55,55,55,0,MATCH,9.49,10.11,+0.25,+0.25,#36 to #142,#36 to #142
+Composite (60/40),92,2417,Akeal Hosein,433,433,433,0,MATCH,8.49,8.49,+0.23,+0.23,#39 to #148,#39 to #148
+Composite (60/40),93,8049,Naseem Shah,187,187,187,0,MATCH,8.92,8.61,+0.10,+0.10,#32 to #148,#32 to #148
+Composite (60/40),94,5441,Barry McCarthy,195,195,195,0,MATCH,8.43,9.22,+0.08,+0.08,#34 to #146,#34 to #146
+Composite (60/40),95,5979,Abrar Ahmed,170,170,170,0,MATCH,8.33,8.12,+0.01,+0.01,#22 to #156,#22 to #156
+Composite (60/40),96,1758,Patrick Cummins,301,301,301,0,MATCH,9.87,9.81,-0.04,-0.04,#34 to #151,#34 to #151
+Composite (60/40),97,2436,Dasun Shanaka,121,121,121,0,MATCH,10.66,9.92,-0.10,-0.10,#26 to #157,#26 to #157
+Composite (60/40),98,58246,Prince Yadav,161,161,161,0,MATCH,9.69,9.91,-0.18,-0.18,#20 to #161,#20 to #161
+Composite (60/40),99,3174,Matt Henry,189,189,189,0,MATCH,8.25,8.69,-0.34,-0.34,#36 to #145,#36 to #145
+Composite (60/40),100,6628,Gerald Coetzee,159,159,159,0,MATCH,9.74,9.57,-0.36,-0.36,#25 to #163,#25 to #163
+Composite (60/40),101,6523,Blessing Muzarabani,233,233,233,0,MATCH,8.81,8.77,-0.50,-0.50,#27 to #165,#27 to #165
+Composite (60/40),102,7689,Dilshan Madushanka,110,110,110,0,MATCH,8.02,8.5,-0.72,-0.72,#25 to #157,#25 to #157
+Composite (60/40),103,5837,Mahedi Hasan,199,199,199,0,MATCH,8.59,7.72,-0.79,-0.79,#16 to #167,#16 to #167
+Composite (60/40),104,152,Ravindra Jadeja,300,300,300,0,MATCH,8.8,8.71,-0.80,-0.80,#38 to #153,#38 to #153
+Composite (60/40),105,6355,Shaheen Afridi,335,335,335,0,MATCH,7.63,8.21,-0.86,-0.86,#34 to #152,#34 to #152
+Composite (60/40),106,2463,Ryan Burl,49,49,49,0,MATCH,6.37,7.85,-0.88,-0.88,#48 to #152,#48 to #152
+Composite (60/40),107,829,Mitchell Starc,311,311,311,0,MATCH,10.28,9.31,-1.00,-1.00,#25 to #165,#25 to #165
+Composite (60/40),108,4837,Obed McCoy,188,188,188,0,MATCH,10.44,9.43,-1.02,-1.02,#18 to #165,#18 to #165
+Composite (60/40),109,5041,Mukesh Kumar,387,387,387,0,MATCH,9.35,9.89,-1.44,-1.44,#38 to #164,#38 to #164
+Composite (60/40),110,2411,Sandeep Sharma,327,327,327,0,MATCH,9.76,10.26,-1.48,-1.48,#41 to #156,#41 to #156
+Composite (60/40),111,1107,Mohammad Nabi,171,171,171,0,MATCH,8.11,7.83,-1.51,-1.51,#46 to #157,#46 to #157
+Composite (60/40),112,7905,Tanzim Sakib,155,155,155,0,MATCH,9.06,9.07,-1.57,-1.57,#37 to #161,#37 to #161
+Composite (60/40),113,2399,Dushmantha Chameera,343,343,343,0,MATCH,9.45,9.0,-1.66,-1.66,#35 to #161,#35 to #161
+Composite (60/40),114,28,Ishant Sharma,128,128,128,0,MATCH,9.8,9.9,-1.69,-1.69,#41 to #161,#41 to #161
+Composite (60/40),115,5944,Mohammed Siraj,665,665,665,0,MATCH,9.41,9.32,-1.75,-1.75,#43 to #159,#43 to #159
+Composite (60/40),116,305,Ravichandran Ashwin,398,398,398,0,MATCH,8.47,8.77,-1.76,-1.76,#46 to #154,#46 to #154
+Composite (60/40),117,5809,Naveen ul Haq,222,222,222,0,MATCH,9.03,9.16,-1.92,-1.92,#37 to #159,#37 to #159
+Composite (60/40),118,3664,Binura Fernando,77,77,77,0,MATCH,9.43,9.01,-1.93,-1.93,#21 to #166,#21 to #166
+Composite (60/40),119,2334,Dwaine Pretorius,65,65,65,0,MATCH,10.34,11.14,-1.93,-1.93,#52 to #158,#52 to #158
+Composite (60/40),120,1071,Jaydev Unadkat,128,128,128,0,MATCH,10.88,9.85,-2.00,-2.00,#27 to #167,#27 to #167
+Composite (60/40),121,5379,Mark Adair,321,321,321,0,MATCH,8.75,8.76,-2.19,-2.19,#33 to #162,#33 to #162
+Composite (60/40),122,2526,Ish Sodhi,156,156,156,0,MATCH,9.58,8.24,-2.25,-2.25,#28 to #171,#28 to #171
+Composite (60/40),123,5577,Sai Kishore,142,142,142,0,MATCH,9.72,9.27,-2.27,-2.27,#45 to #156,#45 to #156
+Composite (60/40),124,7503,Ravi Bishnoi,545,545,545,0,MATCH,9.12,9.02,-2.48,-2.48,#47 to #153,#47 to #153
+Composite (60/40),125,4815,Benjamin White,129,129,129,0,MATCH,9.02,8.5,-2.56,-2.56,#34 to #165,#34 to #165
+Composite (60/40),126,6272,William Jacks,97,97,97,0,MATCH,9.15,9.55,-2.75,-2.75,#28 to #164,#28 to #164
+Composite (60/40),127,5738,Xavier Bartlett,175,175,175,0,MATCH,8.19,8.88,-2.80,-2.80,#54 to #162,#54 to #162
+Composite (60/40),128,403,Umesh Yadav,184,184,184,0,MATCH,8.54,7.72,-2.93,-2.93,#42 to #159,#42 to #159
+Composite (60/40),129,3298,Jofra Archer,433,433,433,0,MATCH,9.95,9.62,-3.14,-3.14,#42 to #163,#42 to #163
+Composite (60/40),130,2639,Marcus Stoinis,165,165,165,0,MATCH,10.0,9.37,-3.36,-3.36,#26 to #175,#26 to #175
+Composite (60/40),131,3330,Hardik Pandya,474,474,474,0,MATCH,9.47,9.07,-3.57,-3.57,#49 to #165,#49 to #165
+Composite (60/40),132,4926,Shadab Khan,112,112,112,0,MATCH,7.93,7.9,-3.70,-3.70,#39 to #170,#39 to #170
+Composite (60/40),133,1813,Deepak Chahar,310,310,310,0,MATCH,9.23,8.82,-3.83,-3.83,#43 to #165,#43 to #165
+Composite (60/40),134,1389,Sean Abbott,130,130,130,0,MATCH,11.17,9.81,-4.50,-4.50,#11 to #178,#11 to #178
+Composite (60/40),135,7699,Abbas Afridi,137,137,137,0,MATCH,10.55,9.96,-4.51,-4.51,#58 to #167,#58 to #167
+Composite (60/40),136,47050,Shamar Joseph,87,87,87,0,MATCH,11.86,10.0,-4.83,-4.83,#32 to #176,#32 to #176
+Composite (60/40),137,4373,Mustafizur Rahman,385,385,385,0,MATCH,9.34,9.43,-5.12,-5.12,#53 to #168,#53 to #168
+Composite (60/40),138,4823,Washington Sundar,151,151,151,0,MATCH,9.1,9.04,-5.20,-5.20,#50 to #173,#50 to #173
+Composite (60/40),139,6676,Azmatullah Omarzai,426,426,426,0,MATCH,9.42,8.99,-5.25,-5.25,#57 to #166,#57 to #166
+Composite (60/40),140,8746,Vaibhav Arora,326,326,326,0,MATCH,10.25,9.21,-5.42,-5.42,#61 to #166,#61 to #166
+Composite (60/40),141,2382,Jamie Overton,76,76,76,0,MATCH,12.0,10.15,-5.47,-5.47,#37 to #176,#37 to #176
+Composite (60/40),142,2315,Reece Topley,185,185,185,0,MATCH,9.63,8.91,-5.67,-5.67,#45 to #175,#45 to #175
+Composite (60/40),143,7322,Yash Dayal,305,305,305,0,MATCH,10.25,9.84,-6.04,-6.04,#72 to #167,#72 to #167
+Composite (60/40),144,7240,FazalHaq Farooqi,363,363,363,0,MATCH,8.83,8.38,-6.21,-6.21,#65 to #171,#65 to #171
+Composite (60/40),145,2878,Mohit Sharma,175,175,175,0,MATCH,11.31,10.68,-6.66,-6.66,#52 to #175,#52 to #175
+Composite (60/40),146,6161,Rahul Chahar,244,244,244,0,MATCH,9.42,8.76,-6.85,-6.85,#61 to #173,#61 to #173
+Composite (60/40),147,2633,Jason Holder,577,577,577,0,MATCH,9.64,9.53,-7.00,-7.00,#75 to #169,#75 to #169
+Composite (60/40),148,22471,Matthew Humphreys,117,117,117,0,MATCH,8.72,8.25,-7.70,-7.70,#91 to #169,#91 to #169
+Composite (60/40),149,6281,Abhishek Sharma,119,119,119,0,MATCH,9.23,8.66,-7.87,-7.87,#90 to #170,#90 to #170
+Composite (60/40),150,4237,Tabraiz Shamsi,47,47,47,0,MATCH,10.21,8.78,-7.97,-7.97,#96 to #170,#96 to #170
+Composite (60/40),151,838,Glenn Maxwell,188,188,188,0,MATCH,9.06,8.49,-8.22,-8.22,#69 to #175,#69 to #175
+Composite (60/40),152,2687,Roston Chase,125,125,125,0,MATCH,9.89,8.79,-8.27,-8.27,#80 to #173,#80 to #173
+Composite (60/40),153,26663,Kwena Maphaka,87,87,87,0,MATCH,11.38,9.53,-8.31,-8.31,#63 to #176,#63 to #176
+Composite (60/40),154,3653,Avesh Khan,511,511,511,0,MATCH,10.05,9.4,-8.70,-8.70,#74 to #175,#74 to #175
+Composite (60/40),155,7472,Shahbaz Ahmed,128,128,128,0,MATCH,9.47,8.43,-8.78,-8.78,#81 to #176,#81 to #176
+Composite (60/40),156,6806,Tushar Deshpande,401,401,401,0,MATCH,10.62,10.21,-8.88,-8.88,#91 to #174,#91 to #174
+Composite (60/40),157,8295,Matthew Forde,107,107,107,0,MATCH,9.76,8.82,-9.07,-9.07,#74 to #178,#74 to #178
+Composite (60/40),158,3660,Luke Wood,101,101,101,0,MATCH,11.17,9.36,-9.25,-9.25,#79 to #176,#79 to #176
+Composite (60/40),159,4487,Vyshak Kumar,171,171,171,0,MATCH,10.98,9.99,-9.52,-9.52,#68 to #177,#68 to #177
+Composite (60/40),160,4755,Shivam Dube,51,51,51,0,MATCH,13.88,10.15,-9.69,-9.69,#85 to #176,#85 to #176
+Composite (60/40),161,3605,Aiden Markram,108,108,108,0,MATCH,10.33,8.77,-9.72,-9.72,#77 to #177,#77 to #177
+Composite (60/40),162,20005,Arshad Khan,144,144,144,0,MATCH,10.92,9.77,-10.07,-10.07,#94 to #176,#94 to #176
+Composite (60/40),163,1219,David Willey,111,111,111,0,MATCH,9.14,8.73,-10.40,-10.40,#94 to #176,#94 to #176
+Composite (60/40),164,7312,Nandre Burger,154,154,154,0,MATCH,10.99,9.51,-10.46,-10.46,#86 to #177,#86 to #177
+Composite (60/40),165,2847,Shardul Thakur,276,276,276,0,MATCH,10.07,9.61,-10.67,-10.67,#102 to #176,#102 to #176
+Composite (60/40),166,36982,Suyash Sharma,177,177,177,0,MATCH,9.32,8.89,-10.96,-10.96,#83 to #176,#83 to #176
+Composite (60/40),167,7094,Curtis Campher,125,125,125,0,MATCH,9.46,8.57,-11.49,-11.49,#106 to #176,#106 to #176
+Composite (60/40),168,7808,Marco Jansen,345,345,345,0,MATCH,11.11,9.89,-11.87,-11.87,#80 to #177,#80 to #177
+Composite (60/40),169,4265,T Natarajan,323,323,323,0,MATCH,10.5,10.66,-12.02,-12.02,#109 to #177,#109 to #177
+Composite (60/40),170,38855,Mohammad Saifuddin,123,123,123,0,MATCH,10.49,8.92,-12.23,-12.23,#83 to #178,#83 to #178
+Composite (60/40),171,3323,Jimmy Neesham,87,87,87,0,MATCH,11.59,9.22,-12.44,-12.44,#92 to #178,#92 to #178
+Composite (60/40),172,4409,Sam Curran,429,429,429,0,MATCH,10.29,9.32,-12.72,-12.72,#99 to #178,#99 to #178
+Composite (60/40),173,22134,Luke Jongwe,106,106,106,0,MATCH,10.02,8.84,-13.15,-13.15,#125 to #176,#125 to #176
+Composite (60/40),174,3720,Craig Young,162,162,162,0,MATCH,10.63,8.5,-14.03,-14.03,#123 to #179,#123 to #179
+Composite (60/40),175,786,Chris Jordan,116,116,116,0,MATCH,12.05,10.14,-14.40,-14.40,#112 to #179,#112 to #179
+Composite (60/40),176,7270,Anrich Nortje,190,190,190,0,MATCH,11.43,9.78,-14.74,-14.74,#130 to #178,#130 to #178
+Composite (60/40),177,5939,Cameron Green,137,137,137,0,MATCH,11.17,9.53,-15.19,-15.19,#118 to #179,#118 to #179
+Composite (60/40),178,8221,Nitish Reddy,143,143,143,0,MATCH,11.08,9.82,-16.01,-16.01,#136 to #178,#136 to #178
+Composite (60/40),179,4391,Liam Livingstone,90,90,90,0,MATCH,11.8,8.44,-19.19,-19.19,#137 to #179,#137 to #179
+Pure RPAE (100% Econ),1,8661,Matheesha Pathirana,290,290,290,0,MATCH,9.02,10.95,+21.18,+21.18,#1 to #31,#1 to #31
+Pure RPAE (100% Econ),2,2933,Jasprit Bumrah,469,469,469,0,MATCH,7.79,9.18,+17.54,+17.54,#1 to #39,#1 to #39
+Pure RPAE (100% Econ),3,19316,Maheesh Theekshana,493,493,493,0,MATCH,7.64,9.01,+17.48,+17.48,#1 to #32,#1 to #32
+Pure RPAE (100% Econ),4,7344,Shoriful Islam,205,205,205,0,MATCH,6.76,8.53,+16.98,+16.98,#2 to #42,#2 to #42
+Pure RPAE (100% Econ),5,34485,Sufiyan Muqeem,84,84,84,0,MATCH,5.29,8.12,+16.94,+16.94,#1 to #80,#1 to #80
+Pure RPAE (100% Econ),6,39657,Eshan Malinga,179,179,179,0,MATCH,9.18,10.86,+15.16,+15.16,#2 to #76,#2 to #76
+Pure RPAE (100% Econ),7,781,Sunil Narine,353,353,353,0,MATCH,7.6,8.86,+14.77,+14.77,#1 to #79,#1 to #79
+Pure RPAE (100% Econ),8,27960,Mayank Yadav,121,121,121,0,MATCH,8.03,9.89,+13.80,+13.80,#2 to #88,#2 to #88
+Pure RPAE (100% Econ),9,4658,Nasum Ahmed,120,120,120,0,MATCH,6.25,7.99,+12.92,+12.92,#2 to #85,#2 to #85
+Pure RPAE (100% Econ),10,25048,Umran Malik,111,111,111,0,MATCH,7.68,9.34,+11.81,+11.81,#3 to #106,#3 to #106
+Pure RPAE (100% Econ),11,722,Liam Dawson,76,76,76,0,MATCH,6.55,8.59,+11.42,+11.42,#3 to #104,#3 to #104
+Pure RPAE (100% Econ),12,58134,Digvesh Rathi,139,139,139,0,MATCH,7.77,9.15,+11.05,+11.05,#4 to #92,#4 to #92
+Pure RPAE (100% Econ),13,6284,Anukul Roy,73,73,73,0,MATCH,6.99,8.91,+10.49,+10.49,#5 to #98,#5 to #98
+Pure RPAE (100% Econ),14,6450,Mujeeb Ur Rahman,261,261,261,0,MATCH,7.52,8.5,+10.43,+10.43,#3 to #109,#3 to #109
+Pure RPAE (100% Econ),15,6354,Spencer Johnson,106,106,106,0,MATCH,8.26,9.77,+10.39,+10.39,#3 to #114,#3 to #114
+Pure RPAE (100% Econ),16,5750,Ehsan Khan,43,43,43,0,MATCH,6.7,9.44,+10.17,+10.17,#8 to #76,#8 to #76
+Pure RPAE (100% Econ),17,8805,Ottneil Baartman,52,52,52,0,MATCH,6.58,8.88,+9.89,+9.89,#8 to #75,#8 to #75
+Pure RPAE (100% Econ),18,6287,Yash Thakur,142,142,142,0,MATCH,9.17,10.39,+9.87,+9.87,#4 to #101,#4 to #101
+Pure RPAE (100% Econ),19,360,Bhuvneshwar Kumar,830,830,830,0,MATCH,7.94,8.64,+9.85,+9.85,#7 to #79,#7 to #79
+Pure RPAE (100% Econ),20,7920,Nathan Ellis,273,273,273,0,MATCH,8.86,9.76,+9.67,+9.67,#5 to #98,#5 to #98
+Pure RPAE (100% Econ),21,830,Josh Hazlewood,399,399,399,0,MATCH,8.14,8.93,+9.64,+9.64,#6 to #99,#6 to #99
+Pure RPAE (100% Econ),22,4874,Richard Ngarava,247,247,247,0,MATCH,7.85,8.73,+9.18,+9.18,#8 to #89,#8 to #89
+Pure RPAE (100% Econ),23,4692,Lockie Ferguson,265,265,265,0,MATCH,8.81,9.67,+9.17,+9.17,#2 to #137,#2 to #137
+Pure RPAE (100% Econ),24,23,Piyush Chawla,85,85,85,0,MATCH,7.27,8.74,+8.84,+8.84,#6 to #101,#6 to #101
+Pure RPAE (100% Econ),25,2984,Sikandar Raza,177,177,177,0,MATCH,7.39,8.35,+8.69,+8.69,#7 to #106,#7 to #106
+Pure RPAE (100% Econ),26,5940,Riley Meredith,80,80,80,0,MATCH,9.07,10.39,+7.63,+7.63,#9 to #96,#9 to #96
+Pure RPAE (100% Econ),27,4101,Mitchell Santner,325,325,325,0,MATCH,7.92,8.58,+7.58,+7.58,#8 to #115,#8 to #115
+Pure RPAE (100% Econ),28,5441,Barry McCarthy,195,195,195,0,MATCH,8.43,9.22,+7.44,+7.44,#9 to #108,#9 to #108
+Pure RPAE (100% Econ),29,1612,Yuzvendra Chahal,539,539,539,0,MATCH,8.89,9.46,+7.31,+7.31,#14 to #89,#14 to #89
+Pure RPAE (100% Econ),30,4641,Lungi Ngidi,302,302,302,0,MATCH,8.86,9.51,+7.23,+7.23,#6 to #125,#6 to #125
+Pure RPAE (100% Econ),31,3276,Gudakesh Motie,163,163,163,0,MATCH,7.88,8.69,+7.09,+7.09,#5 to #142,#5 to #142
+Pure RPAE (100% Econ),32,22920,Jacob Duffy,191,191,191,0,MATCH,8.07,8.8,+6.74,+6.74,#12 to #114,#12 to #114
+Pure RPAE (100% Econ),33,6355,Shaheen Afridi,335,335,335,0,MATCH,7.63,8.21,+6.68,+6.68,#7 to #114,#7 to #114
+Pure RPAE (100% Econ),34,6669,Mohsin Khan,250,250,250,0,MATCH,8.35,8.98,+6.51,+6.51,#7 to #117,#7 to #117
+Pure RPAE (100% Econ),35,5041,Mukesh Kumar,387,387,387,0,MATCH,9.35,9.89,+6.50,+6.50,#11 to #128,#11 to #128
+Pure RPAE (100% Econ),36,2490,Mohammad Nawaz,221,221,221,0,MATCH,6.87,7.52,+6.48,+6.48,#12 to #114,#12 to #114
+Pure RPAE (100% Econ),37,7690,Saim Ayub,150,150,150,0,MATCH,6.76,7.53,+6.41,+6.41,#15 to #102,#15 to #102
+Pure RPAE (100% Econ),38,4722,Rashid Khan,619,619,619,0,MATCH,8.37,8.85,+6.40,+6.40,#9 to #123,#9 to #123
+Pure RPAE (100% Econ),39,5738,Xavier Bartlett,175,175,175,0,MATCH,8.19,8.88,+6.16,+6.16,#11 to #143,#11 to #143
+Pure RPAE (100% Econ),40,6643,Hasan Mahmud,114,114,114,0,MATCH,7.68,8.54,+6.14,+6.14,#10 to #119,#10 to #119
+Pure RPAE (100% Econ),41,2463,Ryan Burl,49,49,49,0,MATCH,6.37,7.85,+6.09,+6.09,#10 to #126,#10 to #126
+Pure RPAE (100% Econ),42,4856,Benjamin Sears,72,72,72,0,MATCH,7.67,8.74,+5.80,+5.80,#16 to #118,#16 to #118
+Pure RPAE (100% Econ),43,2411,Sandeep Sharma,327,327,327,0,MATCH,9.76,10.26,+5.66,+5.66,#13 to #125,#13 to #125
+Pure RPAE (100% Econ),44,3628,Kagiso Rabada,474,474,474,0,MATCH,8.85,9.29,+5.60,+5.60,#9 to #129,#9 to #129
+Pure RPAE (100% Econ),45,5189,Faheem Ashraf,65,65,65,0,MATCH,7.2,8.29,+5.49,+5.49,#10 to #116,#10 to #116
+Pure RPAE (100% Econ),46,7325,Harpreet Brar,160,160,160,0,MATCH,8.51,9.15,+5.47,+5.47,#8 to #129,#8 to #129
+Pure RPAE (100% Econ),47,4219,Krunal Pandya,274,274,274,0,MATCH,8.01,8.49,+5.07,+5.07,#15 to #134,#15 to #134
+Pure RPAE (100% Econ),48,6464,Arshdeep Singh,1020,1020,1020,0,MATCH,9.44,9.76,+4.75,+4.75,#22 to #109,#22 to #109
+Pure RPAE (100% Econ),49,20704,Salman Mirza,52,52,52,0,MATCH,6.92,7.97,+4.49,+4.49,#12 to #141,#12 to #141
+Pure RPAE (100% Econ),50,2681,Taskin Ahmed,212,212,212,0,MATCH,7.61,8.07,+4.42,+4.42,#9 to #146,#9 to #146
+Pure RPAE (100% Econ),51,8530,Kartik Tyagi,110,110,110,0,MATCH,10.15,10.74,+4.21,+4.21,#6 to #150,#6 to #150
+Pure RPAE (100% Econ),52,6518,Daniel Sams,114,114,114,0,MATCH,7.95,8.52,+4.11,+4.11,#14 to #141,#14 to #141
+Pure RPAE (100% Econ),53,3174,Matt Henry,189,189,189,0,MATCH,8.25,8.69,+4.08,+4.08,#11 to #143,#11 to #143
+Pure RPAE (100% Econ),54,2334,Dwaine Pretorius,65,65,65,0,MATCH,10.34,11.14,+4.03,+4.03,#12 to #145,#12 to #145
+Pure RPAE (100% Econ),55,7364,Haris Rauf,305,305,305,0,MATCH,8.81,9.17,+4.03,+4.03,#6 to #145,#6 to #145
+Pure RPAE (100% Econ),56,2876,Axar Patel,513,513,513,0,MATCH,8.63,8.93,+3.79,+3.79,#19 to #132,#19 to #132
+Pure RPAE (100% Econ),57,305,Ravichandran Ashwin,398,398,398,0,MATCH,8.47,8.77,+3.64,+3.64,#18 to #122,#18 to #122
+Pure RPAE (100% Econ),58,3275,Alzarri Joseph,303,303,303,0,MATCH,8.91,9.23,+3.53,+3.53,#11 to #149,#11 to #149
+Pure RPAE (100% Econ),59,7689,Dilshan Madushanka,110,110,110,0,MATCH,8.02,8.5,+3.43,+3.43,#10 to #151,#10 to #151
+Pure RPAE (100% Econ),60,7052,Dunith Wellalage,80,80,80,0,MATCH,8.1,8.66,+3.25,+3.25,#12 to #140,#12 to #140
+Pure RPAE (100% Econ),61,6512,Michael Bracewell,147,147,147,0,MATCH,8.69,9.07,+3.11,+3.11,#9 to #150,#9 to #150
+Pure RPAE (100% Econ),62,29066,Zakary Foulkes,55,55,55,0,MATCH,9.49,10.11,+2.79,+2.79,#22 to #136,#22 to #136
+Pure RPAE (100% Econ),63,7741,Gareth Delany,150,150,150,0,MATCH,7.64,7.96,+2.67,+2.67,#30 to #122,#30 to #122
+Pure RPAE (100% Econ),64,6272,William Jacks,97,97,97,0,MATCH,9.15,9.55,+2.59,+2.59,#8 to #158,#8 to #158
+Pure RPAE (100% Econ),65,6256,Varun Chakravarthy,371,371,371,0,MATCH,8.88,9.09,+2.54,+2.54,#20 to #133,#20 to #133
+Pure RPAE (100% Econ),66,479,Adil Rashid,166,166,166,0,MATCH,8.24,8.53,+2.51,+2.51,#13 to #150,#13 to #150
+Pure RPAE (100% Econ),67,27964,Anshul Kamboj,182,182,182,0,MATCH,9.3,9.57,+2.49,+2.49,#22 to #136,#22 to #136
+Pure RPAE (100% Econ),68,7327,Rasikh Salam,129,129,129,0,MATCH,10.23,10.54,+2.38,+2.38,#10 to #152,#10 to #152
+Pure RPAE (100% Econ),69,4900,Wanindu Hasaranga,408,408,408,0,MATCH,8.32,8.52,+2.35,+2.35,#22 to #141,#22 to #141
+Pure RPAE (100% Econ),70,8177,Akash Madhwal,96,96,96,0,MATCH,11.38,11.68,+2.00,+2.00,#7 to #160,#7 to #160
+Pure RPAE (100% Econ),71,1944,Keshav Maharaj,104,104,104,0,MATCH,8.08,8.36,+1.95,+1.95,#19 to #149,#19 to #149
+Pure RPAE (100% Econ),72,58246,Prince Yadav,161,161,161,0,MATCH,9.69,9.91,+1.94,+1.94,#15 to #151,#15 to #151
+Pure RPAE (100% Econ),73,4807,Joshua Little,158,158,158,0,MATCH,8.32,8.54,+1.91,+1.91,#15 to #149,#15 to #149
+Pure RPAE (100% Econ),74,4265,T Natarajan,323,323,323,0,MATCH,10.5,10.66,+1.90,+1.90,#19 to #150,#19 to #150
+Pure RPAE (100% Econ),75,19312,Nuwan Thushara,212,212,212,0,MATCH,8.66,8.84,+1.74,+1.74,#14 to #150,#14 to #150
+Pure RPAE (100% Econ),76,499,Shakib Al Hasan,73,73,73,0,MATCH,8.05,8.35,+1.63,+1.63,#3 to #168,#3 to #168
+Pure RPAE (100% Econ),77,3697,Kyle Jamieson,148,148,148,0,MATCH,9.0,9.19,+1.58,+1.58,#16 to #153,#16 to #153
+Pure RPAE (100% Econ),78,2261,Harshal Patel,448,448,448,0,MATCH,10.04,10.16,+1.45,+1.45,#17 to #152,#17 to #152
+Pure RPAE (100% Econ),79,5809,Naveen ul Haq,222,222,222,0,MATCH,9.03,9.16,+1.32,+1.32,#28 to #140,#28 to #140
+Pure RPAE (100% Econ),80,7696,Mohammad Wasim,88,88,88,0,MATCH,8.59,8.78,+1.19,+1.19,#20 to #147,#20 to #147
+Pure RPAE (100% Econ),81,4373,Mustafizur Rahman,385,385,385,0,MATCH,9.34,9.43,+1.14,+1.14,#21 to #147,#21 to #147
+Pure RPAE (100% Econ),82,8380,Mohammad Rishad Hossain,162,162,162,0,MATCH,8.19,8.29,+0.93,+0.93,#30 to #140,#30 to #140
+Pure RPAE (100% Econ),83,3644,Kuldeep Yadav,376,376,376,0,MATCH,9.02,9.09,+0.86,+0.86,#23 to #157,#23 to #157
+Pure RPAE (100% Econ),84,2320,Trent Boult,536,536,536,0,MATCH,8.27,8.34,+0.82,+0.82,#32 to #137,#32 to #137
+Pure RPAE (100% Econ),85,28,Ishant Sharma,128,128,128,0,MATCH,9.8,9.9,+0.78,+0.78,#21 to #158,#21 to #158
+Pure RPAE (100% Econ),86,7967,Noor Ahmad,319,319,319,0,MATCH,9.25,9.29,+0.43,+0.43,#16 to #158,#16 to #158
+Pure RPAE (100% Econ),87,21784,Brad Evans,120,120,120,0,MATCH,9.55,9.59,+0.31,+0.31,#26 to #150,#26 to #150
+Pure RPAE (100% Econ),88,5379,Mark Adair,321,321,321,0,MATCH,8.75,8.76,+0.12,+0.12,#26 to #149,#26 to #149
+Pure RPAE (100% Econ),89,7905,Tanzim Sakib,155,155,155,0,MATCH,9.06,9.07,+0.10,+0.10,#17 to #162,#17 to #162
+Pure RPAE (100% Econ),90,32862,Allah Ghazanfar,131,131,131,0,MATCH,8.93,8.93,-0.03,-0.03,#14 to #156,#14 to #156
+Pure RPAE (100% Econ),91,4489,Prasidh Krishna,338,338,338,0,MATCH,9.59,9.58,-0.06,-0.06,#19 to #157,#19 to #157
+Pure RPAE (100% Econ),92,2417,Akeal Hosein,433,433,433,0,MATCH,8.49,8.49,-0.07,-0.07,#37 to #146,#37 to #146
+Pure RPAE (100% Econ),93,4926,Shadab Khan,112,112,112,0,MATCH,7.93,7.9,-0.20,-0.20,#22 to #162,#22 to #162
+Pure RPAE (100% Econ),94,6523,Blessing Muzarabani,233,233,233,0,MATCH,8.81,8.77,-0.32,-0.32,#22 to #164,#22 to #164
+Pure RPAE (100% Econ),95,4823,Washington Sundar,151,151,151,0,MATCH,9.1,9.04,-0.53,-0.53,#24 to #163,#24 to #163
+Pure RPAE (100% Econ),96,1758,Patrick Cummins,301,301,301,0,MATCH,9.87,9.81,-0.66,-0.66,#37 to #150,#37 to #150
+Pure RPAE (100% Econ),97,2054,Jason Behrendorff,105,105,105,0,MATCH,8.06,7.95,-0.75,-0.75,#24 to #162,#24 to #162
+Pure RPAE (100% Econ),98,4816,Khaleel Ahmed,403,403,403,0,MATCH,9.08,9.02,-0.81,-0.81,#32 to #153,#32 to #153
+Pure RPAE (100% Econ),99,8009,Junaid Siddique,104,104,104,0,MATCH,8.71,8.58,-0.87,-0.87,#54 to #130,#54 to #130
+Pure RPAE (100% Econ),100,7250,Mukesh Choudhary,151,151,151,0,MATCH,8.86,8.75,-0.93,-0.93,#42 to #149,#42 to #149
+Pure RPAE (100% Econ),101,152,Ravindra Jadeja,300,300,300,0,MATCH,8.8,8.71,-1.02,-1.02,#33 to #156,#33 to #156
+Pure RPAE (100% Econ),102,3641,Ben Dwarshuis,61,61,61,0,MATCH,10.03,9.82,-1.03,-1.03,#35 to #148,#35 to #148
+Pure RPAE (100% Econ),103,3629,Corbin Bosch,78,78,78,0,MATCH,9.15,8.95,-1.14,-1.14,#27 to #161,#27 to #161
+Pure RPAE (100% Econ),104,5944,Mohammed Siraj,665,665,665,0,MATCH,9.41,9.32,-1.24,-1.24,#36 to #153,#36 to #153
+Pure RPAE (100% Econ),105,7503,Ravi Bishnoi,545,545,545,0,MATCH,9.12,9.02,-1.31,-1.31,#41 to #155,#41 to #155
+Pure RPAE (100% Econ),106,6683,Mayank Markande,75,75,75,0,MATCH,9.76,9.52,-1.36,-1.36,#25 to #159,#25 to #159
+Pure RPAE (100% Econ),107,6628,Gerald Coetzee,159,159,159,0,MATCH,9.74,9.57,-1.39,-1.39,#28 to #160,#28 to #160
+Pure RPAE (100% Econ),108,4840,Odean Smith,84,84,84,0,MATCH,10.14,9.91,-1.40,-1.40,#17 to #169,#17 to #169
+Pure RPAE (100% Econ),109,2633,Jason Holder,577,577,577,0,MATCH,9.64,9.53,-1.43,-1.43,#35 to #153,#35 to #153
+Pure RPAE (100% Econ),110,2636,Adam Zampa,231,231,231,0,MATCH,8.65,8.5,-1.53,-1.53,#34 to #158,#34 to #158
+Pure RPAE (100% Econ),111,1566,Mohammed Shami,355,355,355,0,MATCH,8.43,8.3,-1.59,-1.59,#37 to #156,#37 to #156
+Pure RPAE (100% Econ),112,295,Wayne Parnell,67,67,67,0,MATCH,10.21,9.86,-1.82,-1.82,#41 to #156,#41 to #156
+Pure RPAE (100% Econ),113,5979,Abrar Ahmed,170,170,170,0,MATCH,8.33,8.12,-1.87,-1.87,#21 to #168,#21 to #168
+Pure RPAE (100% Econ),114,3664,Binura Fernando,77,77,77,0,MATCH,9.43,9.01,-2.37,-2.37,#40 to #160,#40 to #160
+Pure RPAE (100% Econ),115,1107,Mohammad Nabi,171,171,171,0,MATCH,8.11,7.83,-2.46,-2.46,#43 to #162,#43 to #162
+Pure RPAE (100% Econ),116,8049,Naseem Shah,187,187,187,0,MATCH,8.92,8.61,-2.83,-2.83,#48 to #156,#48 to #156
+Pure RPAE (100% Econ),117,1219,David Willey,111,111,111,0,MATCH,9.14,8.73,-2.90,-2.90,#39 to #163,#39 to #163
+Pure RPAE (100% Econ),118,22471,Matthew Humphreys,117,117,117,0,MATCH,8.72,8.25,-3.39,-3.39,#47 to #163,#47 to #163
+Pure RPAE (100% Econ),119,278,Tim Southee,218,218,218,0,MATCH,8.75,8.39,-3.57,-3.57,#47 to #164,#47 to #164
+Pure RPAE (100% Econ),120,5577,Sai Kishore,142,142,142,0,MATCH,9.72,9.27,-3.60,-3.60,#44 to #163,#44 to #163
+Pure RPAE (100% Econ),121,36982,Suyash Sharma,177,177,177,0,MATCH,9.32,8.89,-3.92,-3.92,#38 to #165,#38 to #165
+Pure RPAE (100% Econ),122,4815,Benjamin White,129,129,129,0,MATCH,9.02,8.5,-4.00,-4.00,#48 to #161,#48 to #161
+Pure RPAE (100% Econ),123,3298,Jofra Archer,433,433,433,0,MATCH,9.95,9.62,-4.06,-4.06,#36 to #167,#36 to #167
+Pure RPAE (100% Econ),124,6281,Abhishek Sharma,119,119,119,0,MATCH,9.23,8.66,-4.19,-4.19,#35 to #173,#35 to #173
+Pure RPAE (100% Econ),125,7322,Yash Dayal,305,305,305,0,MATCH,10.25,9.84,-4.52,-4.52,#50 to #170,#50 to #170
+Pure RPAE (100% Econ),126,1813,Deepak Chahar,310,310,310,0,MATCH,9.23,8.82,-4.63,-4.63,#56 to #164,#56 to #164
+Pure RPAE (100% Econ),127,7699,Abbas Afridi,137,137,137,0,MATCH,10.55,9.96,-4.71,-4.71,#60 to #163,#60 to #163
+Pure RPAE (100% Econ),128,2847,Shardul Thakur,276,276,276,0,MATCH,10.07,9.61,-4.96,-4.96,#49 to #169,#49 to #169
+Pure RPAE (100% Econ),129,3330,Hardik Pandya,474,474,474,0,MATCH,9.47,9.07,-5.02,-5.02,#54 to #166,#54 to #166
+Pure RPAE (100% Econ),130,6806,Tushar Deshpande,401,401,401,0,MATCH,10.62,10.21,-5.05,-5.05,#52 to #168,#52 to #168
+Pure RPAE (100% Econ),131,2399,Dushmantha Chameera,343,343,343,0,MATCH,9.45,9.0,-5.18,-5.18,#44 to #169,#44 to #169
+Pure RPAE (100% Econ),132,7240,FazalHaq Farooqi,363,363,363,0,MATCH,8.83,8.38,-5.29,-5.29,#55 to #169,#55 to #169
+Pure RPAE (100% Econ),133,838,Glenn Maxwell,188,188,188,0,MATCH,9.06,8.49,-5.34,-5.34,#44 to #170,#44 to #170
+Pure RPAE (100% Econ),134,6676,Azmatullah Omarzai,426,426,426,0,MATCH,9.42,8.99,-5.37,-5.37,#71 to #159,#71 to #159
+Pure RPAE (100% Econ),135,2639,Marcus Stoinis,165,165,165,0,MATCH,10.0,9.37,-5.50,-5.50,#48 to #172,#48 to #172
+Pure RPAE (100% Econ),136,2436,Dasun Shanaka,121,121,121,0,MATCH,10.66,9.92,-5.51,-5.51,#81 to #156,#81 to #156
+Pure RPAE (100% Econ),137,1487,Adam Milne,130,130,130,0,MATCH,10.29,9.57,-5.59,-5.59,#38 to #171,#38 to #171
+Pure RPAE (100% Econ),138,4237,Tabraiz Shamsi,47,47,47,0,MATCH,10.21,8.78,-5.69,-5.69,#55 to #171,#55 to #171
+Pure RPAE (100% Econ),139,2878,Mohit Sharma,175,175,175,0,MATCH,11.31,10.68,-5.72,-5.72,#57 to #168,#57 to #168
+Pure RPAE (100% Econ),140,6726,Romario Shepherd,326,326,326,0,MATCH,10.27,9.75,-5.96,-5.96,#57 to #169,#57 to #169
+Pure RPAE (100% Econ),141,1596,Moeen Ali,149,149,149,0,MATCH,8.86,8.13,-6.05,-6.05,#61 to #172,#61 to #172
+Pure RPAE (100% Econ),142,8295,Matthew Forde,107,107,107,0,MATCH,9.76,8.82,-6.52,-6.52,#25 to #178,#25 to #178
+Pure RPAE (100% Econ),143,2315,Reece Topley,185,185,185,0,MATCH,9.63,8.91,-6.67,-6.67,#41 to #175,#41 to #175
+Pure RPAE (100% Econ),144,7094,Curtis Campher,125,125,125,0,MATCH,9.46,8.57,-6.68,-6.68,#68 to #168,#68 to #168
+Pure RPAE (100% Econ),145,29888,Harshit Rana,271,271,271,0,MATCH,10.01,9.39,-6.68,-6.68,#63 to #171,#63 to #171
+Pure RPAE (100% Econ),146,6161,Rahul Chahar,244,244,244,0,MATCH,9.42,8.76,-6.79,-6.79,#64 to #171,#64 to #171
+Pure RPAE (100% Econ),147,4201,Fareed Malik,104,104,104,0,MATCH,9.92,8.88,-7.12,-7.12,#61 to #172,#61 to #172
+Pure RPAE (100% Econ),148,403,Umesh Yadav,184,184,184,0,MATCH,8.54,7.72,-7.52,-7.52,#47 to #173,#47 to #173
+Pure RPAE (100% Econ),149,1071,Jaydev Unadkat,128,128,128,0,MATCH,10.88,9.85,-7.83,-7.83,#55 to #174,#55 to #174
+Pure RPAE (100% Econ),150,7472,Shahbaz Ahmed,128,128,128,0,MATCH,9.47,8.43,-7.95,-7.95,#63 to #174,#63 to #174
+Pure RPAE (100% Econ),151,22134,Luke Jongwe,106,106,106,0,MATCH,10.02,8.84,-8.13,-8.13,#91 to #170,#91 to #170
+Pure RPAE (100% Econ),152,5837,Mahedi Hasan,199,199,199,0,MATCH,8.59,7.72,-8.29,-8.29,#66 to #174,#66 to #174
+Pure RPAE (100% Econ),153,2687,Roston Chase,125,125,125,0,MATCH,9.89,8.79,-8.34,-8.34,#89 to #170,#89 to #170
+Pure RPAE (100% Econ),154,3653,Avesh Khan,511,511,511,0,MATCH,10.05,9.4,-8.41,-8.41,#75 to #171,#75 to #171
+Pure RPAE (100% Econ),155,4487,Vyshak Kumar,171,171,171,0,MATCH,10.98,9.99,-8.82,-8.82,#61 to #176,#61 to #176
+Pure RPAE (100% Econ),156,4837,Obed McCoy,188,188,188,0,MATCH,10.44,9.43,-9.33,-9.33,#70 to #178,#70 to #178
+Pure RPAE (100% Econ),157,20005,Arshad Khan,144,144,144,0,MATCH,10.92,9.77,-9.36,-9.36,#58 to #177,#58 to #177
+Pure RPAE (100% Econ),158,8221,Nitish Reddy,143,143,143,0,MATCH,11.08,9.82,-10.25,-10.25,#85 to #174,#85 to #174
+Pure RPAE (100% Econ),159,2382,Jamie Overton,76,76,76,0,MATCH,12.0,10.15,-10.35,-10.35,#70 to #176,#70 to #176
+Pure RPAE (100% Econ),160,1389,Sean Abbott,130,130,130,0,MATCH,11.17,9.81,-10.50,-10.50,#31 to #179,#31 to #179
+Pure RPAE (100% Econ),161,829,Mitchell Starc,311,311,311,0,MATCH,10.28,9.31,-10.90,-10.90,#86 to #177,#86 to #177
+Pure RPAE (100% Econ),162,3605,Aiden Markram,108,108,108,0,MATCH,10.33,8.77,-10.94,-10.94,#69 to #177,#69 to #177
+Pure RPAE (100% Econ),163,26663,Kwena Maphaka,87,87,87,0,MATCH,11.38,9.53,-11.29,-11.29,#56 to #178,#56 to #178
+Pure RPAE (100% Econ),164,47050,Shamar Joseph,87,87,87,0,MATCH,11.86,10.0,-11.37,-11.37,#51 to #179,#51 to #179
+Pure RPAE (100% Econ),165,2526,Ish Sodhi,156,156,156,0,MATCH,9.58,8.24,-11.38,-11.38,#72 to #178,#72 to #178
+Pure RPAE (100% Econ),166,38855,Mohammad Saifuddin,123,123,123,0,MATCH,10.49,8.92,-11.77,-11.77,#88 to #177,#88 to #177
+Pure RPAE (100% Econ),167,8746,Vaibhav Arora,326,326,326,0,MATCH,10.25,9.21,-11.92,-11.92,#98 to #176,#98 to #176
+Pure RPAE (100% Econ),168,4409,Sam Curran,429,429,429,0,MATCH,10.29,9.32,-12.01,-12.01,#92 to #176,#92 to #176
+Pure RPAE (100% Econ),169,3660,Luke Wood,101,101,101,0,MATCH,11.17,9.36,-12.11,-12.11,#83 to #177,#83 to #177
+Pure RPAE (100% Econ),170,7312,Nandre Burger,154,154,154,0,MATCH,10.99,9.51,-12.47,-12.47,#66 to #179,#66 to #179
+Pure RPAE (100% Econ),171,5939,Cameron Green,137,137,137,0,MATCH,11.17,9.53,-13.04,-13.04,#84 to #178,#84 to #178
+Pure RPAE (100% Econ),172,786,Chris Jordan,116,116,116,0,MATCH,12.05,10.14,-13.86,-13.86,#108 to #178,#108 to #178
+Pure RPAE (100% Econ),173,7808,Marco Jansen,345,345,345,0,MATCH,11.11,9.89,-14.24,-14.24,#91 to #178,#91 to #178
+Pure RPAE (100% Econ),174,3323,Jimmy Neesham,87,87,87,0,MATCH,11.59,9.22,-14.49,-14.49,#105 to #178,#105 to #178
+Pure RPAE (100% Econ),175,1318,Andre Russell,235,235,235,0,MATCH,11.36,9.88,-15.07,-15.07,#100 to #179,#100 to #179
+Pure RPAE (100% Econ),176,7270,Anrich Nortje,190,190,190,0,MATCH,11.43,9.78,-15.42,-15.42,#132 to #178,#132 to #178
+Pure RPAE (100% Econ),177,4755,Shivam Dube,51,51,51,0,MATCH,13.88,10.15,-15.80,-15.80,#124 to #178,#124 to #178
+Pure RPAE (100% Econ),178,3720,Craig Young,162,162,162,0,MATCH,10.63,8.5,-18.45,-18.45,#125 to #179,#125 to #179
+Pure RPAE (100% Econ),179,4391,Liam Livingstone,90,90,90,0,MATCH,11.8,8.44,-21.01,-21.01,#142 to #179,#142 to #179

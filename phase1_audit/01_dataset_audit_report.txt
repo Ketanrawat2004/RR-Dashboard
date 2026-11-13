@@ -1,0 +1,598 @@
+================================================================================
+PHASE 1 — SIX OFFICIAL DATASETS AUDIT REPORT
+================================================================================
+
+[1] FILE INVENTORY & SHA-256 INTEGRITY
+  ball_by_ball.csv                         | c:\Rajasthan Royals\ball_by_ball.csv                              | 41,071,609 B | A3926F49D2C684DCA2A5D2DE535A02C5EE46EA654CA1E79DD31C69E7544E9889
+  -> Distinct hashes for ball_by_ball.csv: 1 (identical across copies: True)
+  matches.csv                              | c:\Rajasthan Royals\matches.csv                                   |    123,864 B | BB100AB84B8B9A15160C1F2315CF675210131A30E779EC5079FD5403DCF56EEF
+  matches.csv                              | c:\Rajasthan Royals\season2_data\matches.csv                      |    123,864 B | BB100AB84B8B9A15160C1F2315CF675210131A30E779EC5079FD5403DCF56EEF
+  -> Distinct hashes for matches.csv: 1 (identical across copies: True)
+  competitions.csv                         | c:\Rajasthan Royals\competitions.csv                              |      7,624 B | 507CEB7189F972D4E4F299DDCFC97F3C3247AF1913F6291106F161FA8353FD9B
+  competitions.csv                         | c:\Rajasthan Royals\season2_data\competitions.csv                 |      7,624 B | 507CEB7189F972D4E4F299DDCFC97F3C3247AF1913F6291106F161FA8353FD9B
+  -> Distinct hashes for competitions.csv: 1 (identical across copies: True)
+  teams.csv                                | c:\Rajasthan Royals\teams.csv                                     |      6,922 B | A65E5922A9B3BF49247B24FC9471782E700EFB31F8DCC5042923238B87C50A5D
+  teams.csv                                | c:\Rajasthan Royals\season2_data\teams.csv                        |      6,922 B | A65E5922A9B3BF49247B24FC9471782E700EFB31F8DCC5042923238B87C50A5D
+  -> Distinct hashes for teams.csv: 1 (identical across copies: True)
+  playing_eleven.csv                       | c:\Rajasthan Royals\playing_eleven.csv                            |    966,287 B | 7517C73722A28D5D61C808CCF0CBED315A8780586D02E946EB9A7F5DAF011C27
+  playing_eleven.csv                       | c:\Rajasthan Royals\season2_data\playing_eleven.csv               |    966,287 B | 7517C73722A28D5D61C808CCF0CBED315A8780586D02E946EB9A7F5DAF011C27
+  -> Distinct hashes for playing_eleven.csv: 1 (identical across copies: True)
+  competition_team_player_mapping.csv      | c:\Rajasthan Royals\competition_team_player_mapping.csv           |    462,969 B | 1DED4E42A933618572D6E2C3A521C3257EB1844FAB4456D567D77CBB2D3BBB12
+  competition_team_player_mapping.csv      | c:\Rajasthan Royals\season2_data\competition_team_player_mapping.csv |    462,969 B | 1DED4E42A933618572D6E2C3A521C3257EB1844FAB4456D567D77CBB2D3BBB12
+  -> Distinct hashes for competition_team_player_mapping.csv: 1 (identical across copies: True)
+
+[2] COLUMN-LEVEL SCHEMA, MISSINGNESS & UNIQUE COUNTS
+
+--- ball_by_ball.csv: 200,999 rows x 33 cols | exact duplicates: 0 ---
+  match_id                     | int64    | miss=      0 (  0.00%) | uniq=    867 | 13511, 13511, 13511
+  innings                      | int64    | miss=      0 (  0.00%) | uniq=      4 | 1, 1, 1
+  overid                       | int64    | miss=      0 (  0.00%) | uniq=     20 | 1, 1, 1
+  over_ball_num                | int64    | miss=      0 (  0.00%) | uniq=     13 | 1, 2, 3
+  innings_ball_num             | int64    | miss=      0 (  0.00%) | uniq=    136 | 1, 2, 3
+  batting_team_id              | int64    | miss=      0 (  0.00%) | uniq=     38 | 22, 22, 22
+  bowling_team_id              | int64    | miss=      0 (  0.00%) | uniq=     38 | 28, 28, 28
+  striker_id                   | int64    | miss=      0 (  0.00%) | uniq=    888 | 1187, 1187, 1187
+  striker_name                 | str      | miss=      0 (  0.00%) | uniq=    885 | Jos Buttler (2920); Suryakumar Yadav (2850); Shubman Gill (2
+  non_striker_id               | int64    | miss=      0 (  0.00%) | uniq=    867 | 6273, 6273, 6273
+  non_striker_name             | str      | miss=      0 (  0.00%) | uniq=    864 | Shubman Gill (3269); Jos Buttler (2912); Namboori Tilak Varm
+  bowler_id                    | int64    | miss=      0 (  0.00%) | uniq=    647 | 1772, 1772, 1772
+  bowler_name                  | str      | miss=      0 (  0.00%) | uniq=    646 | Arshdeep Singh (3432); Rashid Khan (2780); Axar Patel (2707)
+  batting_type                 | str      | miss=      0 (  0.00%) | uniq=      2 | RHB (131006); LHB (69993)
+  bowling_type                 | str      | miss=      0 (  0.00%) | uniq=     12 | Right-arm Leg-Break (28027); Right-arm medium-fast (27014); 
+  batting_order                | int64    | miss=      0 (  0.00%) | uniq=     13 | 1, 1, 1
+  runs                         | int64    | miss=      0 (  0.00%) | uniq=      7 | 0, 0, 0
+  is_four                      | bool     | miss=      0 (  0.00%) | uniq=      2 | False, False, False
+  is_six                       | bool     | miss=      0 (  0.00%) | uniq=      2 | False, False, False
+  is_wicket                    | bool     | miss=      0 (  0.00%) | uniq=      2 | False, False, False
+  dismissal_type_id            | float64  | miss= 190118 ( 94.59%) | uniq=      8 | 1.0, 2.0, 2.0
+  dismissal_type               | str      | miss= 190118 ( 94.59%) | uniq=      9 | Caught (7557); Bowled (1775); LBW (709); RunOut (600)
+  dismissed_player_id          | float64  | miss= 190107 ( 94.58%) | uniq=    814 | 1187.0, 6273.0, 1596.0
+  extras_type                  | str      | miss= 189167 ( 94.11%) | uniq=      6 | wide (7714); legbyes (2748); Overstep (576); byes (529)
+  extras1_runs                 | int64    | miss=      0 (  0.00%) | uniq=      7 | 6, 6, 6
+  extras_2_runs                | int64    | miss=      0 (  0.00%) | uniq=      3 | 0, 0, 0
+  pace_or_spin                 | str      | miss=      0 (  0.00%) | uniq=      2 | Pace (123886); Spin (77113)
+  bowl_speed                   | float64  | miss=      0 (  0.00%) | uniq=   1033 | 0.0, 0.0, 0.0
+  stroke                       | str      | miss=   6158 (  3.06%) | uniq=     30 | Pull shot (24645); Cover Drive (20779); Worked (20757); Flic
+  delivery_style               | str      | miss=    391 (  0.20%) | uniq=     34 | Seamed In (22058); Orthodox (19239); Leg Break (15449); Off 
+  over_or_around               | str      | miss=    407 (  0.20%) | uniq=      2 | Over (154670); Around (45922)
+  on_or_off                    | str      | miss=      0 (  0.00%) | uniq=      2 | Off-side (104875); On-side (96124)
+  delivery_ist_time            | str      | miss=      0 (  0.00%) | uniq= 200826 | 2022-01-23 00:00:00 UTC (34); 2023-08-13 00:00:00 UTC (5); 2
+
+--- matches.csv: 883 rows x 22 cols | exact duplicates: 0 ---
+  match_id                     | int64    | miss=      0 (  0.00%) | uniq=    883 | 13511, 13512, 13513
+  comp_id                      | int64    | miss=      0 (  0.00%) | uniq=    138 | 1331, 1331, 1331
+  match_number                 | int64    | miss=      0 (  0.00%) | uniq=     75 | 1, 2, 3
+  match_date                   | str      | miss=      0 (  0.00%) | uniq=    686 | 2024-05-12 (4); 2022-09-25 (3); 2023-04-02 (3); 2023-04-08 (
+  stage                        | str      | miss=      0 (  0.00%) | uniq=      7 | League (620); Others (226); Final (12); Qualifier (10)
+  venue_id                     | int64    | miss=      0 (  0.00%) | uniq=     98 | 54, 54, 54
+  venue_country                | str      | miss=      0 (  0.00%) | uniq=     17 | India (425); United Arab Emirates (69); New Zealand (52); Un
+  home_team_id                 | int64    | miss=      0 (  0.00%) | uniq=     36 | 28, 28, 28
+  home_team                    | str      | miss=      0 (  0.00%) | uniq=     36 | India (62); West Indies (51); New Zealand (47); Bangladesh (
+  away_team_id                 | int64    | miss=      0 (  0.00%) | uniq=     36 | 22, 22, 22
+  away_team                    | str      | miss=      0 (  0.00%) | uniq=     36 | India (58); Pakistan (53); England (42); West Indies (42)
+  home_team_captain_id         | float64  | miss=     44 (  4.98%) | uniq=     89 | 494.0, 494.0, 494.0
+  away_team_captain_id         | float64  | miss=     45 (  5.10%) | uniq=     98 | 478.0, 1596.0, 1596.0
+  toss_win_team_id             | float64  | miss=     15 (  1.70%) | uniq=     37 | 28.0, 28.0, 22.0
+  toss_opted                   | str      | miss=     15 (  1.70%) | uniq=      2 | Fielding (639); Batting (229)
+  man_of_the_match             | int64    | miss=      0 (  0.00%) | uniq=    293 | 0, 0, 4986
+  first_inn_revised_overs      | float64  | miss=    858 ( 97.17%) | uniq=     13 | 114.0, 84.0, 66.0
+  second_inn_revised_overs     | float64  | miss=    858 ( 97.17%) | uniq=     12 | 114.0, 42.0, 48.0
+  revised_target               | float64  | miss=    860 ( 97.39%) | uniq=     23 | 143.0, 56.0, 91.0
+  knock_out                    | int64    | miss=      0 (  0.00%) | uniq=      2 | 0, 0, 0
+  win_team_id                  | float64  | miss=     41 (  4.64%) | uniq=     36 | 28.0, 22.0, 28.0
+  result                       | str      | miss=      0 (  0.00%) | uniq=    670 | No Result (21); Match Abandoned (19); India Won by 7 wickets
+
+--- competitions.csv: 141 rows x 4 cols | exact duplicates: 0 ---
+  comp_id                      | int64    | miss=      0 (  0.00%) | uniq=    141 | 3395, 3405, 3465
+  comp_name                    | str      | miss=      0 (  0.00%) | uniq=    141 | South Africa in New Zealand T20I Series 2026 (1); Afghanista
+  match_format                 | str      | miss=      0 (  0.00%) | uniq=      2 | T20I (134); T20 (7)
+  season                       | str      | miss=      0 (  0.00%) | uniq=      8 | 2024 (33); 2025 (33); 2026 (25); 2022 (25)
+
+--- teams.csv: 353 rows x 3 cols | exact duplicates: 0 ---
+  comp_id                      | int64    | miss=      0 (  0.00%) | uniq=    141 | 1331, 1331, 1335
+  team_id                      | int64    | miss=      0 (  0.00%) | uniq=     38 | 22, 28, 18
+  team_name                    | str      | miss=      0 (  0.00%) | uniq=     38 | India (33); West Indies (26); Bangladesh (26); New Zealand (
+
+--- playing_eleven.csv: 28,381 rows x 9 cols | exact duplicates: 0 ---
+  match_id                     | int64    | miss=      0 (  0.00%) | uniq=    880 | 13511, 13511, 13511
+  team_id                      | int64    | miss=      0 (  0.00%) | uniq=     38 | 22, 22, 22
+  player_id                    | int64    | miss=      0 (  0.00%) | uniq=   1082 | 1187, 6273, 1210
+  batting_order                | float64  | miss=   8678 ( 30.58%) | uniq=     13 | 1.0, 2.0, 3.0
+  is_played                    | bool     | miss=      0 (  0.00%) | uniq=      2 | True, True, True
+  is_captain                   | object   | miss=   8667 ( 30.54%) | uniq=      2 | False (18031); True (1683)
+  is_wk                        | object   | miss=   8667 ( 30.54%) | uniq=      2 | False (18039); True (1675)
+  is_impact                    | int64    | miss=      0 (  0.00%) | uniq=      2 | 0, 0, 0
+  is_impact_off                | int64    | miss=      0 (  0.00%) | uniq=      2 | 0, 0, 0
+
+--- competition_team_player_mapping.csv: 6,413 rows x 6 cols | exact duplicates: 0 ---
+  comp_id                      | int64    | miss=      0 (  0.00%) | uniq=    140 | 1331, 1331, 1331
+  comp_name                    | str      | miss=      0 (  0.00%) | uniq=    140 | IPL 2026 (275); IPL 2023 (264); IPL 2024 (263); IPL 2025 (25
+  team_id                      | int64    | miss=      0 (  0.00%) | uniq=     38 | 22, 22, 22
+  team_name                    | str      | miss=      0 (  0.00%) | uniq=     38 | India (551); West Indies (415); Bangladesh (415); New Zealan
+  player_id                    | int64    | miss=      0 (  0.00%) | uniq=   1217 | 478, 479, 722
+  player_name                  | str      | miss=      0 (  0.00%) | uniq=   1210 | Arshdeep Singh (33); Axar Patel (30); Rovman Powell (28); Ro
+
+[3] PRIMARY KEYS, COMPOSITE KEYS & DUPLICATES
+  matches.match_id unique: 883 / 883 (dups=0)
+  competitions.comp_id unique: 141 / 141 (dups=0)
+  teams (comp_id, team_id) unique rows: 353 / 353
+  teams team_id distinct: 38
+  playing_eleven (match_id, team_id, player_id) unique: 28341 / 28381
+  playing_eleven (match_id, player_id) unique: 28341 / 28381
+  ctpm (comp_id, team_id, player_id) unique: 6413 / 6413
+  bbb (match_id, innings, overid, over_ball_num, innings_ball_num) unique: 200999 / 200999
+
+[4] FOREIGN-KEY RELATIONSHIPS
+  matches -> competitions (comp_id missing in comps): 0
+  bbb match_ids not in matches: 0
+  matches match_ids missing from bbb: 16 -> IDs: [np.int64(31281), np.int64(31284), np.int64(31288), np.int64(32610), np.int64(32612), np.int64(32622), np.int64(36210), np.int64(36564), np.int64(38797), np.int64(40761), np.int64(41502), np.int64(41503), np.int64(42030), np.int64(46008), np.int64(48513), np.int64(50189)]
+  Missing-from-bbb matches results:
+     match_id  comp_id  match_date                    home_team              away_team           result
+396     31281     2193  2024-05-13               Gujarat Titans  Kolkata Knight Riders  Match Abandoned
+399     31284     2193  2024-05-16          Sunrisers Hyderabad         Gujarat Titans  Match Abandoned
+403     31288     2193  2024-05-19             Rajasthan Royals  Kolkata Knight Riders  Match Abandoned
+425     32610     2354  2024-05-22                      England               Pakistan  Match Abandoned
+427     32612     2354  2024-05-28                      England               Pakistan  Match Abandoned
+447     32622     2398  2024-05-20                      Ireland               Scotland  Match Abandoned
+453     38797     2442  2024-12-14                 South Africa               Pakistan  Match Abandoned
+481     36564     2548  2024-09-15                      England              Australia  Match Abandoned
+498     36210     2628  2025-09-14                      England           South Africa  Match Abandoned
+593     40761     2725  2025-05-17  Royal Challengers Bengaluru  Kolkata Knight Riders  Match Abandoned
+615     41502     2873  2025-06-12                      Ireland            West Indies  Match Abandoned
+616     41503     2873  2025-06-14                      Ireland            West Indies  Match Abandoned
+640     42030     2921  2025-12-17                        India           South Africa  Match Abandoned
+695     46008     3174  2025-09-19                      Ireland                England  Match Abandoned
+825     48513     3317  2026-01-10                    Sri Lanka               Pakistan  Match Abandoned
+847     50189     3433  2026-04-29                   Bangladesh            New Zealand  Match Abandoned
+  p11 match_ids not in matches: 0
+  matches match_ids missing from p11: 3 -> IDs: [np.int64(36210), np.int64(41503), np.int64(48513)]
+     match_id  comp_id  match_date           result
+498     36210     2628  2025-09-14  Match Abandoned
+616     41503     2873  2025-06-14  Match Abandoned
+825     48513     3317  2026-01-10  Match Abandoned
+  Distinct striker+non_striker+bowler player_ids in bbb: 959
+  Distinct dismissed_player_ids in bbb: 814 (not in striker/ns/bowler: 0)
+  bbb players not in p11: 2
+  bbb players not in ctpm: 0
+  p11 players not in ctpm: 0
+  ctpm players not in p11: 135
+  player_ids with >1 striker_name: 0
+  player_ids with >1 bowler_name: 0
+  player_ids with >1 ctpm player_name: 0
+  striker_names shared by >1 striker_id: 3
+        striker_id  striker_name
+4347          7446   Abdul Samad
+111337        6922   Abdul Samad
+34743         8638  Basil Hameed
+111058       39444  Basil Hameed
+36398         7338    Haider Ali
+147325       28756    Haider Ali
+  bowler_names shared by >1 bowler_id: 1
+        bowler_id   bowler_name
+34777        8638  Basil Hameed
+110915      39444  Basil Hameed
+
+[5] COMPETITION & MATCH COVERAGE
+  Matches by match_format:
+match_format
+T20I    482
+T20     401
+  Matches by season:
+season
+2022       168
+2022/23     12
+2023       137
+2023/24      3
+2024       198
+2024/25      3
+2025       216
+2026       146
+  Matches by competition format & name (non-T20I or Emerging):
+    comp_id                              comp_name match_format season
+12     1358                               IPL 2022          T20   2022
+13     1715                               IPL 2023          T20   2023
+14     2670  Mens T20 Emerging Teams Asia Cup 2024          T20   2024
+15     2193                               IPL 2024          T20   2024
+16     2725                               IPL 2025          T20   2025
+17     3289             Asia Cup Rising Stars 2025          T20   2025
+18     3298                               IPL 2026          T20   2026
+  Emerging / Asia Cup / Rising competitions in comps:
+     comp_id                              comp_name match_format season
+14      2670  Mens T20 Emerging Teams Asia Cup 2024          T20   2024
+17      3289             Asia Cup Rising Stars 2025          T20   2025
+21      1551           Asia Cup T20 Qualifiers 2022         T20I   2022
+30      1533            Mens Twenty20 Asia Cup 2022         T20I   2022
+111     3133                          Asia Cup 2025         T20I   2025
+  Matches by stage (top 20):
+stage
+League        620
+Others        226
+Final          12
+Qualifier      10
+Super 4         6
+Eliminator      5
+Semi Final      4
+  knock_out value_counts: {0: 852, 1: 31}
+  win_team_id isna count: 41
+  Matches with win_team_id NaN categorized by result pattern:
+     match_id  comp_id   stage  knock_out           result
+94      15410     1439  League          0  Match Abandoned
+95      15546     1452  League          0        No Result
+177     17765     1611  League          0        No Result
+179     18532     1646  League          0       Match Tied
+234     20226     1715  League          0  Match Abandoned
+281     21406     1799  League          0  Match Abandoned
+315     28333     2058  Others          0        No Result
+396     31281     2193  League          0  Match Abandoned
+399     31284     2193  League          0  Match Abandoned
+403     31288     2193  League          0  Match Abandoned
+420     31707     2350  League          0        No Result
+425     32610     2354  Others          0  Match Abandoned
+427     32612     2354  Others          0  Match Abandoned
+447     32622     2398  Others          0  Match Abandoned
+453     38797     2442  League          0  Match Abandoned
+464     37353     2455  Others          0        No Result
+481     36564     2548  League          0  Match Abandoned
+488     35424     2605  League          0        No Result
+498     36210     2628  League          0  Match Abandoned
+569     40737     2725  League          0        No Result
+580     40748     2725  League          0        No Result
+583     40751     2725  League          0        No Result
+593     40761     2725  League          0  Match Abandoned
+612     39983     2801  League          0        No Result
+614     39985     2801  League          0        No Result
+615     41502     2873  Others          0  Match Abandoned
+616     41503     2873  Others          0  Match Abandoned
+632     41975     2915  Others          0        No Result
+636     41979     2915  Others          0        No Result
+640     42030     2921  Others          0  Match Abandoned
+654     45390     3126  Others          0        No Result
+693     45908     3163  Others          0        No Result
+695     46008     3174  Others          0  Match Abandoned
+701     46311     3197  Others          0        No Result
+706     46747     3226  Others          0        No Result
+708     46749     3226  Others          0        No Result
+724     47968     3282  Others          0        No Result
+759     50136     3298  League          0        No Result
+825     48513     3317  Others          0  Match Abandoned
+847     50189     3433  Others          0  Match Abandoned
+855     50408     3450  Others          0        No Result
+
+[6] REVISED OVERS, REVISED TARGET & DLS AUDIT
+  Total matches with any revised column populated: 34
+     match_id  first_inn_revised_overs  second_inn_revised_overs  revised_target                                              result
+8       13612                      NaN                     114.0           143.0               Australia Won by 20 runs (D/L method)
+94      15410                    114.0                       NaN             NaN                                     Match Abandoned
+95      15546                     84.0                       NaN             NaN                                           No Result
+143     16753                     66.0                       NaN             NaN                          Afghanistan Won by 27 Runs
+144     16754                      NaN                      42.0            56.0                Ireland Won by 7 Wickets(D/L Method)
+152     17395                     48.0                      48.0            91.0                              India Won by 6 Wickets
+177     17765                     72.0                      72.0           130.0                                           No Result
+262     21586                      NaN                      90.0           171.0  Chennai Super Kings Won by 5 wickets  (DLS method)
+263     19959                     66.0                       NaN             NaN                        West Indies won by 3 wickets
+272     21070                      NaN                      48.0           104.0              Bangladesh Won by 22 Runs (DLS method)
+273     21071                    102.0                     102.0           203.0                           Bangladesh Won by 77 Runs
+307     28046                      NaN                      90.0           152.0                 South Africa won by 5 wickets (DLS)
+330     29984                      NaN                      60.0           126.0               Australia Won by 27 Runs (DLS method)
+420     31707                     30.0                       NaN             NaN                                           No Result
+439     37354                     42.0                      42.0            94.0                            Australia Won by 29 runs
+459     36098                     78.0                      78.0           116.0                  West Indies Won by 8 wickets (DLS)
+477     34428                      NaN                      48.0            78.0                  India Won by 7 wickets(D/L Method)
+496     36208                     54.0                      30.0            69.0             South Africa Won by 14 runs(DLS method)
+559     40727                     84.0                      84.0            96.0                       Punjab Kings Won by 5 wickets
+581     40749                      NaN                     114.0           147.0        Gujarat Titans Won by 3 wickets (DLS Method)
+608     39809                     90.0                      90.0           136.0                        New Zealand Won by 5 wickets
+612     39983                     54.0                       NaN             NaN                                           No Result
+614     39985                    108.0                       NaN             NaN                                           No Result
+628     41851                     60.0                      60.0           125.0               West Indies Won by 6 runs(DLS Method)
+632     41975                    108.0                       NaN             NaN                                           No Result
+701     46311                     54.0                      54.0             NaN                                           No Result
+708     46749                     84.0                       NaN             NaN                                           No Result
+760     50137                     66.0                      66.0           151.0                     Rajasthan Royals Won by 27 runs
+797     50371                    114.0                     114.0           213.0     Lucknow Super Giants Won by 9 runs (DLS method)
+835     48610                    102.0                      90.0           115.0                 England Won by 11 runs (DLS method)
+836     48611                      NaN                     102.0           168.0                England Won by 6 wickets(DLS Method)
+848     50190                     90.0                      90.0           103.0           New Zealand Won by 6 wickets (DLS Method)
+855     50408                     54.0                      54.0             NaN                                           No Result
+876     54711                     30.0                      30.0            33.0                                 India Won by 2 runs
+  Actual legal balls bowled in revised matches:
+    match_id  first_inn_revised_overs  second_inn_revised_overs  revised_target                                              result    1    2
+0      13612                      NaN                     114.0           143.0               Australia Won by 20 runs (D/L method)  120  114
+1      15410                    114.0                       NaN             NaN                                     Match Abandoned   21    0
+2      15546                     84.0                       NaN             NaN                                           No Result   78    0
+3      16753                     66.0                       NaN             NaN                          Afghanistan Won by 27 Runs   66   66
+4      16754                      NaN                      42.0            56.0                Ireland Won by 7 Wickets(D/L Method)   90   40
+5      17395                     48.0                      48.0            91.0                              India Won by 6 Wickets   48   44
+6      17765                     72.0                      72.0           130.0                                           No Result   72   23
+7      21586                      NaN                      90.0           171.0  Chennai Super Kings Won by 5 wickets  (DLS method)  120   90
+8      19959                     66.0                       NaN             NaN                        West Indies won by 3 wickets   66   63
+9      21070                      NaN                      48.0           104.0              Bangladesh Won by 22 Runs (DLS method)  116   48
+10     21071                    102.0                     102.0           203.0                           Bangladesh Won by 77 Runs  102  102
+11     28046                      NaN                      90.0           152.0                 South Africa won by 5 wickets (DLS)  117   83
+12     29984                      NaN                      60.0           126.0               Australia Won by 27 Runs (DLS method)   64   60
+13     31707                     30.0                       NaN             NaN                                           No Result    2    0
+14     37354                     42.0                      42.0            94.0                            Australia Won by 29 runs   42   42
+15     36098                     78.0                      78.0           116.0                  West Indies Won by 8 wickets (DLS)   78   56
+16     34428                      NaN                      48.0            78.0                  India Won by 7 wickets(D/L Method)  120   39
+17     36208                     54.0                      30.0            69.0             South Africa Won by 14 runs(DLS method)   47   30
+18     40727                     84.0                      84.0            96.0                       Punjab Kings Won by 5 wickets   84   73
+19     40749                      NaN                     114.0           147.0        Gujarat Titans Won by 3 wickets (DLS Method)  120  114
+20     39809                     90.0                      90.0           136.0                        New Zealand Won by 5 wickets   90   79
+21     39983                     54.0                       NaN             NaN                                           No Result   54    0
+22     39985                    108.0                       NaN             NaN                                           No Result  108    0
+23     41851                     60.0                      60.0           125.0               West Indies Won by 6 runs(DLS Method)   60   60
+24     41975                    108.0                       NaN             NaN                                           No Result   58    0
+25     46311                     54.0                      54.0             NaN                                           No Result   13    0
+26     46749                     84.0                       NaN             NaN                                           No Result   22    0
+27     50137                     66.0                      66.0           151.0                     Rajasthan Royals Won by 27 runs   66   66
+28     50371                    114.0                     114.0           213.0     Lucknow Super Giants Won by 9 runs (DLS method)  114  114
+29     48610                    102.0                      90.0           115.0                 England Won by 11 runs (DLS method)   98   90
+30     48611                      NaN                     102.0           168.0                England Won by 6 wickets(DLS Method)  120  100
+31     50190                     90.0                      90.0           103.0           New Zealand Won by 6 wickets (DLS Method)   86   70
+32     50408                     54.0                      54.0             NaN                                           No Result   46    0
+33     54711                     30.0                      30.0            33.0                                 India Won by 2 runs   30   30
+
+[7] BALL-BY-BALL DELIVERY SEMANTICS
+  innings values: {1: 105727, 2: 95234, 3: 25, 4: 13}
+  overid range per innings:
+         min  max  nunique
+innings                   
+1          1   20       20
+2          1   20       20
+3          1    1        1
+4          1    1        1
+  runs value_counts: {0: 79387, 1: 72267, 2: 12547, 3: 656, 4: 23303, 5: 25, 6: 12814}
+  is_four vs runs crosstab:
+is_four  False  True 
+runs                 
+0        79387      0
+1        72267      0
+2        12547      0
+3          656      0
+4           20  23283
+5           25      0
+6        12814      0
+  is_six vs runs crosstab:
+is_six  False  True 
+runs                
+0       79387      0
+1       72267      0
+2       12547      0
+3         656      0
+4       23303      0
+5          25      0
+6           3  12811
+  extras_type x extras1_runs crosstab:
+extras1_runs    1     2     3    4    5       6  7
+extras_type                                       
+<NaN>           0     0     0    0    0  189167  0
+Overstep      576     0     0    0    0       0  0
+Penalty         0     0     0    0    0       0  1
+byes            0     0     0  529    0       0  0
+legbyes         0     0  2748    0    0       0  0
+other           0     0     0    0  264       0  0
+wide            0  7714     0    0    0       0  0
+  extras_type x extras_2_runs crosstab:
+extras_2_runs       0   1  4
+extras_type                 
+<NaN>          189166   1  0
+Overstep          555  12  9
+Penalty             1   0  0
+byes              529   0  0
+legbyes          2748   0  0
+other             250   7  7
+wide             7714   0  0
+  extras_type x runs crosstab:
+runs             0      1      2    3      4   5      6
+extras_type                                            
+<NaN>        68029  72043  12496  653  23180  25  12741
+Overstep       239    174     33    2     81   0     47
+Penalty          1      0      0    0      0   0      0
+byes           529      0      0    0      0   0      0
+legbyes       2747      1      0    0      0   0      0
+other          128     49     18    1     42   0     26
+wide          7714      0      0    0      0   0      0
+
+  Rows with extras_2_runs > 0 (grouped):
+        match_id  innings  overid  over_ball_num  innings_ball_num  runs extras_type  extras1_runs  extras_2_runs  is_four  is_six
+1485       13523        1       1              4                 4     0    Overstep             1              4    False   False
+2588       13614        1      18              5               111     0       other             5              4    False   False
+7607       14112        1      11              5                66     0    Overstep             1              4    False   False
+11386      14127        2       9              3                52     0       other             5              4    False   False
+18844      14159        2       9              1                51     0       other             5              1    False   False
+24453      15796        2      14              4                88     0    Overstep             1              1    False   False
+28010      16424        2       6              1                33     0    Overstep             1              4    False   False
+36854      17555        1       5              4                29     0         NaN             6              1    False   False
+47440      20186        2      20              2               130     0    Overstep             1              1    False   False
+47803      20188        1      19              4               117     0       other             5              1    False   False
+50553      20199        2      10              4                59     0    Overstep             1              1    False   False
+50935      20201        1      11              5                66     0    Overstep             1              4    False   False
+55141      20218        1      16              5               101     0    Overstep             1              1    False   False
+59011      20234        2      13              3                80     0       other             5              4    False   False
+61163      20243        2      19              4               121     0       other             5              4    False   False
+66138      21583        1      20              4               119     0       other             5              1    False   False
+83106      30068        1       6              2                32     0    Overstep             1              1    False   False
+84026      30071        2      15              3                91     0    Overstep             1              4    False   False
+85169      30076        2       5              5                30     0    Overstep             1              1    False   False
+85384      30341        1      20              3               123     0    Overstep             1              4    False   False
+90205      31254        1      17              3               101     0    Overstep             1              4    False   False
+92934      31265        2       1              3                 3     0    Overstep             1              1    False   False
+95981      31278        2       3              2                14     0    Overstep             1              4    False   False
+108203     36200        2      18              1               110     0       other             5              4    False   False
+112514     37093        2      19              3               111     0       other             5              1    False   False
+114427     37278        1      12              1                69     0       other             5              4    False   False
+116915     37894        1      17              5               106     0    Overstep             1              4    False   False
+121459     38844        1      19              1               111     0    Overstep             1              1    False   False
+122187     39811        1       6              1                34     0    Overstep             1              1    False   False
+123548     40038        1      19              3               114     0       other             5              1    False   False
+124457     40695        1      18              1               115     0       other             5              4    False   False
+138578     40756        1       4              5                23     0    Overstep             1              1    False   False
+147808     43057        2      14              6                85     0    Overstep             1              1    False   False
+160240     46740        2       1              3                 3     0    Overstep             1              1    False   False
+170542     48467        1      20              6               126     0       other             5              1    False   False
+199755     55078        1      20              4               124     0       other             5              1    False   False
+
+  Anomalous legbyes with runs > 0:
+        match_id  innings  overid  over_ball_num  innings_ball_num     striker_name bowler_name  runs extras_type  extras1_runs  extras_2_runs  is_wicket dismissal_type
+113765     37099        1      14              1                82  Nimesh Vimukthi  Qais Ahmad     1     legbyes             3              0      False            NaN
+
+  Wicket & Dismissal Semantics:
+  is_wicket value_counts: {False: 190118, True: 10881}
+  is_wicket==1 vs dismissal_type:
+dismissal_type
+Caught                   7557
+Bowled                   1775
+LBW                       709
+RunOut                    600
+Stump                     214
+Hit Wicket                 17
+Retire Out                  6
+Obstracting the field       2
+Obstructing the field       1
+  is_wicket==0 but dismissal_type notna:
+  Count: 0
+  is_wicket==1 but dismissed_player_id isna:
+  Count: 1
+        match_id  innings  overid  over_ball_num   striker_name      non_striker_name     bowler_name  is_wicket dismissal_type
+127899     40709        2      19              5  Hardik Pandya  Namboori Tilak Varma  Shardul Thakur       True     Retire Out
+  batting_order values > 11 count: 26 (max=13); over_ball_num max=13, innings_ball_num max=136
+  is_wicket==1 & dismissed_player_id != striker_id (e.g. non-striker runout/retired):
+  Count: 275 | breakdown by dismissal_type: {'RunOut': 271, 'Retire Out': 3, 'Obstracting the field': 1}
+  is_wicket==1 on wide / Overstep / other:
+dismissal_type  RunOut  Stump
+extras_type                  
+Overstep             5      0
+byes                 1      0
+other                3      0
+wide                15     25
+
+[8] INNINGS TOTAL & MATCH MARGIN RECONCILIATION
+  Non-DLS 'won by X runs' matches: 395
+  Exact margin match (diff == 0) using min_obs (1 per extra + extras_2_runs): 126 / 395 (31.9%)
+  Within +/- 2 runs: 231 / 395
+  Diff quantiles: {0.0: -10.0, 0.05: -5.0, 0.25: -1.0, 0.5: 0.0, 0.75: 2.0, 0.95: 5.0, 1.0: 10.0}
+  Sample non-DLS run-margin mismatches (showing i1_min_obs, i2_min_obs, reported_margin, extras counts):
+    match_id  i1_min_obs  i2_min_obs  reported_margin  calc_margin_min_obs  diff_runs  i1_n_wide  i1_n_byes  i1_n_legbyes  i2_n_wide  i2_n_byes  i2_n_legbyes
+1      13512       171.0       168.0                1                  3.0       -2.0        8.0        0.0           0.0        4.0        3.0           3.0
+2      13513       217.0       199.0               20                 18.0        2.0        3.0        0.0           1.0        7.0        0.0           0.0
+3      13514       193.0       156.0               34                 37.0       -3.0        8.0        1.0           2.0        5.0        1.0           0.0
+6      13523       185.0       173.0                8                 12.0       -4.0        8.0        1.0           3.0        7.0        0.0           2.0
+7      13524       178.0       166.0               17                 12.0        5.0        4.0        0.0           4.0        7.0        0.0           2.0
+17     14098       210.0       146.0               61                 64.0       -3.0        6.0        0.0           4.0        4.0        0.0           2.0
+21     14102       190.0       170.0               23                 20.0        3.0        6.0        0.0           2.0        8.0        0.0           1.0
+22     14103       171.0       153.0               14                 18.0       -4.0        3.0        1.0           2.0        3.0        0.0           4.0
+24     14105       167.0       154.0               12                 13.0       -1.0        1.0        0.0           1.0        5.0        0.0           1.0
+31     14112       212.0       170.0               44                 42.0        2.0        2.0        0.0           4.0        3.0        0.0           2.0
+34     14115       213.0       193.0               23                 20.0        3.0        6.0        1.0           2.0        8.0        0.0           0.0
+35     14116       194.0       186.0               12                  8.0        4.0        7.0        0.0           5.0        4.0        0.0           0.0
+38     14119       198.0       174.0               18                 24.0       -6.0        4.0        0.0           3.0        5.0        0.0           3.0
+39     14120       187.0       173.0               16                 14.0        2.0        6.0        0.0           2.0        4.0        0.0           1.0
+42     14123       213.0       210.0                7                  3.0        4.0        6.0        2.0           3.0       13.0        0.0           0.0
+  Non-DLS run-margin matches with ZERO wides/byes/legbyes: 0, exact diff==0: 0
+  Non-DLS 'won by X wkts' matches: 404
+  Cases where i2_min_obs < i1_min_obs + 1 (proving unrecorded multi-run wides/byes/legbyes/penalties happened): 104 / 404 (25.7%)
+  Chase shortfall quantiles (runs 'missing' from i2 due to unrecorded multi-run extras minus i1 unrecorded extras): {0.0: -19.0, 0.25: -3.0, 0.5: -1.0, 0.75: 1.0, 0.95: 5.0, 1.0: 12.0}
+  Sample wicket-win matches where i2_min_obs <= i1_min_obs:
+    match_id  i1_min_obs  i2_min_obs  chase_shortfall  i2_n_wide  i2_n_byes  i2_n_legbyes                                        result
+0      13511       103.0       101.0              3.0        0.0        0.0           2.0                  West Indies Won by 9 Wickets
+13     14094       131.0       130.0              2.0        0.0        1.0           0.0           Kolkata Knight Riders Won by 6 Wkts
+14     14095       177.0       176.0              2.0        7.0        0.0           1.0               Delhi Capitals Won by 4 Wickets
+16     14097       158.0       158.0              1.0        3.0        0.0           3.0               Gujarat Titans Won by 5 Wickets
+26     14107       161.0       161.0              1.0        0.0        0.0           1.0        Kolkata Knight Riders Won by 5 Wickets
+28     14109       189.0       189.0              1.0        3.0        0.0           2.0               Gujarat Titans won by 6 wickets
+37     14118       175.0       169.0              7.0        4.0        1.0           0.0          Sunrisers Hyderabad won by 7 wickets
+40     14121       150.0       148.0              3.0        3.0        0.0           1.0           Sunrisers Hyderabad won by 7 wicket
+41     14122       169.0       167.0              3.0        1.0        1.0           1.0               Gujarat Titans won by 3 wickets
+64     14146       189.0       189.0              1.0        6.0        0.0           0.0             Rajasthan Royals won by 6 wickets
+79     14161       168.0       163.0              6.0        3.0        1.0           0.0  Royal Challengers Bengaluru won by 8 wickets
+80     14162       150.0       144.0              7.0        4.0        0.0           5.0             Rajasthan Royals Won by 5 Wickets
+
+[9] STRIKE-ROTATION FORENSICS FOR UNRECORDED EXTRA RUNS
+  extras_type=wide       mid-over non-wicket balls= 7664 | strike rotated on next ball:   298 (3.9%) [note: if always 1 extra run, strike rotates ~100% on byes/legbyes and 0% on 1-wide!]
+  extras_type=legbyes    mid-over non-wicket balls= 2348 | strike rotated on next ball:  2043 (87.0%) [note: if always 1 extra run, strike rotates ~100% on byes/legbyes and 0% on 1-wide!]
+  extras_type=byes       mid-over non-wicket balls=  429 | strike rotated on next ball:   277 (64.6%) [note: if always 1 extra run, strike rotates ~100% on byes/legbyes and 0% on 1-wide!]
+  extras_type=Overstep   mid-over non-wicket balls=  569 | strike rotated on next ball:   189 (33.2%) [note: if always 1 extra run, strike rotates ~100% on byes/legbyes and 0% on 1-wide!]
+  extras_type=other      mid-over non-wicket balls=  259 | strike rotated on next ball:    57 (22.0%) [note: if always 1 extra run, strike rotates ~100% on byes/legbyes and 0% on 1-wide!]
+
+[10] SCOUTING & TRACKING METADATA COVERAGE IN ball_by_ball.csv
+  batting_type      : non-null= 200999 (100.0%), uniq=    2 | top: RHB:131006; LHB:69993
+  bowling_type      : non-null= 200999 (100.0%), uniq=   12 | top: Right-arm Leg-Break:28027; Right-arm medium-fast:27014; Right-arm Fast:26637; Right-arm medium:23919
+  batting_order     : non-null= 200999 (100.0%), uniq=   13 | top: 2:34488; 1:34126; 3:31065; 4:30068
+  pace_or_spin      : non-null= 200999 (100.0%), uniq=    2 | top: Pace:123886; Spin:77113
+  bowl_speed        : non-null= 200999 (100.0%), >0= 123137 ( 61.3%), ==0=  77861
+  stroke            : non-null= 194841 ( 96.9%), uniq=   30 | top: Pull shot:24645; Cover Drive:20779; Worked:20757; Flick:14836
+  delivery_style    : non-null= 200608 ( 99.8%), uniq=   34 | top: Seamed In:22058; Orthodox:19239; Leg Break:15449; Off Cutter:15143
+  over_or_around    : non-null= 200592 ( 99.8%), uniq=    2 | top: Over:154670; Around:45922
+  on_or_off         : non-null= 200999 (100.0%), uniq=    2 | top: Off-side:104875; On-side:96124
+  delivery_ist_time : non-null= 200999 (100.0%), uniq=200826 | top: 2022-01-23 00:00:00 UTC:34; 2023-08-13 00:00:00 UTC:5; 2022-06-12 19:02:23 UTC:2; 2022-06-14 19:00:42 UTC:2
+
+  Tracking metadata coverage by match_format:
+              deliveries  speed_gt0_pct  stroke_pct  delivery_style_pct  on_or_off_pct
+match_format                                                                          
+T20                94672      68.649654   96.745606           99.978874          100.0
+T20I              106327      54.685075   97.106097           99.651076          100.0
+
+[11] FORENSIC EDGE CASES
+  playing_eleven duplicate (match_id, player_id) rows: 75
+     match_id  team_id  player_id  batting_order  is_played is_captain  is_wk  is_impact  is_impact_off
+198     13613       20       3539            1.0       True      False  False          0              0
+199     13613       20        838            1.0       True      False  False          0              0
+200     13613       20        250            2.0       True       True  False          0              0
+201     13613       20       2639            2.0       True      False  False          0              0
+202     13613       20       4736            3.0       True      False  False          0              0
+203     13613       20       3539            3.0       True      False  False          0              0
+204     13613       20        838            4.0       True      False  False          0              0
+205     13613       20        250            4.0       True       True  False          0              0
+206     13613       20        223            5.0       True      False  False          0              0
+207     13613       20       4736            5.0       True      False  False          0              0
+208     13613       20        223            6.0       True      False  False          0              0
+209     13613       20       2639            6.0       True      False  False          0              0
+  bbb player_ids missing from playing_eleven: {36153, 39444}
+      comp_id                              comp_name  team_id             team_name  player_id   player_name
+3606     2670  Mens T20 Emerging Teams Asia Cup 2024      272  United Arab Emirates      36153   Syed Haider
+3607     2670  Mens T20 Emerging Teams Asia Cup 2024      272  United Arab Emirates      39444  Basil Hameed
+  bowling_team_id == win_team_id? Any match_id anomalies in Super Overs (innings 3,4):
+   match_id innings  rows  comp_id                                                             result  knock_out       stage
+0     34429  [3, 4]     5     2542   India Tied with Srilanka (India Won the Super Over by 2 wickets)          0      Others
+1     40725  [3, 4]    10     2725  Delhi Capitals Tied with Rajasthan Royals (DC won the Super Over)          0      League
+2     45512  [3, 4]     7     3133                               India won the Super Over(Match Tied)          0     Super 4
+3     48027  [3, 4]     4     3289                                    Bangladesh A Won The Super Over          1  Semi Final
+4     48029  [3, 4]     8     3289                                      Pakistan A Won the super over          1       Final
+5     50359  [3, 4]     4     3298               Kolkata Knight Riders Won by Super over (Match Tied)          0      League
+  Duplicate-name player records in ctpm:
+      player_id   player_name             team_name                                             comp_name
+307        7446   Abdul Samad   Sunrisers Hyderabad                                              IPL 2022
+794        7338    Haider Ali              Pakistan                           Mens Twenty20 Asia Cup 2022
+980        8638  Basil Hameed  United Arab Emirates                          Asia Cup T20 Qualifiers 2022
+1120       7338    Haider Ali              Pakistan                  England in Pakistan T20I Series 2022
+1198       8638  Basil Hameed  United Arab Emirates   Bangladesh in United Arab Emirates T20I Series 2022
+1286       7338    Haider Ali              Pakistan                   New Zealand T20I Tri Series 2022/23
+1661       7446   Abdul Samad   Sunrisers Hyderabad                                              IPL 2023
+2000       8638  Basil Hameed  United Arab Emirates  New Zealand in United Arab Emirates T20I Series 2023
+2625       7446   Abdul Samad   Sunrisers Hyderabad                                              IPL 2024
+3594       8638  Basil Hameed  United Arab Emirates                 Mens T20 Emerging Teams Asia Cup 2024
+3607      39444  Basil Hameed  United Arab Emirates                 Mens T20 Emerging Teams Asia Cup 2024
+3651       6922   Abdul Samad            Pakistan A                 Mens T20 Emerging Teams Asia Cup 2024
+3652       7338    Haider Ali            Pakistan A                 Mens T20 Emerging Teams Asia Cup 2024
+4084       7446   Abdul Samad  Lucknow Super Giants                                              IPL 2025
+4184       6922   Abdul Samad              Pakistan              Pakistan in New Zealand T20I Series 2025
+4536      28756    Haider Ali  United Arab Emirates   Bangladesh in United Arab Emirates T20I Series 2025
+4791      28756    Haider Ali  United Arab Emirates                                         Asia Cup 2025
+4885      28756    Haider Ali  United Arab Emirates             United Arab Emirates T20I Tri-Series 2025
+5076       6922   Abdul Samad              Pakistan             South Africa in Pakistan T20I Series 2025
+5280       6922   Abdul Samad              Pakistan                         Pakistan T20I Tri-Series 2025
+5726       7446   Abdul Samad  Lucknow Super Giants                                              IPL 2026
+5752       8638  Basil Hameed  United Arab Emirates      Ireland in United Arab Emirates T20I Series 2026
+5762      28756    Haider Ali  United Arab Emirates      Ireland in United Arab Emirates T20I Series 2026
+5775       6922   Abdul Samad              Pakistan                Pakistan in Sri Lanka T20I Series 2026
+6163      28756    Haider Ali  United Arab Emirates        United Arab Emirates in Nepal T20I Series 2026
+6354       6922   Abdul Samad              Pakistan                Sri Lanka in Pakistan T20I Series 2026
+  bowl_speed > 0 count=123137, min=1.32, p01=79.7, median=123.8, p99=147.2, max=1456.1
+  bowl_speed < 0 count=1
+  runs==4 & is_four==False count: 20 | runs==6 & is_six==False count: 3 | runs==5 count: 25
+  batting_order > 11 sample:
+        match_id  innings  overid  striker_id      striker_name  batting_order
+16054      14147        2      15       29888      Harshit Rana             12
+63607      20880        2      16        7240  FazalHaq Farooqi             12
+170136     48029        2      16       48616     Abdul Saqlain             12
+170148     48029        2      18       24767      Ripon Mondol             13
