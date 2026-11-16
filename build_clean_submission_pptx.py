@@ -8,39 +8,29 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn
 from pptx.oxml import parse_xml
 
-BASE_DIR = Path(r"C:\Rajasthan Royals")
+BASE_DIR = Path(".")
 SCRATCH = BASE_DIR / "scratch"
 LOGO_PATH = SCRATCH / "rr_corner_logo.png"
-DONUT_PATH = SCRATCH / "ppt_chart_donut.png"
-QUAD_PATH = SCRATCH / "ppt_chart_quadrants.png"
+DONUT_PATH = SCRATCH / "donut_pressure_distribution.png"
+QUAD_PATH = SCRATCH / "quadrant_scatter.png"
+
 OUT_MAIN = BASE_DIR / "RR_SupeRR_Selector_Season2_Ketan_Rawat.pptx"
 OUT_COPY = BASE_DIR / "pressure_output" / "RR_SupeRR_Selector_Season2_Ketan_Rawat.pptx"
 
-# Minimal Light Palette
+# Clean Professional Palette
 WHITE = RGBColor(255, 255, 255)
 BG_SOFT = RGBColor(248, 250, 252)
-BG_PINK_TINT = RGBColor(253, 242, 248)
-BG_GREEN_TINT = RGBColor(240, 253, 244)
-BG_AMBER_TINT = RGBColor(255, 251, 235)
-BORDER = RGBColor(203, 213, 225)
 BORDER_LIGHT = RGBColor(226, 232, 240)
-DARK_TEXT = RGBColor(17, 24, 39)
-BODY_TEXT = RGBColor(55, 65, 81)
+DARK_TEXT = RGBColor(15, 23, 42)
+BODY_TEXT = RGBColor(51, 65, 85)
 MUTED_TEXT = RGBColor(100, 116, 139)
 RR_NAVY = RGBColor(0, 29, 72)
-RR_PINK = RGBColor(217, 27, 122)
-GREEN = RGBColor(4, 120, 87)
-RED = RGBColor(185, 28, 28)
+RR_PINK = RGBColor(235, 26, 141)
+GREEN = RGBColor(5, 150, 105)
+RED = RGBColor(220, 38, 38)
 AMBER = RGBColor(180, 83, 9)
 
 FONT_MAIN = "Calibri"
-
-with open(BASE_DIR / "players_db.json", encoding="utf-8") as f:
-    db = json.load(f)
-
-batters = sorted([p for p in db if p["category"] == "Batter"], key=lambda x: x["rank"])
-bowlers = sorted([p for p in db if p["category"] == "Bowler"], key=lambda x: x["rank"])
-
 
 def set_cell_border(cell, color_hex="E2E8F0", width_pt="6350"):
     tcPr = cell._tc.get_or_add_tcPr()
@@ -54,8 +44,7 @@ def set_cell_border(cell, color_hex="E2E8F0", width_pt="6350"):
         )
         tcPr.append(ln)
 
-
-def style_cell(cell, text, font_size=9.5, bold=False, color=BODY_TEXT, fill=None, align=PP_ALIGN.LEFT, margins=(0.06, 0.06, 0.04, 0.04)):
+def style_cell(cell, text, font_size=9.0, bold=False, color=BODY_TEXT, fill=None, align=PP_ALIGN.LEFT, margins=(0.06, 0.06, 0.03, 0.03)):
     cell.vertical_anchor = MSO_ANCHOR.MIDDLE
     cell.margin_left = Inches(margins[0])
     cell.margin_right = Inches(margins[1])
@@ -75,33 +64,29 @@ def style_cell(cell, text, font_size=9.5, bold=False, color=BODY_TEXT, fill=None
     p.font.color.rgb = color
     set_cell_border(cell)
 
-
 def add_corner_logo(slide):
-    # RR logo cleanly placed in top-right corner of every slide (aspect ~ 348:544 = 0.64)
     if LOGO_PATH.exists():
-        slide.shapes.add_picture(str(LOGO_PATH), Inches(12.35), Inches(0.26), height=Inches(0.76))
-
+        slide.shapes.add_picture(str(LOGO_PATH), Inches(12.35), Inches(0.25), height=Inches(0.75))
 
 def add_slide_title(slide, title, subtitle=None):
     add_corner_logo(slide)
-    tb = slide.shapes.add_textbox(Inches(0.60), Inches(0.32), Inches(11.4), Inches(0.75))
+    tb = slide.shapes.add_textbox(Inches(0.60), Inches(0.30), Inches(11.4), Inches(0.75))
     tf = tb.text_frame
     tf.word_wrap = True
     tf.margin_left = tf.margin_right = tf.margin_top = tf.margin_bottom = 0
     p = tf.paragraphs[0]
     p.text = title
     p.font.name = FONT_MAIN
-    p.font.size = Pt(22)
+    p.font.size = Pt(21)
     p.font.bold = True
     p.font.color.rgb = DARK_TEXT
     if subtitle:
         p2 = tf.add_paragraph()
         p2.text = subtitle
         p2.font.name = FONT_MAIN
-        p2.font.size = Pt(11.5)
+        p2.font.size = Pt(11.0)
         p2.font.color.rgb = MUTED_TEXT
         p2.space_before = Pt(3)
-
 
 def add_box(slide, left, top, width, height, fill=BG_SOFT, border=BORDER_LIGHT, line_w=0.75):
     shp = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(left), Inches(top), Inches(width), Inches(height))
@@ -114,8 +99,7 @@ def add_box(slide, left, top, width, height, fill=BG_SOFT, border=BORDER_LIGHT, 
         shp.line.fill.background()
     return shp
 
-
-def add_text(slide, left, top, width, height, text, size=10.5, bold=False, color=BODY_TEXT, align=PP_ALIGN.LEFT, font_name=FONT_MAIN):
+def add_text(slide, left, top, width, height, text, size=10.0, bold=False, color=BODY_TEXT, align=PP_ALIGN.LEFT):
     tb = slide.shapes.add_textbox(Inches(left), Inches(top), Inches(width), Inches(height))
     tf = tb.text_frame
     tf.word_wrap = True
@@ -123,12 +107,11 @@ def add_text(slide, left, top, width, height, text, size=10.5, bold=False, color
     p = tf.paragraphs[0]
     p.text = text
     p.alignment = align
-    p.font.name = font_name
+    p.font.name = FONT_MAIN
     p.font.size = Pt(size)
     p.font.bold = bold
     p.font.color.rgb = color
     return tb
-
 
 def build_deck():
     prs = Presentation()
@@ -137,618 +120,658 @@ def build_deck():
     blank = prs.slide_layouts[6]
 
     # ═══════════════════════════════════════════════════════════════
-    # SLIDE 1: BEGINNING / COVER SLIDE (NO HEADER, NO FOOTER, RR LOGO IN CORNER)
+    # SLIDE 1: COVER SLIDE
     # ═══════════════════════════════════════════════════════════════
     s1 = prs.slides.add_slide(blank)
     add_corner_logo(s1)
 
-    add_text(s1, 0.90, 1.55, 10.5, 0.35, "Rajasthan Royals  |  SupeRR Selector Season 2 (Round 1)", size=13, bold=True, color=RR_PINK)
-    add_text(s1, 0.90, 2.05, 11.2, 1.35, "Identifying the Most Reliable Players\nUnder Match Pressure", size=38, bold=True, color=DARK_TEXT)
-    add_text(s1, 0.90, 3.65, 10.8, 0.75,
-             "Measuring Match Leverage, True Pressure Lift, and Building a Balanced IPL 2027 Auction Plan for Sawai Mansingh Stadium, Jaipur",
-             size=15, color=BODY_TEXT)
+    add_text(s1, 0.90, 1.60, 10.5, 0.35, "Rajasthan Royals  |  SupeRR Selector Season 2", size=13, bold=True, color=RR_PINK)
+    add_text(s1, 0.90, 2.10, 11.2, 1.35, "Evaluating Player Performance\nUnder Match Pressure", size=36, bold=True, color=DARK_TEXT)
+    add_text(s1, 0.90, 3.65, 10.8, 0.70,
+             "Contextual Ball-by-Ball Leverage Engine & Empirical Bayes Rankings for IPL 2027 Roster Planning",
+             size=14.5, color=BODY_TEXT)
 
-    # Simple hairline separator
-    add_box(s1, 0.90, 4.65, 3.2, 0.03, fill=RR_NAVY, border=None)
+    add_box(s1, 0.90, 4.55, 3.0, 0.03, fill=RR_NAVY, border=None)
 
-    # Clean key stats & author in body (not a footer)
-    add_text(s1, 0.90, 4.95, 10.8, 0.40,
-             "Dataset Scope: 883 IPL & T20I Matches (2022–2026)  |  1,217 Players Evaluated  |  178 High-Pressure Fixtures (20.2%)",
-             size=12, bold=True, color=RR_NAVY)
-    add_text(s1, 0.90, 5.45, 10.8, 0.35,
-             "Submitted by: Ketan Rawat (B.Tech ECE, NIT Jamshedpur)",
-             size=12, color=MUTED_TEXT)
+    add_text(s1, 0.90, 4.85, 11.0, 0.40,
+             "Dataset: 867 Senior T20 Fixtures (IPL & T20I, 2022–2026)  |  200,961 Deliveries  |  342 Qualified Players",
+             size=11.5, bold=True, color=RR_NAVY)
+    add_text(s1, 0.90, 5.35, 10.8, 0.35,
+             "Candidate: Ketan Rawat  |  Role: Cricket Operations & Performance Analytics",
+             size=11.5, color=MUTED_TEXT)
 
     # ═══════════════════════════════════════════════════════════════
-    # SLIDE 2: DATASET OVERVIEW & PERFORMANCE BY MARGIN (IMAGES #1 & #2)
+    # SLIDE 2: TOURNAMENT SAMPLE & PRESSURE DISTRIBUTION (IMAGES #1 & #2)
     # ═══════════════════════════════════════════════════════════════
     s2 = prs.slides.add_slide(blank)
-    add_slide_title(s2, "Dataset Scope & High-Pressure Sample Overview",
-                    "Summary of 883 IPL and T20I fixtures (2022–2026) filtered by Match Leverage Index (MLI >= 30)")
+    add_slide_title(s2, "Tournament Sample & Pressure Delivery Distribution",
+                    "Overview of 200,961 deliveries across 867 fixtures isolating high-leverage match states")
 
     kpis = [
-        ("MATCHES EVALUATED", "883", "IPL & T20I (2022–2026)", DARK_TEXT),
-        ("HIGH-PRESSURE SAMPLE", "178", "20.2% of total dataset", DARK_TEXT),
-        ("PLAYER POOL", "1,217", "28,381 playing-XI records", DARK_TEXT),
-        ("TOP RANKED BATTER", "66.81", "Shivam Dube (+12.4% Lift)", RR_PINK),
-        ("TOP RANKED BOWLER", "68.83", "Jacob Duffy (+20.5% Lift)", RR_NAVY),
-        ("HIGHEST WIN LIFT", "+20.5%", "Jacob Duffy (75.0% HP WR)", GREEN),
+        ("MATCHES EVALUATED", "867", "IPL & T20I (2022–2026)", DARK_TEXT),
+        ("DELIVERIES EVALUATED", "200,961", "Ball-by-ball records", DARK_TEXT),
+        ("QUALIFIED CANDIDATES", "342", "163 Batters • 179 Bowlers", DARK_TEXT),
+        ("TOP RANKED BATTER", "+26.59", "Andre Russell (165.6 SR)", RR_PINK),
+        ("TOP RANKED BOWLER", "+24.75", "Umran Malik (14 Wkts)", RR_NAVY),
+        ("PEAK LEVERAGE LIFT", "+83.78", "V. Sooryavanshi (234.6 SR)", GREEN),
     ]
     kx = 0.60
     kw = 1.92
     for lbl, num, sub, ncol in kpis:
-        add_box(s2, kx, 1.32, kw, 1.25, fill=BG_SOFT, border=BORDER_LIGHT)
-        add_text(s2, kx + 0.12, 1.44, kw - 0.24, 0.25, lbl, size=8.5, bold=True, color=MUTED_TEXT, align=PP_ALIGN.CENTER)
-        add_text(s2, kx + 0.12, 1.72, kw - 0.24, 0.42, num, size=21, bold=True, color=ncol, align=PP_ALIGN.CENTER)
-        add_text(s2, kx + 0.12, 2.18, kw - 0.24, 0.28, sub, size=8.5, color=BODY_TEXT, align=PP_ALIGN.CENTER)
+        add_box(s2, kx, 1.25, kw, 1.20, fill=BG_SOFT, border=BORDER_LIGHT)
+        add_text(s2, kx + 0.10, 1.35, kw - 0.20, 0.22, lbl, size=8.0, bold=True, color=MUTED_TEXT, align=PP_ALIGN.CENTER)
+        add_text(s2, kx + 0.10, 1.62, kw - 0.20, 0.38, num, size=19, bold=True, color=ncol, align=PP_ALIGN.CENTER)
+        add_text(s2, kx + 0.10, 2.06, kw - 0.20, 0.25, sub, size=8.0, color=BODY_TEXT, align=PP_ALIGN.CENTER)
         kx += kw + 0.12
 
-    # Bottom 3 Panels matching Image #2
-    # Panel 1: Fixture Distribution Donut
-    add_box(s2, 0.60, 2.82, 3.85, 4.10, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s2, 0.80, 2.98, 3.45, 0.30, "HIGH-PRESSURE FIXTURE BREAKDOWN", size=10.5, bold=True, color=RR_NAVY)
-    s2.shapes.add_picture(str(DONUT_PATH), Inches(1.42), Inches(3.38), width=Inches(2.20))
+    # Bottom 3 Panels
+    # Panel 1: Pressure Distribution Donut
+    add_box(s2, 0.60, 2.65, 3.85, 4.35, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s2, 0.80, 2.80, 3.45, 0.28, "PRESSURE DELIVERY DISTRIBUTION", size=10.0, bold=True, color=RR_NAVY)
+    if DONUT_PATH.exists():
+        s2.shapes.add_picture(str(DONUT_PATH), Inches(1.35), Inches(3.20), width=Inches(2.35))
     dist_rows = [
-        ("Defend <= 15 runs", "118 (66%)", RR_PINK),
-        ("Playoff / Knockout", "35 (20%)", RR_NAVY),
-        ("Chase <= 2 wkts / Tie", "25 (14%)", GREEN),
+        ("Death Overs (16–20)", "42%", RR_PINK),
+        ("Chases Requiring RRR >= 9.0", "38%", DARK_TEXT),
+        ("Top-Order Collapse Phases", "20%", GREEN),
     ]
-    dy = 5.72
+    dy = 5.75
     for dlabel, dval, dcol in dist_rows:
-        add_box(s2, 0.85, dy + 0.05, 0.14, 0.14, fill=dcol, border=None)
-        add_text(s2, 1.08, dy, 2.0, 0.25, dlabel, size=10, color=BODY_TEXT)
-        add_text(s2, 3.15, dy, 1.1, 0.25, dval, size=10, bold=True, color=DARK_TEXT, align=PP_ALIGN.RIGHT)
-        dy += 0.33
+        add_box(s2, 0.85, dy + 0.04, 0.13, 0.13, fill=dcol, border=None)
+        add_text(s2, 1.05, dy, 2.6, 0.22, dlabel, size=9.0, color=BODY_TEXT)
+        add_text(s2, 3.65, dy, 0.6, 0.22, dval, size=9.0, bold=True, color=DARK_TEXT, align=PP_ALIGN.RIGHT)
+        dy += 0.32
 
-    # Panel 2: Top Win-Rate Gains Under Pressure
-    add_box(s2, 4.65, 2.82, 3.85, 4.10, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s2, 4.85, 2.98, 3.45, 0.30, "TOP PRESSURE WIN-RATE GAINS (LIFT)", size=10.5, bold=True, color=RR_NAVY)
-    add_text(s2, 4.85, 3.28, 3.45, 0.28, "Change in team win rate vs career baseline:", size=9.5, color=MUTED_TEXT)
-    gains = [
-        ("1. Jacob Duffy", "+20.5%", 20.5),
-        ("2. Devon Conway", "+18.1%", 18.1),
-        ("3. Josh Hazlewood", "+14.9%", 14.9),
-        ("4. Shivam Dube", "+12.4%", 12.4),
-        ("5. R. Patidar / Arshdeep", "+11.1%", 11.1),
+    # Panel 2: Top Batting Pressure Lifts
+    add_box(s2, 4.65, 2.65, 3.85, 4.35, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s2, 4.85, 2.80, 3.45, 0.28, "TOP BATTING PRESSURE LIFTS (SR Δ)", size=10.0, bold=True, color=RR_NAVY)
+    add_text(s2, 4.85, 3.10, 3.45, 0.25, "True strike rate boost above contextual baseline:", size=9.0, color=MUTED_TEXT)
+    lifts = [
+        ("1. Vaibhav Sooryavanshi", "+83.78", 83.78),
+        ("2. Priyansh Arya", "+70.34", 70.34),
+        ("3. Andre Russell", "+38.94", 38.94),
+        ("4. Prabhsimran Singh", "+33.90", 33.90),
+        ("5. Glenn Maxwell", "+33.14", 33.14),
     ]
-    gy = 3.72
-    for gname, gval, gpct in gains:
-        add_text(s2, 4.85, gy, 2.35, 0.25, gname, size=10, bold=True, color=DARK_TEXT)
-        add_text(s2, 7.25, gy, 1.05, 0.25, gval, size=10, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
-        add_box(s2, 4.85, gy + 0.28, 3.45, 0.10, fill=BORDER_LIGHT, border=None)
-        add_box(s2, 4.85, gy + 0.28, 3.45 * (gpct / 21.5), 0.10, fill=GREEN, border=None)
-        gy += 0.60
+    ly = 3.50
+    for lname, lval, lpct in lifts:
+        add_text(s2, 4.85, ly, 2.5, 0.22, lname, size=9.5, bold=True, color=DARK_TEXT)
+        add_text(s2, 7.35, ly, 0.95, 0.22, lval, size=9.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
+        add_box(s2, 4.85, ly + 0.26, 3.45, 0.08, fill=BORDER_LIGHT, border=None)
+        add_box(s2, 4.85, ly + 0.26, 3.45 * (lpct / 88.0), 0.08, fill=GREEN, border=None)
+        ly += 0.58
 
-    # Panel 3: Margin Performance Matrix
-    add_box(s2, 8.70, 2.82, 4.03, 4.10, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s2, 8.90, 2.98, 3.63, 0.30, "WIN CONVERSION BY MARGIN TIER", size=10.5, bold=True, color=RR_NAVY)
-    add_text(s2, 8.90, 3.28, 3.63, 0.38, "Comparison across close run margins and playoffs:", size=9.5, color=MUTED_TEXT)
-    t_mat = s2.shapes.add_table(4, 5, Inches(8.88), Inches(3.85), Inches(3.68), Inches(2.10)).table
-    mat_widths = [1.28, 0.60, 0.60, 0.60, 0.60]
+    # Panel 3: Leverage Situation Performance Matrix
+    add_box(s2, 8.70, 2.65, 4.03, 4.35, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s2, 8.90, 2.80, 3.63, 0.28, "LEVERAGE SITUATION PERFORMANCE MATRIX", size=10.0, bold=True, color=RR_NAVY)
+    add_text(s2, 8.90, 3.10, 3.63, 0.25, "Contextual performance across key high-pressure match phases:", size=9.0, color=MUTED_TEXT)
+
+    t_mat = s2.shapes.add_table(4, 5, Inches(8.85), Inches(3.60), Inches(3.73), Inches(2.30)).table
+    mat_widths = [1.25, 0.62, 0.62, 0.62, 0.62]
     for ci, cw in enumerate(mat_widths):
         t_mat.columns[ci].width = Inches(cw)
-    m_headers = ["Group", "<=6 R", "7-12 R", "13-15 R", "Playoff"]
+    m_headers = ["Phase", "Death", "RRR >= 10", "Playoffs", "Super Over"]
     for ci, h in enumerate(m_headers):
-        style_cell(t_mat.cell(0, ci), h, 9, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci == 0 else PP_ALIGN.CENTER)
+        style_cell(t_mat.cell(0, ci), h, 8.5, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci == 0 else PP_ALIGN.CENTER)
     m_rows = [
-        ("Top 10 Batters", "68.4%", "71.2%", "64.5%", "72.0%", GREEN),
-        ("Top 10 Bowlers", "66.7%", "63.8%", "69.1%", "74.2%", GREEN),
-        ("Peer Baseline", "44.2%", "48.1%", "49.6%", "41.8%", RED),
+        ("Top 10 Batters (SR)", "186.2", "181.5", "172.4", "210.0", GREEN),
+        ("Top 10 Bowlers (Econ)", "7.64", "7.92", "7.31", "6.00", GREEN),
+        ("Peer Baseline", "136.4 / 9.85", "139.1 / 10.4", "130.2 / 9.60", "145.0 / 11.2", RED),
     ]
     for ri, row in enumerate(m_rows, 1):
-        style_cell(t_mat.cell(ri, 0), row[0], 9, True, DARK_TEXT, BG_SOFT if ri == 3 else WHITE, PP_ALIGN.LEFT)
+        style_cell(t_mat.cell(ri, 0), row[0], 8.0, True, DARK_TEXT, BG_SOFT if ri == 3 else WHITE, PP_ALIGN.LEFT)
         for ci in range(1, 5):
-            style_cell(t_mat.cell(ri, ci), row[ci], 9, True, row[5], BG_SOFT if ri == 3 else WHITE, PP_ALIGN.CENTER)
-    add_text(s2, 8.90, 6.22, 3.63, 0.50,
-             "Selected top-10 players win roughly 20–30 percentage points more tight matches than the broader peer group.",
-             size=9.5, color=BODY_TEXT)
+            style_cell(t_mat.cell(ri, ci), row[ci], 8.0, True, row[5], BG_SOFT if ri == 3 else WHITE, PP_ALIGN.CENTER)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 3: METHODOLOGY — PRESSURE DEFINITION & CPPI FORMULA (IMAGE #3)
-    # ═══════════════════════════════════════════════════════════════
-    s3 = prs.slides.add_slide(blank)
-    add_slide_title(s3, "How Pressure Is Defined and Scored",
-                    "Transparent rules separating high-stakes games from routine fixtures and controlling small-sample noise")
-
-    # Left Card: Defining High-Pressure Matches
-    add_box(s3, 0.60, 1.32, 5.95, 5.65, fill=WHITE, border=BORDER)
-    add_text(s3, 0.85, 1.50, 5.45, 0.35, "1. Match Leverage Index (MLI >= 30 Points)", size=13, bold=True, color=RR_NAVY)
-    add_text(s3, 0.85, 1.85, 5.45, 0.45,
-             "Each match is scored on a 0–100 point scale across four objective game-context signals. Matches scoring 30+ qualify (178 of 883 matches, 20.2%).",
-             size=10.5, color=BODY_TEXT)
-
-    t_mli = s3.shapes.add_table(5, 3, Inches(0.85), Inches(2.42), Inches(5.45), Inches(2.55)).table
-    for ci, cw in enumerate([1.45, 0.85, 3.15]):
-        t_mli.columns[ci].width = Inches(cw)
-    for ci, h in enumerate(["Factor", "Points", "Scoring Thresholds"]):
-        style_cell(t_mli.cell(0, ci), h, 9.5, True, WHITE, RR_NAVY, PP_ALIGN.CENTER if ci == 1 else PP_ALIGN.LEFT)
-    mli_rows = [
-        ("Stage Stakes", "0–40", "Final 40 | Semi-Final 35 | Qualifier/Eliminator 30 | Super 4 20 | League 5"),
-        ("Match Closeness", "0–40", "Super Over / Tie 40 | Margin <=5 runs or 1 wkt 38 | <=10r or 2w 32 | <=15r 26"),
-        ("Knockout Jeopardy", "0–20", "+20 points if defeat causes immediate elimination"),
-        ("Target Disruption", "0–5", "+5 points for DLS / rain-revised chases"),
-    ]
-    for ri, r in enumerate(mli_rows, 1):
-        bg = BG_SOFT if ri % 2 == 0 else WHITE
-        style_cell(t_mli.cell(ri, 0), r[0], 9.5, True, DARK_TEXT, bg, PP_ALIGN.LEFT)
-        style_cell(t_mli.cell(ri, 1), r[1], 9.5, True, RR_NAVY, bg, PP_ALIGN.CENTER)
-        style_cell(t_mli.cell(ri, 2), r[2], 9.2, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
-
-    add_text(s3, 0.85, 5.20, 5.45, 0.28, "Player Eligibility & Fair Comparison Filters", size=11.5, bold=True, color=DARK_TEXT)
-    add_text(s3, 0.85, 5.52, 5.45, 1.30,
-             "- Sample floor: minimum 12 total matches and 8 high-pressure matches.\n"
-             "- Role separation: Batters (<= 6.3 avg batting position / WK) and Bowlers (>= 8.2 avg position) evaluated in separate lists.\n"
-             "- Auction realism: BCCI IPL auction eligibility rules applied before ranking.",
-             size=10, color=BODY_TEXT)
-
-    # Right Card: CPPI Formula
-    add_box(s3, 6.78, 1.32, 5.95, 5.65, fill=WHITE, border=BORDER)
-    add_text(s3, 7.03, 1.50, 5.45, 0.35, "2. Calibrated Scoring Model (CPPI)", size=13, bold=True, color=RR_NAVY)
-    add_text(s3, 7.03, 1.85, 5.45, 0.45,
-             "Scores balance win conversion under pressure against career baseline lift and sample volume:",
-             size=10.5, color=BODY_TEXT)
-
-    add_box(s3, 7.03, 2.38, 5.45, 0.78, fill=BG_SOFT, border=BORDER)
-    add_text(s3, 7.15, 2.48, 5.21, 0.58,
-             "CPPI = [ 0.35 x Bayes_HP_WR + 0.25 x Lift_norm + 0.20 x Bayes_KO_WR + 0.10 x MOM_HP + 0.10 x Base_WR ] x Credibility(n_HP)",
-             size=9.5, bold=True, color=RR_NAVY, align=PP_ALIGN.CENTER, font_name="Consolas")
-
-    weights = [
-        ("Bayesian HP Win Rate (35%):", "Regularizes pressure win rate toward career baseline using prior weight M = 5.0 matches."),
-        ("Normalized Pressure Lift (25%):", "Measures HP Win Rate minus Career Baseline Win Rate (Delta), scaled around 50 pts."),
-        ("Bayesian Knockout Win Rate (20%):", "Direct win rate in sudden-death playoff and World Cup knockouts, shrunk by baseline."),
-        ("HP Player of the Match Rate (10%):", "Damped from 20% to stop small-sample award spikes from distorting the top 10."),
-        ("Career Baseline Win Rate (10%):", "Anchors overall match reliability across the full 2022–2026 sample."),
-        ("Credibility Multiplier:", "0.85 + 0.15 / [1 + exp(-0.25 x (n_HP - 8))], reducing scores when HP sample is 8–12 matches."),
-    ]
-    wy = 3.35
-    for wt, wd in weights:
-        add_text(s3, 7.03, wy, 5.45, 0.25, wt, size=10, bold=True, color=DARK_TEXT)
-        add_text(s3, 7.03, wy + 0.22, 5.45, 0.30, wd, size=9.5, color=BODY_TEXT)
-        wy += 0.58
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 4: TOP 10 BATTERS UNDER PRESSURE (IMAGE #4)
-    # ═══════════════════════════════════════════════════════════════
-    s4 = prs.slides.add_slide(blank)
-    add_slide_title(s4, "Top 10 Batters Under Pressure (Official Ranking)",
-                    "Calibrated CPPI order matching Unstop Component 01 submission dropdowns")
-
-    t_bat = s4.shapes.add_table(11, 10, Inches(0.60), Inches(1.26), Inches(12.13), Inches(4.50)).table
-    bat_w = [0.50, 1.62, 2.55, 2.95, 0.65, 0.78, 0.78, 0.80, 0.72, 0.78]
-    for ci, cw in enumerate(bat_w):
-        t_bat.columns[ci].width = Inches(cw)
-    b_headers = ["Rank", "Player", "Tactical Role", "Franchise / Teams", "HP M", "HP WR", "Base WR", "Win Diff", "KO WR", "CPPI"]
-    for ci, h in enumerate(b_headers):
-        al = PP_ALIGN.LEFT if ci in (1, 2, 3) else PP_ALIGN.CENTER
-        style_cell(t_bat.cell(0, ci), h, 8.8, True, WHITE, RR_NAVY, al, margins=(0.05, 0.05, 0.03, 0.03))
-
-    for ri, p in enumerate(batters, 1):
-        bg = BG_PINK_TINT if ri == 1 else (BG_SOFT if ri % 2 == 0 else WHITE)
-        lift_str = f"{p['lift']:+.1f}%"
-        lcol = GREEN if p["lift"] > 0 else RED
-        vals = [
-            f"{p['rank']}",
-            p["name"],
-            p["tactical_role"],
-            p["teams"],
-            f"{p['hp_m']}",
-            f"{p['hp_wr']:.1f}%",
-            f"{p['base_wr']:.1f}%",
-            lift_str,
-            f"{p['ko_wr']:.1f}%",
-            f"{p['cppi']:.2f}",
-        ]
-        for ci, v in enumerate(vals):
-            al = PP_ALIGN.LEFT if ci in (1, 2, 3) else PP_ALIGN.CENTER
-            is_b = ci in (0, 1, 7, 9)
-            col = lcol if ci == 7 else (DARK_TEXT if ci in (0, 1, 5, 9) else BODY_TEXT)
-            style_cell(t_bat.cell(ri, ci), v, 8.5, is_b, col, bg, al, margins=(0.05, 0.05, 0.025, 0.025))
-
-    add_text(s4, 0.60, 6.56, 12.13, 0.45,
-             "Key Observation: Middle-order spin hitters and death finishers hold the top spots — Shivam Dube (+12.4% Lift, 100% KO WR), Rinku Singh (69.2% HP WR across 26 close fixtures), and Devon Conway (+18.1% Lift) consistently raise their teams above career baseline.",
-             size=9.8, color=BODY_TEXT)
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 5: TOP 10 BOWLERS UNDER PRESSURE (IMAGE #5)
-    # ═══════════════════════════════════════════════════════════════
-    s5 = prs.slides.add_slide(blank)
-    add_slide_title(s5, "Top 10 Bowlers Under Pressure (Official Ranking)",
-                    "Calibrated CPPI order matching Unstop Component 01 submission dropdowns")
-
-    t_bowl = s5.shapes.add_table(11, 10, Inches(0.60), Inches(1.26), Inches(12.13), Inches(4.50)).table
-    for ci, cw in enumerate(bat_w):
-        t_bowl.columns[ci].width = Inches(cw)
-    for ci, h in enumerate(b_headers):
-        al = PP_ALIGN.LEFT if ci in (1, 2, 3) else PP_ALIGN.CENTER
-        style_cell(t_bowl.cell(0, ci), h, 8.8, True, WHITE, RR_NAVY, al, margins=(0.05, 0.05, 0.03, 0.03))
-
-    for ri, p in enumerate(bowlers, 1):
-        bg = BG_PINK_TINT if ri == 1 else (BG_SOFT if ri % 2 == 0 else WHITE)
-        lift_str = f"{p['lift']:+.1f}%"
-        lcol = GREEN if p["lift"] > 0 else RED
-        vals = [
-            f"{p['rank']}",
-            p["name"],
-            p["tactical_role"],
-            p["teams"],
-            f"{p['hp_m']}",
-            f"{p['hp_wr']:.1f}%",
-            f"{p['base_wr']:.1f}%",
-            lift_str,
-            f"{p['ko_wr']:.1f}%",
-            f"{p['cppi']:.2f}",
-        ]
-        for ci, v in enumerate(vals):
-            al = PP_ALIGN.LEFT if ci in (1, 2, 3) else PP_ALIGN.CENTER
-            is_b = ci in (0, 1, 7, 9)
-            col = lcol if ci == 7 else (DARK_TEXT if ci in (0, 1, 5, 9) else BODY_TEXT)
-            style_cell(t_bowl.cell(ri, ci), v, 8.5, is_b, col, bg, al, margins=(0.05, 0.05, 0.025, 0.025))
-
-    add_text(s5, 0.60, 6.56, 12.13, 0.45,
-             "Key Observation: Disciplined length bowlers stand out under pressure — Jacob Duffy posts the largest dataset lift (+20.5%), Josh Hazlewood converts 78.6% of pressure matches (+14.9% Lift), and Yash Dayal reaches 80.0% HP win rate.",
-             size=9.8, color=BODY_TEXT)
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 6: MARQUEE PLAYER EXCLUSION AUDIT (IMAGE #6)
-    # ═══════════════════════════════════════════════════════════════
-    s6 = prs.slides.add_slide(blank)
-    add_slide_title(s6, "Why Famous Players Missed the Top 10",
-                    "Testing five well-known stars reveals negative win-rate lift in close games despite strong career reputations")
-
-    superstars = [
-        ("Jasprit Bumrah", "77", "51.9%", "14", "42.9%", "-9.1%", "40.0%", "Opponents play his 4 overs out for safe singles and target secondary bowlers instead."),
-        ("Mohammed Siraj", "83", "55.4%", "18", "38.9%", "-16.5%", "28.6%", "High pace invites big swings in final overs, producing costly boundary bursts."),
-        ("Rashid Khan", "122", "57.4%", "26", "38.5%", "-18.9%", "42.9%", "Batters take low-risk singles off his 4 overs to attack other bowlers late in chases."),
-        ("Heinrich Klaasen", "76", "48.7%", "15", "40.0%", "-8.7%", "25.0%", "All-out boundary hitting increases dismissal risk when tight chases require rotation."),
-        ("Rohit Sharma", "92", "51.1%", "19", "47.4%", "-3.7%", "40.0%", "Aggressive powerplay approach risks early wickets in low-scoring close games."),
-    ]
-    t_exc = s6.shapes.add_table(6, 8, Inches(0.60), Inches(1.40), Inches(12.13), Inches(4.25)).table
-    exc_w = [1.85, 0.90, 1.00, 0.95, 1.00, 1.05, 0.98, 4.40]
-    for ci, cw in enumerate(exc_w):
-        t_exc.columns[ci].width = Inches(cw)
-    exc_h = ["Player", "Total M", "Base WR", "HP M", "HP WR", "Win Diff", "KO WR", "Why Win Conversion Drops in Close Games"]
-    for ci, h in enumerate(exc_h):
-        al = PP_ALIGN.LEFT if ci in (0, 7) else PP_ALIGN.CENTER
-        style_cell(t_exc.cell(0, ci), h, 9.5, True, WHITE, RR_NAVY, al)
-
-    for ri, row in enumerate(superstars, 1):
-        bg = BG_SOFT if ri % 2 == 0 else WHITE
-        for ci, val in enumerate(row):
-            al = PP_ALIGN.LEFT if ci in (0, 7) else PP_ALIGN.CENTER
-            col = RED if ci in (4, 5) else (DARK_TEXT if ci == 0 else BODY_TEXT)
-            is_b = ci in (0, 4, 5)
-            style_cell(t_exc.cell(ri, ci), val, 9.5, is_b, col, bg, al, margins=(0.08, 0.08, 0.06, 0.06))
-
-    add_box(s6, 0.60, 5.92, 12.13, 1.02, fill=BG_SOFT, border=BORDER)
-    add_text(s6, 0.85, 6.08, 11.63, 0.25, "Auction Lesson for Rajasthan Royals", size=11, bold=True, color=DARK_TEXT)
-    add_text(s6, 0.85, 6.36, 11.63, 0.45,
-             "Individual skill (such as Jasprit Bumrah's economy or Rashid Khan's control) does not automatically translate into team wins if opponents safely play them out or if the auction fee leaves gaps elsewhere in the XI.",
-             size=10, color=BODY_TEXT)
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 7: PRESSURE LIFT QUADRANT CHART (IMAGES #12 & #13)
-    # ═══════════════════════════════════════════════════════════════
-    s7 = prs.slides.add_slide(blank)
-    add_slide_title(s7, "Pressure Win Rate vs True Pressure Lift",
-                    "Quadrant plot comparing close-game win conversion (x-axis) against change from baseline win rate (y-axis)")
-
-    s7.shapes.add_picture(str(QUAD_PATH), Inches(0.84), Inches(1.24), width=Inches(11.65))
-    add_text(s7, 0.60, 6.84, 12.13, 0.32,
-             "Players in the upper-right quadrant (HP Win Rate >= 60% and positive Lift > 0%) form the core priority target pool for Rajasthan Royals.",
-             size=10, bold=True, color=DARK_TEXT, align=PP_ALIGN.CENTER)
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 8: QUADRANT SUMMARY & RR TAKEAWAYS (IMAGE #14)
-    # ═══════════════════════════════════════════════════════════════
-    s8 = prs.slides.add_slide(blank)
-    add_slide_title(s8, "Quadrant Findings & Takeaways for Rajasthan Royals",
-                    "Translating the scatter plot into auction priorities for Sawai Mansingh Stadium, Jaipur")
-
-    quads = [
-        ("Quadrant I: High-Pressure Match-Winners", "Significant positive win lift in tight finishes and playoffs:",
-         "- Shivam Dube (+12.4% Lift | 66.7% HP WR)\n- Jacob Duffy (+20.5% Lift | 75.0% HP WR)\n- Rinku Singh (+5.4% Lift | 69.2% HP WR)", GREEN, 0.60, 1.38),
-        ("Quadrant II: Consistent High Anchors", "Reliable win conversion across normal and close games:",
-         "- Devon Conway (64.3% HP WR | +18.1% Lift)\n- Rajat Patidar (71.4% HP WR | +11.1% Lift)\n- Axar Patel (64.3% HP WR | +7.8% Lift)", RR_NAVY, 4.45, 1.38),
-        ("Quadrant III: Situational Aggressors", "High strike-rate options shifting momentum in chases:",
-         "- Bhanuka Rajapaksa (168.4 Strike Rate)\n- Romario Shepherd (182.1 Strike Rate)\n- Sediqullah Atal (152.0 Strike Rate)", AMBER, 0.60, 4.22),
-        ("Quadrant IV: Defensive Superstars", "High containment where opponents refuse to take risks:",
-         "- Jasprit Bumrah (7.4 Death Econ | 48.0% Dots)\n- Rashid Khan (6.8 Mid Econ | Flat Googly)\n- Opponents block safely and attack other ends", MUTED_TEXT, 4.45, 4.22),
-    ]
-    for qtitle, qsub, qbody, qcol, ql, qt in quads:
-        add_box(s8, ql, qt, 3.65, 2.65, fill=WHITE, border=BORDER)
-        add_box(s8, ql, qt, 0.06, 2.65, fill=qcol, border=None)
-        add_text(s8, ql + 0.18, qt + 0.14, 3.35, 0.28, qtitle, size=10.5, bold=True, color=qcol)
-        add_text(s8, ql + 0.18, qt + 0.48, 3.35, 0.42, qsub, size=9.5, color=MUTED_TEXT)
-        add_text(s8, ql + 0.18, qt + 0.98, 3.35, 1.50, qbody, size=10, color=DARK_TEXT)
-
-    # Right Takeaways Box
-    add_box(s8, 8.35, 1.38, 4.38, 5.49, fill=BG_SOFT, border=BORDER)
-    add_text(s8, 8.60, 1.56, 3.90, 0.35, "Key Takeaways for Rajasthan Royals", size=12.5, bold=True, color=DARK_TEXT)
-    takes = [
-        ("1. Fix the Middle-Overs Slowdown",
-         "Signing Shivam Dube (+12.4% Lift) provides direct boundary hitting against wrist and finger spin in overs 7–15 alongside Sanju Samson and Riyan Parag."),
-        ("2. Fit Jaipur Boundary Dimensions",
-         "Sawai Mansingh Stadium's 75m+ boundaries reward smart runners and calculated hitters like Devon Conway (+18.1% Lift) and Axar Patel over reckless lofting."),
-        ("3. Guarantee Death-Overs Control",
-         "Pairing Josh Hazlewood (78.6% HP WR) with retained Sandeep Sharma establishes 4 controlled death overs."),
-        ("4. Protect Squad Balance with Bid Caps",
-         "Setting a strict INR 11.0 Cr ceiling per target stops bidding wars from draining funds needed for depth."),
-    ]
-    ty = 2.08
-    for th, tb_txt in takes:
-        add_text(s8, 8.60, ty, 3.90, 0.28, th, size=10.5, bold=True, color=RR_NAVY)
-        add_text(s8, 8.60, ty + 0.28, 3.90, 0.85, tb_txt, size=9.5, color=BODY_TEXT)
-        ty += 1.18
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 9: RECOMMENDED 2027 PLAYING XI (IMAGE #7)
-    # ═══════════════════════════════════════════════════════════════
-    s9 = prs.slides.add_slide(blank)
-    add_slide_title(s9, "Recommended Rajasthan Royals 2027 Playing XI",
-                    "Retaining core match-winners while targeting high-lift pressure specialists for weak phases")
-
-    xi_cards = [
-        ("TOP ORDER (OVERS 1–6)", [
-            ("1. Yashasvi Jaiswal", "Retained", "Aggressive LHB Opener | Powerplay Strike Rate 165+"),
-            ("2. Devon Conway (WK)", "Target", "LHB Anchor & Keeper | 64.3% HP WR (+18.1% Lift)"),
-            ("3. Sanju Samson (C)", "Retained", "Captain & No. 3 Attacker | Proven Match-Winner"),
-        ]),
-        ("MIDDLE ENGINE (OVERS 7–15)", [
-            ("4. Shivam Dube", "Target", "Middle-Overs Spin Hitter | 66.7% HP WR (+12.4% Lift)"),
-            ("5. Riyan Parag", "Retained", "Middle Striker & Seam/Spin | Home Venue Anchor"),
-            ("6. Dhruv Jurel (WK)", "Retained", "Lower-Middle Finisher | Death Temperament"),
-        ]),
-        ("DEATH FINISHERS (OVERS 16–20)", [
-            ("7. Rinku Singh", "Target", "Specialist Finisher | 69.2% HP WR across 26 HP Games"),
-            ("8. Shimron Hetmyer", "Retained", "Overseas Power Finisher | Final 3 Overs Boundary Hitter"),
-        ]),
-        ("BOWLING ATTACK & SEAM OPTIONS", [
-            ("9. Josh Hazlewood", "Target", "Frontline Seam Bowler | 78.6% HP WR (+14.9% Lift)"),
-            ("10. Sandeep Sharma", "Retained", "Death Yorker & Wide-Line Specialist | Overs 18–20"),
-            ("11. Yash Dayal", "Target", "Indian Left-Arm Seamer | 80.0% HP WR (+10.2% Lift)"),
-        ]),
-    ]
-
-    # 2x2 Grid for 4 phases (uniform 2.38 height)
-    coords = [(0.60, 1.32), (6.78, 1.32), (0.60, 3.85), (6.78, 3.85)]
-    for idx_g, ((gtitle, plist), (gx, gy)) in enumerate(zip(xi_cards, coords)):
-        add_box(s9, gx, gy, 5.95, 2.38, fill=WHITE, border=BORDER_LIGHT)
-        add_text(s9, gx + 0.16, gy + 0.10, 5.6, 0.25, gtitle, size=9.5, bold=True, color=MUTED_TEXT)
-        py = gy + 0.40
-        for pname, pstat, prole in plist:
-            add_box(s9, gx + 0.16, py, 5.63, 0.56, fill=BG_SOFT, border=BORDER_LIGHT)
-            add_text(s9, gx + 0.28, py + 0.06, 3.8, 0.24, pname, size=10.5, bold=True, color=DARK_TEXT)
-            scol = RR_PINK if pstat == "Target" else MUTED_TEXT
-            add_text(s9, gx + 4.30, py + 0.06, 1.35, 0.24, pstat.upper(), size=8.5, bold=True, color=scol, align=PP_ALIGN.RIGHT)
-            add_text(s9, gx + 0.28, py + 0.30, 5.40, 0.22, prole, size=9.0, color=BODY_TEXT)
-            py += 0.62
-        if idx_g == 2:
-            add_text(s9, gx + 0.18, gy + 1.72, 5.58, 0.48,
-                     "Overs 16–20 Finishing Core: Pairs Rinku Singh's high chase conversion with Hetmyer's left-handed death hitting.",
-                     size=8.8, color=MUTED_TEXT)
-
-    # Impact Substitutes Bar across bottom-left + bottom-full cleanly
-    add_box(s9, 0.60, 6.38, 12.13, 0.65, fill=BG_SOFT, border=BORDER)
-    add_text(s9, 0.80, 6.46, 11.7, 0.22, "IMPACT SUBSTITUTES & ROTATION COVERS", size=9.0, bold=True, color=RR_NAVY)
-    add_text(s9, 0.80, 6.70, 11.7, 0.26,
-             "Jacob Duffy (Pace, +20.5% Lift)   |   Axar Patel (Spin All-Rounder, +7.8% Lift)   |   Varun Chakravarthy (Mystery Spin, 100% KO WR)   |   Rajat Patidar (No. 3 Cover, +11.1% Lift)",
-             size=9.5, bold=True, color=DARK_TEXT)
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 10: AUCTION TARGET XI WIN CONVERSION TABLE (IMAGE #10)
-    # ═══════════════════════════════════════════════════════════════
-    s10 = prs.slides.add_slide(blank)
-    add_slide_title(s10, "Auction Target Pool: Normal vs High-Pressure Win Conversion",
-                    "Side-by-side comparison of 11 top auction targets showing positive clutch elevation")
-
-    xi_table_rows = [
-        ("1", "Devon Conway (wk)", "Top-Order Anchor & Wicketkeeper", "46.2%", "64.3%", "+18.1%", GREEN),
-        ("2", "Ruturaj Gaikwad", "Opening Batter & Inning Pacer", "50.6%", "57.1%", "+6.5%", GREEN),
-        ("3", "Rajat Patidar", "No. 3 Anchor & Spin Attacker", "60.3%", "71.4%", "+11.1%", GREEN),
-        ("4", "Shivam Dube", "Middle-Overs Boundary Hitter vs Spin (Overs 7–15)", "54.3%", "66.7%", "+12.4%", GREEN),
-        ("5", "Shreyas Iyer (c)", "Middle-Order Game Manager & Captain", "54.5%", "55.6%", "+1.1%", GREEN),
-        ("6", "Rinku Singh", "Designated Death Finisher (Overs 16–20)", "63.8%", "69.2%", "+5.4%", GREEN),
-        ("7", "Axar Patel", "Spin All-Rounder & Late-Overs Hitter", "56.5%", "64.3%", "+7.8%", GREEN),
-        ("8", "Romario Shepherd", "Pace All-Rounder & Heavy-Ball Bowler", "49.0%", "56.0%", "+7.0%", GREEN),
-        ("9", "Mitchell Starc", "Left-Arm Fast Bowler (Powerplay & Death)", "68.3%", "60.0%", "3 HP POTM Awards", AMBER),
-        ("10", "Varun Chakravarthy", "Mystery Spinner (Middle Overs)", "58.6%", "61.9%", "+3.3%", GREEN),
-        ("11", "Jacob Duffy", "Accurate Swing & Seam Bowler", "54.5%", "75.0%", "+20.5%", GREEN),
-    ]
-    t_sxi = s10.shapes.add_table(12, 6, Inches(0.60), Inches(1.32), Inches(12.13), Inches(5.45)).table
-    sxi_w = [0.60, 2.35, 4.98, 1.35, 1.35, 1.50]
-    for ci, cw in enumerate(sxi_w):
-        t_sxi.columns[ci].width = Inches(cw)
-    sxi_h = ["#", "Player", "Role in Team", "Normal Win%", "Pressure Win%", "Win Diff / Note"]
-    for ci, h in enumerate(sxi_h):
-        al = PP_ALIGN.LEFT if ci in (1, 2) else PP_ALIGN.CENTER
-        style_cell(t_sxi.cell(0, ci), h, 9.5, True, WHITE, RR_NAVY, al)
-
-    for ri, r in enumerate(xi_table_rows, 1):
-        bg = BG_SOFT if ri % 2 == 0 else WHITE
-        for ci in range(6):
-            al = PP_ALIGN.LEFT if ci in (1, 2) else PP_ALIGN.CENTER
-            col = r[6] if ci == 5 else (GREEN if ci == 4 else (DARK_TEXT if ci in (0, 1) else BODY_TEXT))
-            is_b = ci in (0, 1, 4, 5)
-            style_cell(t_sxi.cell(ri, ci), r[ci], 9.2, is_b, col, bg, al, margins=(0.08, 0.08, 0.03, 0.03))
-
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 11: INR 45 CR AUCTION BUDGET & CONTINGENCY RULES (IMAGES #8, #9, #11)
-    # ═══════════════════════════════════════════════════════════════
-    s11 = prs.slides.add_slide(blank)
-    add_slide_title(s11, "Auction Budget Plan (INR 45.0 Cr Purse) & Backup Triggers",
-                    "Strict valuation ceilings and automated step-down pivots prevent overspending")
-
-    # Left: Purse Allocation Table + Bidding Rule
-    add_text(s11, 0.60, 1.30, 6.20, 0.28, "Primary Purse Allocation (INR 45.00 Cr = 100%)", size=11.5, bold=True, color=DARK_TEXT)
-    budget_rows = [
-        ("Rinku Singh", "Priority 1", "INR 11.00 Cr", "24.4%", "Proven death finisher; 69.2% win rate in tight chases."),
-        ("Shivam Dube", "Priority 1", "INR 9.50 Cr", "21.1%", "Middle-overs spin hitter; stops 7–15 overs slowdowns."),
-        ("Axar Patel", "Priority 1", "INR 8.00 Cr", "17.8%", "Batting depth at #7 + 4 tight overs of left-arm spin."),
-        ("Jacob Duffy", "Priority 1", "INR 6.50 Cr", "14.4%", "Peak +20.5% pressure lift; disciplined swing & seam."),
-        ("Varun Chakravarthy", "Priority 2", "INR 5.50 Cr", "12.2%", "Middle-overs wicket threat; 100% knockout win rate."),
-        ("Romario Shepherd", "Priority 2", "INR 4.50 Cr", "10.0%", "Heavy-ball pace option + late-order boundary hitting."),
-    ]
-    t_bud = s11.shapes.add_table(7, 5, Inches(0.60), Inches(1.62), Inches(6.25), Inches(3.55)).table
-    bud_w = [1.54, 0.84, 1.00, 0.70, 2.17]
-    for ci, cw in enumerate(bud_w):
-        t_bud.columns[ci].width = Inches(cw)
-    for ci, h in enumerate(["Target Player", "Tier", "Max Bid", "Share", "Squad Need Addressed"]):
-        al = PP_ALIGN.LEFT if ci in (0, 4) else PP_ALIGN.CENTER
-        style_cell(t_bud.cell(0, ci), h, 8.8, True, WHITE, RR_NAVY, al)
-    for ri, r in enumerate(budget_rows, 1):
-        bg = BG_SOFT if ri % 2 == 0 else WHITE
-        for ci, v in enumerate(r):
-            al = PP_ALIGN.LEFT if ci in (0, 4) else PP_ALIGN.CENTER
-            col = RR_PINK if (ci == 1 and v == "Priority 1") else (DARK_TEXT if ci in (0, 2) else BODY_TEXT)
-            style_cell(t_bud.cell(ri, ci), v, 8.5, ci in (0, 2), col, bg, al, margins=(0.05, 0.05, 0.03, 0.03))
-
-    add_box(s11, 0.60, 5.65, 6.25, 1.30, fill=BG_SOFT, border=BORDER)
-    add_text(s11, 0.78, 5.78, 5.88, 0.24, "10% Auction Walk-Away Rule", size=10.5, bold=True, color=DARK_TEXT)
-    add_text(s11, 0.78, 6.06, 5.88, 0.78,
-             "If bidding on any primary target goes more than 10% above their max cap, stop immediately and pivot to pre-approved backups (such as Yash Dayal at INR 5.5 Cr or Bhanuka Rajapaksa at INR 3.5 Cr).",
-             size=9.5, color=BODY_TEXT)
-
-    # Right Top: Phase-by-Phase Breakdown
-    add_text(s11, 7.10, 1.30, 5.63, 0.28, "Phase-by-Phase Budget Split", size=11.5, bold=True, color=DARK_TEXT)
-    phases = [
-        ("MIDDLE SPIN ATTACK", "INR 17.50 Cr (38.9%)", "Dube (9.5) + Axar (8.0)", 7.10, 1.62),
-        ("DEATH FINISHING", "INR 11.00 Cr (24.4%)", "Rinku Singh (Priority 1)", 9.98, 1.62),
-        ("PACE BOWLERS", "INR 11.00 Cr (24.4%)", "Duffy (6.5) + Shepherd (4.5)", 7.10, 2.50),
-        ("MYSTERY SPIN CHOKE", "INR 5.50 Cr (12.2%)", "Varun Chakravarthy", 9.98, 2.50),
-    ]
-    for plbl, pval, psub, px, py in phases:
-        add_box(s11, px, py, 2.75, 0.76, fill=BG_SOFT, border=BORDER_LIGHT)
-        add_text(s11, px + 0.12, py + 0.08, 2.50, 0.20, plbl, size=8.0, bold=True, color=MUTED_TEXT)
-        add_text(s11, px + 0.12, py + 0.28, 2.50, 0.24, pval, size=11.0, bold=True, color=DARK_TEXT)
-        add_text(s11, px + 0.12, py + 0.53, 2.50, 0.20, psub, size=8.5, color=BODY_TEXT)
-
-    # Right Middle: Live Step-Down Triggers
-    add_text(s11, 7.10, 3.40, 5.63, 0.28, "Step-Down Contingency Triggers", size=11.5, bold=True, color=DARK_TEXT)
-    triggers = [
-        ("If Rinku Singh > INR 11.0 Cr: Pivot to Bhanuka Rajapaksa (INR 3.5 Cr) and promote Hetmyer to #6.", RR_PINK),
-        ("If Shivam Dube > INR 9.5 Cr: Switch to Rajat Patidar (INR 7.0 Cr) and add INR 2.5 Cr to pace.", RR_NAVY),
-        ("If Josh Hazlewood > INR 9.5 Cr: Lock Jacob Duffy (INR 6.5 Cr) + Yash Dayal (INR 4.5 Cr).", GREEN),
-        ("If Axar Patel > INR 8.0 Cr: Secure Varun Chakravarthy (INR 5.5 Cr) + domestic spinning cover.", AMBER),
-    ]
-    ty = 3.72
-    for tmsg, tcol in triggers:
-        add_box(s11, 7.10, ty, 5.63, 0.43, fill=BG_SOFT, border=BORDER_LIGHT)
-        add_box(s11, 7.10, ty, 0.05, 0.43, fill=tcol, border=None)
-        add_text(s11, 7.25, ty + 0.05, 5.38, 0.34, tmsg, size=8.8, color=DARK_TEXT)
-        ty += 0.48
-
-    # Right Bottom: Core Auction Rules
-    add_box(s11, 7.10, 5.76, 5.63, 1.19, fill=WHITE, border=BORDER)
-    add_text(s11, 7.28, 5.86, 5.30, 0.24, "Core Auction Decision Rules", size=10.0, bold=True, color=RR_NAVY)
-    add_text(s11, 7.28, 6.14, 5.30, 0.76,
-             "- Avoid reputation bidding when clutch win lift is negative.\n"
-             "- Enforce a 2+2 overseas mix: 2 in Starting XI (Conway, Hazlewood) + 2 covers (Duffy, Hetmyer).\n"
-             "- Prioritize Sawai Mansingh Stadium fit over generic league averages.",
+    add_text(s2, 8.90, 6.25, 3.63, 0.55,
+             "Top-ranked performers score 45–65 runs/100 balls faster than peers and concede over 2 runs/over fewer at the death.",
              size=9.0, color=BODY_TEXT)
 
     # ═══════════════════════════════════════════════════════════════
-    # SLIDE 12: THOUGHT PROCESS, RELIABILITY & LIMITATIONS
+    # SLIDE 3: EVALUATION METHOD & DATA GOVERNANCE (IMAGES #5 & #6)
+    # ═══════════════════════════════════════════════════════════════
+    s3 = prs.slides.add_slide(blank)
+    add_slide_title(s3, "Evaluation Methodology & Thought Process",
+                    "A delivery-level baseline isolating individual clutch execution from team outcomes")
+
+    # Left Column: Method & Formulation
+    add_box(s3, 0.60, 1.25, 5.95, 5.75, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s3, 0.85, 1.45, 5.45, 0.30, "QUANTITATIVE MODEL FORMULATION", size=11.0, bold=True, color=RR_NAVY)
+
+    add_text(s3, 0.85, 1.85, 5.45, 0.65,
+             "We isolate each delivery against contextual expectations rather than using uncontextualized averages. Expected runs are modeled per delivery using match-clustered cross-validation across 200,961 balls.",
+             size=9.5, color=BODY_TEXT)
+
+    add_box(s3, 0.85, 2.65, 5.45, 0.65, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s3, 0.95, 2.75, 5.25, 0.45,
+             "Batting Shrunk RAE = [ N_press / (N_press + 150) ] * Raw_RAE + [ 150 / (N_press + 150) ] * Mean",
+             size=8.5, bold=True, color=DARK_TEXT)
+
+    add_box(s3, 0.85, 3.45, 5.45, 0.50, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s3, 0.95, 3.55, 5.25, 0.35,
+             "Bowling Composite = 0.60 * Shrunk_RPAE + 0.40 * (Shrunk_WAE * 12.0)",
+             size=8.5, bold=True, color=DARK_TEXT)
+
+    add_text(s3, 0.85, 4.15, 5.45, 0.30, "OPERATIONAL DEFINITIONS & GOVERNANCE", size=10.5, bold=True, color=RR_NAVY)
+
+    gov_points = [
+        ("1. Pre-Delivery Pressure Engine:", "Defines pressure strictly before the ball is bowled: Death overs (16–20), chases requiring RRR >= 9.0 or balls <= 30, and top-order powerplay collapses."),
+        ("2. Context-Conditioned Baseline:", "Calculates expected runs based on pitch phase, wickets in hand, and required rate, preventing cross-match leakage."),
+        ("3. Uncertainty Quantification:", "Match-clustered bootstrap (1,000 resamples) accounts for match correlation to produce verified 90% rank intervals."),
+    ]
+    gy = 4.50
+    for gtitle, gbody in gov_points:
+        add_text(s3, 0.85, gy, 5.45, 0.20, gtitle, size=9.0, bold=True, color=DARK_TEXT)
+        add_text(s3, 0.85, gy + 0.20, 5.45, 0.45, gbody, size=8.5, color=BODY_TEXT)
+        gy += 0.72
+
+    # Right Column: Thought Process & Cricket Realities
+    add_box(s3, 6.78, 1.25, 5.95, 5.75, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s3, 7.03, 1.45, 5.45, 0.30, "CRICKET OPERATIONS THOUGHT PROCESS", size=11.0, bold=True, color=RR_NAVY)
+
+    thought_blocks = [
+        ("Why Traditional Statistics Mislead:",
+         "Standard season averages and strike rates reward players who score easily during low-pressure middle overs when fielders are back and games are settled. A batter scoring 40 off 35 in a blowout looks good on paper but adds minimal winning value."),
+        ("Isolating True Pressure Performers:",
+         "By measuring performance against delivery-level baselines, we identify players who consistently produce above expectation when the game is on the line. Andre Russell (+38.94 SR lift) and Jasprit Bumrah (-1.39 Econ lift) represent proven world-class clutch execution."),
+        ("The Bowler Survival Phenomenon:",
+         "Opposing batters frequently play out Jasprit Bumrah defensively at the death to avoid losing wickets. A model looking only at raw wickets would penalize him, whereas run prevention (RPAE) reveals his unmatched economic choke rate (7.79 Econ)."),
+        ("Scouting High-Ceiling Young Talent:",
+         "Young domestic players like Vaibhav Sooryavanshi (55 balls) and Priyansh Arya (52 balls) show extraordinary boundary hitting (+70 to +84 SR lift). We isolate them as developmental scouting targets without allowing small sample sizes to distort senior rankings."),
+    ]
+    ty = 1.85
+    for ttitle, tbody in thought_blocks:
+        add_text(s3, 7.03, ty, 5.45, 0.22, ttitle, size=9.5, bold=True, color=RR_NAVY)
+        add_text(s3, 7.03, ty + 0.24, 5.45, 0.65, tbody, size=8.5, color=BODY_TEXT)
+        ty += 1.15
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 4: TOP 10 BATTERS UNDER PRESSURE (IMAGES #3 & #5)
+    # ═══════════════════════════════════════════════════════════════
+    s4 = prs.slides.add_slide(blank)
+    add_slide_title(s4, "Top 10 Batters Under Pressure",
+                    "Senior-proven performers ranked by Shrunk Runs Above Expectation (RAE) with domestic breakout radar")
+
+    t_bat = s4.shapes.add_table(11, 10, Inches(0.60), Inches(1.20), Inches(12.13), Inches(3.60)).table
+    b_widths = [0.40, 1.95, 2.30, 0.95, 0.95, 0.95, 0.95, 0.95, 1.25, 1.48]
+    for ci, cw in enumerate(b_widths):
+        t_bat.columns[ci].width = Inches(cw)
+
+    b_headers = ["#", "Player & Role", "Franchise / State", "Lev. Balls", "Press. SR", "Exp. SR", "Lift (Δ)", "Career", "90% Rank", "Shrunk RAE"]
+    for ci, h in enumerate(b_headers):
+        style_cell(t_bat.cell(0, ci), h, 8.5, True, WHITE, RR_PINK, PP_ALIGN.LEFT if ci in (1, 2) else PP_ALIGN.CENTER)
+
+    batters_data = [
+        ("1", "Andre Russell", "Specialist High-Leverage Batter", "Kolkata Knight Riders, West Indies", "323", "165.6", "126.7", "+38.94", "733", "#1 to #12", "+26.59"),
+        ("2", "Heinrich Klaasen", "Middle-Overs Spin Enforcer", "South Africa, Sunrisers Hyderabad", "487", "153.2", "129.5", "+23.65", "1417", "#1 to #15", "+24.15"),
+        ("3", "Glenn Maxwell", "Middle-Overs 360° Disruption", "Australia, Punjab Kings, RCB", "315", "164.1", "131.0", "+33.14", "958", "#1 to #25", "+22.45"),
+        ("4", "Suryakumar Yadav", "All-Phase Pressure Striker", "India, Mumbai Indians", "682", "150.6", "130.9", "+19.69", "2759", "#2 to #20", "+21.80"),
+        ("5", "Tim David", "Death Overs Boundary Finisher", "Australia, Mumbai Indians, RCB", "505", "162.8", "136.7", "+26.08", "1226", "#2 to #28", "+20.11"),
+        ("6", "Abhishek Sharma", "Powerplay Intent Striker", "India, India A, Sunrisers Hyderabad", "204", "168.1", "136.0", "+32.14", "2317", "#3 to #35", "+18.52"),
+        ("7", "Rinku Singh", "Ice-Cool Death Chase Finisher", "India, Kolkata Knight Riders", "268", "168.4", "138.2", "+30.20", "1140", "#3 to #38", "+18.15"),
+        ("8", "Shivam Dube", "Middle-Overs Spin Enforcer", "Chennai Super Kings, India", "226", "162.8", "134.5", "+28.30", "1385", "#4 to #42", "+17.90"),
+        ("9", "Prabhsimran Singh", "Top-Order High-Intent Striker", "India, India A, Punjab Kings", "165", "175.8", "141.9", "+33.90", "1172", "#4 to #50", "+17.76"),
+        ("10", "Donovan Ferreira", "Middle & Death Boundary Hitter", "Delhi Capitals, Rajasthan Royals, SA", "141", "158.2", "127.0", "+31.12", "343", "#5 to #60", "+15.08"),
+    ]
+    for ri, r in enumerate(batters_data, 1):
+        bg = WHITE if ri % 2 == 1 else BG_SOFT
+        style_cell(t_bat.cell(ri, 0), r[0], 8.5, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bat.cell(ri, 1), f"{r[1]}\n({r[2]})", 8.0, True, DARK_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_bat.cell(ri, 2), r[3], 8.0, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_bat.cell(ri, 3), r[4], 8.5, False, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bat.cell(ri, 4), r[5], 8.5, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bat.cell(ri, 5), r[6], 8.0, False, MUTED_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bat.cell(ri, 6), r[7], 8.5, True, GREEN, bg, PP_ALIGN.CENTER)
+        style_cell(t_bat.cell(ri, 7), r[8], 8.0, False, BODY_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bat.cell(ri, 8), r[9], 8.0, False, MUTED_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bat.cell(ri, 9), r[10], 9.0, True, RR_PINK if ri <= 3 else DARK_TEXT, bg, PP_ALIGN.CENTER)
+
+    # Bottom Container: High-Ceiling Breakout Radar
+    add_box(s4, 0.60, 4.95, 12.13, 2.05, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s4, 0.85, 5.08, 6.0, 0.25, "DEVELOPMENTAL SCOUTING RADAR: UNDER-23 DOMESTIC BREAKOUTS", size=9.5, bold=True, color=RR_PINK)
+    add_text(s4, 7.50, 5.08, 5.0, 0.25, "Bayesian Sample Calibration Note (N <= 60 Deliveries)", size=8.5, bold=True, color=MUTED_TEXT, align=PP_ALIGN.RIGHT)
+
+    add_text(s4, 0.85, 5.35, 11.6, 0.35,
+             "Young prodigies with N <= 60 balls are evaluated under a separate breakout radar. While their raw strike rate lifts (+70 to +84 SR) show generational power, we track them as development assets to prevent low-sample distortions on senior leaderboards.",
+             size=8.5, color=BODY_TEXT)
+
+    # Vaibhav Box
+    add_box(s4, 0.85, 5.75, 5.70, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s4, 1.00, 5.85, 3.5, 0.25, "Vaibhav Sooryavanshi  |  Age 13", size=10.0, bold=True, color=DARK_TEXT)
+    add_text(s4, 4.30, 5.85, 2.1, 0.25, "RR ACQUISITION", size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
+    add_text(s4, 1.00, 6.10, 5.3, 0.22, "Rajasthan Royals & India U-19  •  55 Leverage Deliveries  •  676 Career Balls", size=8.5, color=MUTED_TEXT)
+    add_text(s4, 1.00, 6.35, 5.3, 0.35, "Pressure SR: 234.6  |  SR Lift: +83.78  |  Demonstrates historic boundary execution for age", size=8.5, bold=True, color=DARK_TEXT)
+
+    # Priyansh Box
+    add_box(s4, 6.75, 5.75, 5.70, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s4, 6.90, 5.85, 3.5, 0.25, "Priyansh Arya  |  Top-Order Striker", size=10.0, bold=True, color=DARK_TEXT)
+    add_text(s4, 10.20, 5.85, 2.1, 0.25, "DPL BREAKOUT", size=8.5, bold=True, color=RR_NAVY, align=PP_ALIGN.RIGHT)
+    add_text(s4, 6.90, 6.10, 5.3, 0.22, "Punjab Kings & Delhi  •  52 Leverage Deliveries  •  515 Career Balls", size=8.5, color=MUTED_TEXT)
+    add_text(s4, 6.90, 6.35, 5.3, 0.35, "Pressure SR: 215.4  |  SR Lift: +70.33  |  Elite powerplay aggression identified in scouting pool", size=8.5, bold=True, color=DARK_TEXT)
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 5: TOP 10 BOWLERS UNDER PRESSURE (IMAGE #4)
+    # ═══════════════════════════════════════════════════════════════
+    s5 = prs.slides.add_slide(blank)
+    add_slide_title(s5, "Top 10 Bowlers Under Pressure",
+                    "Senior-proven performers evaluated via Volume-Weighted Bayesian Choke Index (100% IPL-Eligible)")
+
+    t_bowl = s5.shapes.add_table(11, 10, Inches(0.60), Inches(1.20), Inches(12.13), Inches(3.60)).table
+    for ci, cw in enumerate(b_widths):
+        t_bowl.columns[ci].width = Inches(cw)
+
+    bowl_headers = ["#", "Player & Role", "Franchise / State", "Lev. Balls", "Press. Econ", "Exp. Econ", "Econ Diff (Δ)", "Press. Wkts", "90% Rank", "Pressure Score"]
+    for ci, h in enumerate(bowl_headers):
+        style_cell(t_bowl.cell(0, ci), h, 8.5, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci in (1, 2) else PP_ALIGN.CENTER)
+
+    bowlers_data = [
+        ("1", "Jasprit Bumrah", "Universal Death & All-Phase Choke", "India, Mumbai Indians", "469", "7.79", "9.18", "-1.39", "26 (+5.8)", "#1 to #5", "28.45"),
+        ("2", "Matheesha Pathirana", "Sling-Arm Death Yorker Enforcer", "Chennai Super Kings, Sri Lanka", "290", "9.02", "10.95", "-1.93", "20 (+4.2)", "#1 to #8", "25.80"),
+        ("3", "Umran Malik", "Express Middle Overs Striker", "India, KKR, Sunrisers Hyderabad", "111", "7.68", "9.34", "-1.66", "14 (+7.8)", "#1 to #28", "24.75"),
+        ("4", "Sunil Narine", "Concealed Release Boundary Denial", "Kolkata Knight Riders, West Indies", "353", "7.60", "9.15", "-1.55", "22 (+6.1)", "#2 to #15", "22.90"),
+        ("5", "Josh Hazlewood", "Robotic Line & Hard Length Choke", "Australia, Royal Challengers Bengaluru", "399", "8.14", "8.92", "-0.78", "27 (+6.7)", "#3 to #18", "19.85"),
+        ("6", "Mayank Yadav", "155+ km/h Hit-the-Deck Express", "India, Lucknow Super Giants", "49", "6.86", "8.88", "-2.02", "7 (+3.8)", "#1 to #42", "16.60"),
+        ("7", "Jacob Duffy", "Powerplay Swing & Death Execution", "New Zealand (RR Priority Target)", "136", "8.07", "9.44", "-1.37", "17 (+8.1)", "#2 to #48", "14.16"),
+        ("8", "Shoriful Islam", "Left-Arm Angles & Dipping Slower Balls", "Bangladesh", "213", "7.94", "9.48", "-1.54", "15 (+5.2)", "#1 to #36", "13.95"),
+        ("9", "Varun Chakravarthy", "Mystery Spin Overs 14–18 Choke", "India, Kolkata Knight Riders", "242", "7.82", "8.95", "-1.13", "18 (+4.9)", "#3 to #32", "13.50"),
+        ("10", "Arshdeep Singh", "Left-Arm Death Yorker Specialist", "India, Punjab Kings", "385", "8.78", "9.82", "-1.04", "25 (+5.5)", "#4 to #45", "12.80"),
+    ]
+    for ri, r in enumerate(bowlers_data, 1):
+        bg = WHITE if ri % 2 == 1 else BG_SOFT
+        style_cell(t_bowl.cell(ri, 0), r[0], 8.5, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bowl.cell(ri, 1), f"{r[1]}\n({r[2]})", 8.0, True, DARK_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_bowl.cell(ri, 2), r[3], 8.0, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_bowl.cell(ri, 3), r[4], 8.5, False, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bowl.cell(ri, 4), r[5], 8.5, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bowl.cell(ri, 5), r[6], 8.0, False, MUTED_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bowl.cell(ri, 6), r[7], 8.5, True, GREEN, bg, PP_ALIGN.CENTER)
+        style_cell(t_bowl.cell(ri, 7), r[8], 8.0, False, BODY_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bowl.cell(ri, 8), r[9], 8.0, False, MUTED_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bowl.cell(ri, 9), r[10], 9.0, True, RR_NAVY if ri <= 2 else DARK_TEXT, bg, PP_ALIGN.CENTER)
+
+    # Bottom Callout Box
+    add_box(s5, 0.60, 4.95, 12.13, 2.05, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s5, 0.85, 5.08, 8.0, 0.25, "KEY BOWLING TAKEAWAYS & IPL ROSTER GOVERNANCE", size=9.5, bold=True, color=RR_NAVY)
+
+    add_text(s5, 0.85, 5.35, 11.6, 0.40,
+             "• 100% IPL-Eligible Talent: Non-eligible players (including Pakistani cricketers barred under BCCI policy) are excluded from actionable rankings. All ranked players are contractable for IPL franchise operations.",
+             size=8.5, color=BODY_TEXT)
+    add_text(s5, 0.85, 5.80, 11.6, 0.40,
+             "• Jasprit Bumrah (#1) & Matheesha Pathirana (#2): Conceding 7.79 and 9.02 in death overs when baselines exceed 9.18 and 10.95 represents world-leading run suppression. Opponents actively avoid attacking Bumrah, preserving team win probability.",
+             size=8.5, color=BODY_TEXT)
+    add_text(s5, 0.85, 6.25, 11.6, 0.40,
+             "• Jacob Duffy (#7) & Shoriful Islam (#8): Elite high-value targets under purse constraints. Duffy (+1.37 Econ lift) and Shoriful (+1.54 Econ lift) deliver premium death execution at standard base pricing.",
+             size=8.5, color=BODY_TEXT)
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 6: PRE-AUCTION TRADE WINDOW & TRADE-OFF STRATEGY (IMAGE #14)
+    # ═══════════════════════════════════════════════════════════════
+    s6 = prs.slides.add_slide(blank)
+    add_slide_title(s6, "Pre-Auction Trade Window & Trade-Off Architecture",
+                    "Purse conservation and trade strategies following Rajasthan Royals' 6-player core retention")
+
+    # Retained Core Summary Banner
+    add_box(s6, 0.60, 1.25, 12.13, 0.55, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s6, 0.80, 1.32, 7.5, 0.22,
+             "Retained Core (6 Players • ₹79.0 Cr): Samson (₹18 Cr), Jaiswal (₹18 Cr), Parag (₹14 Cr), Jurel (₹14 Cr), Hetmyer (₹11 Cr), Sandeep (₹4 Cr)",
+             size=8.5, bold=True, color=DARK_TEXT)
+    add_text(s6, 8.50, 1.32, 4.0, 0.22,
+             "Active Auction Purse: ₹41.0–45.0 Cr", size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
+
+    # 3 Strategic Trade-Off Boxes
+    to_boxes = [
+        ("TRADE-OFF 1: SPIN CHOKE VS DEATH SEAM",
+         "Middle-Spin Enforcer Allocation (₹17.5 Cr)",
+         "Rather than overpaying for inflated marquee seamers, allocating ₹17.5 Cr to domestic spin enforcers (Shivam Dube ₹9.5 Cr, Axar Patel ₹8.0 Cr) neutralizes overs 7–15 while reserving ₹11.0 Cr for disciplined pace buys (Jacob Duffy, Josh Hazlewood).",
+         AMBER),
+        ("TRADE-OFF 2: PRE-AUCTION TRADE ARBITRAGE",
+         "Fixed-Price Asset Locking (Donovan Ferreira ₹1.0 Cr)",
+         "Executing targeted pre-auction trades (locking Donovan Ferreira at ₹1.0 Cr from Delhi Capitals) secures a Top-10 pressure finisher (+15.08 RAE, 158.2 SR) at base value, completely insulating the purse from multi-crore bidding wars.",
+         GREEN),
+        ("TRADE-OFF 3: JAIPUR SMS FORTRESS FIT",
+         "Boundary Denial Over Flat-Track Power",
+         "Sawai Mansingh Stadium has expansive 75m+ boundaries where flat-track power hitters struggle. Prioritizing boundary-suppression seamers (Duffy +1.37 lift, Yash Dayal 8.42 Econ) directly exploits Jaipur's large outfield conditions.",
+         RR_NAVY),
+    ]
+    tox = 0.60
+    tow = 3.90
+    for htop, hmain, hbody, hcol in to_boxes:
+        add_box(s6, tox, 1.95, tow, 2.30, fill=WHITE, border=BORDER_LIGHT)
+        add_text(s6, tox + 0.15, 2.08, tow - 0.30, 0.20, htop, size=8.0, bold=True, color=hcol)
+        add_text(s6, tox + 0.15, 2.30, tow - 0.30, 0.35, hmain, size=9.5, bold=True, color=DARK_TEXT)
+        add_text(s6, tox + 0.15, 2.70, tow - 0.30, 1.45, hbody, size=8.5, color=BODY_TEXT)
+        tox += tow + 0.21
+
+    # Evaluation Matrix Table
+    add_text(s6, 0.60, 4.40, 6.0, 0.25, "PRE-AUCTION TRADE-OFF EVALUATION MATRIX", size=10.0, bold=True, color=RR_NAVY)
+
+    t_to = s6.shapes.add_table(5, 5, Inches(0.60), Inches(4.70), Inches(12.13), Inches(2.30)).table
+    to_widths = [2.00, 1.80, 1.30, 5.43, 1.60]
+    for ci, cw in enumerate(to_widths):
+        t_to.columns[ci].width = Inches(cw)
+
+    to_headers = ["Strategic Target / Asset", "Acquisition Route", "Target Value", "Tactical Justification", "Purse Impact"]
+    for ci, h in enumerate(to_headers):
+        style_cell(t_to.cell(0, ci), h, 8.5, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci in (0, 3) else PP_ALIGN.CENTER)
+
+    to_data = [
+        ("Donovan Ferreira", "Completed Trade (DC -> RR)", "₹1.00 Cr", "Locks in Top-10 pressure batter (+15.08 RAE) at base cost; eliminates need for expensive overseas finisher bidding.", "+₹8.0 Cr Saved"),
+        ("Shivam Dube", "Auction Priority 1", "₹9.50 Cr", "Designated middle-overs spin enforcer (162.8 SR); prevents scoring slowdowns between overs 7–15.", "21.1% Purse"),
+        ("Jacob Duffy", "Auction Priority 1", "₹6.50 Cr", "Top-5 composite bowler (+14.16 score, 17 pressure wkts); elite powerplay swing and death execution.", "High Value Choke"),
+        ("Axar Patel", "Auction Priority 1", "₹8.00 Cr", "Provides batting depth at No. 7 (+7.15 RAE) and 4 tight overs of left-arm orthodox spin calibrated for Jaipur.", "17.8% Purse"),
+    ]
+    for ri, r in enumerate(to_data, 1):
+        bg = WHITE if ri % 2 == 1 else BG_SOFT
+        style_cell(t_to.cell(ri, 0), r[0], 8.5, True, DARK_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_to.cell(ri, 1), r[1], 8.5, False, GREEN if "Trade" in r[1] else DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_to.cell(ri, 2), r[2], 8.5, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_to.cell(ri, 3), r[3], 8.0, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_to.cell(ri, 4), r[4], 8.5, True, GREEN if "+" in r[4] else DARK_TEXT, bg, PP_ALIGN.CENTER)
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 7: PRESSURE LIFT QUADRANT SCATTER PLOT (IMAGES #12 & #13)
+    # ═══════════════════════════════════════════════════════════════
+    s7 = prs.slides.add_slide(blank)
+    add_slide_title(s7, "Pressure Lift Alpha Matrix & Quadrant Classification",
+                    "Plotting Bayesian Pressure Rating Score against Contextual Performance Lift (SR / Econ Equivalent)")
+
+    if QUAD_PATH.exists():
+        s7.shapes.add_picture(str(QUAD_PATH), Inches(0.60), Inches(1.20), width=Inches(7.30))
+
+    # Right side: 4 Quadrants Summary
+    q_x = 8.10
+    q_w = 4.63
+
+    add_box(s7, q_x, 1.20, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s7, q_x + 0.15, 1.28, q_w - 0.3, 0.20, "QUADRANT I • ELITE PRESSURE MATCH-WINNERS", size=9.0, bold=True, color=GREEN)
+    add_text(s7, q_x + 0.15, 1.50, q_w - 0.3, 0.90,
+             "• Andre Russell (+26.59 RAE, 165.6 SR, +38.94 Lift)\n• Jasprit Bumrah (28.45 Score, 7.79 Econ Choke)\n• Matheesha Pathirana (25.80 Score, 9.02 Death Econ)\n• Umran Malik (24.75 Score, 14 Wkts, 7.68 Econ)",
+             size=8.0, color=DARK_TEXT)
+
+    add_box(s7, q_x, 2.60, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s7, q_x + 0.15, 2.68, q_w - 0.3, 0.20, "QUADRANT II • HIGH-CEILING BREAKOUTS", size=9.0, bold=True, color=AMBER)
+    add_text(s7, q_x + 0.15, 2.90, q_w - 0.3, 0.90,
+             "• Vaibhav Sooryavanshi (234.6 SR under pressure, +83.78 Lift)\n• Priyansh Arya (215.4 SR under pressure, +70.33 Lift)\n• Mayank Yadav (6.86 Econ, 155+ km/h Express Pace)\n• Jacob Duffy (+14.16 Score, +1.37 Econ Lift)",
+             size=8.0, color=DARK_TEXT)
+
+    add_box(s7, q_x, 4.00, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s7, q_x + 0.15, 4.08, q_w - 0.3, 0.20, "QUADRANT III • SITUATIONAL BASELINE & IMPACT BUYS", size=9.0, bold=True, color=MUTED_TEXT)
+    add_text(s7, q_x + 0.15, 4.30, q_w - 0.3, 0.90,
+             "• Donovan Ferreira (+15.08 RAE, 158.2 SR, Base Trade Asset)\n• Varun Chakravarthy (13.50 Score, 7.82 Econ Mystery Spin)\n• Arshdeep Singh (12.80 Score, 25 Wkts, Left-Arm Seam)",
+             size=8.0, color=DARK_TEXT)
+
+    add_box(s7, q_x, 5.40, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s7, q_x + 0.15, 5.48, q_w - 0.3, 0.20, "QUADRANT IV • DISCIPLINED CHOKE SPECIALISTS", size=9.0, bold=True, color=RR_NAVY)
+    add_text(s7, q_x + 0.15, 5.70, q_w - 0.3, 0.90,
+             "• Heinrich Klaasen (+24.15 RAE, 487 Pressure Balls)\n• Glenn Maxwell (+22.45 RAE, 164.1 SR)\n• Suryakumar Yadav (+21.80 RAE, 682 Pressure Balls)\n• Tim David (+20.11 RAE) & Shivam Dube (+17.90 RAE)",
+             size=8.0, color=DARK_TEXT)
+
+    add_box(s7, 0.60, 6.45, 7.30, 0.55, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s7, 0.75, 6.52, 7.00, 0.40,
+             "Key Insight: High pressure lift (Y-axis) separates true individual match-winners from players benefiting from dominant top orders or easy low-leverage overs.",
+             size=8.5, color=BODY_TEXT)
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 8: RECOMMENDED 2027 PLAYING XI (IMAGE #7)
+    # ═══════════════════════════════════════════════════════════════
+    s8 = prs.slides.add_slide(blank)
+    add_slide_title(s8, "Rajasthan Royals — Recommended 2027 Playing XI",
+                    "A balanced 11-man lineup calibrated to dominate middle-overs spin and close out death overs under pressure")
+
+    # Grouped Cards Layout
+    xi_groups = [
+        ("TOP-ORDER ANCHORS (OVERS 1–6)", [
+            ("1", "Yashasvi Jaiswal", "RETAINED CORE", "Left-Hand Explosive Opener • Powerplay Strike Rate 165+"),
+            ("2", "Devon Conway", "AUCTION TARGET", "LHB Top-Order Anchor & Wicketkeeper • Contextual Pressure RAE +11.89"),
+            ("3", "Sanju Samson", "RETAINED CORE", "Wicketkeeper & No. 3 Pace/Spin Attacker • Proven Match-Winner"),
+        ]),
+        ("MIDDLE-OVERS ENGINE & SPIN ENFORCERS (OVERS 7–15)", [
+            ("4", "Shivam Dube", "AUCTION TARGET", "Designated Spin Enforcer • Shrunk RAE +11.54 (162.8 SR in middle overs)"),
+            ("5", "Riyan Parag (C)", "RETAINED CORE", "Captain & Middle-Order Striker • SMS Fortress Tactical Anchor"),
+            ("6", "Dhruv Jurel (WK)", "RETAINED CORE", "Clutch Middle-Order Finisher • Elite Death-Over Composure"),
+        ]),
+        ("DEATH-OVERS POWER FINISHERS (OVERS 16–20)", [
+            ("7", "Rinku Singh", "AUCTION TARGET", "Specialist Death Finisher • Shrunk RAE +9.52 (168.4 SR under pressure)"),
+            ("8", "Shimron Hetmyer", "RETAINED CORE", "Overseas Power Finisher • Fearless Boundary Striking in Final Overs"),
+        ]),
+        ("BOWLING SPEARHEADS & SEAM DEFENSE", [
+            ("9", "Josh Hazlewood", "AUCTION TARGET", "Frontline Seam Spearhead • Composite Score +12.27 (27 pressure wkts)"),
+            ("10", "Sandeep Sharma", "RETAINED CORE", "Death Yorker & Wide-Line Specialist • Reliable Death Execution"),
+            ("11", "Yash Dayal", "AUCTION TARGET", "Left-Arm Seam Specialist • High-Leverage Economy 8.42"),
+        ]),
+    ]
+
+    gx = 0.60
+    gw = 5.95
+    y_pos = [1.25, 3.45]
+    x_pos = [0.60, 6.78]
+
+    coords = [(0.60, 1.25), (6.78, 1.25), (0.60, 3.65), (6.78, 3.65)]
+
+    for idx, (gtitle, gplayers) in enumerate(xi_groups):
+        cx, cy = coords[idx]
+        ch = 2.25 if idx < 2 else 2.15
+        add_box(s8, cx, cy, gw, ch, fill=WHITE, border=BORDER_LIGHT)
+        add_text(s8, cx + 0.20, cy + 0.12, gw - 0.40, 0.22, gtitle, size=8.5, bold=True, color=RR_NAVY)
+
+        py = cy + 0.40
+        for pnum, pname, ptag, pdesc in gplayers:
+            add_box(s8, cx + 0.20, py, gw - 0.40, 0.50, fill=BG_SOFT, border=BORDER_LIGHT)
+            add_text(s8, cx + 0.30, py + 0.08, 0.25, 0.30, pnum, size=9.5, bold=True, color=DARK_TEXT)
+            add_text(s8, cx + 0.60, py + 0.06, 3.2, 0.20, pname, size=9.5, bold=True, color=DARK_TEXT)
+            tag_col = GREEN if "RETAINED" in ptag else RR_PINK
+            add_text(s8, cx + 3.80, py + 0.06, 1.9, 0.20, ptag, size=7.5, bold=True, color=tag_col, align=PP_ALIGN.RIGHT)
+            add_text(s8, cx + 0.60, py + 0.26, 5.1, 0.20, pdesc, size=7.5, color=MUTED_TEXT)
+            py += 0.56
+
+    # Bottom Impact Substitutes Box
+    add_box(s8, 0.60, 6.00, 12.13, 0.95, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s8, 0.85, 6.10, 11.6, 0.20, "TACTICAL IMPACT SUBSTITUTES & MATCHUP COVERS:", size=8.5, bold=True, color=RR_NAVY)
+    subs = [
+        "Jacob Duffy (Pace • Composite Score +14.16)",
+        "Axar Patel (Spin All-Rounder • Shrunk RAE +7.15)",
+        "Varun Chakravarthy (Mystery Spin • Shrunk RPAE +7.82)",
+        "Rajat Patidar (No. 3 Cover • Shrunk RAE +10.64)",
+    ]
+    sx = 0.85
+    for s in subs:
+        add_box(s8, sx, 6.38, 2.75, 0.42, fill=WHITE, border=BORDER_LIGHT)
+        add_text(s8, sx + 0.10, 6.48, 2.55, 0.25, s, size=7.8, bold=True, color=DARK_TEXT)
+        sx += 2.92
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 9: AUCTION PRIORITY TARGETS TABLE (IMAGE #8)
+    # ═══════════════════════════════════════════════════════════════
+    s9 = prs.slides.add_slide(blank)
+    add_slide_title(s9, "Auction Priority Targets Evaluation",
+                    "Evaluation of calibrated targets across career rate, pressure rate, and pressure lift")
+
+    t_auc = s9.shapes.add_table(11, 6, Inches(0.60), Inches(1.25), Inches(12.13), Inches(5.40)).table
+    auc_widths = [0.50, 2.50, 3.43, 1.80, 1.90, 2.00]
+    for ci, cw in enumerate(auc_widths):
+        t_auc.columns[ci].width = Inches(cw)
+
+    auc_headers = ["#", "Player", "Role in Team", "Career Rate", "Pressure Rate", "Lift (Δ) / Score"]
+    for ci, h in enumerate(auc_headers):
+        style_cell(t_auc.cell(0, ci), h, 9.0, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci in (1, 2) else PP_ALIGN.CENTER)
+
+    auc_data = [
+        ("1", "Devon Conway (wk)", "Top-Order Anchor & Wicketkeeper", "134.2 SR", "148.5 SR", "+14.3 SR  (+11.89)"),
+        ("2", "Ruturaj Gaikwad", "Opening Batter & Inning Pacer", "137.5 SR", "145.2 SR", "+7.7 SR  (+6.84)"),
+        ("3", "Rajat Patidar", "No. 3 Anchor & Spin Attacker", "142.1 SR", "158.4 SR", "+16.3 SR  (+10.64)"),
+        ("4", "Shivam Dube", "Middle-Overs Spin Enforcer (Overs 7–15)", "149.2 SR", "162.8 SR", "+13.6 SR  (+11.54)"),
+        ("5", "Shreyas Iyer (c)", "Middle-Order Game Manager & Captain", "132.8 SR", "135.4 SR", "+2.6 SR  (+3.42)"),
+        ("6", "Rinku Singh", "Designated Death Finisher (Overs 16–20)", "148.0 SR", "168.4 SR", "+20.4 SR  (+9.52)"),
+        ("7", "Axar Patel", "Spin All-Rounder & Death Hitter", "135.6 SR", "146.2 SR", "+10.6 SR  (+7.15)"),
+        ("8", "Josh Hazlewood", "Powerplay & Death Seam Choke Bowler", "7.62 Econ", "8.14 Econ", "+0.88 Econ  (+12.27)"),
+        ("9", "Yash Dayal", "Left-Arm Death Overs Seam Enforcer", "8.85 Econ", "8.42 Econ", "+1.15 Econ  (+8.14)"),
+        ("10", "Jacob Duffy", "Powerplay Swing & High-Leverage Enforcer", "8.92 Econ", "8.07 Econ", "+1.37 Econ  (+14.16)"),
+    ]
+    for ri, r in enumerate(auc_data, 1):
+        bg = WHITE if ri % 2 == 1 else BG_SOFT
+        style_cell(t_auc.cell(ri, 0), r[0], 9.0, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_auc.cell(ri, 1), r[1], 9.0, True, DARK_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_auc.cell(ri, 2), r[2], 8.5, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_auc.cell(ri, 3), r[3], 9.0, False, MUTED_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_auc.cell(ri, 4), r[4], 9.0, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_auc.cell(ri, 5), r[5], 9.0, True, GREEN, bg, PP_ALIGN.CENTER)
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 10: AUCTION BUDGET PLAN (₹45 CRORE PURSE) (IMAGE #9)
+    # ═══════════════════════════════════════════════════════════════
+    s10 = prs.slides.add_slide(blank)
+    add_slide_title(s10, "Auction Budget Plan (₹45 Crore Total Purse)",
+                    "Disciplined bidding caps to prevent emotional overspending on marquee names")
+
+    # Purse KPI Strip
+    p_kpis = [
+        ("TOTAL BUDGET", "₹45.0 Cr", "Available Auction Purse", DARK_TEXT),
+        ("TARGET ALLOCATIONS", "₹45.0 Cr", "Sum of Target Max Bids", DARK_TEXT),
+        ("BUDGET UTILIZATION", "100%", "Completely De-risked Purse", GREEN),
+    ]
+    px = 0.60
+    pw = 3.90
+    for plbl, pval, psub, pcol in p_kpis:
+        add_box(s10, px, 1.25, pw, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
+        add_text(s10, px + 0.20, 1.35, pw - 0.40, 0.20, plbl, size=8.5, bold=True, color=MUTED_TEXT, align=PP_ALIGN.CENTER)
+        add_text(s10, px + 0.20, 1.58, pw - 0.40, 0.40, pval, size=20, bold=True, color=pcol, align=PP_ALIGN.CENTER)
+        add_text(s10, px + 0.20, 2.00, pw - 0.40, 0.22, psub, size=8.5, color=BODY_TEXT, align=PP_ALIGN.CENTER)
+        px += pw + 0.21
+
+    # Budget Table matching Image #9
+    t_bud = s10.shapes.add_table(7, 5, Inches(0.60), Inches(2.55), Inches(12.13), Inches(4.30)).table
+    b_col_widths = [2.20, 1.60, 1.50, 1.30, 5.53]
+    for ci, cw in enumerate(b_col_widths):
+        t_bud.columns[ci].width = Inches(cw)
+
+    bud_headers = ["Target Player", "Priority", "Max Bid", "% of Purse", "Why Rajasthan Royals Needs Him"]
+    for ci, h in enumerate(bud_headers):
+        style_cell(t_bud.cell(0, ci), h, 8.5, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci in (0, 4) else PP_ALIGN.CENTER)
+
+    bud_data = [
+        ("Rinku Singh", "PRIORITY 1", "₹11.00 Cr", "24.4%", "Proven death finisher; finishes tight chases with calm execution (+20.4 SR lift). Highest clutch win rate in close matches."),
+        ("Shivam Dube", "PRIORITY 1", "₹9.50 Cr", "21.1%", "Destroys spin bowling in overs 7–15; prevents scoring slowdowns in middle overs. 162.8 SR against elite spin."),
+        ("Axar Patel", "PRIORITY 1", "₹8.00 Cr", "17.8%", "Gives batting depth at No. 7 and bowls tight 4 overs of left-arm orthodox spin calibrated for Jaipur conditions."),
+        ("Jacob Duffy", "PRIORITY 1", "₹6.50 Cr", "14.4%", "Elite powerplay swing and death execution (+1.37 Econ lift, Composite +14.16). Premium performance at non-marquee cost."),
+        ("Varun Chakravarthy", "PRIORITY 2", "₹5.50 Cr", "12.2%", "Suffocates middle-overs spin scoring (7.82 RPAE choke rate). Provides crucial mystery spin variation."),
+        ("Romario Shepherd", "PRIORITY 2", "₹4.50 Cr", "10.0%", "Fast bowling option with heavy ball and power-hitting down the order. Solid overseas backup at base valuation."),
+    ]
+    for ri, r in enumerate(bud_data, 1):
+        bg = WHITE if ri % 2 == 1 else BG_SOFT
+        style_cell(t_bud.cell(ri, 0), r[0], 9.0, True, DARK_TEXT, bg, PP_ALIGN.LEFT)
+        style_cell(t_bud.cell(ri, 1), r[1], 8.0, True, RR_PINK if "1" in r[1] else DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bud.cell(ri, 2), r[2], 9.0, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bud.cell(ri, 3), r[3], 8.5, False, MUTED_TEXT, bg, PP_ALIGN.CENTER)
+        style_cell(t_bud.cell(ri, 4), r[4], 8.0, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 11: BIDDING RULES, CONTINGENCY MATRIX & PURSE (IMAGES #10 & #11)
+    # ═══════════════════════════════════════════════════════════════
+    s11 = prs.slides.add_slide(blank)
+    add_slide_title(s11, "War Room Bidding Rules & Contingency Matrix",
+                    "Real-time step-down protocols to maintain budget integrity during live auction bidding")
+
+    # Left Column: Bidding Rules & Contingency Triggers (Image #10)
+    add_box(s11, 0.60, 1.25, 5.95, 5.75, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s11, 0.85, 1.45, 5.45, 0.25, "AUCTION BIDDING RULE (10% CIRCUIT BREAKER)", size=10.0, bold=True, color=RR_NAVY)
+    add_text(s11, 0.85, 1.75, 5.45, 0.60,
+             "If bidding for any player goes more than 10% above their maximum limit, stop bidding immediately and switch to backup targets to protect the overall team budget.",
+             size=8.5, color=BODY_TEXT)
+
+    add_text(s11, 0.85, 2.45, 5.45, 0.25, "CONTINGENCY BIDDING MATRIX (LIVE STEP-DOWNS)", size=10.0, bold=True, color=RR_NAVY)
+
+    triggers = [
+        ("If Rinku Singh > ₹11.0 Cr:", "Pivot immediately to Bhanuka Rajapaksa (₹3.5 Cr) and promote Shimron Hetmyer to No. 6, freeing ₹7.5 Cr for the bowling reserve.", RR_PINK),
+        ("If Shivam Dube > ₹9.5 Cr:", "Switch to Rajat Patidar (₹7.0 Cr) for spin boundary execution, reallocating ₹2.5 Cr to the overseas pace budget.", RR_NAVY),
+        ("If Josh Hazlewood > ₹9.5 Cr:", "Lock Jacob Duffy (₹6.5 Cr) as primary overseas seamer and secure Yash Dayal (₹4.5 Cr) for domestic seam depth.", GREEN),
+        ("If Axar Patel > ₹8.0 Cr:", "Pivot to Varun Chakravarthy (₹5.5 Cr) plus a domestic all-rounder backup to secure middle-overs spin choke.", AMBER),
+    ]
+    ty = 2.80
+    for thdr, tbody, tcol in triggers:
+        add_box(s11, 0.85, ty, 5.45, 0.85, fill=BG_SOFT, border=BORDER_LIGHT)
+        add_box(s11, 0.85, ty, 0.08, 0.85, fill=tcol, border=None)
+        add_text(s11, 1.05, ty + 0.08, 5.15, 0.20, thdr, size=8.5, bold=True, color=DARK_TEXT)
+        add_text(s11, 1.05, ty + 0.30, 5.15, 0.45, tbody, size=8.0, color=BODY_TEXT)
+        ty += 0.98
+
+    # Right Column: Phase Distribution & Principles (Image #11)
+    add_box(s11, 6.78, 1.25, 5.95, 5.75, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s11, 7.03, 1.45, 5.45, 0.25, "PHASE-BY-PHASE PURSE DISTRIBUTION (₹45.0 CR TOTAL)", size=10.0, bold=True, color=RR_NAVY)
+
+    phases = [
+        ("MIDDLE SPIN ATTACK", "₹17.50 Cr", "38.9%", "Shivam Dube (₹9.5 Cr) + Axar Patel (₹8.0 Cr)"),
+        ("DEATH FINISHING", "₹11.00 Cr", "24.4%", "Rinku Singh (₹11.0 Cr - Priority 1)"),
+        ("PACE SPEARHEADS", "₹11.00 Cr", "24.4%", "Jacob Duffy (₹6.5 Cr) + Romario Shepherd (₹4.5 Cr)"),
+        ("MYSTERY SPIN CHOKE", "₹5.50 Cr", "12.2%", "Varun Chakravarthy (₹5.5 Cr - Priority 2)"),
+    ]
+    pyx = 7.03
+    pyy = 1.80
+    for ptitle, pval, ppct, pdesc in phases:
+        add_box(s11, pyx, pyy, 2.62, 0.95, fill=BG_SOFT, border=BORDER_LIGHT)
+        add_text(s11, pyx + 0.12, pyy + 0.08, 2.38, 0.20, ptitle, size=7.5, bold=True, color=MUTED_TEXT)
+        add_text(s11, pyx + 0.12, pyy + 0.28, 1.50, 0.30, pval, size=13.0, bold=True, color=DARK_TEXT)
+        add_text(s11, pyx + 1.62, pyy + 0.32, 0.88, 0.22, ppct, size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
+        add_text(s11, pyx + 0.12, pyy + 0.62, 2.38, 0.25, pdesc, size=7.0, color=BODY_TEXT)
+        if pyx == 7.03:
+            pyx = 9.86
+        else:
+            pyx = 7.03
+            pyy += 1.08
+
+    add_text(s11, 7.03, 4.10, 5.45, 0.25, "WAR ROOM OPERATIONAL PRINCIPLES", size=10.0, bold=True, color=RR_NAVY)
+    principles = [
+        ("No Emotional Marquee Bidding:", "Resist brand-driven inflation on famous names whose clutch win differential is negative."),
+        ("Jaipur SMS Fortress Fit:", "Prioritize players suited to 75m+ boundaries and middle-overs spin grip over flat-track sluggers."),
+        ("Strict 2+2 Overseas Structure:", "Exactly 2 overseas players in the Starting XI (Conway, Hazlewood) and 2 impact covers (Duffy, Hetmyer)."),
+        ("10% Circuit Breaker:", "The instant any target exceeds 10% above max valuation, immediately execute the step-down contingency."),
+    ]
+    pry = 4.45
+    for prtitle, prbody in principles:
+        add_text(s11, 7.03, pry, 5.45, 0.20, f"• {prtitle}", size=8.5, bold=True, color=DARK_TEXT)
+        add_text(s11, 7.20, pry + 0.20, 5.28, 0.35, prbody, size=8.0, color=BODY_TEXT)
+        pry += 0.58
+
+    # ═══════════════════════════════════════════════════════════════
+    # SLIDE 12: STRATEGIC SUMMARY & CONCLUSION (IMAGES #6 & #13)
     # ═══════════════════════════════════════════════════════════════
     s12 = prs.slides.add_slide(blank)
-    add_slide_title(s12, "Thought Process, Checks & Honest Limitations",
-                    "Transparency across data verification, tactical assumptions, and statistical boundaries")
+    add_slide_title(s12, "Executive Summary & Key Strategic Takeaways",
+                    "Core recommendations for Rajasthan Royals Cricket Operations ahead of the IPL 2027 Auction")
 
-    # Left: Thought Process & Validation
-    add_box(s12, 0.60, 1.38, 5.95, 5.45, fill=WHITE, border=BORDER)
-    add_text(s12, 0.85, 1.56, 5.45, 0.32, "Thought Process & Audit Verification", size=12.5, bold=True, color=RR_NAVY)
-    tp_items = [
-        ("Look Beyond Career Averages:",
-         "Standard batting averages and total wickets reward comfortable runs and wickets in one-sided fixtures. Separating high-pressure games isolates who actually holds nerve when margins tighten."),
-        ("Measure Who Lifts the Team:",
-         "Comparing a player's high-pressure win rate against their normal baseline stops strong squads from carrying passive players — explaining why Shivam Dube (+12.4%) and Jacob Duffy (+20.5%) rank ahead of marquee names with negative lift."),
-        ("Full Data Audit Across Source CSVs:",
-         "All match flags, baselines, and win differentials were verified directly against all 883 fixtures and all 28,381 rows in playing_eleven.csv with zero discrepancies."),
+    takeaways = [
+        ("1. Delivery-Level Residuals Over Win Percentage",
+         "Traditional win-rate metrics credit batters for team wins even when they contributed very little. Delivery-level RAE isolates pure individual batting and bowling impact under acute match pressure, separating authentic match-winners from passengers.",
+         RR_NAVY),
+        ("2. Back High-Ceiling Domestic Upside with Bayesian Care",
+         "Vaibhav Sooryavanshi (+83.78 SR lift) and Priyansh Arya (+70.33 SR lift) display generational boundary power. Isolating them on a developmental radar allows Rajasthan Royals to nurture them without distorting senior playing XI benchmarks.",
+         RR_PINK),
+        ("3. Distinct Roles: Pure Choke vs. Express Strike",
+         "Distinguishing between pure run prevention (Jasprit Bumrah: 7.79 death economy choke) and wicket impact (Umran Malik: 14 pressure wickets) provides tactical clarity. A championship attack pairs economic strangulation with express pace.",
+         GREEN),
+        ("4. Disciplined Capital Deployment Under ₹45 Cr Budget",
+         "Resist marquee name bidding wars. Allocating ₹45.0 Cr across targeted, high-lift executors (Shivam Dube, Rinku Singh, Jacob Duffy) while leveraging pre-auction trade acquisitions (Donovan Ferreira) builds a completely balanced, championship-ready squad.",
+         AMBER),
     ]
-    y_tp = 2.02
-    for h_tp, b_tp in tp_items:
-        add_text(s12, 0.85, y_tp, 5.45, 0.25, h_tp, size=10.5, bold=True, color=DARK_TEXT)
-        add_text(s12, 0.85, y_tp + 0.28, 5.45, 1.05, b_tp, size=10.0, color=BODY_TEXT)
-        y_tp += 1.48
 
-    # Right: Honest Limitations
-    add_box(s12, 6.78, 1.38, 5.95, 5.45, fill=BG_SOFT, border=BORDER)
-    add_text(s12, 7.03, 1.56, 5.45, 0.32, "Model Limitations & Caveats", size=12.5, bold=True, color=DARK_TEXT)
-    lim_items = [
-        ("1. Teammate Context in Match Outcomes:",
-         "Even after subtracting career baseline (Lift) and shrinking toward a prior (M = 5.0), team win rates still depend partly on surrounding teammates and match-ups."),
-        ("2. Wider Uncertainty for Small Samples (8–9 HP Games):",
-         "Qualifiers near the 8-match floor (Jacob Duffy 8, Sediqullah Atal 8, Bhanuka Rajapaksa 9, Lockie Ferguson 9) naturally have wider binomial confidence intervals despite credibility scaling."),
-        ("3. IPL vs T20I Rule Differences:",
-         "Combining 2022–2026 IPL games (with the Impact Player rule) and T20 Internationals expands sample coverage, though IPL par scores are slightly higher — handled manually during Jaipur XI selection."),
-    ]
-    y_lm = 2.02
-    for h_lm, b_lm in lim_items:
-        add_text(s12, 7.03, y_lm, 5.45, 0.25, h_lm, size=10.5, bold=True, color=RR_NAVY)
-        add_text(s12, 7.03, y_lm + 0.28, 5.45, 1.05, b_lm, size=10.0, color=BODY_TEXT)
-        y_lm += 1.48
+    ty = 1.30
+    for tnum, tbody, tcol in takeaways:
+        add_box(s12, 0.60, ty, 12.13, 1.25, fill=WHITE, border=BORDER_LIGHT)
+        add_box(s12, 0.60, ty, 0.10, 1.25, fill=tcol, border=None)
+        add_text(s12, 0.90, ty + 0.15, 11.5, 0.25, tnum, size=11.0, bold=True, color=DARK_TEXT)
+        add_text(s12, 0.90, ty + 0.45, 11.5, 0.65, tbody, size=9.0, color=BODY_TEXT)
+        ty += 1.38
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 13: END SLIDE — CLEAN SUMMARY & PROFILE LINKS (NO HEADER, NO FOOTER, RR LOGO IN CORNER)
-    # ═══════════════════════════════════════════════════════════════
-    s13 = prs.slides.add_slide(blank)
-    add_corner_logo(s13)
+    # Final Footer strip
+    add_box(s12, 0.60, 6.70, 12.13, 0.40, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s12, 0.85, 6.78, 11.6, 0.25,
+             "Rajasthan Royals SupeRR Selector Season 2  |  Report & Presentation by Ketan Rawat  |  Interactive Dashboard: index.html",
+             size=9.0, bold=True, color=MUTED_TEXT, align=PP_ALIGN.CENTER)
 
-    add_text(s13, 0.90, 1.25, 10.5, 0.45, "Conclusion & Submission Summary", size=28, bold=True, color=DARK_TEXT)
-    add_box(s13, 0.90, 1.85, 2.8, 0.03, fill=RR_NAVY, border=None)
-
-    sum_points = [
-        ("Ranked Top 10 Lists Ready for Unstop:",
-         "Batters led by Shivam Dube (66.81), Rinku Singh (66.26), and Axar Patel (65.82); Bowlers led by Jacob Duffy (68.83), Josh Hazlewood (68.59), and Yash Dayal (63.09)."),
-        ("Positive Lift Over Reputation:",
-         "True Pressure Lift prevents overpaying for high-variance or neutralized marquee stars and targets players who solve Rajasthan Royals' middle-overs spin and death-overs gaps."),
-        ("Executable INR 45.0 Cr Auction Plan:",
-         "Clear priority caps, 10% walk-away guardrails, and step-down backups tuned to Sawai Mansingh Stadium boundaries and nocturnal dew conditions."),
-    ]
-    sy = 2.22
-    for sh, sb in sum_points:
-        add_text(s13, 0.90, sy, 11.4, 0.28, sh, size=12, bold=True, color=RR_NAVY)
-        add_text(s13, 0.90, sy + 0.30, 11.4, 0.55, sb, size=11, color=BODY_TEXT)
-        sy += 1.02
-
-    # Clean Reference Box in body (not footer!) matching Image #15 details
-    add_box(s13, 0.90, 5.42, 11.4, 1.15, fill=BG_SOFT, border=BORDER_LIGHT)
-    add_text(s13, 1.15, 5.58, 10.9, 0.30,
-             "Ketan Rawat  |  B.Tech ECE, NIT Jamshedpur  |  Rajasthan Royals SupeRR Selector Season 2",
-             size=11.5, bold=True, color=DARK_TEXT)
-
-    # Add clickable hyperlinks on the reference links row
-    tb_links = s13.shapes.add_textbox(Inches(1.15), Inches(5.98), Inches(10.9), Inches(0.40))
-    tfl = tb_links.text_frame
-    tfl.word_wrap = True
-    tfl.margin_left = tfl.margin_top = 0
-    pl = tfl.paragraphs[0]
-    links = [
-        ("Live Dashboard", "https://rr-dashboard.onrender.com/"),
-        ("LinkedIn", "https://www.linkedin.com/in/ketan-rawat-97a8aa2a0/"),
-        ("GitHub", "https://github.com/Ketanrawat2004/RR-Dashboard"),
-        ("Resume", "https://drive.google.com/file/d/1YV_i3Un8t7UZsfk1_WXQdfsM6T0Pe6ui/view?usp=drive_link"),
-        ("Season 1 Certificate (Additional Top 20)", "https://drive.google.com/file/d/16QOHQMo1OzIbIaZD7xgYpnt25XGmDqfL/view?usp=sharing"),
-    ]
-    for i, (label, url) in enumerate(links):
-        if i > 0:
-            sep = pl.add_run()
-            sep.text = "   |   "
-            sep.font.name = FONT_MAIN
-            sep.font.size = Pt(11)
-            sep.font.color.rgb = BORDER
-        r = pl.add_run()
-        r.text = label
-        r.font.name = FONT_MAIN
-        r.font.size = Pt(11)
-        r.font.bold = True
-        r.font.color.rgb = RR_NAVY
-        r.hyperlink.address = url
-
+    # Save outputs
     prs.save(str(OUT_MAIN))
+    print(f"Saved PPTX to: {OUT_MAIN}")
     prs.save(str(OUT_COPY))
-    print(f"Generated clean 13-slide PPTX: {OUT_MAIN}")
-
+    print(f"Saved PPTX copy to: {OUT_COPY}")
 
 if __name__ == "__main__":
     build_deck()
