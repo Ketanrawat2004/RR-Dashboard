@@ -1877,15 +1877,7 @@
 
     <!-- Table 2: Bowlers -->
     <div id="section-bowlers" class="table-responsive data-section" style="display:none;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding:6px 2px;flex-wrap:wrap;gap:8px;">
-            <div style="font-size:12px;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">
-                Bowling Evaluation Framework:
-            </div>
-            <div style="display:flex;gap:6px;flex-wrap:wrap;">
-                <button id="btn-bowling-composite" class="nav-tab-btn active" onclick="switchBowlingFramework('composite')" style="padding:6px 14px;font-size:12px;">Balanced Composite (60% RPAE + 40% WAE)</button>
-                <button id="btn-bowling-rpae" class="nav-tab-btn" onclick="switchBowlingFramework('rpae')" style="padding:6px 14px;font-size:12px;">Pure Run Prevention (RPAE)</button>
-            </div>
-        </div>
+        
         
         <!-- IPL Roster Governance & Actionability Filter -->
         <div style="background:#F8F8F9;border:1px solid #E4E4E7;border-radius:8px;padding:9px 14px;margin-bottom:12px;font-size:11.5px;color:#52525B;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
@@ -1899,20 +1891,20 @@
             <thead>
                 <tr>
                     <th style="width:34px;text-align:center;">#</th>
-                    <th style="text-align:left;">Player & Role</th>
+                    <th style="text-align:left;">Player &amp; Role</th>
                     <th style="text-align:left;">Franchise / State</th>
                     <th style="text-align:center;">Leverage<br>Deliveries</th>
                     <th style="text-align:right;">Pressure<br>Econ</th>
                     <th style="text-align:right;">Expected<br>Econ</th>
                     <th style="text-align:center;">Econ Diff<br>(&Delta;)</th>
-                    <th id="bowler-th-col8" style="text-align:center;">Pressure<br>Wickets</th>
+                    <th style="text-align:center;">Pressure<br>Wickets</th>
                     <th style="text-align:right;">90% Rank<br>Bound</th>
-                    <th id="bowler-th-score" style="text-align:right;">Composite<br>Score</th>
+                    <th style="text-align:right;">Pressure<br>Score</th>
                     <th style="text-align:center;">Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/umran_malik.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Middle & Death Overs Express Enforcer" data-diff="1.66" data-win="7.68" data-index="24.75" data-rank="1">
+                <tr onclick="window.location.href='players/umran_malik.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Middle & Death Overs Express Enforcer" data-diff="1.66" data-win="7.68" data-index="24.75" data-rank="1">
                     <td style="font-weight:700;color:#09090B;">1</td>
                     <td>
                         <div class="player-flex">
@@ -1933,7 +1925,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">24.75</td>
                     <td style="text-align:center;"><a href="players/umran_malik.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/mayank_yadav.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Middle & Death Overs Express Enforcer" data-diff="2.02" data-win="6.86" data-index="16.60" data-rank="2">
+                <tr onclick="window.location.href='players/mayank_yadav.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Middle & Death Overs Express Enforcer" data-diff="2.02" data-win="6.86" data-index="16.60" data-rank="2">
                     <td style="font-weight:700;color:#09090B;">2</td>
                     <td>
                         <div class="player-flex">
@@ -1954,7 +1946,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">16.60</td>
                     <td style="text-align:center;"><a href="players/mayank_yadav.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/shoriful_islam.html'" style="cursor:pointer;" data-role="High-Impact Seam Bowler | Powerplay Swing & Death Specialist" data-diff="1.54" data-win="7.94" data-index="16.36" data-rank="3">
+                <tr onclick="window.location.href='players/shoriful_islam.html'" style="cursor:pointer;" data-role="High-Impact Seam Bowler | Powerplay Swing & Death Specialist" data-diff="1.54" data-win="7.94" data-index="16.36" data-rank="3">
                     <td style="font-weight:700;color:#09090B;">3</td>
                     <td>
                         <div class="player-flex">
@@ -1975,7 +1967,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">16.36</td>
                     <td style="text-align:center;"><a href="players/shoriful_islam.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/jacob_duffy.html'" style="cursor:pointer;" data-role="High-Impact Seam Bowler | Powerplay Swing & High-Leverage Enforcer" data-diff="1.37" data-win="8.07" data-index="14.16" data-rank="4">
+                <tr onclick="window.location.href='players/jacob_duffy.html'" style="cursor:pointer;" data-role="High-Impact Seam Bowler | Powerplay Swing & High-Leverage Enforcer" data-diff="1.37" data-win="8.07" data-index="14.16" data-rank="4">
                     <td style="font-weight:700;color:#09090B;">4</td>
                     <td>
                         <div class="player-flex">
@@ -1996,7 +1988,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">14.16</td>
                     <td style="text-align:center;"><a href="players/jacob_duffy.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/anukul_roy.html'" style="cursor:pointer;" data-role="Specialist Spin Bowler | Middle Overs Defensive Choke" data-diff="1.72" data-win="6.52" data-index="13.43" data-rank="5">
+                <tr onclick="window.location.href='players/anukul_roy.html'" style="cursor:pointer;" data-role="Specialist Spin Bowler | Middle Overs Defensive Choke" data-diff="1.72" data-win="6.52" data-index="13.43" data-rank="5">
                     <td style="font-weight:700;color:#09090B;">5</td>
                     <td>
                         <div class="player-flex">
@@ -2017,7 +2009,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">13.43</td>
                     <td style="text-align:center;"><a href="players/anukul_roy.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/piyush_chawla.html'" style="cursor:pointer;" data-role="Specialist Leg-Spin Bowler | Middle Overs Choke & Partnership Breaker" data-diff="1.04" data-win="7.88" data-index="13.39" data-rank="6">
+                <tr onclick="window.location.href='players/piyush_chawla.html'" style="cursor:pointer;" data-role="Specialist Leg-Spin Bowler | Middle Overs Choke & Partnership Breaker" data-diff="1.04" data-win="7.88" data-index="13.39" data-rank="6">
                     <td style="font-weight:700;color:#09090B;">6</td>
                     <td>
                         <div class="player-flex">
@@ -2038,7 +2030,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">13.39</td>
                     <td style="text-align:center;"><a href="players/piyush_chawla.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/yash_thakur.html'" style="cursor:pointer;" data-role="High-Impact Seam Bowler | Death Overs Wide-Line Specialist" data-diff="0.94" data-win="8.84" data-index="13.03" data-rank="7">
+                <tr onclick="window.location.href='players/yash_thakur.html'" style="cursor:pointer;" data-role="High-Impact Seam Bowler | Death Overs Wide-Line Specialist" data-diff="0.94" data-win="8.84" data-index="13.03" data-rank="7">
                     <td style="font-weight:700;color:#09090B;">7</td>
                     <td>
                         <div class="player-flex">
@@ -2059,7 +2051,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">13.03</td>
                     <td style="text-align:center;"><a href="players/yash_thakur.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/josh_hazlewood.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Relentless Line & Length Choke" data-diff="0.78" data-win="8.14" data-index="12.27" data-rank="8">
+                <tr onclick="window.location.href='players/josh_hazlewood.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Relentless Line & Length Choke" data-diff="0.78" data-win="8.14" data-index="12.27" data-rank="8">
                     <td style="font-weight:700;color:#09090B;">8</td>
                     <td>
                         <div class="player-flex">
@@ -2080,7 +2072,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">12.27</td>
                     <td style="text-align:center;"><a href="players/josh_hazlewood.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/matheesha_pathirana.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Sling-Arm Death Yorker Enforcer" data-diff="1.93" data-win="9.02" data-index="11.40" data-rank="9">
+                <tr onclick="window.location.href='players/matheesha_pathirana.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Sling-Arm Death Yorker Enforcer" data-diff="1.93" data-win="9.02" data-index="11.40" data-rank="9">
                     <td style="font-weight:700;color:#09090B;">9</td>
                     <td>
                         <div class="player-flex">
@@ -2101,7 +2093,7 @@
                     <td style="text-align:right;font-weight:800;color:#09090B;">11.40</td>
                     <td style="text-align:center;"><a href="players/matheesha_pathirana.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
-                <tr class="bowler-row-composite" onclick="window.location.href='players/jasprit_bumrah.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | All-Phase Universal Containment" data-diff="1.39" data-win="7.79" data-index="10.96" data-rank="10">
+                <tr onclick="window.location.href='players/jasprit_bumrah.html'" style="cursor:pointer;" data-role="High-Impact Pace Strike Bowler | All-Phase Universal Containment" data-diff="1.39" data-win="7.79" data-index="10.96" data-rank="10">
                     <td style="font-weight:700;color:#09090B;">10</td>
                     <td>
                         <div class="player-flex">
@@ -2121,216 +2113,6 @@
                     <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#3 to #82</td>
                     <td style="text-align:right;font-weight:800;color:#09090B;">10.96</td>
                     <td style="text-align:center;"><a href="players/jasprit_bumrah.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/matheesha_pathirana.html'" style="display:none;cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Sling-Arm Death Yorker Enforcer" data-diff="1.93" data-win="9.02" data-index="21.18" data-rank="1">
-                    <td style="font-weight:700;color:#09090B;">1</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/matheesha_pathirana.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/matheesha_pathirana.png" alt="Matheesha Pathirana"></div></a>
-                            <div class="name-box">
-                                <a href="players/matheesha_pathirana.html" onclick="event.stopPropagation();">Matheesha Pathirana</a>
-                                <div class="team-sub">High-Impact Pace Strike Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>Chennai Super Kings, Kolkata Knight Riders, Sri Lanka</td>
-                    <td style="text-align:center;font-weight:600;">290</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">9.02</td>
-                    <td style="text-align:right;color:var(--text-muted);">10.95</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.93</span></td>
-                    <td style="text-align:center;font-weight:600;">20.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#1 to #31</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+21.18</td>
-                    <td style="text-align:center;"><a href="players/matheesha_pathirana.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/jasprit_bumrah.html'" style="display:none;cursor:pointer;" data-role="High-Impact Pace Strike Bowler | All-Phase Universal Containment" data-diff="1.39" data-win="7.79" data-index="17.54" data-rank="2">
-                    <td style="font-weight:700;color:#09090B;">2</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/jasprit_bumrah.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/jasprit_bumrah.png" alt="Jasprit Bumrah"></div></a>
-                            <div class="name-box">
-                                <a href="players/jasprit_bumrah.html" onclick="event.stopPropagation();">Jasprit Bumrah</a>
-                                <div class="team-sub">High-Impact Pace Strike Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>India, Mumbai Indians</td>
-                    <td style="text-align:center;font-weight:600;">469</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">7.79</td>
-                    <td style="text-align:right;color:var(--text-muted);">9.18</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.39</span></td>
-                    <td style="text-align:center;font-weight:600;">26.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#1 to #39</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+17.54</td>
-                    <td style="text-align:center;"><a href="players/jasprit_bumrah.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/maheesh_theekshana.html'" style="display:none;cursor:pointer;" data-role="Specialist Spin Bowler | Carrom Ball & Powerplay Containment" data-diff="1.42" data-win="7.82" data-index="16.82" data-rank="3">
-                    <td style="font-weight:700;color:#09090B;">3</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/maheesh_theekshana.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/maheesh_theekshana.png" alt="Maheesh Theekshana"></div></a>
-                            <div class="name-box">
-                                <a href="players/maheesh_theekshana.html" onclick="event.stopPropagation();">Maheesh Theekshana</a>
-                                <div class="team-sub">Specialist Spin Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>Chennai Super Kings, Sri Lanka</td>
-                    <td style="text-align:center;font-weight:600;">244</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">7.82</td>
-                    <td style="text-align:right;color:var(--text-muted);">9.24</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.42</span></td>
-                    <td style="text-align:center;font-weight:600;">18.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#1 to #45</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+16.82</td>
-                    <td style="text-align:center;"><a href="players/maheesh_theekshana.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/shoriful_islam.html'" style="display:none;cursor:pointer;" data-role="High-Impact Seam Bowler | Powerplay Swing & Death Specialist" data-diff="1.54" data-win="7.94" data-index="15.90" data-rank="4">
-                    <td style="font-weight:700;color:#09090B;">4</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/shoriful_islam.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/shoriful_islam.png" alt="Shoriful Islam"></div></a>
-                            <div class="name-box">
-                                <a href="players/shoriful_islam.html" onclick="event.stopPropagation();">Shoriful Islam</a>
-                                <div class="team-sub">High-Impact Seam Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>Bangladesh</td>
-                    <td style="text-align:center;font-weight:600;">213</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">7.94</td>
-                    <td style="text-align:right;color:var(--text-muted);">9.48</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.54</span></td>
-                    <td style="text-align:center;font-weight:600;">15.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#1 to #48</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+15.90</td>
-                    <td style="text-align:center;"><a href="players/shoriful_islam.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/eshan_malinga.html'" style="display:none;cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Malinga-Action Sling Yorker" data-diff="1.68" data-win="9.18" data-index="15.16" data-rank="5">
-                    <td style="font-weight:700;color:#09090B;">5</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/eshan_malinga.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/eshan_malinga.png" alt="Eshan Malinga"></div></a>
-                            <div class="name-box">
-                                <a href="players/eshan_malinga.html" onclick="event.stopPropagation();">Eshan Malinga</a>
-                                <div class="team-sub">High-Impact Pace Strike Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>Sri Lanka, Sunrisers Hyderabad</td>
-                    <td style="text-align:center;font-weight:600;">179</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">9.18</td>
-                    <td style="text-align:right;color:var(--text-muted);">10.86</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.68</span></td>
-                    <td style="text-align:center;font-weight:600;">14.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#2 to #76</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+15.16</td>
-                    <td style="text-align:center;"><a href="players/eshan_malinga.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/sunil_narine.html'" style="display:none;cursor:pointer;" data-role="Specialist Mystery Spin Bowler | Death Boundary Denial Master" data-diff="1.26" data-win="7.60" data-index="14.77" data-rank="6">
-                    <td style="font-weight:700;color:#09090B;">6</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/sunil_narine.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/sunil_narine.png" alt="Sunil Narine"></div></a>
-                            <div class="name-box">
-                                <a href="players/sunil_narine.html" onclick="event.stopPropagation();">Sunil Narine</a>
-                                <div class="team-sub">Specialist Mystery Spin Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>Kolkata Knight Riders</td>
-                    <td style="text-align:center;font-weight:600;">353</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">7.60</td>
-                    <td style="text-align:right;color:var(--text-muted);">8.86</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.26</span></td>
-                    <td style="text-align:center;font-weight:600;">22.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#1 to #79</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+14.77</td>
-                    <td style="text-align:center;"><a href="players/sunil_narine.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/mayank_yadav.html'" style="display:none;cursor:pointer;" data-role="High-Impact Pace Strike Bowler | 155 km/h Hostile Enforcer" data-diff="2.02" data-win="6.86" data-index="13.80" data-rank="7">
-                    <td style="font-weight:700;color:#09090B;">7</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/mayank_yadav.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/mayank_yadav.png" alt="Mayank Yadav"></div></a>
-                            <div class="name-box">
-                                <a href="players/mayank_yadav.html" onclick="event.stopPropagation();">Mayank Yadav</a>
-                                <div class="team-sub">High-Impact Pace Strike Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>India, Lucknow Super Giants</td>
-                    <td style="text-align:center;font-weight:600;">49</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">6.86</td>
-                    <td style="text-align:right;color:var(--text-muted);">8.88</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-2.02</span></td>
-                    <td style="text-align:center;font-weight:600;">7.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#2 to #82</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+13.80</td>
-                    <td style="text-align:center;"><a href="players/mayank_yadav.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/nasum_ahmed.html'" style="display:none;cursor:pointer;" data-role="Specialist Spin Bowler | Powerplay Left-Arm Choke" data-diff="1.74" data-win="6.25" data-index="12.92" data-rank="8">
-                    <td style="font-weight:700;color:#09090B;">8</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/nasum_ahmed.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/nasum_ahmed.png" alt="Nasum Ahmed"></div></a>
-                            <div class="name-box">
-                                <a href="players/nasum_ahmed.html" onclick="event.stopPropagation();">Nasum Ahmed</a>
-                                <div class="team-sub">Specialist Spin Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>Bangladesh</td>
-                    <td style="text-align:center;font-weight:600;">120</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">6.25</td>
-                    <td style="text-align:right;color:var(--text-muted);">7.99</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.74</span></td>
-                    <td style="text-align:center;font-weight:600;">9.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#2 to #85</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+12.92</td>
-                    <td style="text-align:center;"><a href="players/nasum_ahmed.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/umran_malik.html'" style="display:none;cursor:pointer;" data-role="High-Impact Pace Strike Bowler | 150 km/h Middle Strike Enforcer" data-diff="1.66" data-win="7.68" data-index="11.80" data-rank="9">
-                    <td style="font-weight:700;color:#09090B;">9</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/umran_malik.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/umran_malik.png" alt="Umran Malik"></div></a>
-                            <div class="name-box">
-                                <a href="players/umran_malik.html" onclick="event.stopPropagation();">Umran Malik</a>
-                                <div class="team-sub">High-Impact Pace Strike Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>India, Kolkata Knight Riders, Sunrisers Hyderabad</td>
-                    <td style="text-align:center;font-weight:600;">111</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">7.68</td>
-                    <td style="text-align:right;color:var(--text-muted);">9.34</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-1.66</span></td>
-                    <td style="text-align:center;font-weight:600;">14.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#3 to #89</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+11.80</td>
-                    <td style="text-align:center;"><a href="players/umran_malik.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
-                </tr>
-                <tr class="bowler-row-rpae" onclick="window.location.href='players/josh_hazlewood.html'" style="display:none;cursor:pointer;" data-role="High-Impact Pace Strike Bowler | Relentless Line & Length Choke" data-diff="0.78" data-win="8.14" data-index="9.64" data-rank="10">
-                    <td style="font-weight:700;color:#09090B;">10</td>
-                    <td>
-                        <div class="player-flex">
-                            <a href="players/josh_hazlewood.html" onclick="event.stopPropagation();"><div class="thumb-img"><img src="player_images/josh_hazlewood.png" alt="Josh Hazlewood"></div></a>
-                            <div class="name-box">
-                                <a href="players/josh_hazlewood.html" onclick="event.stopPropagation();">Josh Hazlewood</a>
-                                <div class="team-sub">High-Impact Pace Strike Bowler</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>Australia, Royal Challengers Bengaluru</td>
-                    <td style="text-align:center;font-weight:600;">399</td>
-                    <td style="text-align:right;font-weight:700;color:#09090B;">8.14</td>
-                    <td style="text-align:right;color:var(--text-muted);">8.92</td>
-                    <td style="text-align:center;"><span class="diff-tag diff-pos">-0.78</span></td>
-                    <td style="text-align:center;font-weight:600;">27.0</td>
-                    <td style="text-align:right;font-family:monospace;font-size:11.5px;color:var(--text-muted);">#4 to #92</td>
-                    <td style="text-align:right;font-weight:800;color:#09090B;">+9.64</td>
-                    <td style="text-align:center;"><a href="players/josh_hazlewood.html" class="action-link" onclick="event.stopPropagation();">Dossier &rarr;</a></td>
                 </tr>
             </tbody>
         </table>
@@ -3541,29 +3323,6 @@
 
 <!-- Interactive Power BI Slicer & Sort Logic -->
 <script>
-var currentBowlingFramework = 'composite';
-
-function switchBowlingFramework(mode) {
-    currentBowlingFramework = mode;
-    var btnComp = document.getElementById('btn-bowling-composite');
-    var btnRpae = document.getElementById('btn-bowling-rpae');
-    var thCol8 = document.getElementById('bowler-th-col8');
-    var thScore = document.getElementById('bowler-th-score');
-
-    if (mode === 'rpae') {
-        if (btnComp) btnComp.classList.remove('active');
-        if (btnRpae) btnRpae.classList.add('active');
-        if (thCol8) thCol8.innerHTML = 'Career<br>Deliveries';
-        if (thScore) thScore.innerHTML = 'Pure RPAE<br>Score';
-    } else {
-        if (btnRpae) btnRpae.classList.remove('active');
-        if (btnComp) btnComp.classList.add('active');
-        if (thCol8) thCol8.innerHTML = 'Pressure<br>Wickets';
-        if (thScore) thScore.innerHTML = 'Composite<br>Score';
-    }
-    applySlicers();
-}
-
 function resetSlicers() {
     var searchInput = document.getElementById('filterInput');
     var roleSlicer = document.getElementById('roleSlicer');
@@ -3621,22 +3380,7 @@ function applySlicers() {
     var isBowlerTable = (table.id === 'table-bowlers');
     var allRows = Array.from(tbody.querySelectorAll('tr'));
 
-    // Filter relevant rows based on active bowling framework
-    var activeRows = [];
-    allRows.forEach(function(row) {
-        if (isBowlerTable) {
-            var isComp = row.classList.contains('bowler-row-composite');
-            var isRpae = row.classList.contains('bowler-row-rpae');
-            if (currentBowlingFramework === 'composite' && !isComp) {
-                row.style.display = 'none';
-                return;
-            } else if (currentBowlingFramework === 'rpae' && !isRpae) {
-                row.style.display = 'none';
-                return;
-            }
-        }
-        activeRows.push(row);
-    });
+    var activeRows = allRows.slice();
 
     activeRows.forEach(function(row) {
         var text = row.textContent.toLowerCase();
