@@ -10,7 +10,7 @@ from reportlab.platypus import (
 )
 from reportlab.pdfgen import canvas
 
-BASE_DIR = Path(r"C:\Rajasthan Royals")
+BASE_DIR = Path(".")
 OUTPUT_DIR = BASE_DIR / "pressure_output"
 PDF_PATH = BASE_DIR / "RR_SupeRR_Selector_Season2_Report_Ketan_Rawat.pdf"
 CHART2_PATH = OUTPUT_DIR / "chart_02_pressure_lift_quadrants.png"
@@ -370,9 +370,9 @@ def generate_pdf():
         [Paragraph("Pos", table_header_style), Paragraph("Player Name", table_header_style), Paragraph("Squad Role & Status", table_header_style), Paragraph("Key Pressure Metric", table_header_style), Paragraph("Tactical Deployment at SMS Jaipur", table_header_style)],
         [Paragraph("<b>1</b>", table_cell_center), Paragraph("<b>Yashasvi Jaiswal</b>", table_cell_bold), Paragraph("LH Aggressive Opener (Retained)", table_cell_style), Paragraph("SR: 165+ | Retained", table_cell_center), Paragraph("Powerplay boundary blitzkrieg; disrupts defensive field sets early.", table_cell_style)],
         [Paragraph("<b>2</b>", table_cell_center), Paragraph("<b>Devon Conway</b>", table_cell_bold), Paragraph("LHB Anchor & WK (Target #6)", table_cell_style), Paragraph("CPPI 61.97 | +18.1% Lift", table_cell_center), Paragraph("Controlled chase pacing; elite strike-rotation against swinging ball.", table_cell_style)],
-        [Paragraph("<b>3</b>", table_cell_center), Paragraph("<b>Sanju Samson (C)</b>", table_cell_bold), Paragraph("Captain & Keeper (Retained)", table_cell_style), Paragraph("Core Leader | Retained", table_cell_center), Paragraph("Attacks pace in PP; anchors transition into middle overs.", table_cell_style)],
+        [Paragraph("<b>3</b>", table_cell_center), Paragraph("<b>Sanju Samson</b>", table_cell_bold), Paragraph("Wicketkeeper & No. 3 (Retained)", table_cell_style), Paragraph("Core Keeper | Retained", table_cell_center), Paragraph("Attacks pace in PP; anchors transition into middle overs.", table_cell_style)],
         [Paragraph("<b>4</b>", table_cell_center), Paragraph("<b>Shivam Dube</b>", table_cell_bold), Paragraph("Middle Spin Enforcer (Target #1)", table_cell_style), Paragraph("CPPI 66.81 | +12.4% Lift", table_cell_center), Paragraph("Demolishes wrist-spin into top tier over 75m Jaipur boundaries.", table_cell_style)],
-        [Paragraph("<b>5</b>", table_cell_center), Paragraph("<b>Riyan Parag</b>", table_cell_bold), Paragraph("Middle Striker & Seam (Retained)", table_cell_style), Paragraph("Core Hitter | Retained", table_cell_center), Paragraph("Attacks lengths; secondary 2 overs of seam in middle phase.", table_cell_style)],
+        [Paragraph("<b>5</b>", table_cell_center), Paragraph("<b>Riyan Parag (C)</b>", table_cell_bold), Paragraph("Captain & Middle Striker (Retained)", table_cell_style), Paragraph("Captain | Retained Core", table_cell_center), Paragraph("Captaincy tactical anchor; middle spin enforcer & leg-spin option.", table_cell_style)],
         [Paragraph("<b>6</b>", table_cell_center), Paragraph("<b>Dhruv Jurel (WK)</b>", table_cell_bold), Paragraph("Designated Finisher (Retained)", table_cell_style), Paragraph("Death Specialist | Retained", table_cell_center), Paragraph("360-degree boundary scoop and ramp execution in overs 16–20.", table_cell_style)],
         [Paragraph("<b>7</b>", table_cell_center), Paragraph("<b>Rinku Singh</b>", table_cell_bold), Paragraph("Elite Finisher (Target #2)", table_cell_style), Paragraph("CPPI 66.26 | 100% KO WR", table_cell_center), Paragraph("Ice-in-veins composure; guaranteed 20th over execution.", table_cell_style)],
         [Paragraph("<b>8</b>", table_cell_center), Paragraph("<b>Shimron Hetmyer</b>", table_cell_bold), Paragraph("Overseas Finisher (Retained)", table_cell_style), Paragraph("Power Finisher | Retained", table_cell_center), Paragraph("Explosive death boundary hitting; intimidates opposing death bowlers.", table_cell_style)],
