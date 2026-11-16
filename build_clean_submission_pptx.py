@@ -479,9 +479,9 @@ def build_grand_deck():
          "Middle-Spin Enforcer Allocation (₹17.5 Cr)",
          "Rather than overpaying for inflated marquee seamers, allocating ₹17.5 Cr to domestic spin enforcers (Shivam Dube ₹9.5 Cr, Axar Patel ₹8.0 Cr) neutralizes overs 7–15 while reserving ₹11.0 Cr for disciplined pace buys (Jacob Duffy, Josh Hazlewood).",
          AMBER),
-        ("TRADE-OFF 2: PRE-AUCTION TRADE ARBITRAGE",
-         "Fixed-Price Asset Locking (Donovan Ferreira ₹1.0 Cr)",
-         "Executing targeted pre-auction trades (locking Donovan Ferreira at ₹1.0 Cr from Delhi Capitals) secures a Top-10 pressure finisher (+15.08 RAE, 158.2 SR) at base value, completely insulating the purse from multi-crore bidding wars.",
+        ("TRADE-OFF 2: BLOCKBUSTER TRADE ARBITRAGE",
+         "Mohammed Shami (LSG -> RR) • Traded for Sam Curran",
+         "Trading Sam Curran to LSG delivers premier Indian seam spearhead Mohammed Shami (and M Siddharth) directly into RR's starting pace attack. This fixes RR's frontline Indian seam without purse spending, frees up a critical overseas slot for batting power, and insulates the purse.",
          GREEN),
         ("TRADE-OFF 3: JAIPUR SMS FORTRESS FIT",
          "Boundary Denial Over Flat-Track Power",
@@ -500,16 +500,17 @@ def build_grand_deck():
     # Evaluation Matrix Table (Bigger rows & font)
     add_text(s7, 0.60, 4.52, 6.0, 0.28, "PRE-AUCTION TRADE-OFF EVALUATION MATRIX", size=12.0, bold=True, color=RR_NAVY)
 
-    t_to = s7.shapes.add_table(5, 5, Inches(0.60), Inches(4.85), Inches(12.13), Inches(2.35)).table
+    t_to = s7.shapes.add_table(6, 5, Inches(0.60), Inches(4.75), Inches(12.13), Inches(2.45)).table
     to_widths = [2.00, 1.80, 1.30, 5.43, 1.60]
     for ci, cw in enumerate(to_widths):
         t_to.columns[ci].width = Inches(cw)
 
     to_headers = ["Strategic Target / Asset", "Acquisition Route", "Target Value", "Tactical Justification", "Purse Impact"]
     for ci, h in enumerate(to_headers):
-        style_cell(t_to.cell(0, ci), h, 11.0, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci in (0, 3) else PP_ALIGN.CENTER)
+        style_cell(t_to.cell(0, ci), h, 10.5, True, WHITE, RR_NAVY, PP_ALIGN.LEFT if ci in (0, 3) else PP_ALIGN.CENTER)
 
     to_data = [
+        ("Mohammed Shami", "Blockbuster Trade (LSG -> RR)", "Swap (Sam Curran)", "Frontline Indian seam spearhead (Purple Cap, 8.32 Econ); frees overseas slot and brings spinner M Siddharth.", "Overseas Slot Freed"),
         ("Donovan Ferreira", "Completed Trade (DC -> RR)", "₹1.00 Cr", "Locks in Top-10 pressure batter (+15.08 RAE) at base cost; eliminates need for expensive overseas finisher bidding.", "+₹8.0 Cr Saved"),
         ("Shivam Dube", "Auction Priority 1", "₹9.50 Cr", "Designated middle-overs spin enforcer (162.8 SR); prevents scoring slowdowns between overs 7–15.", "21.1% Purse"),
         ("Jacob Duffy", "Auction Priority 1", "₹6.50 Cr", "Top-5 composite bowler (+14.16 score, 17 pressure wkts); elite powerplay swing and death execution.", "High Value Choke"),
@@ -588,9 +589,9 @@ def build_grand_deck():
             ("8", "Shimron Hetmyer", "RETAINED CORE", "Overseas Power Finisher • Fearless Boundary Striking in Final Overs"),
         ]),
         ("BOWLING SPEARHEADS & SEAM DEFENSE", [
-            ("9", "Josh Hazlewood", "AUCTION TARGET", "Frontline Seam Spearhead • Composite Score +12.27 (27 pressure wkts)"),
+            ("9", "Mohammed Shami", "TRADED ASSET (LSG -> RR)", "Frontline Indian Seam Spearhead • Upright Seam & Powerplay Breakthroughs (Traded for Curran)"),
             ("10", "Sandeep Sharma", "RETAINED CORE", "Death Yorker & Wide-Line Specialist • Reliable Death Execution"),
-            ("11", "Yash Dayal", "AUCTION TARGET", "Left-Arm Seam Specialist • High-Leverage Economy 8.42"),
+            ("11", "Yash Dayal", "AUCTION TARGET", "Left-Arm Seam Specialist • High-Leverage Economy 8.42 (-1.15 Econ Lift)"),
         ]),
     ]
 
@@ -617,10 +618,10 @@ def build_grand_deck():
     add_box(s9, 0.60, 6.00, 12.13, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
     add_text(s9, 0.85, 6.12, 11.6, 0.24, "TACTICAL IMPACT SUBSTITUTES & MATCHUP COVERS:", size=11.5, bold=True, color=RR_NAVY)
     subs = [
+        "Josh Hazlewood (Overseas Seam • Composite +12.27)",
         "Jacob Duffy (Pace • Composite Score +14.16)",
+        "M Siddharth (Traded Spin Asset • Left-Arm Orthodox)",
         "Axar Patel (Spin All-Rounder • Shrunk RAE +7.15)",
-        "Varun Chakravarthy (Mystery Spin • Shrunk RPAE +7.82)",
-        "Rajat Patidar (No. 3 Cover • Shrunk RAE +10.64)",
     ]
     sx = 0.85
     for s in subs:
