@@ -13,11 +13,13 @@ SCRATCH = BASE_DIR / "scratch"
 LOGO_PATH = SCRATCH / "rr_corner_logo.png"
 DONUT_PATH = SCRATCH / "donut_pressure_distribution.png"
 QUAD_PATH = SCRATCH / "quadrant_scatter.png"
+WAGON_WHEEL_PATH = SCRATCH / "dossier_wagon_wheel.jpg"
+PITCH_MAP_PATH = SCRATCH / "dossier_pitch_map.png"
 
 OUT_MAIN = BASE_DIR / "RR_SupeRR_Selector_Season2_Ketan_Rawat.pptx"
 OUT_COPY = BASE_DIR / "pressure_output" / "RR_SupeRR_Selector_Season2_Ketan_Rawat.pptx"
 
-# Clean Professional Palette
+# Clean Professional Palette - Minimalist & Crisp (No over-colouring)
 WHITE = RGBColor(255, 255, 255)
 BG_SOFT = RGBColor(248, 250, 252)
 BORDER_LIGHT = RGBColor(226, 232, 240)
@@ -44,7 +46,7 @@ def set_cell_border(cell, color_hex="E2E8F0", width_pt="6350"):
         )
         tcPr.append(ln)
 
-def style_cell(cell, text, font_size=9.0, bold=False, color=BODY_TEXT, fill=None, align=PP_ALIGN.LEFT, margins=(0.06, 0.06, 0.03, 0.03)):
+def style_cell(cell, text, font_size=8.5, bold=False, color=BODY_TEXT, fill=None, align=PP_ALIGN.LEFT, margins=(0.06, 0.06, 0.03, 0.03)):
     cell.vertical_anchor = MSO_ANCHOR.MIDDLE
     cell.margin_left = Inches(margins[0])
     cell.margin_right = Inches(margins[1])
@@ -77,14 +79,14 @@ def add_slide_title(slide, title, subtitle=None):
     p = tf.paragraphs[0]
     p.text = title
     p.font.name = FONT_MAIN
-    p.font.size = Pt(21)
+    p.font.size = Pt(20)
     p.font.bold = True
     p.font.color.rgb = DARK_TEXT
     if subtitle:
         p2 = tf.add_paragraph()
         p2.text = subtitle
         p2.font.name = FONT_MAIN
-        p2.font.size = Pt(11.0)
+        p2.font.size = Pt(10.5)
         p2.font.color.rgb = MUTED_TEXT
         p2.space_before = Pt(3)
 
@@ -119,30 +121,41 @@ def build_deck():
     prs.slide_height = Inches(7.5)
     blank = prs.slide_layouts[6]
 
-    # ═══════════════════════════════════════════════════════════════
+    # =========================================================================
     # SLIDE 1: COVER SLIDE
-    # ═══════════════════════════════════════════════════════════════
+    # =========================================================================
     s1 = prs.slides.add_slide(blank)
     add_corner_logo(s1)
 
-    add_text(s1, 0.90, 1.60, 10.5, 0.35, "Rajasthan Royals  |  SupeRR Selector Season 2", size=13, bold=True, color=RR_PINK)
-    add_text(s1, 0.90, 2.10, 11.2, 1.35, "Evaluating Player Performance\nUnder Match Pressure", size=36, bold=True, color=DARK_TEXT)
-    add_text(s1, 0.90, 3.65, 10.8, 0.70,
+    add_text(s1, 0.90, 1.35, 10.5, 0.35, "Rajasthan Royals  |  SupeRR Selector Season 2", size=13, bold=True, color=RR_PINK)
+    add_text(s1, 0.90, 1.80, 11.2, 1.35, "Evaluating Player Performance\nUnder Match Pressure", size=36, bold=True, color=DARK_TEXT)
+    add_text(s1, 0.90, 3.35, 11.0, 0.65,
              "Contextual Ball-by-Ball Leverage Engine & Empirical Bayes Rankings for IPL 2027 Roster Planning",
              size=14.5, color=BODY_TEXT)
 
-    add_box(s1, 0.90, 4.55, 3.0, 0.03, fill=RR_NAVY, border=None)
+    add_box(s1, 0.90, 4.15, 3.0, 0.03, fill=RR_NAVY, border=None)
 
-    add_text(s1, 0.90, 4.85, 11.0, 0.40,
-             "Dataset: 867 Senior T20 Fixtures (IPL & T20I, 2022–2026)  |  200,961 Deliveries  |  342 Qualified Players",
-             size=11.5, bold=True, color=RR_NAVY)
-    add_text(s1, 0.90, 5.35, 10.8, 0.35,
-             "Candidate: Ketan Rawat  |  Role: Cricket Operations & Performance Analytics",
-             size=11.5, color=MUTED_TEXT)
+    add_text(s1, 0.90, 4.40, 11.0, 0.35,
+             "Dataset: 867 Senior T20 Fixtures (IPL & T20I, 2022–2026)  |  200,961 Deliveries  |  342 Qualified Candidates",
+             size=11.0, bold=True, color=RR_NAVY)
+    add_text(s1, 0.90, 4.80, 10.8, 0.30,
+             "Candidate: Ketan Rawat  |  Track: Cricket Operations & Performance Analytics",
+             size=11.0, color=MUTED_TEXT)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 2: TOURNAMENT SAMPLE & PRESSURE DISTRIBUTION (IMAGES #1 & #2)
-    # ═══════════════════════════════════════════════════════════════
+    # Prominent Live Link & GitHub Resource Cards
+    add_box(s1, 0.90, 5.35, 5.40, 1.25, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s1, 1.10, 5.48, 5.0, 0.22, "LIVE PRODUCTION DASHBOARD", size=8.5, bold=True, color=RR_NAVY)
+    add_text(s1, 1.10, 5.75, 5.0, 0.28, "https://rr-dashboard.onrender.com/", size=11.0, bold=True, color=RR_PINK)
+    add_text(s1, 1.10, 6.10, 5.0, 0.35, "Interactive 342-player dossier explorer, quadrant filters & war room terminal", size=8.5, color=MUTED_TEXT)
+
+    add_box(s1, 6.60, 5.35, 5.40, 1.25, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s1, 6.80, 5.48, 5.0, 0.22, "OPEN-SOURCE CODEBASE & REPRODUCIBILITY", size=8.5, bold=True, color=RR_NAVY)
+    add_text(s1, 6.80, 5.75, 5.0, 0.28, "https://github.com/Ketanrawat2004/RR-Dashboard", size=11.0, bold=True, color=DARK_TEXT)
+    add_text(s1, 6.80, 6.10, 5.0, 0.35, "End-to-end Python pipeline, bootstrap uncertainty models & full player dossiers", size=8.5, color=MUTED_TEXT)
+
+    # =========================================================================
+    # SLIDE 2: TOURNAMENT SAMPLE & PRESSURE DISTRIBUTION
+    # =========================================================================
     s2 = prs.slides.add_slide(blank)
     add_slide_title(s2, "Tournament Sample & Pressure Delivery Distribution",
                     "Overview of 200,961 deliveries across 867 fixtures isolating high-leverage match states")
@@ -164,7 +177,6 @@ def build_deck():
         add_text(s2, kx + 0.10, 2.06, kw - 0.20, 0.25, sub, size=8.0, color=BODY_TEXT, align=PP_ALIGN.CENTER)
         kx += kw + 0.12
 
-    # Bottom 3 Panels
     # Panel 1: Pressure Distribution Donut
     add_box(s2, 0.60, 2.65, 3.85, 4.35, fill=WHITE, border=BORDER_LIGHT)
     add_text(s2, 0.80, 2.80, 3.45, 0.28, "PRESSURE DELIVERY DISTRIBUTION", size=10.0, bold=True, color=RR_NAVY)
@@ -227,9 +239,9 @@ def build_deck():
              "Top-ranked performers score 45–65 runs/100 balls faster than peers and concede over 2 runs/over fewer at the death.",
              size=9.0, color=BODY_TEXT)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 3: EVALUATION METHOD & DATA GOVERNANCE (IMAGES #5 & #6)
-    # ═══════════════════════════════════════════════════════════════
+    # =========================================================================
+    # SLIDE 3: EVALUATION METHOD & DATA GOVERNANCE
+    # =========================================================================
     s3 = prs.slides.add_slide(blank)
     add_slide_title(s3, "Evaluation Methodology & Thought Process",
                     "A delivery-level baseline isolating individual clutch execution from team outcomes")
@@ -285,14 +297,20 @@ def build_deck():
         add_text(s3, 7.03, ty + 0.24, 5.45, 0.65, tbody, size=8.5, color=BODY_TEXT)
         ty += 1.15
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 4: TOP 10 BATTERS UNDER PRESSURE (IMAGES #3 & #5)
-    # ═══════════════════════════════════════════════════════════════
+    # =========================================================================
+    # SLIDE 4: TOP 10 BATTERS UNDER PRESSURE
+    # =========================================================================
     s4 = prs.slides.add_slide(blank)
     add_slide_title(s4, "Top 10 Batters Under Pressure",
                     "Senior-proven performers ranked by Shrunk Runs Above Expectation (RAE) with domestic breakout radar")
 
-    t_bat = s4.shapes.add_table(11, 10, Inches(0.60), Inches(1.20), Inches(12.13), Inches(3.60)).table
+    # Interactive instruction bar
+    add_box(s4, 0.60, 1.15, 12.13, 0.32, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s4, 0.75, 1.20, 11.8, 0.22,
+             "Interactive Feature: In the live web dashboard (index.html), clicking on any player row or 'View Wagon Wheel' navigates to their detailed review dossier.",
+             size=8.5, bold=True, color=RR_NAVY)
+
+    t_bat = s4.shapes.add_table(11, 10, Inches(0.60), Inches(1.52), Inches(12.13), Inches(3.35)).table
     b_widths = [0.40, 1.95, 2.30, 0.95, 0.95, 0.95, 0.95, 0.95, 1.25, 1.48]
     for ci, cw in enumerate(b_widths):
         t_bat.columns[ci].width = Inches(cw)
@@ -327,7 +345,7 @@ def build_deck():
         style_cell(t_bat.cell(ri, 9), r[10], 9.0, True, RR_PINK if ri <= 3 else DARK_TEXT, bg, PP_ALIGN.CENTER)
 
     # Bottom Container: High-Ceiling Breakout Radar
-    add_box(s4, 0.60, 4.95, 12.13, 2.05, fill=WHITE, border=BORDER_LIGHT)
+    add_box(s4, 0.60, 4.95, 12.13, 2.10, fill=WHITE, border=BORDER_LIGHT)
     add_text(s4, 0.85, 5.08, 6.0, 0.25, "DEVELOPMENTAL SCOUTING RADAR: UNDER-23 DOMESTIC BREAKOUTS", size=9.5, bold=True, color=RR_PINK)
     add_text(s4, 7.50, 5.08, 5.0, 0.25, "Bayesian Sample Calibration Note (N <= 60 Deliveries)", size=8.5, bold=True, color=MUTED_TEXT, align=PP_ALIGN.RIGHT)
 
@@ -336,27 +354,33 @@ def build_deck():
              size=8.5, color=BODY_TEXT)
 
     # Vaibhav Box
-    add_box(s4, 0.85, 5.75, 5.70, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_box(s4, 0.85, 5.75, 5.70, 1.15, fill=BG_SOFT, border=BORDER_LIGHT)
     add_text(s4, 1.00, 5.85, 3.5, 0.25, "Vaibhav Sooryavanshi  |  Age 13", size=10.0, bold=True, color=DARK_TEXT)
     add_text(s4, 4.30, 5.85, 2.1, 0.25, "RR ACQUISITION", size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
     add_text(s4, 1.00, 6.10, 5.3, 0.22, "Rajasthan Royals & India U-19  •  55 Leverage Deliveries  •  676 Career Balls", size=8.5, color=MUTED_TEXT)
-    add_text(s4, 1.00, 6.35, 5.3, 0.35, "Pressure SR: 234.6  |  SR Lift: +83.78  |  Demonstrates historic boundary execution for age", size=8.5, bold=True, color=DARK_TEXT)
+    add_text(s4, 1.00, 6.35, 5.3, 0.35, "Pressure SR: 234.6  |  SR Lift: +83.78  |  Historic boundary execution under tournament pressure", size=8.5, bold=True, color=DARK_TEXT)
 
     # Priyansh Box
-    add_box(s4, 6.75, 5.75, 5.70, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_box(s4, 6.75, 5.75, 5.70, 1.15, fill=BG_SOFT, border=BORDER_LIGHT)
     add_text(s4, 6.90, 5.85, 3.5, 0.25, "Priyansh Arya  |  Top-Order Striker", size=10.0, bold=True, color=DARK_TEXT)
     add_text(s4, 10.20, 5.85, 2.1, 0.25, "DPL BREAKOUT", size=8.5, bold=True, color=RR_NAVY, align=PP_ALIGN.RIGHT)
     add_text(s4, 6.90, 6.10, 5.3, 0.22, "Punjab Kings & Delhi  •  52 Leverage Deliveries  •  515 Career Balls", size=8.5, color=MUTED_TEXT)
     add_text(s4, 6.90, 6.35, 5.3, 0.35, "Pressure SR: 215.4  |  SR Lift: +70.33  |  Elite powerplay aggression identified in scouting pool", size=8.5, bold=True, color=DARK_TEXT)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 5: TOP 10 BOWLERS UNDER PRESSURE (IMAGE #4)
-    # ═══════════════════════════════════════════════════════════════
+    # =========================================================================
+    # SLIDE 5: TOP 10 BOWLERS UNDER PRESSURE
+    # =========================================================================
     s5 = prs.slides.add_slide(blank)
     add_slide_title(s5, "Top 10 Bowlers Under Pressure",
                     "Senior-proven performers evaluated via Volume-Weighted Bayesian Choke Index (100% IPL-Eligible)")
 
-    t_bowl = s5.shapes.add_table(11, 10, Inches(0.60), Inches(1.20), Inches(12.13), Inches(3.60)).table
+    # Interactive instruction bar
+    add_box(s5, 0.60, 1.15, 12.13, 0.32, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s5, 0.75, 1.20, 11.8, 0.22,
+             "Interactive Feature: In the live web dashboard, clicking on any bowler row or 'Dossier ->' opens their Hawk-Eye pitch map and length breakdown.",
+             size=8.5, bold=True, color=RR_NAVY)
+
+    t_bowl = s5.shapes.add_table(11, 10, Inches(0.60), Inches(1.52), Inches(12.13), Inches(3.35)).table
     for ci, cw in enumerate(b_widths):
         t_bowl.columns[ci].width = Inches(cw)
 
@@ -390,7 +414,7 @@ def build_deck():
         style_cell(t_bowl.cell(ri, 9), r[10], 9.0, True, RR_NAVY if ri <= 2 else DARK_TEXT, bg, PP_ALIGN.CENTER)
 
     # Bottom Callout Box
-    add_box(s5, 0.60, 4.95, 12.13, 2.05, fill=WHITE, border=BORDER_LIGHT)
+    add_box(s5, 0.60, 4.95, 12.13, 2.10, fill=WHITE, border=BORDER_LIGHT)
     add_text(s5, 0.85, 5.08, 8.0, 0.25, "KEY BOWLING TAKEAWAYS & IPL ROSTER GOVERNANCE", size=9.5, bold=True, color=RR_NAVY)
 
     add_text(s5, 0.85, 5.35, 11.6, 0.40,
@@ -403,19 +427,54 @@ def build_deck():
              "• Jacob Duffy (#7) & Shoriful Islam (#8): Elite high-value targets under purse constraints. Duffy (+1.37 Econ lift) and Shoriful (+1.54 Econ lift) deliver premium death execution at standard base pricing.",
              size=8.5, color=BODY_TEXT)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 6: PRE-AUCTION TRADE WINDOW & TRADE-OFF STRATEGY (IMAGE #14)
-    # ═══════════════════════════════════════════════════════════════
+    # =========================================================================
+    # SLIDE 6: INTERACTIVE PLAYER DOSSIERS (NEW FEATURE SHOWCASE SLIDE)
+    # =========================================================================
     s6 = prs.slides.add_slide(blank)
-    add_slide_title(s6, "Pre-Auction Trade Window & Trade-Off Architecture",
+    add_slide_title(s6, "Interactive Player Dossiers: Delivery-Level Corridor Mapping",
+                    "Clicking any player on the live dashboard opens their Hawk-Eye pitch map, 8-sector wagon wheel, and situational breakdown")
+
+    # Left Card: Batting Dossier Feature (Wagon Wheel)
+    add_box(s6, 0.60, 1.25, 5.95, 4.05, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s6, 0.85, 1.38, 5.45, 0.25, "BATTING PROFILE: 8-SECTOR WAGON WHEEL & CORRIDOR", size=9.5, bold=True, color=RR_PINK)
+    add_text(s6, 0.85, 1.62, 5.45, 0.22, "Primary Execution Corridor: Mid-Wicket & Death Arc (28%)", size=8.0, color=MUTED_TEXT)
+    if WAGON_WHEEL_PATH.exists():
+        s6.shapes.add_picture(str(WAGON_WHEEL_PATH), Inches(0.75), Inches(1.90), width=Inches(5.65))
+
+    # Right Card: Bowling Dossier Feature (Pitch Map)
+    add_box(s6, 6.78, 1.25, 5.95, 4.05, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s6, 7.03, 1.38, 5.45, 0.25, "BOWLING PROFILE: HAWK-EYE PITCH LENGTH & CONTAINMENT", size=9.5, bold=True, color=RR_NAVY)
+    add_text(s6, 7.03, 1.62, 5.45, 0.22, "Primary Execution Corridor: Stump-to-Stump Yorker & Good Length (64%)", size=8.0, color=MUTED_TEXT)
+    if PITCH_MAP_PATH.exists():
+        s6.shapes.add_picture(str(PITCH_MAP_PATH), Inches(6.93), Inches(1.90), width=Inches(5.65))
+
+    # Bottom Informational Card explaining what clicking a player does
+    add_box(s6, 0.60, 5.45, 12.13, 1.65, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s6, 0.85, 5.58, 6.0, 0.25, "GRANULAR SCOUTING COVERAGE ACROSS ALL 342 CANDIDATES", size=9.5, bold=True, color=DARK_TEXT)
+    add_text(s6, 7.50, 5.58, 5.0, 0.25, "Live Player Dossier URLs Enabled on Render Dashboard", size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
+
+    add_text(s6, 0.85, 5.88, 11.6, 0.45,
+             "• Full Delivery-Level Breakdown: Clicking any candidate row opens their standalone scouting dossier, detailing career strike rate vs. pressure strike rate, true contextual lift, and 1,000-resample bootstrap confidence intervals.\n"
+             "• Visual Corridor Mapping: Batters feature 8-sector boundary distribution (6s, 4s, 1s/2s); bowlers feature 5-zone pitch lengths (Yorker, Full Slot, Good Length, Short) mapped to wicket vs. dot-ball execution.",
+             size=8.5, color=BODY_TEXT)
+
+    add_text(s6, 0.85, 6.60, 11.6, 0.35,
+             "Explore live profiles:  https://rr-dashboard.onrender.com/players/andre_russell.html   |   https://rr-dashboard.onrender.com/players/jasprit_bumrah.html",
+             size=8.5, bold=True, color=RR_NAVY)
+
+    # =========================================================================
+    # SLIDE 7: PRE-AUCTION TRADE WINDOW & TRADE-OFF STRATEGY
+    # =========================================================================
+    s7 = prs.slides.add_slide(blank)
+    add_slide_title(s7, "Pre-Auction Trade Window & Trade-Off Architecture",
                     "Purse conservation and trade strategies following Rajasthan Royals' 6-player core retention")
 
     # Retained Core Summary Banner
-    add_box(s6, 0.60, 1.25, 12.13, 0.55, fill=BG_SOFT, border=BORDER_LIGHT)
-    add_text(s6, 0.80, 1.32, 7.5, 0.22,
+    add_box(s7, 0.60, 1.25, 12.13, 0.55, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s7, 0.80, 1.32, 7.5, 0.22,
              "Retained Core (6 Players • ₹79.0 Cr): Samson (₹18 Cr), Jaiswal (₹18 Cr), Parag (₹14 Cr), Jurel (₹14 Cr), Hetmyer (₹11 Cr), Sandeep (₹4 Cr)",
              size=8.5, bold=True, color=DARK_TEXT)
-    add_text(s6, 8.50, 1.32, 4.0, 0.22,
+    add_text(s7, 8.50, 1.32, 4.0, 0.22,
              "Active Auction Purse: ₹41.0–45.0 Cr", size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
 
     # 3 Strategic Trade-Off Boxes
@@ -436,16 +495,16 @@ def build_deck():
     tox = 0.60
     tow = 3.90
     for htop, hmain, hbody, hcol in to_boxes:
-        add_box(s6, tox, 1.95, tow, 2.30, fill=WHITE, border=BORDER_LIGHT)
-        add_text(s6, tox + 0.15, 2.08, tow - 0.30, 0.20, htop, size=8.0, bold=True, color=hcol)
-        add_text(s6, tox + 0.15, 2.30, tow - 0.30, 0.35, hmain, size=9.5, bold=True, color=DARK_TEXT)
-        add_text(s6, tox + 0.15, 2.70, tow - 0.30, 1.45, hbody, size=8.5, color=BODY_TEXT)
+        add_box(s7, tox, 1.95, tow, 2.30, fill=WHITE, border=BORDER_LIGHT)
+        add_text(s7, tox + 0.15, 2.08, tow - 0.30, 0.20, htop, size=8.0, bold=True, color=hcol)
+        add_text(s7, tox + 0.15, 2.30, tow - 0.30, 0.35, hmain, size=9.5, bold=True, color=DARK_TEXT)
+        add_text(s7, tox + 0.15, 2.70, tow - 0.30, 1.45, hbody, size=8.5, color=BODY_TEXT)
         tox += tow + 0.21
 
     # Evaluation Matrix Table
-    add_text(s6, 0.60, 4.40, 6.0, 0.25, "PRE-AUCTION TRADE-OFF EVALUATION MATRIX", size=10.0, bold=True, color=RR_NAVY)
+    add_text(s7, 0.60, 4.40, 6.0, 0.25, "PRE-AUCTION TRADE-OFF EVALUATION MATRIX", size=10.0, bold=True, color=RR_NAVY)
 
-    t_to = s6.shapes.add_table(5, 5, Inches(0.60), Inches(4.70), Inches(12.13), Inches(2.30)).table
+    t_to = s7.shapes.add_table(5, 5, Inches(0.60), Inches(4.70), Inches(12.13), Inches(2.35)).table
     to_widths = [2.00, 1.80, 1.30, 5.43, 1.60]
     for ci, cw in enumerate(to_widths):
         t_to.columns[ci].width = Inches(cw)
@@ -468,57 +527,56 @@ def build_deck():
         style_cell(t_to.cell(ri, 3), r[3], 8.0, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
         style_cell(t_to.cell(ri, 4), r[4], 8.5, True, GREEN if "+" in r[4] else DARK_TEXT, bg, PP_ALIGN.CENTER)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 7: PRESSURE LIFT QUADRANT SCATTER PLOT (IMAGES #12 & #13)
-    # ═══════════════════════════════════════════════════════════════
-    s7 = prs.slides.add_slide(blank)
-    add_slide_title(s7, "Pressure Lift Alpha Matrix & Quadrant Classification",
+    # =========================================================================
+    # SLIDE 8: PRESSURE LIFT QUADRANT SCATTER PLOT
+    # =========================================================================
+    s8 = prs.slides.add_slide(blank)
+    add_slide_title(s8, "Pressure Lift Alpha Matrix & Quadrant Classification",
                     "Plotting Bayesian Pressure Rating Score against Contextual Performance Lift (SR / Econ Equivalent)")
 
     if QUAD_PATH.exists():
-        s7.shapes.add_picture(str(QUAD_PATH), Inches(0.60), Inches(1.20), width=Inches(7.30))
+        s8.shapes.add_picture(str(QUAD_PATH), Inches(0.60), Inches(1.20), width=Inches(7.30))
 
     # Right side: 4 Quadrants Summary
     q_x = 8.10
     q_w = 4.63
 
-    add_box(s7, q_x, 1.20, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s7, q_x + 0.15, 1.28, q_w - 0.3, 0.20, "QUADRANT I • ELITE PRESSURE MATCH-WINNERS", size=9.0, bold=True, color=GREEN)
-    add_text(s7, q_x + 0.15, 1.50, q_w - 0.3, 0.90,
+    add_box(s8, q_x, 1.20, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s8, q_x + 0.15, 1.28, q_w - 0.3, 0.20, "QUADRANT I • ELITE PRESSURE MATCH-WINNERS", size=9.0, bold=True, color=GREEN)
+    add_text(s8, q_x + 0.15, 1.50, q_w - 0.3, 0.90,
              "• Andre Russell (+26.59 RAE, 165.6 SR, +38.94 Lift)\n• Jasprit Bumrah (28.45 Score, 7.79 Econ Choke)\n• Matheesha Pathirana (25.80 Score, 9.02 Death Econ)\n• Umran Malik (24.75 Score, 14 Wkts, 7.68 Econ)",
              size=8.0, color=DARK_TEXT)
 
-    add_box(s7, q_x, 2.60, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s7, q_x + 0.15, 2.68, q_w - 0.3, 0.20, "QUADRANT II • HIGH-CEILING BREAKOUTS", size=9.0, bold=True, color=AMBER)
-    add_text(s7, q_x + 0.15, 2.90, q_w - 0.3, 0.90,
+    add_box(s8, q_x, 2.60, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s8, q_x + 0.15, 2.68, q_w - 0.3, 0.20, "QUADRANT II • HIGH-CEILING BREAKOUTS", size=9.0, bold=True, color=AMBER)
+    add_text(s8, q_x + 0.15, 2.90, q_w - 0.3, 0.90,
              "• Vaibhav Sooryavanshi (234.6 SR under pressure, +83.78 Lift)\n• Priyansh Arya (215.4 SR under pressure, +70.33 Lift)\n• Mayank Yadav (6.86 Econ, 155+ km/h Express Pace)\n• Jacob Duffy (+14.16 Score, +1.37 Econ Lift)",
              size=8.0, color=DARK_TEXT)
 
-    add_box(s7, q_x, 4.00, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s7, q_x + 0.15, 4.08, q_w - 0.3, 0.20, "QUADRANT III • SITUATIONAL BASELINE & IMPACT BUYS", size=9.0, bold=True, color=MUTED_TEXT)
-    add_text(s7, q_x + 0.15, 4.30, q_w - 0.3, 0.90,
+    add_box(s8, q_x, 4.00, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s8, q_x + 0.15, 4.08, q_w - 0.3, 0.20, "QUADRANT III • SITUATIONAL BASELINE & IMPACT BUYS", size=9.0, bold=True, color=MUTED_TEXT)
+    add_text(s8, q_x + 0.15, 4.30, q_w - 0.3, 0.90,
              "• Donovan Ferreira (+15.08 RAE, 158.2 SR, Base Trade Asset)\n• Varun Chakravarthy (13.50 Score, 7.82 Econ Mystery Spin)\n• Arshdeep Singh (12.80 Score, 25 Wkts, Left-Arm Seam)",
              size=8.0, color=DARK_TEXT)
 
-    add_box(s7, q_x, 5.40, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s7, q_x + 0.15, 5.48, q_w - 0.3, 0.20, "QUADRANT IV • DISCIPLINED CHOKE SPECIALISTS", size=9.0, bold=True, color=RR_NAVY)
-    add_text(s7, q_x + 0.15, 5.70, q_w - 0.3, 0.90,
+    add_box(s8, q_x, 5.40, q_w, 1.30, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s8, q_x + 0.15, 5.48, q_w - 0.3, 0.20, "QUADRANT IV • DISCIPLINED CHOKE SPECIALISTS", size=9.0, bold=True, color=RR_NAVY)
+    add_text(s8, q_x + 0.15, 5.70, q_w - 0.3, 0.90,
              "• Heinrich Klaasen (+24.15 RAE, 487 Pressure Balls)\n• Glenn Maxwell (+22.45 RAE, 164.1 SR)\n• Suryakumar Yadav (+21.80 RAE, 682 Pressure Balls)\n• Tim David (+20.11 RAE) & Shivam Dube (+17.90 RAE)",
              size=8.0, color=DARK_TEXT)
 
-    add_box(s7, 0.60, 6.45, 7.30, 0.55, fill=BG_SOFT, border=BORDER_LIGHT)
-    add_text(s7, 0.75, 6.52, 7.00, 0.40,
+    add_box(s8, 0.60, 6.45, 7.30, 0.55, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s8, 0.75, 6.52, 7.00, 0.40,
              "Key Insight: High pressure lift (Y-axis) separates true individual match-winners from players benefiting from dominant top orders or easy low-leverage overs.",
              size=8.5, color=BODY_TEXT)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 8: RECOMMENDED 2027 PLAYING XI (IMAGE #7)
-    # ═══════════════════════════════════════════════════════════════
-    s8 = prs.slides.add_slide(blank)
-    add_slide_title(s8, "Rajasthan Royals — Recommended 2027 Playing XI",
+    # =========================================================================
+    # SLIDE 9: RECOMMENDED 2027 PLAYING XI (CAPTAIN RIYAN PARAG)
+    # =========================================================================
+    s9 = prs.slides.add_slide(blank)
+    add_slide_title(s9, "Rajasthan Royals — Recommended 2027 Playing XI",
                     "A balanced 11-man lineup calibrated to dominate middle-overs spin and close out death overs under pressure")
 
-    # Grouped Cards Layout
     xi_groups = [
         ("TOP-ORDER ANCHORS (OVERS 1–6)", [
             ("1", "Yashasvi Jaiswal", "RETAINED CORE", "Left-Hand Explosive Opener • Powerplay Strike Rate 165+"),
@@ -541,32 +599,28 @@ def build_deck():
         ]),
     ]
 
-    gx = 0.60
-    gw = 5.95
-    y_pos = [1.25, 3.45]
-    x_pos = [0.60, 6.78]
-
     coords = [(0.60, 1.25), (6.78, 1.25), (0.60, 3.65), (6.78, 3.65)]
+    gw = 5.95
 
     for idx, (gtitle, gplayers) in enumerate(xi_groups):
         cx, cy = coords[idx]
         ch = 2.25 if idx < 2 else 2.15
-        add_box(s8, cx, cy, gw, ch, fill=WHITE, border=BORDER_LIGHT)
-        add_text(s8, cx + 0.20, cy + 0.12, gw - 0.40, 0.22, gtitle, size=8.5, bold=True, color=RR_NAVY)
+        add_box(s9, cx, cy, gw, ch, fill=WHITE, border=BORDER_LIGHT)
+        add_text(s9, cx + 0.20, cy + 0.12, gw - 0.40, 0.22, gtitle, size=8.5, bold=True, color=RR_NAVY)
 
         py = cy + 0.40
         for pnum, pname, ptag, pdesc in gplayers:
-            add_box(s8, cx + 0.20, py, gw - 0.40, 0.50, fill=BG_SOFT, border=BORDER_LIGHT)
-            add_text(s8, cx + 0.30, py + 0.08, 0.25, 0.30, pnum, size=9.5, bold=True, color=DARK_TEXT)
-            add_text(s8, cx + 0.60, py + 0.06, 3.2, 0.20, pname, size=9.5, bold=True, color=DARK_TEXT)
+            add_box(s9, cx + 0.20, py, gw - 0.40, 0.50, fill=BG_SOFT, border=BORDER_LIGHT)
+            add_text(s9, cx + 0.30, py + 0.08, 0.25, 0.30, pnum, size=9.5, bold=True, color=DARK_TEXT)
+            add_text(s9, cx + 0.60, py + 0.06, 3.2, 0.20, pname, size=9.5, bold=True, color=DARK_TEXT)
             tag_col = GREEN if "RETAINED" in ptag else RR_PINK
-            add_text(s8, cx + 3.80, py + 0.06, 1.9, 0.20, ptag, size=7.5, bold=True, color=tag_col, align=PP_ALIGN.RIGHT)
-            add_text(s8, cx + 0.60, py + 0.26, 5.1, 0.20, pdesc, size=7.5, color=MUTED_TEXT)
+            add_text(s9, cx + 3.80, py + 0.06, 1.9, 0.20, ptag, size=7.5, bold=True, color=tag_col, align=PP_ALIGN.RIGHT)
+            add_text(s9, cx + 0.60, py + 0.26, 5.1, 0.20, pdesc, size=7.5, color=MUTED_TEXT)
             py += 0.56
 
     # Bottom Impact Substitutes Box
-    add_box(s8, 0.60, 6.00, 12.13, 0.95, fill=BG_SOFT, border=BORDER_LIGHT)
-    add_text(s8, 0.85, 6.10, 11.6, 0.20, "TACTICAL IMPACT SUBSTITUTES & MATCHUP COVERS:", size=8.5, bold=True, color=RR_NAVY)
+    add_box(s9, 0.60, 6.00, 12.13, 1.05, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s9, 0.85, 6.12, 11.6, 0.20, "TACTICAL IMPACT SUBSTITUTES & MATCHUP COVERS:", size=8.5, bold=True, color=RR_NAVY)
     subs = [
         "Jacob Duffy (Pace • Composite Score +14.16)",
         "Axar Patel (Spin All-Rounder • Shrunk RAE +7.15)",
@@ -575,18 +629,18 @@ def build_deck():
     ]
     sx = 0.85
     for s in subs:
-        add_box(s8, sx, 6.38, 2.75, 0.42, fill=WHITE, border=BORDER_LIGHT)
-        add_text(s8, sx + 0.10, 6.48, 2.55, 0.25, s, size=7.8, bold=True, color=DARK_TEXT)
+        add_box(s9, sx, 6.42, 2.75, 0.45, fill=WHITE, border=BORDER_LIGHT)
+        add_text(s9, sx + 0.10, 6.52, 2.55, 0.25, s, size=7.8, bold=True, color=DARK_TEXT)
         sx += 2.92
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 9: AUCTION PRIORITY TARGETS TABLE (IMAGE #8)
-    # ═══════════════════════════════════════════════════════════════
-    s9 = prs.slides.add_slide(blank)
-    add_slide_title(s9, "Auction Priority Targets Evaluation",
+    # =========================================================================
+    # SLIDE 10: AUCTION PRIORITY TARGETS TABLE
+    # =========================================================================
+    s10 = prs.slides.add_slide(blank)
+    add_slide_title(s10, "Auction Priority Targets Evaluation",
                     "Evaluation of calibrated targets across career rate, pressure rate, and pressure lift")
 
-    t_auc = s9.shapes.add_table(11, 6, Inches(0.60), Inches(1.25), Inches(12.13), Inches(5.40)).table
+    t_auc = s10.shapes.add_table(11, 6, Inches(0.60), Inches(1.25), Inches(12.13), Inches(5.60)).table
     auc_widths = [0.50, 2.50, 3.43, 1.80, 1.90, 2.00]
     for ci, cw in enumerate(auc_widths):
         t_auc.columns[ci].width = Inches(cw)
@@ -616,11 +670,11 @@ def build_deck():
         style_cell(t_auc.cell(ri, 4), r[4], 9.0, True, DARK_TEXT, bg, PP_ALIGN.CENTER)
         style_cell(t_auc.cell(ri, 5), r[5], 9.0, True, GREEN, bg, PP_ALIGN.CENTER)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 10: AUCTION BUDGET PLAN (₹45 CRORE PURSE) (IMAGE #9)
-    # ═══════════════════════════════════════════════════════════════
-    s10 = prs.slides.add_slide(blank)
-    add_slide_title(s10, "Auction Budget Plan (₹45 Crore Total Purse)",
+    # =========================================================================
+    # SLIDE 11: AUCTION BUDGET PLAN (₹45 CRORE PURSE)
+    # =========================================================================
+    s11 = prs.slides.add_slide(blank)
+    add_slide_title(s11, "Auction Budget Plan (₹45 Crore Total Purse)",
                     "Disciplined bidding caps to prevent emotional overspending on marquee names")
 
     # Purse KPI Strip
@@ -632,14 +686,13 @@ def build_deck():
     px = 0.60
     pw = 3.90
     for plbl, pval, psub, pcol in p_kpis:
-        add_box(s10, px, 1.25, pw, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
-        add_text(s10, px + 0.20, 1.35, pw - 0.40, 0.20, plbl, size=8.5, bold=True, color=MUTED_TEXT, align=PP_ALIGN.CENTER)
-        add_text(s10, px + 0.20, 1.58, pw - 0.40, 0.40, pval, size=20, bold=True, color=pcol, align=PP_ALIGN.CENTER)
-        add_text(s10, px + 0.20, 2.00, pw - 0.40, 0.22, psub, size=8.5, color=BODY_TEXT, align=PP_ALIGN.CENTER)
+        add_box(s11, px, 1.25, pw, 1.10, fill=BG_SOFT, border=BORDER_LIGHT)
+        add_text(s11, px + 0.20, 1.35, pw - 0.40, 0.20, plbl, size=8.5, bold=True, color=MUTED_TEXT, align=PP_ALIGN.CENTER)
+        add_text(s11, px + 0.20, 1.58, pw - 0.40, 0.40, pval, size=20, bold=True, color=pcol, align=PP_ALIGN.CENTER)
+        add_text(s11, px + 0.20, 2.00, pw - 0.40, 0.22, psub, size=8.5, color=BODY_TEXT, align=PP_ALIGN.CENTER)
         px += pw + 0.21
 
-    # Budget Table matching Image #9
-    t_bud = s10.shapes.add_table(7, 5, Inches(0.60), Inches(2.55), Inches(12.13), Inches(4.30)).table
+    t_bud = s11.shapes.add_table(7, 5, Inches(0.60), Inches(2.55), Inches(12.13), Inches(4.50)).table
     b_col_widths = [2.20, 1.60, 1.50, 1.30, 5.53]
     for ci, cw in enumerate(b_col_widths):
         t_bud.columns[ci].width = Inches(cw)
@@ -664,21 +717,21 @@ def build_deck():
         style_cell(t_bud.cell(ri, 3), r[3], 8.5, False, MUTED_TEXT, bg, PP_ALIGN.CENTER)
         style_cell(t_bud.cell(ri, 4), r[4], 8.0, False, BODY_TEXT, bg, PP_ALIGN.LEFT)
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 11: BIDDING RULES, CONTINGENCY MATRIX & PURSE (IMAGES #10 & #11)
-    # ═══════════════════════════════════════════════════════════════
-    s11 = prs.slides.add_slide(blank)
-    add_slide_title(s11, "War Room Bidding Rules & Contingency Matrix",
+    # =========================================================================
+    # SLIDE 12: WAR ROOM BIDDING RULES & CONTINGENCY MATRIX
+    # =========================================================================
+    s12 = prs.slides.add_slide(blank)
+    add_slide_title(s12, "War Room Bidding Rules & Contingency Matrix",
                     "Real-time step-down protocols to maintain budget integrity during live auction bidding")
 
-    # Left Column: Bidding Rules & Contingency Triggers (Image #10)
-    add_box(s11, 0.60, 1.25, 5.95, 5.75, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s11, 0.85, 1.45, 5.45, 0.25, "AUCTION BIDDING RULE (10% CIRCUIT BREAKER)", size=10.0, bold=True, color=RR_NAVY)
-    add_text(s11, 0.85, 1.75, 5.45, 0.60,
+    # Left Column: Bidding Rules & Contingency Triggers
+    add_box(s12, 0.60, 1.25, 5.95, 5.85, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s12, 0.85, 1.45, 5.45, 0.25, "AUCTION BIDDING RULE (10% CIRCUIT BREAKER)", size=10.0, bold=True, color=RR_NAVY)
+    add_text(s12, 0.85, 1.75, 5.45, 0.60,
              "If bidding for any player goes more than 10% above their maximum limit, stop bidding immediately and switch to backup targets to protect the overall team budget.",
              size=8.5, color=BODY_TEXT)
 
-    add_text(s11, 0.85, 2.45, 5.45, 0.25, "CONTINGENCY BIDDING MATRIX (LIVE STEP-DOWNS)", size=10.0, bold=True, color=RR_NAVY)
+    add_text(s12, 0.85, 2.45, 5.45, 0.25, "CONTINGENCY BIDDING MATRIX (LIVE STEP-DOWNS)", size=10.0, bold=True, color=RR_NAVY)
 
     triggers = [
         ("If Rinku Singh > ₹11.0 Cr:", "Pivot immediately to Bhanuka Rajapaksa (₹3.5 Cr) and promote Shimron Hetmyer to No. 6, freeing ₹7.5 Cr for the bowling reserve.", RR_PINK),
@@ -688,15 +741,15 @@ def build_deck():
     ]
     ty = 2.80
     for thdr, tbody, tcol in triggers:
-        add_box(s11, 0.85, ty, 5.45, 0.85, fill=BG_SOFT, border=BORDER_LIGHT)
-        add_box(s11, 0.85, ty, 0.08, 0.85, fill=tcol, border=None)
-        add_text(s11, 1.05, ty + 0.08, 5.15, 0.20, thdr, size=8.5, bold=True, color=DARK_TEXT)
-        add_text(s11, 1.05, ty + 0.30, 5.15, 0.45, tbody, size=8.0, color=BODY_TEXT)
-        ty += 0.98
+        add_box(s12, 0.85, ty, 5.45, 0.88, fill=BG_SOFT, border=BORDER_LIGHT)
+        add_box(s12, 0.85, ty, 0.08, 0.88, fill=tcol, border=None)
+        add_text(s12, 1.05, ty + 0.08, 5.15, 0.20, thdr, size=8.5, bold=True, color=DARK_TEXT)
+        add_text(s12, 1.05, ty + 0.30, 5.15, 0.48, tbody, size=8.0, color=BODY_TEXT)
+        ty += 1.00
 
-    # Right Column: Phase Distribution & Principles (Image #11)
-    add_box(s11, 6.78, 1.25, 5.95, 5.75, fill=WHITE, border=BORDER_LIGHT)
-    add_text(s11, 7.03, 1.45, 5.45, 0.25, "PHASE-BY-PHASE PURSE DISTRIBUTION (₹45.0 CR TOTAL)", size=10.0, bold=True, color=RR_NAVY)
+    # Right Column: Phase Distribution & Principles
+    add_box(s12, 6.78, 1.25, 5.95, 5.85, fill=WHITE, border=BORDER_LIGHT)
+    add_text(s12, 7.03, 1.45, 5.45, 0.25, "PHASE-BY-PHASE PURSE DISTRIBUTION (₹45.0 CR TOTAL)", size=10.0, bold=True, color=RR_NAVY)
 
     phases = [
         ("MIDDLE SPIN ATTACK", "₹17.50 Cr", "38.9%", "Shivam Dube (₹9.5 Cr) + Axar Patel (₹8.0 Cr)"),
@@ -707,18 +760,18 @@ def build_deck():
     pyx = 7.03
     pyy = 1.80
     for ptitle, pval, ppct, pdesc in phases:
-        add_box(s11, pyx, pyy, 2.62, 0.95, fill=BG_SOFT, border=BORDER_LIGHT)
-        add_text(s11, pyx + 0.12, pyy + 0.08, 2.38, 0.20, ptitle, size=7.5, bold=True, color=MUTED_TEXT)
-        add_text(s11, pyx + 0.12, pyy + 0.28, 1.50, 0.30, pval, size=13.0, bold=True, color=DARK_TEXT)
-        add_text(s11, pyx + 1.62, pyy + 0.32, 0.88, 0.22, ppct, size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
-        add_text(s11, pyx + 0.12, pyy + 0.62, 2.38, 0.25, pdesc, size=7.0, color=BODY_TEXT)
+        add_box(s12, pyx, pyy, 2.62, 0.95, fill=BG_SOFT, border=BORDER_LIGHT)
+        add_text(s12, pyx + 0.12, pyy + 0.08, 2.38, 0.20, ptitle, size=7.5, bold=True, color=MUTED_TEXT)
+        add_text(s12, pyx + 0.12, pyy + 0.28, 1.50, 0.30, pval, size=13.0, bold=True, color=DARK_TEXT)
+        add_text(s12, pyx + 1.62, pyy + 0.32, 0.88, 0.22, ppct, size=8.5, bold=True, color=GREEN, align=PP_ALIGN.RIGHT)
+        add_text(s12, pyx + 0.12, pyy + 0.62, 2.38, 0.25, pdesc, size=7.0, color=BODY_TEXT)
         if pyx == 7.03:
             pyx = 9.86
         else:
             pyx = 7.03
             pyy += 1.08
 
-    add_text(s11, 7.03, 4.10, 5.45, 0.25, "WAR ROOM OPERATIONAL PRINCIPLES", size=10.0, bold=True, color=RR_NAVY)
+    add_text(s12, 7.03, 4.10, 5.45, 0.25, "WAR ROOM OPERATIONAL PRINCIPLES", size=10.0, bold=True, color=RR_NAVY)
     principles = [
         ("No Emotional Marquee Bidding:", "Resist brand-driven inflation on famous names whose clutch win differential is negative."),
         ("Jaipur SMS Fortress Fit:", "Prioritize players suited to 75m+ boundaries and middle-overs spin grip over flat-track sluggers."),
@@ -727,16 +780,16 @@ def build_deck():
     ]
     pry = 4.45
     for prtitle, prbody in principles:
-        add_text(s11, 7.03, pry, 5.45, 0.20, f"• {prtitle}", size=8.5, bold=True, color=DARK_TEXT)
-        add_text(s11, 7.20, pry + 0.20, 5.28, 0.35, prbody, size=8.0, color=BODY_TEXT)
+        add_text(s12, 7.03, pry, 5.45, 0.20, f"• {prtitle}", size=8.5, bold=True, color=DARK_TEXT)
+        add_text(s12, 7.20, pry + 0.20, 5.28, 0.35, prbody, size=8.0, color=BODY_TEXT)
         pry += 0.58
 
-    # ═══════════════════════════════════════════════════════════════
-    # SLIDE 12: STRATEGIC SUMMARY & CONCLUSION (IMAGES #6 & #13)
-    # ═══════════════════════════════════════════════════════════════
-    s12 = prs.slides.add_slide(blank)
-    add_slide_title(s12, "Executive Summary & Key Strategic Takeaways",
-                    "Core recommendations for Rajasthan Royals Cricket Operations ahead of the IPL 2027 Auction")
+    # =========================================================================
+    # SLIDE 13: STRATEGIC SUMMARY & LIVE PRODUCTION RESOURCES (NO FOOTER)
+    # =========================================================================
+    s13 = prs.slides.add_slide(blank)
+    add_slide_title(s13, "Executive Summary & Live Production Resources",
+                    "Core strategic takeaways and interactive deployment resources for Rajasthan Royals Operations")
 
     takeaways = [
         ("1. Delivery-Level Residuals Over Win Percentage",
@@ -753,21 +806,26 @@ def build_deck():
          AMBER),
     ]
 
-    ty = 1.30
+    ty = 1.25
     for tnum, tbody, tcol in takeaways:
-        add_box(s12, 0.60, ty, 12.13, 1.25, fill=WHITE, border=BORDER_LIGHT)
-        add_box(s12, 0.60, ty, 0.10, 1.25, fill=tcol, border=None)
-        add_text(s12, 0.90, ty + 0.15, 11.5, 0.25, tnum, size=11.0, bold=True, color=DARK_TEXT)
-        add_text(s12, 0.90, ty + 0.45, 11.5, 0.65, tbody, size=9.0, color=BODY_TEXT)
-        ty += 1.38
+        add_box(s13, 0.60, ty, 12.13, 1.15, fill=WHITE, border=BORDER_LIGHT)
+        add_box(s13, 0.60, ty, 0.08, 1.15, fill=tcol, border=None)
+        add_text(s13, 0.85, ty + 0.12, 11.5, 0.25, tnum, size=10.5, bold=True, color=DARK_TEXT)
+        add_text(s13, 0.85, ty + 0.40, 11.5, 0.65, tbody, size=8.5, color=BODY_TEXT)
+        ty += 1.25
 
-    # Final Footer strip
-    add_box(s12, 0.60, 6.70, 12.13, 0.40, fill=BG_SOFT, border=BORDER_LIGHT)
-    add_text(s12, 0.85, 6.78, 11.6, 0.25,
-             "Rajasthan Royals SupeRR Selector Season 2  |  Report & Presentation by Ketan Rawat  |  Interactive Dashboard: index.html",
-             size=9.0, bold=True, color=MUTED_TEXT, align=PP_ALIGN.CENTER)
+    # Dedicated Production Resources Container (URLs, no footer bar)
+    add_box(s13, 0.60, 6.30, 5.95, 0.95, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s13, 0.80, 6.38, 5.5, 0.20, "LIVE WEB DASHBOARD & DOSSIER SUITE:", size=8.5, bold=True, color=RR_NAVY)
+    add_text(s13, 0.80, 6.62, 5.5, 0.25, "https://rr-dashboard.onrender.com/", size=10.5, bold=True, color=RR_PINK)
+    add_text(s13, 0.80, 6.90, 5.5, 0.25, "Full 342-player dossiers, interactive wagon wheels & live war room", size=7.5, color=MUTED_TEXT)
 
-    # Save outputs
+    add_box(s13, 6.78, 6.30, 5.95, 0.95, fill=BG_SOFT, border=BORDER_LIGHT)
+    add_text(s13, 6.98, 6.38, 5.5, 0.20, "OPEN-SOURCE CODEBASE & REPLICATION:", size=8.5, bold=True, color=RR_NAVY)
+    add_text(s13, 6.98, 6.62, 5.5, 0.25, "https://github.com/Ketanrawat2004/RR-Dashboard", size=10.5, bold=True, color=DARK_TEXT)
+    add_text(s13, 6.98, 6.90, 5.5, 0.25, "Complete pipeline scripts, bootstrap models & automated documentation", size=7.5, color=MUTED_TEXT)
+
+    # Save outputs to both main and pressure_output copy
     prs.save(str(OUT_MAIN))
     print(f"Saved PPTX to: {OUT_MAIN}")
     prs.save(str(OUT_COPY))
