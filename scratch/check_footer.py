@@ -1,13 +1,5 @@
-with open('index.html', 'r', encoding='utf-8') as f:
-    text = f.read()
+with open('index.html', encoding='utf-8') as f:
+    html = f.read()
 
-import re
-idx = text.rfind('footer')
-if idx != -1:
-    print("Found footer at:", idx)
-    print(text[idx-100:idx+600])
-else:
-    print("No footer found in index.html")
-    print("End of index.html:")
-    print(text[-1500:])
-
+idx = html.find('class="simple-footer"')
+print(html[idx:idx+2500])
