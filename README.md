@@ -122,10 +122,10 @@ Calibrated for conditions at **Sawai Mansingh Stadium, Jaipur** (large boundarie
 ```
                        [1] Yashasvi Jaiswal (Retained Core • LHB Opener)
                        [2] Devon Conway (Auction Target • LHB Anchor / WK)
-                       [3] Sanju Samson (Retained Core • Captain / RHB #3)
+                       [3] Sanju Samson (Retained Core • Wicketkeeper / RHB #3)
                        [4] Rajat Patidar (Auction Target • Spin Neutralizer)
                        [5] Shivam Dube / Rinku Singh (Auction Target • Death Finisher)
-                       [6] Riyan Parag (Retained Core • Dynamic Finisher)
+                       [5] Riyan Parag (Retained Core • Captain / Spin Enforcer & Finisher)
                        [7] Dhruv Jurel (Retained Core • Finisher / WK)
                        [8] Axar Patel / Romario Shepherd (Auction Target • All-Rounder)
                        [9] Varun Chakravarthy / Jacob Duffy (Auction Target • Middle Strike)
